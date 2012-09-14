@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>Actualización de estado</hook_name>
+      <hook_desc>Actualiza el estado de un usuario con posibilidad de etiquetar amigos.</hook_desc>
+      <hook_author>@codebit_org</hook_author>
+      <hook_email>juliobarreraa@gmail.com</hook_email>
+      <hook_website>http://www.codebit.org</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:3:{s:21:"required_applications";a:0:{}s:20:"hook_php_version_min";s:0:"";s:20:"hook_php_version_max";s:0:"";}]]></hook_requirements>
+      <hook_version_human>1.0</hook_version_human>
+      <hook_version_long>1000</hook_version_long>
+      <hook_extra_data><![CDATA[a:3:{s:7:"display";a:3:{s:8:"language";s:58:"From portal_public_portal: facebook, twitter, use_mentions";s:9:"templates";s:48:"From skin_portal: pluginUpdateStatus, poststatus";s:3:"css";s:23:"CSS Files:  podio.style";}s:8:"language";a:2:{s:14:"public_profile";a:1:{i:0;s:13:"label_publish";}s:13:"public_portal";a:1:{i:0;s:11:"attach_link";}}s:3:"css";a:1:{s:0:"";s:11:"podio.style";}}]]></hook_extra_data>
+      <hook_key>labelfriends</hook_key>
+      <hook_global_caches/>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>labelfriends.php</hook_file_real>
+      <hook_type>templateHooks</hook_type>
+      <hook_classname>labelfriends</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_portal";s:12:"skinFunction";s:18:"pluginUpdateStatus";s:4:"type";s:2:"if";s:2:"id";s:18:"pluginUpdateStatus";s:8:"position";s:12:"post.startif";}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+
+/**
+ * <pre>
+ * Codebit.org
+ * IP.Board v3.3.0
+ * @description
+ * Last Updated: $Date: 10-may-2012 -006  $
+ * </pre>
+ * @filename            labelfriends.php
+ * @author 		$Author: juliobarreraa@gmail.com $
+ * @package		PRI
+ * @subpackage	        
+ * @link		http://www.codebit.org
+ * @since		10-may-2012
+ * @timestamp           17:56:10
+ * @version		$Rev:  $
+ *
+ */
+
+/**
+ * Description of labelfriends
+ *
+ * @author juliobarreraa@gmail.com
+ */
+class labelfriends {
+    //Protected
+    protected $registry;
+    //Public
+    public $lang;
+    
+    public function __construct() {
+        $this->registry = ipsRegistry::instance();
+        $this->lang = $this->registry->getClass('class_localization'); //Load language
+    }
+    
+    public function getOutput() {
+        $this->lang->loadLanguageFile(array('public_portal'), 'portal');
+        return $this->registry->output->getTemplate('portal')->poststatus();
+    }
+}
+
+?>
+]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings/>
+  <hookextras_language/>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates/>
+  <hookextras_css>
+    <css>
+      <css_updated>1337720496</css_updated>
+      <css_group>podio.style</css_group>
+      <css_content><![CDATA[/************************************************************************/
+/* IP.Board 3 CSS - By Julio Barreraa - (c)2010 Codebit.org     	*/
+/************************************************************************/
+/* podio.style.css - Status update styles					*/
+/************************************************************************/
+.mentions-input-box {
+  position: relative;
+  background: #fff;
+}
+
+.mentions-input-box textarea {
+  width: 100%;
+  display: block;
+  padding: 9px;
+  border: 1px solid #dcdcdc;
+  border-radius:3px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  outline: 0;
+  resize: none;
+  height: 18px;
+  
+  font-family: 'pt sans',arial,helvetica,sans-serif;
+  font-size: 14px;
+  
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mentions-input-box .mentions-autocomplete-list {
+  display: none;
+  background: #fff;
+  border: 1px solid #b2b2b2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  margin-top: -2px;
+
+  border-radius:5px;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+}
+
+.mentions-input-box .mentions-autocomplete-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mentions-input-box .mentions-autocomplete-list li {
+  background-color: #fff;
+  padding: 0 5px;
+  margin: 0;
+  width: auto;
+  border-bottom: 1px solid #eee;
+  height: 26px;
+  line-height: 26px;
+  overflow: hidden;
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:last-child {
+  border-radius:5px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li > img,
+.mentions-input-box .mentions-autocomplete-list li > div.icon {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-top:5px;
+  margin-right: 5px;
+  -moz-background-origin:3px;
+
+  border-radius:3px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li em {
+  font-weight: bold;
+  font-style: none;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:hover,
+.mentions-input-box .mentions-autocomplete-list li.active {
+  background-color: #f2f2f2;
+}
+
+.mentions-input-box .mentions-autocomplete-list li b {
+  background: #ffff99;
+  font-weight: normal;
+}
+
+.mentions-input-box .mentions {
+  position: absolute;
+  left: 1px;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+  padding: 9px;
+  color: #fff;
+  overflow: hidden;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font: 14px 'pt sans',arial,helvetica,sans-serif !important;
+}
+
+.mentions-input-box .mentions > div {
+  color: #fff;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.mentions-input-box .mentions > div > strong {
+  font-weight:normal;
+  background: #d8dfea;
+}
+
+.mentions-input-box .mentions > div > strong > span {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}]]></css_content>
+      <css_position>2</css_position>
+      <css_added_to>0</css_added_to>
+      <css_app>portal</css_app>
+      <css_app_hide>0</css_app_hide>
+      <css_attributes><![CDATA[title="Main" media="screen,print"]]></css_attributes>
+      <css_modules>portal</css_modules>
+      <css_removed>0</css_removed>
+      <css_master_key>root</css_master_key>
+    </css>
+    <css>
+      <css_updated>1337720498</css_updated>
+      <css_group>podio.style</css_group>
+      <css_content><![CDATA[/************************************************************************/
+/* IP.Board 3 CSS - By Julio Barreraa - (c)2010 Codebit.org     	*/
+/************************************************************************/
+/* podio.style.css - Status update styles					*/
+/************************************************************************/
+.mentions-input-box {
+  position: relative;
+  background: #fff;
+}
+
+.mentions-input-box textarea {
+  width: 100%;
+  display: block;
+  padding: 9px;
+  border: 1px solid #dcdcdc;
+  border-radius:3px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  outline: 0;
+  resize: none;
+  height: 18px;
+  
+  font-family: 'pt sans',arial,helvetica,sans-serif;
+  font-size: 14px;
+  
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mentions-input-box .mentions-autocomplete-list {
+  display: none;
+  background: #fff;
+  border: 1px solid #b2b2b2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  margin-top: -2px;
+
+  border-radius:5px;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+}
+
+.mentions-input-box .mentions-autocomplete-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mentions-input-box .mentions-autocomplete-list li {
+  background-color: #fff;
+  padding: 0 5px;
+  margin: 0;
+  width: auto;
+  border-bottom: 1px solid #eee;
+  height: 26px;
+  line-height: 26px;
+  overflow: hidden;
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:last-child {
+  border-radius:5px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li > img,
+.mentions-input-box .mentions-autocomplete-list li > div.icon {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-top:5px;
+  margin-right: 5px;
+  -moz-background-origin:3px;
+
+  border-radius:3px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li em {
+  font-weight: bold;
+  font-style: none;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:hover,
+.mentions-input-box .mentions-autocomplete-list li.active {
+  background-color: #f2f2f2;
+}
+
+.mentions-input-box .mentions-autocomplete-list li b {
+  background: #ffff99;
+  font-weight: normal;
+}
+
+.mentions-input-box .mentions {
+  position: absolute;
+  left: 1px;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+  padding: 9px;
+  color: #fff;
+  overflow: hidden;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.mentions-input-box .mentions > div {
+  color: #fff;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.mentions-input-box .mentions > div > strong {
+  font-weight:normal;
+  background: #d8dfea;
+}
+
+.mentions-input-box .mentions > div > strong > span {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}]]></css_content>
+      <css_position>2</css_position>
+      <css_added_to>0</css_added_to>
+      <css_app>portal</css_app>
+      <css_app_hide>0</css_app_hide>
+      <css_attributes><![CDATA[title="Main" media="screen,print"]]></css_attributes>
+      <css_modules>portal</css_modules>
+      <css_removed>0</css_removed>
+      <css_master_key>mobile</css_master_key>
+    </css>
+    <css>
+      <css_updated>1337720497</css_updated>
+      <css_group>podio.style</css_group>
+      <css_content><![CDATA[/************************************************************************/
+/* IP.Board 3 CSS - By Julio Barreraa - (c)2010 Codebit.org     	*/
+/************************************************************************/
+/* podio.style.css - Status update styles					*/
+/************************************************************************/
+.mentions-input-box {
+  position: relative;
+  background: #fff;
+}
+
+.mentions-input-box textarea {
+  width: 100%;
+  display: block;
+  padding: 9px;
+  border: 1px solid #dcdcdc;
+  border-radius:3px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  outline: 0;
+  resize: none;
+  height: 18px;
+  
+  font-family: 'pt sans',arial,helvetica,sans-serif;
+  font-size: 14px;
+  
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mentions-input-box .mentions-autocomplete-list {
+  display: none;
+  background: #fff;
+  border: 1px solid #b2b2b2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  margin-top: -2px;
+
+  border-radius:5px;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
+}
+
+.mentions-input-box .mentions-autocomplete-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mentions-input-box .mentions-autocomplete-list li {
+  background-color: #fff;
+  padding: 0 5px;
+  margin: 0;
+  width: auto;
+  border-bottom: 1px solid #eee;
+  height: 26px;
+  line-height: 26px;
+  overflow: hidden;
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:last-child {
+  border-radius:5px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li > img,
+.mentions-input-box .mentions-autocomplete-list li > div.icon {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-top:5px;
+  margin-right: 5px;
+  -moz-background-origin:3px;
+
+  border-radius:3px;
+}
+
+.mentions-input-box .mentions-autocomplete-list li em {
+  font-weight: bold;
+  font-style: none;
+}
+
+.mentions-input-box .mentions-autocomplete-list li:hover,
+.mentions-input-box .mentions-autocomplete-list li.active {
+  background-color: #f2f2f2;
+}
+
+.mentions-input-box .mentions-autocomplete-list li b {
+  background: #ffff99;
+  font-weight: normal;
+}
+
+.mentions-input-box .mentions {
+  position: absolute;
+  left: 1px;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+  padding: 9px;
+  color: #fff;
+  overflow: hidden;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.mentions-input-box .mentions > div {
+  color: #fff;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.mentions-input-box .mentions > div > strong {
+  font-weight:normal;
+  background: #d8dfea;
+}
+
+.mentions-input-box .mentions > div > strong > span {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}]]></css_content>
+      <css_position>2</css_position>
+      <css_added_to>0</css_added_to>
+      <css_app>portal</css_app>
+      <css_app_hide>0</css_app_hide>
+      <css_attributes><![CDATA[title="Main" media="screen,print"]]></css_attributes>
+      <css_modules>portal</css_modules>
+      <css_removed>0</css_removed>
+      <css_master_key>xmlskin</css_master_key>
+    </css>
+  </hookextras_css>
+  <hookextras_replacements/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

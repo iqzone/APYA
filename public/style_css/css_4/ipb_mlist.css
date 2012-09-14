@@ -1,0 +1,14 @@
+#mlist_tabs{margin-top:35px}#mlist_tabs
+li{text-align:center}#mlist_tabs li
+a{padding:5px
+8px}div#member_filters{margin-top:10px;margin-bottom:15px}div#member_filters
+fieldset.other_filters{text-align:center;padding:6px;margin-top:10px;clear:both}div#member_filters
+fieldset.submit{background:#d5dde5;padding:6px}div#member_filters
+ul{margin-bottom:12px;margin-top:8px;width:49%;float:left}div#member_filters
+li{border-bottom:1px solid #d5dde5;margin-right:20px;padding:8px
+0 8px 0;clear:both}div#member_filters li
+.desc{margin:0;display:inline}div#member_filters
+label{text-align:right;margin-right:15px;width:150px;display:block;float:left}div#member_filters li.field.custom input[type=text],
+div#member_filters li.field.custom
+textarea{width:50%}div#member_filters li.field.custom
+.input_check{width:5%}

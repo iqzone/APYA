@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Custom Blocks</grouptitle>
+		<items>
+			<item>
+				<key>blocks_manage</key>
+				<string>Can add/edit custom blocks?</string>
+			</item>
+			<item>
+				<key>blocks_delete</key>
+				<string>Can delete custom blocks?</string>
+			</item>			
+		</items>
+	</group>
+</permissions>

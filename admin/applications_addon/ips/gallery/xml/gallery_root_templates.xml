@@ -1,0 +1,2970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates application="gallery" templategroups="a:1:{s:13:&quot;skin_gallery_&quot;;s:8:&quot;contains&quot;;}">
+  <templategroup group="skin_gallery_albums">
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<script type="text/javascript">
+ ipb.gallery.inSection = 'albumOverview';
+ ipb.gallery.albumId   = parseInt({$album['album_id']});
+ ipb.gallery.albumUrl  = "{parse url="app=gallery&amp;album={$album['album_id']}" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}";
+</script>
+<if test="isUserViewStart:|:$isUserView">
+	<a href='{parse url="showuser={$album['owner']['member_id']}" seotitle="{$album['owner']['members_seo_name']}" template="showuser" base="public"}' class='ipsUserPhotoLink left'>
+		<img src='{$album['owner']['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_medium' />
+	</a>
+	<div class='ipsBox_withphoto'>
+		<h1 class='ipsType_pagetitle'>{$album['album_name_userview']}</h1>
+		<span class='desc'>{$this->lang->words['joined_ucfirst']}: {parse date="$album['owner']['joined']" format="joined"}</span>
+	</div>
+<else />
+	<h1 class='ipsType_pagetitle'>
+		<if test="isPrivate:|:$this->registry->gallery->helper('albums')->isPrivate($album) === true">
+			<span class='ipsBadge ipsBadge_red reset_cursor'>{$this->lang->words['private_ucfirst']}</span>
+		</if>
+		{$album['album_name']}
+	</h1>
+</if>
+<if test="hasRules:|:is_array( $album['album_g_rules_expanded'] )">
+	<div class='ipsType_pagedesc forum_rules'>
+		<if test="$album['album_g_rules_expanded']['text']">
+			<strong>{$album['album_g_rules_expanded']['title']}</strong>
+			{$album['album_g_rules_expanded']['text']}
+		<else />
+			{$album['album_description']}
+		</if>
+	</div>
+</if>
+<if test="canIuploadDearSirWellCanI:|:$this->registry->gallery->helper('albums')->isUploadable($album) || $this->registry->gallery->helper('albums')->canCreateSubAlbumInside($album)">
+	<div class='topic_controls'>
+		<ul class='topic_buttons'>
+			<li><a href='{parse url="app=gallery&amp;module=post&amp;section=image&amp;album_id={$album['album_id']}" base="public"}' title='{$this->lang->words['upload']}'>{$this->lang->words['upload']}</a></li>
+		</ul>
+	</div>
+</if>
+<br />
+<div class='ipsLayout ipsLayout_withright ipsLayout_largeright'>
+	<div class='ipsLayout_right'>
+		{$sideblocks['top']}
+		{parse template="miniAlbumStripHorizontal" group="gallery_albums" params="$subAlbums, $childrenTitle, $album, $childrenRootCount"}
+		{$sideblocks['bottom']}
+		<if test="hasComments:|:$comments">
+			<br />
+			{parse template="miniLatestCommentBlock" group="gallery_albums" params="$comments, $this->lang->words['latest_commments']"}
+		</if>
+	</div>
+	
+	<div class='ipsLayout_content'>
+		<div class='ipsBox'>
+			<div class='ipsBox_container ipsPad'>
+				<if test="hasFeature:|:!empty($feature['id'])">
+					<div class='featured' id="image_wdesc_{$feature['id']}">
+						{$feature['tag']}
+						<p id='image_wdesc_{$feature['id']}_description' class='imageDescription'><strong>{$feature['caption']}</strong><br />{$feature['description']}<br />{$this->lang->words['from_album']}: {$feature['album_name']}</p>
+					</div>
+					
+					<script type="text/javascript">
+						document.observe("dom:loaded", function(){
+							ipb.gallery.registerDescription({$feature['id']});
+						} );
+					</script>
+					<br /><br />
+				</if>
+				<a id="albumimages"></a>
+				<if test="hasRecent:|:count($recents)">
+					<ul class='ipsList_inline ipsList_reset short wrap'>
+						<foreach loop="images:$recents as $id => $data">
+							<if test="isUserViewList:|:$isUserView">
+								<li class='ipsPad_half gallery_tiny_box' -data-id='{$id}'>
+							<else />
+								<li class='ipsPad_half'>
+							</if>
+								<if test="comments:|:$data['comments']"><div class='small'>{$data['comments']}</div></if>
+								{parse gallery_resize="$data['thumb']" width="thumb_large"}
+								<div class='desc desc ipsType_smaller'>
+									{IPSText::truncate($data['caption'], 16)}
+									<if test="isOverviewView:|:!$isUserView">
+										<br />{$this->lang->words['album_ucfirst']}: <a href='{parse url="app=gallery&amp;album={$data['album_id']}" seotitle="{$data['album_name_seo']}" template="viewalbum" base="public"}'>{$data['album_name']}</a>
+									</if>
+								</div>
+							</li>
+						</foreach>
+					</ul>
+					<if test="hasPages:|:! empty( $album['_pages'] )">
+						<div class='ipsPad'>{$album['_pages']}</div>
+						<br />
+					</if>
+					<br />
+				</if>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<br />]]></template_content>
+      <template_name>albumFeatureView</template_name>
+      <template_data><![CDATA[$feature, $recents, $album, $children, $childrenTitle, $sideblocks=array(), $comments='', $childrenRootCount=0, $isUserView=false, $subAlbums=array()]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<h3>{$this->lang->words['as_title']}</h3>
+<div class='fixed_inner ipsBox'>
+	<if test="isLargeTouch:|:$this->registry->output->isLargeTouchDevice()">
+		<div class='message' style='margin-bottom: 5px;'>{$this->lang->words['scroll_tip']}</div>
+	</if>
+	<div class='ipsVerticalTabbed ipsLayout ipsLayout_withleft ipsLayout_smallleft clearfix'>
+		<div class='ipsVerticalTabbed_tabs ipsLayout_left'>
+			<ul id='albumSelector_nav'>
+				<li class='active'><a data-album-pane-update="albums=global" href='#'>{$this->lang->words['as_global_albums']}</a></li>
+				<if test="in_array( $this->request['type'], array( 'upload', 'createMembersAlbum', 'createAlbum', 'create' ) )">
+					<li><a data-album-pane-update="albums=member&type={$this->request['type']}" href='#'>{$this->lang->words['as_your_albums']}</a></li>
+				</if>
+				<if test="$albumData['album_id'] && ! $albumData['album_is_global'] && ( $this->request['moderate'] || IN_ACP )">
+					<li><a data-album-pane-update="albums=othermember&member_id={$albumData['album_owner_id']}&type={$this->request['type']}" href='#'>
+					<if test="$albumData['album_owner_id'] != $this->memberData['member_id']">{$albumData['owners_members_display_name']}'s Albums<else />{$this->lang->words['as_your_albums']}</if>
+					</a></li>
+				</if>
+				<li><a data-album-pane-update="albums=search&type={$this->request['type']}" href='#'>{$this->lang->words['as_search_albums']}</a></li>
+				<li><a data-album-pane-update="albums=recent&type={$this->request['type']}" href='#'>{$this->lang->words['as_recent_albums']}</a></li>
+			</ul>
+		</div>
+		<div class='ipsVerticalTabbed_content ipsLayout_content ipsBox_container' style='position: relative' id='albumSelector_content'>
+			{$albums}
+		</div>
+	</div>
+</div>]]></template_content>
+      <template_name>albumSelector</template_name>
+      <template_data>$albums, $recents, $albumData=array()</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<if test="isSearch:|:$this->request['albums'] == 'search'">
+<div class='ipsPad row2 ipsText_small desc ipsForm_center'>
+	{$this->lang->words['filters_search']}
+	<select id='searchType'>
+		<option value='member' id='searchType_member' <if test="$this->request['searchType']=='member'">selected='selected'</if>>{$this->lang->words['filters_owners_name']}</option>
+		<option value='album' id='searchType_album' <if test="$this->request['searchType']=='album'">selected='selected'</if>>{$this->lang->words['filters_albums_name']}</option>
+		<option value='parent' id='searchType_parent' <if test="$this->request['searchType']=='parent'">selected='selected'</if>>{$this->lang->words['filters_albums_parent']}</option>
+	</select>
+	<select id='searchMatch'>
+		<option value='is' <if test="$this->request['searchMatch']=='is'">selected='selected'</if>>{$this->lang->words['filters_is']}</option>
+		<option value='contains' <if test="$this->request['searchMatch']=='contains'">selected='selected'</if>>{$this->lang->words['filters_contains']}</option>
+	</select>
+	<input type='text' size='20' class='input_text ipsText_small' id='searchText' value='{$_REQUEST['searchText']}' />
+	<select id='searchIsGlobal'>
+		<option value='0' id='searchIsGlobal_0' <if test="$this->request['searchIsGlobal']=='0'">selected='selected'</if>>{$this->lang->words['as_search_member']}</option>
+		<option value='1' id='searchIsGlobal_1' <if test="$this->request['searchIsGlobal']=='1'">selected='selected'</if>>{$this->lang->words['as_search_global']}</option>
+	</select>
+	<select id='searchSort'>
+		<option value='date' id='searchSort_date' <if test="$this->request['searchSort']=='date'">selected='selected'</if>>{$this->lang->words['filters_sort_upload']}</option>
+		<option value='name' id='searchSort_name' <if test="$this->request['searchSort']=='name'">selected='selected'</if>>{$this->lang->words['filters_sort_name']}</option>
+		<option value='images' id='searchSort_images' <if test="$this->request['searchSort']=='images'">selected='selected'</if>>{$this->lang->words['filters_sort_images']}</option>
+		<option value='comments' id='searchSort_comments' <if test="$this->request['searchSort']=='comments'">selected='selected'</if>>{$this->lang->words['filters_sort_comments']}</option>
+	</select>
+	<select id='searchDir'>
+		<option value='desc' id='searchDir_desc' <if test="$this->request['searchDir']=='desc'">selected='selected'</if>>{$this->lang->words['filters_desc']}</option>
+		<option value='asc' id='searchDir_asc' <if test="$this->request['searchDir']=='asc'">selected='selected'</if>>{$this->lang->words['filters_asc']}</option>
+	</select>
+	<input type='button' id='searchGo' value='{$this->lang->words['filters_update']}' class='ipsButton_secondary' />
+</div>
+</if>
+<if test="hasNav:|:$navAlbums">
+<div class="ipsPad">
+	<foreach loop="nav:$navAlbums as $data">
+		<a href='#' class="ipsText_small desc" data-album-pane-update="albums=search&searchType=parent&searchText={$data['album_id']}&searchisGlobal={$album['album_is_global']}">{$data['album_name']}</a>
+		<if test="separator:|:!$data['_last']">
+			<span class='ipsText_small desc'>&rarr;</span>
+		</if>
+	</foreach>
+</div>
+</if>
+<if test="hazAlbums:|:count($albums)">
+	<table class='ipb_table'>
+		<if test="canMoveToRoot:|:$this->request['type'] == 'createGlobalAlbum' || ($albumData['album_is_global'] && ( $this->request['moderate'] || IN_ACP ) && ( $this->request['type'] != 'moveImages' ))">
+			<tr class='row2'>
+				<td width='1%'>&nbsp;</td>
+				<td>
+					<strong>{$this->lang->words['as_root']}</strong>
+					<div class='ipsType_small desc'>{$this->lang->words['as_select_root']}</div>
+				</td>
+				<td width='1%'>
+					<input type='button' data-album-select-album-id="0" class='ipsButton_secondary' value='{$this->lang->words['as_select']}' />
+				</td>
+			</tr>
+		</if>
+		<foreach loop="outer:$albums as $id => $album">
+			<tr <if test="isThisAlbum:|:$album['album_id'] == $this->request['album_id']">class='row2'</if>>
+				<td width='1%'><div class='ipsUserPhoto'>{parse gallery_resize="$album['thumb']" width="30"}</div></td>
+				<td>
+					<if test="hasParents:|:$album['_parents']">
+						<foreach loop="parents:$album['_parents'] as $xid => $data">
+							<a class='ipsType_small desc' data-album-pane-update="albums=search&searchType=parent&searchText={$data['album_id']}&searchisGlobal={$album['album_is_global']}" href='#'>{$data['album_name']}</a> <span class='ipsText_small desc'>&rarr;</span>
+						</foreach>
+					</if>
+					<strong>{$album['album_name']}</strong>
+					<if test="hasChildren:|:$album['_children']">
+						<div class='ipsPad'>
+							<ul class='ipsList'>
+								<foreach loop="children:$album['_children'] as $xid => $data">
+									<li>{parse gallery_resize="$data['thumb']" width="14"} <a href='#' data-album-pane-update="albums=global&parent={$data['album_parent_id']}">{$data['album_name']}</a></li>
+								</foreach>
+							</ul>
+						</div>
+					</if>
+					<if test="isNotGlobal:|: ! $album['album_is_global'] && ( $this->memberData['member_id'] != $album['album_owner_id'] )">
+						<div class='ipsType_small desc'>{$this->lang->words['acp_albums_owners_name']} <a href='#'>{$album['owners_members_display_name']}</a></div>
+					</if>
+					<if test="hasImages:|:$album['album_count_imgs']">
+						<div class='ipsType_smaller desc lighter'>{parse expression="sprintf( $this->lang->words['as_images_comments'], $album['album_count_imgs'], $album['album_count_comments'] )"} {$this->lang->words['as_last_upload']} {parse date="$album['album_last_img_date']" format="tiny"}</div>
+					</if>
+				</td>
+				<td width='1%'>
+					<if test="restrictUpload:|: isset($album['_canUpload']) && ! $album['_canUpload']">
+						&nbsp;
+					<else />
+						<input type='button' data-album-select-album-id="{$album['album_id']}" class='ipsButton_secondary' value='{$this->lang->words['as_select']}' />
+					</if>
+				</td>
+			</tr>
+		</foreach>
+	</table>
+<else />
+	<div class='ipsPad desc'>{$this->lang->words['as_no_albums_show']}</div>
+</if>
+<script type="text/javascript">
+	ipb.gallery_albumChooser.setParam( 'type'     , '{$this->request['type']}' );
+	ipb.gallery_albumChooser.setParam( 'albums'   , '<if test="$isGlobal">global<else />member</if>' );
+	ipb.gallery_albumChooser.setParam( 'moderate' , '{$this->request['moderate']}' );
+	ipb.gallery_albumChooser.setParam( 'album_id' , '{$this->request['album_id']}' );
+	ipb.gallery_albumChooser.setParam( 'member_id', '{$this->request['member_id']}' );
+</script>]]></template_content>
+      <template_name>albumSelectorPanel</template_name>
+      <template_data>$albums, $filters, $navAlbums, $albumData</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<script type="text/javascript">
+ ipb.gallery.inSection = 'albumOverview';
+ ipb.gallery.albumId   = parseInt({$album['album_id']});
+ ipb.gallery.albumUrl  = "{parse url="app=gallery&amp;album={$album['album_id']}" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}";
+</script>
+{parse js_module="gallery_albumchooser"}
+<if test="hasFollow:|:$follow">
+	{$follow}
+</if>
+{$cover['tag']}
+<div class='ipsBox_withphoto'>
+	<if test="! $this->registry->gallery->helper('albums')->isGlobal($album)">
+		<span class='rating ipsType_smaller'>
+			<strong>{$this->lang->words['rate_album']}</strong>&nbsp;&nbsp;
+			<if test="guestrate1:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=1&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_1' title='{$this->lang->words['rate_file_1']}'></if><if test="filerate1:|:$album['album_rating_aggregate'] >= 1"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate1:|:$this->memberData['member_id']"></a></if>
+			<if test="guestrate2:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=2&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_2' title='{$this->lang->words['rate_file_2']}'></if><if test="filerate2:|:$album['album_rating_aggregate'] >= 2"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate2:|:$this->memberData['member_id']"></a></if>
+			<if test="guestrate3:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=3&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_3' title='{$this->lang->words['rate_file_3']}'></if><if test="filerate3:|:$album['album_rating_aggregate'] >= 3"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate3:|:$this->memberData['member_id']"></a></if>
+			<if test="guestrate4:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=4&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_4' title='{$this->lang->words['rate_file_4']}'></if><if test="ralerate4:|:$album['album_rating_aggregate'] >= 4"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate4:|:$this->memberData['member_id']"></a></if>
+			<if test="guestrate5:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=5&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_5' title='{$this->lang->words['rate_file_5']}'></if><if test="filerate5:|:$album['album_rating_aggregate'] >= 5"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate5:|:$this->memberData['member_id']"></a></if>
+			<span id='rating_text' class='desc'>
+				<if test="filevotes:|:$album['album_rating_count'] > 0">{$album['album_rating_count']} {$this->lang->words['votes_cnt']}</if>
+				<if test="fileyourvote:|:$album['_youRated']">({$this->lang->words['you_voted']} {$album['_youRated']})</if>
+			</span>
+			<if test="checkGuestRate:|:$this->memberData['member_id']">
+				<script type='text/javascript'>
+					rating = new ipb.rating( 'album_rate_', { 
+										url: 		'{parse url="app=gallery&amp;module=ajax&amp;section=rate&amp;id={$album['album_id']}&where=album" base="public"}&md5check=' + ipb.vars['secure_hash'],
+										cur_rating: {parse expression="intval($album['album_rating_aggregate'])"},
+										rated: 		<if test="filejsvotes:|:$album['album_rating_count']">1<else />0</if>,
+										allow_rate: <if test="filejsallowvote:|:$this->registry->gallery->helper('rate')->canRate($album) !== false && $this->memberData['member_id'] != $album['album_owner_id']">1<else />0</if>
+									  } );
+				</script>
+			</if>
+		</span>
+	</if>
+	<h1 class='ipsType_pagetitle'>
+		<if test="isPrivate:|:$this->registry->gallery->helper('albums')->isPrivate($album) === true">
+			<span class='ipsBadge ipsBadge_red reset_cursor'>{$this->lang->words['private_ucfirst']}</span>
+		</if>
+		{$album['album_name']}
+	</h1>
+	<if test="hasRules:|:$album['album_description'] || $album['album_g_rules_expanded']['text']">
+		<div class='ipsType_pagedesc forum_rules'>
+			<if test="hasExpandedTextRules:|:$album['album_g_rules_expanded']['text']">
+				<strong>{$album['album_g_rules_expanded']['title']}</strong>
+				{$album['album_g_rules_expanded']['text']}
+			<else />
+				{$album['album_description']}
+			</if>
+		</div>
+	</if>
+</div>
+<div class='topic_controls clear clearfix'>
+	<if test="hasPagesTop:|:$album['_pages']">
+		{$album['_pages']}
+	</if>
+	<ul class='topic_buttons'>
+		<if test="canIuploadDearSirWellCanI:|:$this->registry->gallery->helper('albums')->isUploadable($album) || $this->registry->gallery->helper('albums')->canCreateSubAlbumInside($album)">
+			<li><a href='{parse url="app=gallery&amp;module=post&amp;section=image&amp;album_id={$album['album_id']}" base="public"}' title='{$this->lang->words['upload']}'>{$this->lang->words['upload']}</a></li>
+		</if>
+		<li class='non_button'><a href="{parse url="app=gallery&amp;module=images&amp;section=slideshow&amp;album={$album['album_id']}" base="public"}">{$this->lang->words['ss_title']}</a></li>
+		<li class='non_button'><a href='{parse url="app=gallery&amp;album={$album['album_id']}&amp;display=detail" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}'>{$this->lang->words['detail_ucfirst']}</a></li>
+	</ul>
+</div>
+<div class='ipsLayout ipsLayout_withright ipsLayout_hugeright'>
+	
+	<div class='ipsLayout_right'>
+		<div class='ipsBox'>
+			<div class='ipsBox_container ipsPad clearfix'>
+				<if test="boxAlbumIsGlobal:|:$this->registry->gallery->helper('albums')->isGlobal($album)">
+					<span class='desc'>
+						<a href="{parse url="app=gallery&amp;module=albums&amp;section=rss&amp;album={$album['album_id']}" base="public" template="rssalbum" seotitle="{$album['album_name_seo']}"}"><img src="{$this->settings['img_url']}/rss-mini.png" alt="{$this->lang->words['rss_feed']}" /></a> {$album['album_count_imgs']} {$this->lang->words['images_lower']}, {$album['album_count_comments']} {$this->lang->words['comments_lower']}
+					</span>
+				<else />
+					<ul class='ipsList_withmediumphoto'>
+						<li class='clearfix'>
+							<if test="uploadedByMember:|:$album['owner']['member_id']">
+								<a href='{parse url="showuser={$album['owner']['member_id']}" seotitle="{$album['owner']['members_seo_name']}" template="showuser" base="public"}' class='ipsUserPhotoLink left'>
+									<img src='{$album['owner']['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_medium' />
+								</a>
+							<else />
+								<div class='left'>{IPSMember::buildNoPhoto(0, 'small' )}</div>
+							</if>
+							<div class='list_content'>
+								{$this->lang->words['by_ucfirst']} {parse template="userHoverCard" group="global" params="$album['owner']"} <span class='ipsType_smaller'>(<a href="{parse url="app=gallery&amp;user={$album['owner']['member_id']}" seotitle="{$album['owner']['members_seo_name']}" template="useralbum" base="public"}">{$this->lang->words['view_all_albums']}</a>)</span>
+								<br /><br />
+								<span class='desc'>
+									<if test="hasLovelyRss:|:$this->registry->gallery->helper('albums')->isPrivate($album) !== true">
+										<a href="{parse url="app=gallery&amp;module=albums&amp;section=rss&amp;album={$album['album_id']}" base="public" template="rssalbum" seotitle="{$album['album_name_seo']}"}"><img src="{$this->settings['img_url']}/rss-mini.png" alt="{$this->lang->words['rss_feed']}" /></a>
+									</if>
+									{$album['album_count_imgs']} {$this->lang->words['images_lower']}, {$album['album_count_comments']} {$this->lang->words['comments_lower']}
+								</span>
+							</div>
+						</li>
+					</ul>
+					
+					<if test="canDoStuff:|:$album['_canEdit'] || $album['_canDelete']">
+						<br class='clear' />
+						<ul class='ipsList_inline right'>
+							<if test="canEditAlbum:|:$album['_canEdit']">
+								<li><a href="{parse url="app=gallery&amp;albumedit={$album['album_id']}" base="public" template="editalbum" seotitle="{$album['album_name_seo']}"}" class='ipsButton_secondary'>{$this->lang->words['edit_ucfirst']}</a></li>
+							</if>
+							<if test="canDeleteAlbum:|:$album['_canDelete']">
+								<li><a href="javascript:void(0);" base="public"}" album-id="{$album['album_id']}" class='ipsButton_secondary important _albumDelete'>{$this->lang->words['delete_ucfirst']}</a></li>
+							</if>
+						</ul>
+					</if>
+				</if>
+			</div>
+		</div>
+		<if test="hasKids:|:is_array( $subAlbums ) && count($subAlbums)">
+			<br />
+			<div class='ipsBox_container'>
+				{parse template="miniAlbumStripHorizontal" group="gallery_albums" params="$subAlbums, $this->lang->words['sub_albums'], $album, $childrenRootCount"}
+			</div>
+		</if>
+	</div>
+	
+	<div class='ipsLayout_content'>
+		<div class='maintitle ipsFilterbar'>
+			<ul class='ipsList_inline ipsType_smaller'>
+				<li <if test="$this->request['sortby'] == 'idate' AND $this->request['sortorder'] == 'DESC'">class='active'</if>><a href='{parse url="app=gallery&amp;album={$album['album_id']}&amp;sortby=idate" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}'>{$this->lang->words['most_recent']}</a></li>
+				<li <if test="$this->request['sortby'] == 'views' AND $this->request['sortorder'] == 'DESC'">class='active'</if>><a href='{parse url="app=gallery&amp;album={$album['album_id']}&amp;sortby=views" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}'>{$this->lang->words['most_viewed']}</a></li>
+				<li <if test="$this->request['sortby'] == 'rating' AND $this->request['sortorder'] == 'DESC'">class='active'</if>><a href='{parse url="app=gallery&amp;album={$album['album_id']}&amp;sortby=rating" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}'>{$this->lang->words['most_popular']}</a></li>
+				<if test="enabledComments:|:$album['album_allow_comments']">
+					<li <if test="$this->request['sortby'] == 'comments' AND $this->request['sortorder'] == 'DESC'">class='active'</if>><a href='{parse url="app=gallery&amp;album={$album['album_id']}&amp;sortby=comments" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}'>{$this->lang->words['most_comments']}</a></li>
+				</if>
+				<li <if test="$this->request['sortby'] == 'name' AND $this->request['sortorder'] == 'ASC'">class='active'</if>><a href='{parse url="app=gallery&amp;album={$album['album_id']}&amp;sortby=name&amp;sortorder=ASC" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}'>{$this->lang->words['sort_by_name']}</a></li>
+			</ul>
+		</div>
+		<div class='ipsBox'>
+			<div class='ipsBox_container ipsPad'>
+				<if test="hasImages:|:is_array($images) && count($images)">
+					<ul class='ipsList_inline ipsList_reset wrap'>
+						<foreach loop="images:$images as $id => $data">
+							<li>
+								<if test="moderate:|:$album['_canModerate']"><input type="checkbox" name="modBox_{$data['id']}" id="modBox_{$data['id']}" value="1" class="albumModBox" /></if>
+								<if test="comments:|:$data['comments']"><div class='small'>{$data['comments']}</div></if>
+								{parse gallery_resize="$data['thumb']" width="thumb_large"}
+							</li>
+						</foreach>
+					</ul>
+				<else />
+					{$this->lang->words['category_no_images']}
+				</if>
+			</div>
+		</div>
+		<if test="hasPagesBottom:|:$album['_pages']">
+			<div class='ipsPad'>{$album['_pages']}</div>
+			<br />
+		</if>
+	</div>
+	
+</div>
+<br class='clear' />
+<if test="hasShareLinks:|:$this->settings['sl_enable']">
+	<div class='ipsPad'>
+		{IPSLib::shareLinks( $album['album_name'], array( 'skip' => array( 'print', 'download' ) ) )}
+	</div>
+	<br />
+</if>
+<if test="albumMod:|:$album['_canModerate']">
+	{parse template="inlineAlbumModeration" group="gallery_albums" params=""}
+</if>]]></template_content>
+      <template_name>albumView</template_name>
+      <template_data><![CDATA[$cover, $images, $album, $children, $parents, $follow='', $subAlbums='', $childrenRootCount]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<script type="text/javascript">
+ ipb.gallery.inSection = 'albumDetailView';
+ ipb.gallery.albumId   = parseInt({$album['album_id']});
+ ipb.gallery.albumUrl  = "{parse url="app=gallery&amp;album={$album['album_id']}" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}";
+</script>
+{parse js_module="gallery_albumchooser"}
+<if test="hasFollow:|:$follow">
+	{$follow}
+</if>
+{$cover['tag']}
+<div class='ipsBox_withphoto'>
+	<if test="! $this->registry->gallery->helper('albums')->isGlobal($album)">
+		<span class='rating ipsType_smaller'>
+			<strong>{$this->lang->words['rate_album']}</strong>&nbsp;&nbsp;
+			<if test="guestrate1:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=1&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_1' title='{$this->lang->words['rate_file_1']}'></if><if test="filerate1:|:$album['album_rating_aggregate'] >= 1"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate1:|:$this->memberData['member_id']"></a></if>
+			<if test="guestrate2:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=2&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_2' title='{$this->lang->words['rate_file_2']}'></if><if test="filerate2:|:$album['album_rating_aggregate'] >= 2"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate2:|:$this->memberData['member_id']"></a></if>
+			<if test="guestrate3:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=3&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_3' title='{$this->lang->words['rate_file_3']}'></if><if test="filerate3:|:$album['album_rating_aggregate'] >= 3"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate3:|:$this->memberData['member_id']"></a></if>
+			<if test="guestrate4:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=4&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_4' title='{$this->lang->words['rate_file_4']}'></if><if test="ralerate4:|:$album['album_rating_aggregate'] >= 4"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate4:|:$this->memberData['member_id']"></a></if>
+			<if test="guestrate5:|:$this->memberData['member_id'] && $this->memberData['member_id'] != $album['album_owner_id']"><a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=album&amp;id={$album['album_id']}&amp;rating=5&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_5' title='{$this->lang->words['rate_file_5']}'></if><if test="filerate5:|:$album['album_rating_aggregate'] >= 5"><img src="{$this->settings['img_url']}/star.png" alt='*' class='rate_img' /><else /><img src="{$this->settings['img_url']}/star_off.png" alt='*' class='rate_img' /></if><if test="endguestrate5:|:$this->memberData['member_id']"></a></if>
+			<span id='rating_text' class='desc'>
+				<if test="filevotes:|:$album['album_rating_count'] > 0">{$album['album_rating_count']} {$this->lang->words['votes_cnt']}</if>
+				<if test="fileyourvote:|:$album['_youRated']">({$this->lang->words['you_voted']} {$album['_youRated']})</if>
+			</span>
+			<if test="checkGuestRate:|:$this->memberData['member_id']">
+				<script type='text/javascript'>
+					rating = new ipb.rating( 'album_rate_', { 
+										url: 		'{parse url="app=gallery&amp;module=ajax&amp;section=rate&amp;id={$album['album_id']}&where=album" base="public"}&md5check=' + ipb.vars['secure_hash'],
+										cur_rating: {parse expression="intval($album['album_rating_aggregate'])"},
+										rated: 		<if test="filejsvotes:|:$album['album_rating_count']">1<else />0</if>,
+										allow_rate: <if test="filejsallowvote:|:$this->registry->gallery->helper('rate')->canRate($album) !== false && $this->memberData['member_id'] != $album['album_owner_id']">1<else />0</if>
+									  } );
+				</script>
+			</if>
+		</span>
+	</if>
+	<h1 class='ipsType_pagetitle'>
+		<if test="isPrivate:|:$this->registry->gallery->helper('albums')->isPrivate($album) === true">
+			<span class='ipsBadge ipsBadge_red reset_cursor'>{$this->lang->words['private_ucfirst']}</span>
+		</if>
+		{$album['album_name']}
+	</h1>
+	<if test="hasRules:|:$album['album_description'] || $album['album_g_rules_expanded']['text']">
+		<div class='ipsType_pagedesc forum_rules'>
+			<if test="hasExpandedTextRules:|:$album['album_g_rules_expanded']['text']">
+				<strong>{$album['album_g_rules_expanded']['title']}</strong>
+				{$album['album_g_rules_expanded']['text']}
+			<else />
+				{$album['album_description']}
+			</if>
+		</div>
+	</if>
+</div>
+<div class='topic_controls clear'>
+	<if test="hasPagesTop:|:! empty( $album['_pages'] )">
+		{$album['_pages']}
+	</if>
+	<ul class='topic_buttons'>
+		<if test="canIuploadDearSirWellCanI:|:$this->registry->gallery->helper('albums')->isUploadable($album) || $this->registry->gallery->helper('albums')->canCreateSubAlbumInside($album)">
+			<li><a href='{parse url="app=gallery&amp;module=post&amp;section=image&amp;album_id={$album['album_id']}" base="public"}' title='{$this->lang->words['upload']}'>{$this->lang->words['upload']}</a></li>
+		</if>
+		<li class='non_button'><a href="{parse url="app=gallery&amp;module=images&amp;section=slideshow&amp;album={$album['album_id']}" base="public"}">{$this->lang->words['ss_title']}</a></li>
+		<li class='non_button'><a class='on' href='{parse url="app=gallery&amp;album={$album['album_id']}&amp;display=overview" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}'>{$this->lang->words['overview_ucfirst']}</a></li>
+	</ul>
+</div>
+<br />
+<if test="hasKids:|:array( $children ) && count( $children )">
+	<h3 class="maintitle">{$album['album_name']} {$this->lang->words['album_detail_subalbums']}</h3>
+	<div class='ipsBox'>
+		<div class='ipsBox_container'>
+			<table class='ipb_table'>
+				<foreach loop="results:$children as $data">
+					<tr>
+						<td class='col_c_icon short altrow'>
+							{parse gallery_resize="$data['thumb']" width="thumb_small"}
+						</td>
+						<td>
+							<span class='right'>
+								<foreach loop="ratingLoop:array(1,2,3,4,5) as $_rating">
+									<if test="albumrate:|:$data['album_rating_aggregate'] >= $_rating">{parse replacement="rate_on"}<else />{parse replacement="rate_off"}</if>
+								</foreach>
+							</span>
+							
+							<h4>
+								<if test="albumIsGlobal:|:$this->registry->gallery->helper('albums')->isGlobal($data)">
+									<span class='ipsBadge ipsBadge_grey reset_cursor'>{$this->lang->words['global_album']}</span>
+								</if>
+								<a href='{parse url="app=gallery&amp;album={$data['album_id']}" base="public" template="viewalbum" seotitle="{$data['album_name_seo']}"}'>{IPSText::truncate( $data['album_name'], 200)}</a>
+							</h4>
+							<if test="hasDescription:|:$data['album_description']">
+								<div class='desc lighter blend_links'>
+									{parse expression="IPSText::truncate( strip_tags( IPSText::getTextClass('bbcode')->stripAllTags( $data['album_description'] ), '<br />' ), 230 )"}
+								</div>
+							</if>
+							<if test="hasLittleWeeBabbies:|:$data['_childrenCount']">
+								<br class='clear' /><span class='right'><a href="{parse url="app=gallery&amp;browseAlbum={$data['album_id']}" base="public" template="browsealbum" seotitle="{$data['album_name_seo']}"}"><span class='ipsBadge ipsBadge_lightgrey reset_cursor'>{parse expression="sprintf( $this->lang->words['view_child_albums'], $data['_childrenCount'] )"}</span></a></span>
+							</if>
+						</td>
+						<td class='col_f_views'>
+							<ul>
+								<li>{parse format_number="$data['_totalImages']"} {$this->lang->words['images_lower']}</li>
+								<li class='views desc'>{parse format_number="$data['_totalComments']"} {$this->lang->words['comments_lower']}</li>
+							</ul>
+						</td>
+						<td class='col_f_post'>
+							<if test="albumIsMember:|:!$this->registry->gallery->helper('albums')->isGlobal($data)">
+								<a href='{parse url="showuser={$data['member']['member_id']}" seotitle="{$data['member']['members_seo_name']}" template="showuser" base="public"}' class='ipsUserPhotoLink left'>
+									<img src='{$data['member']['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_mini' />
+								</a>
+								<ul class='last_post ipsType_small'>
+									<li>{parse template="userHoverCard" group="global" params="$data['member']"}</li>
+									<li>{parse date="$data['album_last_img_date']" format="DATE"}</li>
+								</ul>
+							</if>
+						</td>
+					</tr>
+				</foreach>
+			</table>
+		</div>
+	</div>
+	<br />
+</if>
+<table class='ipb_table' id='albumDetailTable'>
+	<foreach loop="$images as $id => $image">
+		<if test="$__iteratorCount == 1 OR $__iteratorCount + 1 % 3 == 0">
+			<tr>
+		</if>
+			<td class='ipsBox_container ipsPad<if test="imageIsUnapproved:|:!$image['approved']"> moderated</if>'>
+				<h3><if test="moderate:|:$album['_canModerate']"><input type="checkbox" name="modBox_{$image['id']}" id="modBox_{$image['id']}" value="1" class="albumModBox right" /></if>{$image['caption']}</h3>
+				<br />
+				<div class='short'>{$image['_smallTag']}</div>
+				<br />
+				<div class='desc'>
+					<p class='short'><em><if test="imageHasDescription:|:$image['_descriptionParsed']">{$image['_descriptionParsed']}<else />&nbsp;</if></em></p>
+					<br />
+					{$this->lang->words['uploaded_ucfirst']}: {parse date="$image['idate']" format="short"}
+					<if test="$image['member_id']"><br />{$this->lang->words['by_ucfirst']} {parse template="userHoverCard" group="global" params="array('member_id' => $image['member_id'], 'members_display_name' => $image['members_display_name'], 'members_seo_name' => $image['members_seo_name'] )"}</strong> (<a href="{parse url="app=gallery&amp;user={$image['member_id']}" seotitle="{$image['members_seo_name']}" template="useralbum" base="public"}">{$this->lang->words['view_all_albums']}</a>)</if>
+					<br />{parse expression="intval($image['comments'])"} {$this->lang->words['comments_lower']} &middot; {parse expression="intval($image['views'])"} {$this->lang->words['views_lower']}
+				</div>
+			</td>
+		<if test="$__iteratorCount % 3 == 0">
+			</tr>
+		</if>
+	</foreach>
+	<if test="count( $images ) % 3">
+		<foreach loop="array_fill( 0, 3 - ( count( $images ) % 3 ), '' ) as $foo">
+			<td class='ipsBox_container ipsPad'>&nbsp;</td>
+		</foreach>
+		</tr>
+	</if>
+</table>
+<if test="hasPagesBottom:|:! empty( $album['_pages'] )">
+	<div class='ipsPad'>{$album['_pages']}</div>
+	<br />
+</if>
+<br />
+<if test="hasShareLinks:|:$this->settings['sl_enable']">
+	<div class='ipsPad'>
+		{IPSLib::shareLinks( $album['album_name'], array( 'skip' => array( 'print', 'download' ) ) )}
+	</div>
+	<br />
+</if>
+<if test="albumMod:|:$album['_canModerate']">
+	{parse template="inlineAlbumModeration" group="gallery_albums" params=""}
+</if>]]></template_content>
+      <template_name>albumViewDetail</template_name>
+      <template_data><![CDATA[$cover, $images, $album, $children, $parents, $follow='', $subAlbums='', $childrenRootCount]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<style type="text/css">
+.inlineimage img {
+	float: right;
+	width: 30px;
+	height: 30px;
+	padding-left: 5px;
+}
+</style>
+<php>
+	if ( $this->registry->gallery->helper('albums')->isContainerOnly( $album ) OR $this->registry->gallery->helper('albums')->isGlobal( $album ) )
+	{
+		$children     = $this->registry->gallery->helper('albums')->fetchAlbumChildren( $album['album_id'], array( 'isViewable' => true, 'limit' => 50, 'sortKey' => 'date', 'sortOrder' => 'desc' ) );
+		$this->_recentImages[ $album['album_id'] ] = $this->registry->gallery->helper('image')->fetchImages( $this->memberData['member_id'], array( 'albumId' => array_keys( $children ), 'limit' => 8, 'sortKey' => 'date', 'sortOrder' => 'desc' ) );
+	}
+</php>
+<tr class='{parse striping="catTable"}'>
+	<td class='altrow' align='center'>
+		{parse gallery_resize="$album['thumb']" width="30"}
+	</td>
+	<td>
+		<h4><a href="{parse url="app=gallery&amp;album={$album['album_id']}" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}">{$this->lang->words['album_ucfirst']} {$album['album_name']}</a></h4>
+		<p class='desc'>{$album['album_description']}</p>
+	</td>
+	<if test="isContainerOnly:|:$this->registry->gallery->helper('albums')->isContainerOnly( $album ) OR $this->registry->gallery->helper('albums')->isGlobal( $album )">
+		<td class='altrow stats' colspan="2" style='overflow:hidden'>
+		<if test="is_array( $this->_recentImages[ $album['album_id'] ] ) && count($this->_recentImages[ $album['album_id'] ])">
+			<foreach loop="$this->_recentImages[ $album['album_id'] ] as $id => $data">
+				<div class='inlineimage'>{parse gallery_resize="$data['thumb']" width="thumb_tiny"}</div>
+			</foreach>
+		</if>
+		</td>
+	<else />
+	<td class='altrow stats'>
+		<ul>
+			<li>{$album['album_count_imgs']} {$this->lang->words['images_lower']}</li>
+			<li>{$album['album_count_comments']} {$this->lang->words['comments_lower']}</li>
+		</ul>
+	</td>
+	<td>
+		<ul class='last_post'>
+			<if test="hideLastInfo:|:$album['album_last_img_date']">
+				<li>{parse date="$album['album_last_img_date']" format="LONG"}</li>
+			</if>
+		</ul>
+	</td>
+	</if>
+</tr>]]></template_content>
+      <template_name>boardIndexEntry</template_name>
+      <template_data>$album</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<if test="hasKids:|:$hasKids">
+	<h3>{$this->lang->words['delete_album']}</h3>
+	<div class='pad center'>
+	 {$this->lang->words['mod_alb_del_not_able_children']}
+	</div>
+<else />
+<form action="{$this->settings['base_url']}app=gallery&module=albums&section=album&amp;do=delete&amp;album={$data['album_id']}" method="post" id="albumDeleteForm_{$data['album_id']}">
+	<input type='hidden' name='auth_key' value='{$this->member->form_hash}' />
+	{$data['hiddens']}
+	{$data['errors']}
+	
+	<h3>{$this->lang->words['delete_album']}</h3>
+	<div class='ipsBox short'>
+	 {$this->lang->words['mod_alb_del_title']}
+	 <if test="hasAlbums:|:$data['options'] !== false">
+	 	<div style="width:auto; display:inline-block; margin: 0 auto; text-align: left;" class='ipsPad'>
+	 	 	<input type="radio" name="doDelete" value="0" checked="checked" /> {$this->lang->words['mod_alb_del_move']}
+		 	<select name='move_to_album_id' id='move_to_album_id' class='input_select'>
+				{$data['options']}
+			</select>
+			<br />
+			<input type="radio" name="doDelete" value="1" /> {$this->lang->words['mod_alb_del_desc']}
+		</div>
+	 <else />
+	 	<input type="hidden" name="doDelete" value="1" />
+	 </if>
+	 <br /><br />
+	 <input type='submit' class="input_submit" value="{$this->lang->words['mod_alb_del_go']}" />
+	</div>
+</form>
+</if>]]></template_content>
+      <template_name>deleteAlbumDialogue</template_name>
+      <template_data>$data=array(), $hasKids=false</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<fieldset class='row1'>
+		<h3>{$this->lang->words['profile_photo_album']}</h3>
+		
+		<foreach loop="$albumImages as $r">
+			<div class='avatar_gallery'>
+				<a href='{parse url="app=gallery&amp;module=images&amp;section=profilephoto&amp;id={$r['id']}&amp;return=usercp" base="public"}' title='{$this->lang->words['profile_photo_thumb_title']}'><img src="{$r['_image']}" alt="" /></a>
+			</div>
+		</foreach>
+		<p>&nbsp;</p>
+		<p align='right'><a href='{parse url="app=gallery&amp;module=user&amp;user={$this->memberData['member_id']}&amp;do=view_album&amp;album={$albumID}" base="public"}'>{$this->lang->words['profile_photo_view_album']}</a></p>
+	</fieldset>]]></template_content>
+      <template_name>galleryPhotoAlbum</template_name>
+      <template_data>$albumImages, $albumID</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<script type='text/javascript'>
+	albumSelectorUpdate = '{"field": "albumModBox_moveTo","div": "asDiv"}';
+	ipb.templates['album_moderation'] = new Template("<div id='album_moderate_box' class='ipsFloatingAction' style='display: none'><span class='desc'>{$this->lang->words['album_modaction_count']} </span><select name='modOptions' id='albumModAction' class='input_select'><option value='approve'>{$this->lang->words['mod_img_approve']}</option><option value='unapprove'>{$this->lang->words['mod_img_unapprove']}</option><option value='delete'>{$this->lang->words['mod_img_delete']}</option><option value='move'>{$this->lang->words['mod_img_move']}</option></select>&nbsp;&nbsp;<input type='button' class='input_submit' id='submitModAction' value='{$this->lang->words['jmp_go']}' /><div id='albumModBox_move' class='desc ipsPad_half short' style='display:none'></div><div class='desc ipsPad_half short'><input type='checkbox' name='albumModSelectAll' id='albumModSelectAll' value='1' #{checked} /> <label for='albumModSelectAll'>{$this->lang->words['mod_select_all']}</label></p></div>");
+	ipb.templates['album_img_moveto'] = new Template("{$this->lang->words['album_modaction_moveto']}: <input type='hidden' id='albumModBox_moveTo' value=0 /><div style='display:none' class='albumSelected' id='asDiv'></div><a class='ipsButton_secondary' data-album-selector-auto-update='" + albumSelectorUpdate + "' data-album-selector='type=moveImages&moderate=1&album_id=#{album_id}'>{$this->lang->words['as_select_album']}</a>");
+</script>]]></template_content>
+      <template_name>inlineAlbumModeration</template_name>
+      <template_data/>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[{parse striping="gallglobal" classes="row1,row2"}
+<div class='general_box'>
+	<if test="hasTitle:|:$title"><h3>{$title}</h3></if>
+	<if test="noAlbums:|:! count( $albums ) OR ! is_array( $albums )">
+		<div class='ipsPad'>{$this->lang->words['albums_none_to_see']}</div>
+	<else />
+		<ul>
+			<foreach loop="$albums as $i => $album">
+				<li class='{parse striping="gallglobal"} clear'>
+					<div class='album horizontal'>
+						{parse gallery_resize="$album['thumb']" width="thumb_small"}
+						<p>
+							<if test="terabyteWillComplainIfIDontAddThisHookId:|:$this->registry->gallery->helper('albums')->isPrivate($album)">
+								<span class='ipsBadge ipsBadge_red reset_cursor'>{$this->lang->words['private_ucfirst']}</span>
+							</if>
+							<a href='{parse url="app=gallery&amp;album={$album['album_id']}" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}'>{$album['album_name']}</a>
+						</p>
+						<if test="hasSubChildren:|:is_array($album['_children']) && count($album['_children'])">
+							{parse template="miniAlbumStripSubAlbums" group="gallery_albums" params="$album['_children'], $album"}
+						</if>
+						<if test="isGlobal:|:$album['album_is_global']">
+							<if test="notContainer:|:is_array( $album['_latestImages'] )">
+								<ol class='ipsList_inline ipsType_small' style='margin-left:76px'>
+								<foreach loop="latestImgs:$album['_latestImages'] as $id => $img">
+									{parse gallery_resize="$img['thumb']" width="teeny" class="ipsUserPhoto"}
+								</foreach>
+								</ol>
+								<if test="hasSubChildren:|:is_array($album['_children']) && count($album['_children'])">
+									<br class='clear' /><br />
+								</if>
+							</if>
+						<else />
+							<if test="hasCount:|:$album['album_count_imgs']">
+								<br />
+								<div class='ipsType_small desc'>
+								{parse expression="intval($album['album_count_imgs'])"} {$this->lang->words['total_images']}
+								<br />{$this->lang->words['last_ucfirst']}: {parse date="$album['album_last_img_date']" format="short"}
+								</div>
+							</if>
+						</if>
+					</div>
+				</li>
+			</foreach>
+			<if test="hasmore:|:$beforeTrimCount && ( $beforeTrimCount > count( $albums ) )">
+				<li class='{parse striping="gallglobal"} desc showMore clear ipsPad'>
+					<a href="{parse url="app=gallery&amp;browseAlbum={$parent['album_id']}" seotitle="{$parent['album_name_seo']}" template="browsealbum" base="public"}">{$this->lang->words['show_all_dots']}</a>
+				</li>
+			</if>
+		</ul>
+	</if>
+</div>]]></template_content>
+      <template_name>miniAlbumStripHorizontal</template_name>
+      <template_data><![CDATA[$albums, $title='', $parent=array(), $beforeTrimCount=0]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<php>
+$count         = count( $albums );
+$this->_lang   = '';
+if ( $count > 5 )
+{
+	$albums      = array_slice( $albums, 0, 5, true );
+	$this->_lang = sprintf( $this->lang->words['gal_and_n_more'], ( $count - 5 ) );
+}
+$ids           = array_keys( $albums );
+$this->_lastId = array_pop( $ids );
+</php>
+<ol class='ipsList_inline ipsType_small sub_albums' id='subalbums_{$parent['album_id']}'>
+	<foreach loop="subAlbums:$albums as $id => $album">
+		<li>
+			<a href="{parse url="app=gallery&amp;album={$album['album_id']}" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}">{$album['album_name']}</a><if test="isNotLast:|: $album['album_id'] != $this->_lastId">,</if>
+		</li>
+		<if test="hasMore:|:$this->_lang && ($album['album_id'] == $this->_lastId )">
+			<li><a href="{parse url="app=gallery&amp;album={$parent['album_id']}" seotitle="{$parent['album_name_seo']}" template="viewalbum" base="public"}">{$this->_lang}</a></li>
+		</if>
+	</foreach>
+</ol>]]></template_content>
+      <template_name>miniAlbumStripSubAlbums</template_name>
+      <template_data>$albums, $parent</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[{parse striping="recentComments" classes="row1,row2"}
+<div class='general_box'>
+	<if test="hasTitle:|:$title"><h3>{$title}</h3></if>
+	
+	<ul class='ipsList_withmediumphoto ipsPad_half'>
+		<foreach loop="imagesLoop:$images as $i => $image">
+			<li class='{parse striping="recentComments"} clear ipsPad_half'>
+				<span class='left' data-tooltip="{$image['_commentShort']}">{parse gallery_resize="$image['thumb']" width="thumb_small" class="ipsUserPhoto"}</span>
+				<div class='list_content ipsPad_left'>
+					<strong><a href='{parse url="app=gallery&amp;image={$image['id']}" seotitle="{$image['caption_seo']}" template="viewimage" base="public"}'>{$image['caption']}</a></strong>
+					<br />
+					<div class='ipsPad_top_bottom_half desc'>
+						{$image['_commentShort']}
+					</div>
+					<div class='ipsType_small lighter blendlinks desc'>
+						<if test="hasMember:|:$image['_commentAuthor']">{parse template="userHoverCard" group="global" params="$image['_commentAuthor']"} {$this->lang->words['on']} </if>{parse date="$image['lastcomment']" format="short"}
+					</div>
+				</div>
+			</li>
+		</foreach>
+	</ul>
+</div>]]></template_content>
+      <template_name>miniLatestCommentBlock</template_name>
+      <template_data><![CDATA[$images, $title='']]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[<form action="{$this->settings['base_url']}" method="post" name="theForm">
+	<input type="hidden" name="app" value="core" />
+	<input type="hidden" name="module" value="usercp" />
+	<input type="hidden" name="tab" value="gallery" />
+	<input type="hidden" name="area" value="albums" />
+	<input type="hidden" name="do" value="{$data['type_op']}" />
+	<input type='hidden' name='auth_key' value='{$this->member->form_hash}' />
+	{$data['hiddens']}
+	{$data['errors']}
+	
+	<h3>{$this->lang->words['new_album']}</h3>
+	<fieldset class='row1'>
+		<ul>
+			<li class='field'>
+				<label for='name'>{$this->lang->words['album_name']}</label>
+				<input type="text" size="40" maxlength="60" name="album_name" id='album_name' value="{$data['album_name']}" class='input_text' />
+			</li>
+			<li class='field'>
+				<label for='desc'>{$this->lang->words['album_desc']}</label>
+				<textarea name='album_description' rows='5' cols='60' style='width:95%' id='album_description' class='input_text'>{$data['album_description']}</textarea>
+			</li>
+			<li class='field'>
+				<label for='parent'>{$this->lang->words['parent_album']}</label>
+				<input type='hidden' id='album_parent_id' name='album_parent_id' value='{$data['_parent']['album_id']}' /><div class='albumSelected' id='asDiv'>{$data['_parent']['album_name']}</div>
+				<a href='#' class='ipsButton_secondary' data-album-selector-auto-update='{"field": "album_parent_id", "div": "asDiv"}' data-album-selector='type=createMembersAlbum&album_id={$data['_parent']['album_id']}'>{$this->lang->words['as_select_album']}</a>
+			</li>
+			<li class='field'>
+				<select name="album_sort_options__key" id='album_sort_options__key'>
+					<foreach loop="array('idate','views','comments','rating', 'name' ) as $field">
+						<option value="{$field}" <if test="$album['album_sort_options__key'] == 'idate'">selected='selected'</if>>{$this->lang->words['album_sort_'.$field]}</option>
+					</foreach>
+				</select>
+				<select name="album_sort_options__dir" id='album_sort_options__dir'>
+					<foreach loop="array('asc', 'desc' ) as $field">
+						<option value="{$field}" <if test="$album['album_sort_options__dir'] == 'asc'">selected='selected'</if>>{$this->lang->words['album_sort_'.$field]}</option>
+					</foreach>
+				</select>
+			</li>
+			<if test="canPrivate:|:$this->memberData['g_album_private']">
+			<li class='field checkbox'>
+				<input type="radio" name="album_is_public" id='album_is_profile' value="0" class='input_check' <if test="$data['album_is_profile']">checked='checked'</if> />
+				<label for='album_is_profile'>{$this->lang->words['private_album']}</label>
+				<span class='desc'>{$this->lang->words['new_alb_prv_desc']}</span>
+			</li>
+			</if>
+			<li class='field checkbox'>
+				<input type="radio" name="album_is_public" id='album_is_public' value="1" class='input_check' <if test="$data['album_is_public'] == 1">checked='checked'</if> />
+				<label for='album_is_public'>{$this->lang->words['album_public_frm']}</label>
+				<span class='desc'>{$this->lang->words['album_public_chk']}</span>
+			</li>
+			<li class='field checkbox'>
+				<input type="radio" name="album_is_public" id='album_is_friends' value="2" class='input_check' <if test="$data['album_is_public'] == 2">checked='checked'</if> />
+				<label for='album_is_friends'>{$this->lang->words['album_friend_only_frm']}</label>
+				<span class='desc'>{$this->lang->words['album_friend_only_chk']}</span>
+			</li>
+			<li class='field checkbox'>
+				<input type='checkbox' value='1' class='input_check' name='album_detail_default' id='album_detail_default' />
+				<label for='album_detail_default'>{$this->lang->words['album_detail_default']}</label>
+				<span class='desc'>{$this->lang->words['album_detail_default_frm']}</span>
+			</li>
+			<li class='field checkbox' id='parentAlbumWatermark' style='display:none;'>
+				<input type='checkbox' value='1' class='input_check' name='album_watermark' id='album_watermark' />
+				<label for='album_watermark'>{$this->lang->words['album_watermark_check']}</label>
+				<span class='desc'>{$this->lang->words['album_watermark_check_desc']}</span>
+			</li>
+		</ul>
+	</fieldset>
+	<fieldset class='submit' id='fieldset_aSubmit'>
+		<input type='submit' value="{$this->lang->words['save_ucfirst']}" class='input_submit _aSubmit' /> {$this->lang->words['or']} <a href='{parse url="app=core&amp;module=usercp&amp;tab=gallery" base="public"}' title='{$this->lang->words['cancel']}' class='cancel'>{$this->lang->words['cancel']}</a>
+	</fieldset>
+</form>]]></template_content>
+      <template_name>newAlbumDialogue</template_name>
+      <template_data>$data=array()</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[{parse js_module="slideshow"}
+<script type='text/javascript'>
+	/* URL to full-size images */
+<if test="$this->settings['gallery_web_accessible'] == 'yes'">
+	ipb.slideshow.imageURL = "{$this->settings['gallery_images_url']}/";
+<else />
+	ipb.slideshow.imageURL = "{parse url="app=gallery&module=images&section=img_ctrl" base="public"}";
+</if>
+	/* The image ID's in order to be displayed */
+	var IMAGES = [ $imageIds ];
+	/* Array of image data, order doesn't matter. Key is image ID to match above array */
+	var IMAGE_DATA = \$H({
+<foreach loop="$imageData as $r">
+						{$r['id']}: { 	
+										'title': '{$r['caption']}',
+<if test="$this->settings['gallery_web_accessible'] == 'yes'">
+						 				'filename': '{$r['directory']}/{$r['masked_file_name']}',
+										'thumb': '{$r['directory']}/tn_{$r['masked_file_name']}',
+<else />
+										'filename': '&img={$r['id']}',
+										'thumb': '&img={$r['id']}&tn=1',
+</if>
+										'author': {
+													'id': {$r['member_id']},
+													'name': '{$r['members_display_name']}',
+													'photo': '{$r['_photo']['pp_small_photo']}',
+													'width': '{$r['_photo']['pp_small_width']}',
+													'height': '{$r['_photo']['pp_small_height']}'
+												}
+									}<if test="$lastID != $r['id']">,</if>
+</foreach>
+						});
+	/* URL to where user photos will be */
+	ipb.slideshow.userPhotoURL = "";
+	/* Just templates */
+	ipb.slideshow.userInfo = new Template("<div id='info_#{id}' class='info' style='display: none'><img src='#{photo}' width='#{width}' height='#{height}' class='photo' /><div class='info_body'><h1>#{title}</h1><h2>{$this->lang->words['by_ucfirst']} #{name}</h2></div>");
+	ipb.slideshow.thumbnail = new Template("<div id='thumb_#{id}' class='thumb'></div>");
+</script>
+<div id='slideshow'>
+	
+	<div id='image_info'></div>
+	<div id='thumbnail_bar'>
+		<div id='thumbnails'>
+			<div id='thumbnail_wrap'></div>
+		</div>
+		<div id='button_left'></div>
+		<div id='button_right'></div>
+	</div>
+	<div id='image_holder'></div>
+	<div id='slideshow_controls'>
+		<div id='controls'><a href='#' id='c_PREV' class='control' title='{$this->lang->words['previous_image']}'>&nsbp;</a><a href='#' id='c_PAUSE_PLAY' class='control' title='{$this->lang->words['ss_playpause']}'>&nsbp;</a><a href='#' id='c_NEXT' class='control' title='{$this->lang->words['ss_next_img']}'>&nsbp;</a></div>
+		<div id='loading'></div>
+	</div>
+	<a href='{parse url="app=gallery&amp;album={$album['album_id']}" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}' id='close_slideshow'>{$this->lang->words['ss_back']}</a>
+</div>
+<div style='display: none'>
+	<img src='{$this->settings['img_url']}/gallery/slideshow/next.png' />
+	<img src='{$this->settings['img_url']}/gallery/slideshow/next_hover.png' />
+	<img src='{$this->settings['img_url']}/gallery/slideshow/prev.png' />
+	<img src='{$this->settings['img_url']}/gallery/slideshow/prev_hover.png' />
+	<img src='{$this->settings['img_url']}/gallery/slideshow/pause.png' />
+	<img src='{$this->settings['img_url']}/gallery/slideshow/play.png' />
+	<img src='{$this->settings['img_url']}/gallery/slideshow/pause_hover.png' />
+	<img src='{$this->settings['img_url']}/gallery/slideshow/play_hover.png' />
+</div>]]></template_content>
+      <template_name>slideShow</template_name>
+      <template_data>$album, $imageIds, $imageData, $lastID</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_albums</template_group>
+      <template_content><![CDATA[{parse template="galleryCss" group="gallery_global" params=""}
+<if test="canIuploadDearSirWellCanI:|:$this->registry->gallery->helper('albums')->canCreate()">
+	<ul class='topic_buttons'>
+		<li><a href='{parse url="app=gallery&amp;module=post&amp;section=image" base="public"}'>{$this->lang->words['container_noup_title']}</a></li>
+	</ul>
+</if>
+<h3 class='ipsType_subtitle ipsSettings_pagetitle'>{$this->lang->words['your_albums']}</h3>
+<br class='clear' />
+<fieldset class='row1'>
+	<if test="hasalbums:|:count( $rows )">
+		{parse js_module="gallery"}
+		<table class='ipb_table'>
+			{parse striping="albums" classes="row2,row1"}
+			<foreach loop="albums:$rows as $data">
+				<tr class='{parse striping="albums"}'>
+					<td class='col_c_icon'>{parse gallery_resize="$data['thumb']" width="thumb_small"}</td>
+					<td>
+						<if test="showAlbumOptions:|:$this->registry->gallery->helper('albums')->isUploadable($data) || $this->registry->gallery->helper('albums')->isOwner($data) || $this->registry->gallery->helper('albums')->canModerate($data)">
+							<ul class='ipsList_inline right'>
+								<if test="canUploadToAlbum:|:$this->registry->gallery->helper('albums')->canEdit($data)">
+									<li><a href='{parse url="app=gallery&amp;module=post&amp;section=image&amp;album_id={$data['album_id']}" base="public"}' title='{$this->lang->words['upload']}' class='ipsButton_secondary'>{parse replacement="gallery_image"}</a></li>
+								</if>
+								<if test="canUploadToAlbum:|:$this->registry->gallery->helper('albums')->isUploadable($data)">
+									<li><a href='{parse url="app=gallery&amp;albumedit={$data['album_id']}" base="public" template="editalbum" seotitle="{$data['album_name_seo']}"}' class='ipsButton_secondary' title='{$this->lang->words['edit']}'>{parse replacement="galery_album_edit"}</a></li>
+								</if>
+								<if test="canUploadToAlbum:|:$this->registry->gallery->helper('albums')->canDelete($data)">
+									<li><a href="javascript:void(0);" album-id="{$data['album_id']}" class="ipsButton_secondary _albumDelete" title='{$this->lang->words['delete_link']}'>{parse replacement="gallery_album_delete"}</a></li>
+								</if>
+							</ul>
+						</if>
+						<if test="albumIsFriendOnly:|:$this->registry->gallery->helper('albums')->isFriends($data)">
+							<span class='ipsBadge ipsBadge_green reset_cursor' data-tooltip='{$this->lang->words['friend_only_prefix_desc']}' title='{$this->lang->words['friend_only_prefix_desc']}'>{$this->lang->words['friend_only_prefix']}</span>&nbsp;
+						</if>
+						<if test="albumIsPrivate:|:$this->memberData['g_album_private'] && $this->registry->gallery->helper('albums')->isPrivate($data)">
+							<span class='ipsBadge ipsBadge_red reset_cursor'>{$this->lang->words['private_ucfirst']}</span>&nbsp;
+						</if>
+						<strong>{$data['depthString']}<a href='{parse url="app=gallery&amp;album={$data['album_id']}" base="public" template="viewalbum" seotitle="{$data['album_name_seo']}"}'>{$data['album_name']}</a></strong>
+						
+						<if test="hasDescription:|:$data['album_description']">
+							<div class='album_desc'>
+								{parse expression="IPSText::truncate( strip_tags( IPSText::getTextClass('bbcode')->stripAllTags( $data['album_description'] ), '<br />' ), 200 )"}
+							</div>
+						</if>
+					</td>
+					<td class='col_c_post desc'>
+						<strong>{$data['album_count_imgs']}<if test="$data['mod_images']"> <em class='moderated inline-moderated'>(+ {$data['mod_images']} {$this->lang->words['queued_suffix']})</em></if></strong> {$this->lang->words['images']}<br />
+						<strong>{$data['album_count_comments']}<if test="$data['mod_comments']"> <em class='moderated inline-moderated'>(+ {$data['mod_comments']} {$this->lang->words['queued_suffix']})</em></if></strong> {$this->lang->words['comments']}
+						<if test="albumIsUploadable:|:$this->registry->gallery->helper('albums')->isUploadable($data)">
+							<br /><br />{$this->lang->words['last_upload']}: {parse date="$data['album_last_img_date']" format="DATE"}
+						</if>
+					</td>
+				</tr>
+			</foreach>
+		</table>
+	<else />
+		<p class='no_messages'>{$this->lang->words['no_album']}</p>
+	</if>
+</fieldset>]]></template_content>
+      <template_name>userCpAlbumIndexView</template_name>
+      <template_data><![CDATA[$rows=""]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_gallery_global">
+    <template>
+      <template_group>skin_gallery_global</template_group>
+      <template_content><![CDATA[<div class='_sharedMediaBbcode'>
+	<div class='bbcode_mediaWrap clearfix'>
+		<a href="{parse url="app=gallery&amp;album={$album['album_id']}" base="public" template="viewalbum" seotitle="{$album['album_name_seo']}"}"><img src='{parse url="app=gallery&amp;module=images&amp;section=img_ctrl&amp;img={$album['album_cover_img_id']}&amp;tn=1" base="public"}' class='sharedmedia_image' /></a>
+		<div class='details'>
+			<h5><a href="{parse url="app=gallery&amp;album={$album['album_id']}" base="public" template="viewalbum" seotitle="{$album['album_name_seo']}"}">{$this->lang->words['album_ucfirst']}: {$album['album_name']}</a></h5>
+			<div>{$album['album_count_imgs']} {$this->lang->words['images_lower']}</div>
+			<div>{$album['album_count_comments']} {$this->lang->words['comments_lower']}</div>
+		</div>
+	</div>
+</div>
+<br />]]></template_content>
+      <template_name>bbCodeAlbum</template_name>
+      <template_data>$album</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_global</template_group>
+      <template_content><![CDATA[<div class='_sharedMediaBbcode'>
+	<div class='bbcode_mediaWrap clearfix'>
+		<if test="ismediathumb:|:$image['media'] == 1">
+            <a href="{parse url="app=gallery&amp;image={$image['id']}" base="public" template="viewimage" seotitle="{$image['caption_seo']}"}"><img src='{parse url="app=gallery&amp;module=images&amp;section=img_ctrl&amp;img={$image['id']}&amp;file=media" base="public"}' class='sharedmedia_image' /></a>
+        <else />
+            <a href="{parse url="app=gallery&amp;image={$image['id']}" base="public" template="viewimage" seotitle="{$image['caption_seo']}"}"><img src='{parse url="app=gallery&amp;module=images&amp;section=img_ctrl&amp;img={$image['id']}&amp;tn=1" base="public"}' class='sharedmedia_image' /></a>
+        </if>		<div class='details'>
+			<h5><a href="{parse url="app=gallery&amp;image={$image['id']}" base="public" template="viewimage" seotitle="{$image['caption_seo']}"}">{$image['caption']}</a></h5>
+			<div><a href="{parse url="app=gallery&amp;album={$image['album_id']}" base="public" template="viewalbum" seotitle="{$image['album_name_seo']}"}">{$this->lang->words['album_ucfirst']}: {$image['album_name']}</a></div>
+			<div>{$this->lang->words['uploaded_ucfirst']} {parse date="$image['idate']" format="tiny"}</div>
+		</div>
+	</div>
+</div>
+<br />]]></template_content>
+      <template_name>bbCodeImage</template_name>
+      <template_data><![CDATA[$image="", $album=""]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_global</template_group>
+      <template_content><![CDATA[<link rel="stylesheet" type="text/css" media="screen" href="{$this->settings['public_dir']}style_css/{$this->registry->output->skin['_csscacheid']}/ipgallery.css" />]]></template_content>
+      <template_name>galleryCss</template_name>
+      <template_data/>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_global</template_group>
+      <template_content><![CDATA[<!-- Show inline warning -->
+<div class='message unspecific'>
+	<strong>{$data['title']}</strong><br />
+	{$data['body']}
+</div>]]></template_content>
+      <template_name>general_warning</template_name>
+      <template_data><![CDATA[$data='']]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_global</template_group>
+      <template_content><![CDATA[{parse js_module="gallery"}
+{parse js_module="rating"}
+{parse striping="imagelisting" classes="row1,row2"}
+{parse template="include_lightbox" group="global" params=""}
+{parse template="include_highlighter" group="global" params="1"}]]></template_content>
+      <template_name>globals</template_name>
+      <template_data><![CDATA[$data='']]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_global</template_group>
+      <template_content><![CDATA[<style type="text/css">
+#appGallLatestHook
+{
+	overflow:auto;
+	height: 117px;
+}
+	#appGallLatestHook a {
+		display: block;
+	}
+	
+	#appGallLatestHook ul li img
+	{
+		max-width: 100px;
+		max-height: 100px;
+	}
+		
+		#appGallLatestHook ul li:last-child { margin-right: 10px; }
+</style>
+<div id='category_gallrecent' class='category_block block_wrap'>
+	<h3 class='maintitle'>
+		<a class='toggle right' href='#' title="{$this->lang->words['toggle_ucfirst']}">{$this->lang->words['toggle_ucfirst']}</a> <a href="{parse url="app=gallery" seotitle="false" template="app=gallery" base="public"}">{$this->lang->words['recent_gallery_images']}</a>
+	</h3>
+	<div id='appGallLatestHook' class='ipsBox table_wrap'>
+		<ul class='ipsList_inline ipsList_nowrap'>
+		<foreach loop="gallery_images_hook:$rows as $r">
+			<li>{parse gallery_resize="$r['thumb']" width="thumb_large"}</li>
+		</foreach>
+		</ul>
+	</div>
+</div>
+<br />]]></template_content>
+      <template_name>hookRecentGalleryImages</template_name>
+      <template_data>$rows</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_global</template_group>
+      <template_content><![CDATA[{parse js_module="like"}
+<div class='__like right' data-app="{$data['app']}" data-area="{$data['area']}" data-relid="{$relId}" data-isfave="{$data['iLike']}">
+	{parse template="likeSummaryContents" group="gallery_global" params="$data, $relId, $opts"}
+</div>
+<script type="text/javascript">
+	var FAVE_TEMPLATE = new Template( "<h3>{parse expression="sprintf( $this->lang->words['unset_fave_title'], $this->lang->words['like_ucfirst_un' . $data['vernacular'] ])"}</h3><div class='ipsPad'><span class='desc'>{parse expression="sprintf( $this->lang->words['unset_fave_words'], $this->lang->words['like_un' . $data['vernacular'] ])"}</span><br /><p class='ipsForm_center'><input type='button' value='{parse expression="sprintf( $this->lang->words['unset_button'], $this->lang->words['like_ucfirst_un' . $data['vernacular'] ])"}' class='input_submit _funset' /></p></div>");
+</script>]]></template_content>
+      <template_name>likeSummary</template_name>
+      <template_data>$data, $relId, $opts</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_global</template_group>
+      <template_content><![CDATA[<span class='ipsButton_extra right <if test="$data['totalCount']">_fmore clickable</if>' title='{parse expression="sprintf( $this->lang->words['like_totalcount_' . $data['vernacular'] ], $data['totalCount'] )"}' data-tooltip="{parse expression="sprintf( $this->lang->words['like_totalcount_' . $data['vernacular'] ], $data['totalCount'] )"}"><img src='{$this->settings['img_url']}/icon_users.png' /> <strong>{$data['totalCount']}</strong></span>
+<if test="likeOnlyMembers:|:$this->memberData['member_id']">
+	<a href='#' title="<if test="$data['iLike']">{parse expression="sprintf( $this->lang->words['fave_tt_on'], $this->lang->words['like_ucfirst_un' . $data['vernacular'] ])"}<else />{parse expression="sprintf( $this->lang->words['fave_tt_off'], $this->lang->words['like_ucfirst_' . $data['vernacular'] ])"}</if>" class='ftoggle ipsButton_secondary'><if test="$data['iLike']">{parse expression="sprintf( $this->lang->words['unset_fave_button'], $this->lang->words['like_ucfirst_un' . $data['vernacular'] ])"}<else />{parse expression="sprintf( $this->lang->words['set_fave_button'], $this->lang->words['like_ucfirst_' . $data['vernacular'] ])"}</if></a>
+</if>]]></template_content>
+      <template_name>likeSummaryContents</template_name>
+      <template_data>$data, $relId, $opts=array()</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_global</template_group>
+      <template_content><![CDATA[{parse template="galleryCss" group="gallery_global" params=""}
+<div class='tab_general'>
+	<h3 class="bar"><img src='{$this->settings['img_url']}/picture.png' alt='' /> <a href='{parse url="app=core&amp;module=search&amp;do=user_activity&amp;search_app=gallery&amp;mid={$member['member_id']}&amp;search_app=gallery" base="public"}'>{$this->lang->words['view_all_images']}</a></h3>
+	<div class='gallery_row'>
+		{$data}
+	</div>
+</div>]]></template_content>
+      <template_name>profileWrapper</template_name>
+      <template_data><![CDATA[$member,$data='']]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_gallery_home">
+    <template>
+      <template_group>skin_gallery_home</template_group>
+      <template_content><![CDATA[<ul class='topic_buttons'>
+	<if test="canIuploadDearSirWellCanI:|:$this->registry->gallery->helper('albums')->canCreate()">
+		<li><a href='{parse url="app=gallery&amp;module=post&amp;section=image" base="public"}'>{$this->lang->words['upload']}</a></li>
+	</if>
+	<if test="$this->settings['gallery_enable_both_views']">
+		<li class='non_button'>
+			<if test="browseIsDefault:|:$this->settings['gallery_default_view'] == 'browse' && empty( $this->request['home'] )">
+				<a href='{parse url="app=gallery&amp;home=portal" seotitle="false" template="galleryportal" base="public"}'>{$this->lang->words['home_ucfirst']}</a>
+			<else />
+				<a href='{parse url="app=gallery" seotitle="false" template="app=gallery" base="public"}'>{$this->lang->words['home_ucfirst']}</a>
+			</if>
+		</li>
+	</if>
+</ul>
+<h1 class='ipsType_pagetitle'><if test="hasName:|:$album['album_name']">{$album['album_name']}<else />{IPSLib::getAppTitle('gallery')}</if></h1>
+<br />
+<div class='maintitle ipsFilterbar'>
+	<ul class='ipsList_inline' style='display:inline'>
+		<li <if test="( $this->request['sort_key'] == 'date' || !$this->request['sort_key'] ) && ( $this->request['sort_order'] == 'desc' || !$this->request['sort_order'] )">class='active'</if>>
+			<a href='{parse url="app=gallery&amp;browseAlbum={$album['album_id']}&amp;dosort=1&amp;sort_key=date&amp;sort_order=desc&amp;filter_key={$this->request['filter_key']}" seotitle="{$album['album_name_seo']}" template="browsealbum"  base="public"}'>{$this->lang->words['filter_most_recent']}</a>
+		</li>
+		<li <if test="$this->request['sort_key'] == 'rated' && $this->request['sort_order'] == 'desc'">class='active'</if>>
+			<a href='{parse url="app=gallery&amp;browseAlbum={$album['album_id']}&amp;dosort=1&amp;sort_key=rated&amp;sort_order=desc&amp;filter_key={$this->request['filter_key']}" seotitle="{$album['album_name_seo']}" template="browsealbum" base="public"}'>{$this->lang->words['filter_highest_rated']}</a>
+		</li>
+		<li <if test="$this->request['sort_key'] == 'images' && $this->request['sort_order'] == 'desc'">class='active'</if>>
+			<a href='{parse url="app=gallery&amp;browseAlbum={$album['album_id']}&amp;dosort=1&amp;sort_key=images&amp;sort_order=desc&amp;filter_key={$this->request['filter_key']}" seotitle="{$album['album_name_seo']}" template="browsealbum" base="public"}'>{$this->lang->words['filter_most_images']}</a>
+		</li>
+		<li <if test="$this->request['sort_key'] == 'comments' && $this->request['sort_order'] == 'desc'">class='active'</if>>
+			<a href='{parse url="app=gallery&amp;browseAlbum={$album['album_id']}&amp;dosort=1&amp;sort_key=comments&amp;sort_order=desc&amp;filter_key={$this->request['filter_key']}" seotitle="{$album['album_name_seo']}" template="browsealbum" base="public"}'>{$this->lang->words['filter_most_comments']}</a>
+		</li>
+	</ul>
+	<ul class='ipsList_inline right' style='display:inline'>
+		<li <if test="$this->request['filter_key'] == 'all' || !$this->request['filter_key']">class='active'</if>>
+			<a href='{parse url="app=gallery&amp;browseAlbum={$album['album_id']}&amp;dosort=1&amp;sort_key=date&amp;sort_order=desc&amp;filter_key=all" seotitle="{$album['album_name_seo']}" template="browsealbum" base="public"}'>{$this->lang->words['filter_show_all']}</a>
+		</li>
+		<li <if test="$this->request['filter_key'] == 'global'">class='active'</if>>
+			<a href='{parse url="app=gallery&amp;browseAlbum={$album['album_id']}&amp;dosort=1&amp;sort_key=date&amp;sort_order=desc&amp;filter_key=global" seotitle="{$album['album_name_seo']}" template="browsealbum" base="public"}'>{$this->lang->words['filter_show_global']}</a>
+		</li>
+		<li <if test="$this->request['filter_key'] == 'member'">class='active'</if>>
+			<a href='{parse url="app=gallery&amp;browseAlbum={$album['album_id']}&amp;dosort=1&amp;sort_key=date&amp;sort_order=desc&amp;filter_key=member" seotitle="{$album['album_name_seo']}" template="browsealbum" base="public"}'>{$this->lang->words['filter_show_member']}</a>
+		</li>
+	</ul>
+</div>
+<if test="catnorows:|:!count($children)">
+	<div class='no_messages'>
+		{$this->lang->words['albums_none_to_see']}
+	</div>
+<else />
+	<div class='ipsBox'>
+		<div class='ipsBox_container'>
+			<table class='ipb_table'>
+				{parse striping="browseRow" classes="row1,row2 altrow"}
+				<foreach loop="albumsLoop:$children as $data">
+					<tr class='{parse striping="browseRow"}'>
+						<td class='col_c_icon'>{parse gallery_resize="$data['thumb']" width="thumb_medium"}</td>
+						<td>
+							<if test="showAlbumOptions:|:$this->registry->gallery->helper('albums')->isUploadable($data) || $this->registry->gallery->helper('albums')->isOwner($data) || $this->registry->gallery->helper('albums')->canModerate($data)">
+								<ul class='ipsList_inline right'>
+									<if test="canUploadToAlbum:|:$this->registry->gallery->helper('albums')->isUploadable($data)">
+										<li><a href='{parse url="app=gallery&amp;module=post&amp;section=image&amp;album_id={$data['album_id']}" base="public"}' title='{$this->lang->words['upload']}' class='ipsButton_secondary'>{parse replacement="gallery_image"}</a></li>
+									</if>
+									<if test="canEditAlbum:|:$this->registry->gallery->helper('albums')->canEdit($data)">
+										<li><a href='{parse url="app=gallery&amp;albumedit={$data['album_id']}" base="public" template="editalbum" seotitle="{$data['album_name_seo']}"}' class='ipsButton_secondary' title='{$this->lang->words['edit']}'>{parse replacement="galery_album_edit"}</a></li>
+									</if>
+									<if test="canDeleteAlbum:|:(!$this->registry->gallery->helper('albums')->isGlobal($data) && $this->registry->gallery->helper('albums')->canDelete($data))">
+										<li><a href="javascript:void(0);" album-id="{$data['album_id']}" class="_albumDelete ipsButton_secondary" title='{$this->lang->words['delete_link']}'>{parse replacement="gallery_album_delete"}</a></li>
+									</if>
+								</ul>
+							</if>
+							<if test="albumIsFriendOnly:|:$this->registry->gallery->helper('albums')->isFriends($data)">
+								<span class='ipsBadge ipsBadge_green reset_cursor' data-tooltip='{$this->lang->words['friend_only_prefix_desc']}' title='{$this->lang->words['friend_only_prefix_desc']}'>{$this->lang->words['friend_only_prefix']}</span>&nbsp;
+							</if>
+							<if test="albumIsPrivate:|:$this->memberData['g_album_private'] && $this->registry->gallery->helper('albums')->isPrivate($data)">
+								<span class='ipsBadge ipsBadge_red reset_cursor'>{$this->lang->words['private_ucfirst']}</span>&nbsp;
+							</if>
+							<if test="albumIsGlobal:|:$this->request['filter_key'] != 'global' && $this->registry->gallery->helper('albums')->isGlobal($data)">
+								<span class='ipsBadge ipsBadge_grey reset_cursor'>{$this->lang->words['global_prefix']}</span>&nbsp;
+							</if>
+							<strong>
+								{$data['depthString']}
+								<if test="hasLittleWeeBabbies:|:$data['_childrenCount']">
+									<a href='{parse url="app=gallery&amp;album={$data['album_id']}&amp;display=detail" seotitle="{$data['album_name_seo']}" template="viewalbum" base="public"}' title='{parse expression="sprintf( $this->lang->words['view_child_albums'], $data['_childrenCount'] )"}'>{$data['album_name']}</a>
+								<else />
+									<a href='{parse url="app=gallery&amp;album={$data['album_id']}" base="public" template="viewalbum" seotitle="{$data['album_name_seo']}"}'>{$data['album_name']}</a>
+								</if>
+							</strong>
+							
+							<if test="hasDescription:|:$data['album_description']">
+								<div class='album_desc'>
+									{parse expression="IPSText::truncate( strip_tags( IPSText::getTextClass('bbcode')->stripAllTags( $data['album_description'] ), '<br />' ), 200 )"}
+								</div>
+							</if>
+						</td>
+						<td class='col_c_post desc'>
+							<if test="albumIsNotContainer:|:!$this->registry->gallery->helper('albums')->isContainerOnly($data)">
+								<strong>{$data['album_count_imgs']}<if test="$data['mod_images']"> <em class='moderated inline-moderated'>(+ {$data['mod_images']} {$this->lang->words['queued_suffix']})</em></if></strong> {$this->lang->words['images']}<br />
+								<strong>{$data['album_count_comments']}<if test="$data['mod_comments']"> <em class='moderated inline-moderated'>(+ {$data['mod_comments']} {$this->lang->words['queued_suffix']})</em></if></strong> {$this->lang->words['comments']}
+								<if test="albumIsUploadable:|:$this->registry->gallery->helper('albums')->isUploadable($data)">
+									<br /><br />{$this->lang->words['last_upload']}: {parse date="$data['album_last_img_date']" format="DATE"}
+								</if>
+							</if>
+						</td>
+					</tr>
+				</foreach>
+			</table>
+		</div>
+	</div>		
+</if>
+<br />
+<if test="$pages">
+	{$pages}
+	<br />
+</if>
+<br />
+<div id='board_stats'>
+	<ul class='ipsType_small ipsList_inline'>
+		<li class='clear'>
+			<span class='value'>{$stats['albums']}</span>
+			{$this->lang->words['stats_total_albums']}
+		</li>
+		<li class='clear'>
+			<span class='value'>{$stats['images']}</span>
+			{$this->lang->words['stats_total_images']}
+		</li>
+		<li class='clear'>
+			<span class='value'>{$stats['comments']}</span>
+			{$this->lang->words['stats_total_comments']}
+		</li>
+		<li class='clear'>
+			<span class='value'>{$stats['diskspace']}</span>
+			{$this->lang->words['stats_total_size']}
+		</li>
+	</ul>
+</div>
+<br />]]></template_content>
+      <template_name>browse</template_name>
+      <template_data>$children, $album, $pages, $stats</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_home</template_group>
+      <template_content><![CDATA[<ul class='topic_buttons'>
+	<if test="canIuploadDearSirWellCanI:|:$this->registry->gallery->helper('albums')->canCreate()">
+		<li><a href='{parse url="app=gallery&amp;module=post&amp;section=image" base="public"}'>{$this->lang->words['upload']}</a></li>
+	</if>
+	<if test="$this->settings['gallery_enable_both_views']">
+		<li class='non_button'><a href='{parse url="app=gallery&amp;browseAlbum=0" seotitle="false" template="browsealbumroot" base="public"}'>{$this->lang->words['gbutton_browse']}</a></li>
+	</if>
+</ul>
+<h1 class='ipsType_pagetitle'>{IPSLib::getAppTitle('gallery')}</h1>
+<br />
+<div class='ipsLayout ipsLayout_withright ipsLayout_bigright'>
+	<div class='ipsLayout_right'>
+		<if test="globalAlbums:|:is_array($sidebars['globalAlbums'])">
+			{parse template="miniAlbumStripHorizontal" group="gallery_albums" params="$sidebars['globalAlbums'], $this->lang->words['home_active_global_albums']"}
+			<br />
+		</if>
+		<if test="recentImages:|:$sidebars['recentImages']">
+			<div class='general_box'>
+				<h3>{$this->lang->words['home_recent_images']}</h3>
+				<ul class='ipsPad_half short ipsList_inline ipsList_reset' id='home_side_recents'>
+					<foreach loop="$sidebars['recentImages'] as $id => $image">
+							<li class='gallery_tiny_box' -data-id="{$id}">
+								{parse gallery_resize="$image['thumb']" width="thumb_small"}
+							</li>
+					</foreach>
+				</ul>
+			</div>
+			<br />
+		</if>
+		<if test="activeAlbums:|:$sidebars['recentComments']">
+			{parse template="miniLatestCommentBlock" group="gallery_albums" params="$sidebars['recentComments'], $this->lang->words['home_recent_comments']"}
+			<br />
+		</if>
+		<if test="activeAlbums:|:is_array($sidebars['activeAlbums']) && count($sidebars['activeAlbums'])">
+			<div class='general_box'>
+				<h3>{$this->lang->words['home_active_albums']}</h3>
+				<ul>
+					<foreach loop="$sidebars['activeAlbums'] as $i => $album">
+						<li class='{parse striping="activeAlbums"} clear'>
+							<div class='album horizontal'>
+								{parse gallery_resize="$album['album']['thumb']" width="thumb_small"}
+								<p><a href='{parse url="app=gallery&amp;album={$album['album']['album_id']}" seotitle="{$album['album']['album_name_seo']}" template="viewalbum" base="public"}'>{$album['album']['album_name']}</a></p>
+								<div style='padding-top:5px'>
+									<if test="hasAnyone:|:count($album['users']) OR $album['others']">
+										<span class='desc'>{$this->lang->words['browsing_ucfirst']}:</span>
+										<if test="hasUsers:|:count($album['users'])">
+											{parse expression="implode( ", ", $album['users'])"}
+										</if>
+										<if test="hasOther:|:$album['others']">
+											<span class="desc">({$album['others']} {$this->lang->words['others_lower']})</span>
+										</if>
+									</if>
+								</div>
+							</div>
+						</li>
+					</foreach>
+				</ul>
+			</div>
+		</if>
+	</div>
+	<div class='ipsLayout_content'>
+		<div class='ipsBox'>
+			<div class='ipsBox_container ipsPad short'>
+				<if test="$feature['id']">
+					<div id="image_wdesc_{$feature['id']}">
+						{$feature['tag']}
+						<p id="image_wdesc_{$feature['id']}_description" class='imageDescription' style="display:none;"><strong>{$feature['caption']}</strong><br />{$feature['description']}<br />{$this->lang->words['from_album']}: {$feature['album_name']}</p>
+					</div>
+				
+					<script type="text/javascript">
+						document.observe("dom:loaded", function(){
+							ipb.gallery.registerDescription({$feature['id']});
+						} );
+					</script>
+					<br />
+				</if>
+				<if test="hasRecentAlbums:|:is_array( $albums ) && count( $albums )">
+					<a id='recentalbums'></a>
+					<div class='ipsPad'>
+						<h2 class='ipsType_subtitle'>{$this->lang->words['home_recent_albums']}</h2><br />
+						<ul id='home_recent_albums' class='ipsList_inline ipsList_reset short'>
+						<foreach loop="recentAlbums:$albums as $id => $data">
+							<li>
+								{parse gallery_resize="$data['thumb']" width="thumb_medium"}
+								<div class='desc ipsType_smaller homepage'>
+									<a href='{parse url="app=gallery&amp;album={$data['album_id']}" seotitle="{$data['album_name_seo']}" template="viewalbum" base="public"}'>{$data['album_name']}</a>
+									<if test="isMember:|:$data['member_id']"><br />{$this->lang->words['by_ucfirst']}: {parse template="userHoverCard" group="global" params="$data"}<else /><br />&nbsp;</if>
+								</div>
+							</li>
+						</foreach>
+						</ul>
+						<if test="hasPages:|:! empty( $pages )">
+							<div class='ipsPad clearfix'>{$pages}</div>
+						</if>
+					</div>
+				</if>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var st = {parse expression="intval($this->request['st'])"};
+	if ( st > 0 )
+	{
+		$('recentalbums').scrollTo();
+	}
+</script>
+<br class='clear' />
+<br />
+<div id='board_stats'>
+	<ul class='ipsType_small ipsList_inline'>
+		<li class='clear'>
+			<span class='value'>{parse format_number="$stats['albums']"}</span>
+			{$this->lang->words['stats_total_albums']}
+		</li>
+		<li class='clear'>
+			<span class='value'>{parse format_number="$stats['images']"}</span>
+			{$this->lang->words['stats_total_images']}
+		</li>
+		<li class='clear'>
+			<span class='value'>{parse format_number="$stats['comments']"}</span>
+			{$this->lang->words['stats_total_comments']}
+		</li>
+		<if test="hasImages:|:$stats['images']">
+		<li class='clear'>
+			<span class='value'>{$stats['diskspace']}</span>
+			{$this->lang->words['stats_total_size']}
+		</li>
+		</if>
+	</ul>
+</div>
+<br />]]></template_content>
+      <template_name>home</template_name>
+      <template_data><![CDATA[$feature, $sidebars, $albums, $pages='', $stats]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_gallery_imagelisting">
+    <template>
+      <template_group>skin_gallery_imagelisting</template_group>
+      <template_content><![CDATA[{parse js_module="gallery"}
+{parse js_module="gallery_albumchooser"}
+<form method="post" id='postingform' action="{parse url="app=gallery&amp;module=images&amp;section=review&amp;do=process&amp;sessionKey={$sessionKey}&amp;album_id={$album['album_id']}&amp;type={$type}" base="public"}">
+	<input type="hidden" name="sessionKey" value="{$sessionKey}" />
+	
+	<if test="isReviewingUpload:|:$type == 'uploads'">
+		<h1 class='ipsType_pagetitle'>{$this->lang->words['upload_ucfirst']}</h1>
+		<br />
+		<div class='ipsSteps clearfix'>
+			<ul>
+				<li class="ipsSteps_done">
+					<strong class='ipsSteps_title'>{parse expression="sprintf( $this->lang->words['step'], '1' )"}</strong>
+					<span class='ipsSteps_desc'>{$this->lang->words['review_step_upload']}</span>
+					<span class='ipsSteps_arrow'>&nbsp;</span>
+				</li>
+				<li class="ipsSteps_active">
+					<strong class='ipsSteps_title'>{parse expression="sprintf( $this->lang->words['step'], '2' )"}</strong>
+					<span class='ipsSteps_desc'>{$this->lang->words['review_step_publish']}</span>
+					<span class='ipsSteps_arrow'>&nbsp;</span>
+				</li>	
+			</ul>
+		</div>
+		<br />
+		
+		<if test="isModerating:|:$album['album_g_approve_img'] AND ! $this->registry->gallery->helper('albums')->canModerate( $album )">
+		<div class='message unspecific'>
+		<h3>{$this->lang->words['image_approval_required']}</h3>
+		<p>{$this->lang->words['image_approval_required_text']}</p>
+		</div>
+		<br />
+		</if>
+
+		<if test="hasAlreadyCoverUpload:|:$album['_hasCoverSet'] == 'elsewhere'">
+			{$album['cover']['tag']}
+			<div class='ipsBox_withphoto'>
+				<h2 class='ipsType_subtitle'>{$this->lang->words['review_sel_album']} {$album['album_name']}</h2>
+				<br /><input type='radio' id='keep_cover' name='makeCover' value='0' checked="checked"> <label for="keep_cover">&nbsp;{$this->lang->words['review_cover_img']}</label>
+			</div>
+		<else />
+			<h2 class='ipsType_subtitle'>{$this->lang->words['review_sel_album']} {$album['album_name']}</h2>
+		</if>
+	<else />
+		<h1 class='ipsType_pagetitle'>{$this->lang->words['review_title_' . $type ]}</h1>
+		<br />
+		
+		<div class='ipsBox'>
+			<div class='ipsBox_container ipsPad'>
+				<div class='ipsLayout ipsLayout_withleft ipsLayout_smallleft ipsLayout_withright ipsLayout_bigright clearfix'>
+					<div class='ipsLayout_left short'>
+						<ul class='ipsForm ipsForm_vertical'>
+							<li class='ipsField'>
+								<label class='ipsField_title'>{$this->lang->words['current_cover']}</label>
+								<p class='ipsField_content'>
+									{$album['thumb']}
+									
+									<!-- SKINNOTE: restore this radio button once we add pagination to that area
+									<if test="hasAlreadyCoverEdit:|:$album['_hasCoverSet'] == 'elsewhere'">
+										<br /><span class='ipsPad_half'><input type='radio' id='keep_cover' name='makeCover' value='0' checked="checked"> <label for="keep_cover">&nbsp;{$this->lang->words['review_cover_img']}</label></span>
+									</if>
+									-->
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class='ipsLayout_content'>
+						<ul class='ipsForm ipsForm_horizontal'>
+							<li class='ipsField'>
+								<label class='ipsField_title'>{$this->lang->words['album_name']}</label>
+								<p class='ipsField_content'><input type='text' name='album_name' class='input_text' value="{$album['album_name']}" size='34' /></p>
+							</li>
+							<if test="hasAlbumType:|:$this->registry->gallery->helper('albums')->isGlobal( $album ) !== true">
+								<li class='ipsField ipsField_select'>
+									<label class='ipsField_title'>{$this->lang->words['album_type']}</label>
+									<div class='ipsField_content'>
+										<select name="album_is_public">
+											<if test="canPrivate:|:$this->memberData['g_album_private']"><option value="0" <if test="isSel0:|:$album['album_is_public'] == 0">selected='selected'</if>>{$this->lang->words['private_album']}</option></if>
+											<option value="1" <if test="isSel1:|:$album['album_is_public'] == 1">selected='selected'</if>>{$this->lang->words['public_album']}</option>
+											<option value="2" <if test="isSel2:|:$album['album_is_public'] == 2">selected='selected'</if>>{$this->lang->words['friend_album']}</option>
+										</select>
+									</div>
+								</li>
+							</if>
+							<li class='ipsField ipsField_select'>
+								<label class='ipsField_title'>{$this->lang->words['album_sorting']}</label>
+								<div class='ipsField_content'>
+									<select name="album_sort_options__key">
+										<foreach loop="array('idate','views','comments','rating' ) as $field">
+											<option value="{$field}" <if test="$album['album_sort_options__key'] == $field">selected='selected'</if>>{$this->lang->words['album_sort_'.$field]}</option>
+										</foreach>
+									</select>
+									<select name="album_sort_options__dir">
+										<foreach loop="array('asc', 'desc' ) as $field">
+											<option value="{$field}" <if test="$album['album_sort_options__dir'] == $field">selected='selected'</if>>{$this->lang->words['album_sort_'.$field]}</option>
+										</foreach>
+									</select>
+								</div>
+							<li>
+							<li class='ipsField ipsField_select'>
+								<label class='ipsField_title'>{$this->lang->words['parent_album']}</label>
+								<div class='ipsField_content'>
+									<input type='hidden' id='albumParentId' name='album_parent_id' value='{$album['album_parent_id']}' /><div class='albumSelected' id='asDiv'>{$album['_parent']['parentText']}</div>
+									<a href='#' class='ipsButton_secondary' data-album-selector-auto-update='{"field": "albumParentId", "div": "asDiv"}' data-album-selector='type=editAlbum&moderate=1&album_id={$album['album_id']}'>{$this->lang->words['as_select_album']}</a>
+								</div>
+							<li>
+							<if test="canWatermark:|:$album['_canWatermark']">
+								<li class='ipsField ipsField_select'>
+									<label class='ipsField_title'>{$this->lang->words['album_watermark_check']}</label>
+									<div class='ipsField_content'>
+										<select name='album_watermark'>
+											<option value='0' <if test="isWatermarkSel0:|:$album['album_watermark'] == 0">selected='selected'</if>>{$this->lang->words['album_dont_watermark']}</option>
+											<option value='1' <if test="isWatermarkSel1:|:$album['album_watermark'] == 1">selected='selected'</if>>{$this->lang->words['album_apply_watermark']}</option>
+										</select>
+									</div>
+								<li>
+							</if>
+							<li class='ipsField ipsField_checkbox'>
+								<input type='checkbox' value='1' name='album_detail_default' id='album_detail_default' <if test="$album['album_detail_default']">checked='checked'</if> />
+								<label for='album_detail_default'>
+									<p class='class='ipsField_content'>
+										&nbsp;{$this->lang->words['album_detail_default']}
+									<p>
+								</label>
+							</li>
+						</ul>
+					</div>
+					
+					<div class='ipsLayout_right'>
+						<ul class='ipsForm ipsForm_vertical'>
+							<li class='ipsField'>
+								<label class='ipsField_title'>{$this->lang->words['review_desc']}</label>
+								<p class='ipsField_content'>
+									<textarea name="album_description" style="width:98%; height:100px">{$album['album_description']}</textarea>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<fieldset class='submit'>
+			<input type='submit' value='{$this->lang->words['review_finish_' . $type ]}' class='input_submit' />
+		</fieldset>
+		<br />
+		
+		<if test="hasImagesToReviewTitle:|:is_array($images) && count($images)">
+			<h2 class='ipsType_subtitle'>{$this->lang->words['review_title_uploads']}</h2>
+		</if>
+	</if>
+	
+	<if test="hasImagesToReview:|:is_array($images) && count($images)">
+		<br />
+		<div class='ipsBox'>
+			<foreach loop="images:$images as $id => $image">
+				<input type='hidden' class='_imgIds _x{$id}' name='imageIds[{$id}]' value="$id">
+				<div class='ipsBox_container ipsPad'>
+					<div class='ipsLayout ipsLayout_withleft ipsLayout_smallleft'>
+						<div class='ipsLayout_left'>
+							{$image['thumb']}
+							<p class='ipsPad desc'>
+								<if test="isMedia:|:$image['_isMedia']">
+									<input type="button" class="ipsButton_secondary media_thumb_pop" style='margin-left:5px' value="{$this->lang->words['media_add_thumb']}" media-has-thumb="<if test="$image['media_thumb']">true<else />false</if>" media-id="{$image['id']}" />
+									<br /><br /><input type='radio' name='makeCover' value='{$image['id']}' <if test="cover:|:$image['_cover']">checked="checked"</if>> &nbsp;{$this->lang->words['review_cover_img']}
+									<br /><input type='checkbox' name='delete[{$image['id']}]' value='1'>  &nbsp;{$this->lang->words['review_delete_movie']}
+								<else />
+									<input type='radio' name='makeCover' value='{$image['id']}' <if test="cover:|:$image['_cover']">checked="checked"</if>> &nbsp;{$this->lang->words['review_cover_img']}
+									<br /><input type='checkbox' name='delete[{$image['id']}]' value='1'>  &nbsp;{$this->lang->words['review_delete_img']}
+									<br /><span class='rotate _r{$image['id']}'><img src="{$this->settings['img_url']}/gallery/rotate90.png" alt='{$this->lang->words['review_rotate_alt']}' title='{$this->lang->words['review_rotate_alt']}' /> {$this->lang->words['review_rotate']}</span>
+								</if>
+							</p>
+						</div>
+						<div class='ipsLayout_content'>
+							<ul class='ipsForm ipsForm_vertical'>
+								<li class='ipsField'>
+									<label class='ipsField_title'>{$this->lang->words['title_ucfirst']}</label>
+									<p class='ipsField_content'><input type='text' name='title[{$image['id']}]' class='input_text' style='width:95%;' value='{$image['_title']}' /></p>
+								</li>
+								<if test="hasTags:|:$image['_tagBox']">
+									<li class='ipsField'>
+										<label class='ipsField_title'>{$this->lang->words['review_tags']}</label>
+										<div class='ipsField_content'>
+										{$image['_tagBox']}
+										</div>
+									</li>
+								</if>
+								<li class='ipsField'>
+									<label class='ipsField_title'>{$this->lang->words['review_desc']}</label>
+									<div class='ipsField_content'>
+										{$image['editor']}
+									</div>
+								</li>
+								<if test="geo:|:$image['image_gps_lat'] AND $image['image_loc_short']">
+									<li class='ipsField ipsField_checkbox'>
+										<input type='checkbox' id='loc_{$image['id']}' name='locationAllow[{$image['id']}]' <if test="clickGps:|:$image['image_gps_show']">checked='checked'</if>value='1'>
+										<label for='loc_{$image['id']}'>
+											<p class='class='ipsField_content'>
+												&nbsp;{$this->lang->words['review_show_loc']} <span class='desc'>({$image['image_loc_short']})</span>
+											<p>
+										</label>
+									</li>
+								</if>
+								<li class='ipsField'>
+									<label class='ipsField_title'>{$this->lang->words['copyright_ucfirst']}</label>
+									<p class='ipsField_content'><input type='text'name='copyright[{$image['id']}]'  class='input_text' style='width:95%;' value='{$image['copyright']}' /></p>
+								</li>
+							</ul>
+						</div>
+						<br class='clear' />
+					</div>
+				</div>
+				<br />
+			</foreach>
+		</div>
+		<fieldset class='submit'>
+			<input type='submit' value='{$this->lang->words['review_finish_' . $type ]}' class='input_submit' />
+		</fieldset>
+	</if>
+</form>
+<div id="templates-mediaupload" style="display:none">
+	<h3>{$this->lang->words['review_upload_thumb']}</h3>
+	<div class='ipsBox short'>
+	 	<div id='mt_attachments_#{id}' style='width:400px;height:50px;'></div>
+	 	<div id='mtErrorBox_#{id}' style='display:none' class='message error'>&nbsp;</div>
+		<input type='button' id='mt_add_files_#{id}' class='input_submit' value='{$this->lang->words['media_save_thumb']}' tabindex='1' />
+	</div>
+</div>
+<script type="text/javascript">
+//<!#^#|CDATA|
+	document.observe("dom:loaded", function(){
+		ipb.gallery.setUpReviewPage();
+	} );
+//|#^#]>
+</script>]]></template_content>
+      <template_name>review</template_name>
+      <template_data>$images, $album, $type, $sessionKey</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_gallery_img">
+    <template>
+      <template_group>skin_gallery_img</template_group>
+      <template_content><![CDATA[<h3>{$image['caption']}</h3>
+<div class='ipsBox short'>
+	{$image['small']}
+	<br /><br />
+	<p class='desc'>
+		{$this->lang->words['in_ucfirst']} <a href='{parse url="app=gallery&amp;album={$album['album_id']}" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}'>{$album['album_name']}</a>
+		<br />{$this->lang->words['by_lower']}: {parse template="userHoverCard" group="global" params="$image"}
+	</p>
+<div>]]></template_content>
+      <template_name>ajaxDetail</template_name>
+      <template_data><![CDATA[$image, $album=""]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_img</template_group>
+      <template_content><![CDATA[<embed autoplay="true" showcontrols="true" showstatusbar="true" showtracker="true" src="{$file}" width="640" height="480">]]></template_content>
+      <template_name>mediaEmbedPlayer</template_name>
+      <template_data>$file, $playerOptions=array()</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_img</template_group>
+      <template_content><![CDATA[<script type="text/javascript" src="{$this->settings['public_dir']}flowplayer/example/flowplayer-3.2.6.min.js"></script>
+<div id="player" style="display:block;width:640px;height:480px;margin:0 auto"></div>
+<script language="JavaScript">
+	ipb.gallery.flashPlayerInit( "$file", "{$this->settings['public_dir']}flowplayer/flowplayer-3.2.7.swf" );
+</script>]]></template_content>
+      <template_name>mediaFlashPlayer</template_name>
+      <template_data>$file, $playerOptions=array()</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_img</template_group>
+      <template_content><![CDATA[{parse striping="meta" classes="row1,row2"}
+<div id='metacontent' style='display: none'>
+	<h3>{$this->lang->words['meta_table_header']}</h3>
+	<div class='fixed_inner'>
+		<table class='ipb_table'>
+			<foreach loop="exif_data:$content as $key => $value">
+				<tr class='{parse striping="meta"}'>
+					<td class='altrow'><strong>{$key}</strong></td>
+					<td>{$value}</td>
+				</tr>
+			</foreach>
+		</table>
+	</div>
+</div>]]></template_content>
+      <template_name>meta_html</template_name>
+      <template_data><![CDATA[$content=""]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_img</template_group>
+      <template_content><![CDATA[<form action="{parse url="app=gallery&amp;module=images&amp;section=mod&amp;do=move&amp;imageid={$image['id']}&amp;secure_key={$this->member->form_hash}" base="public"}" method="post">
+<h3>{$this->lang->words['img_move_title']}</h3>
+<div class='row2 pad' style='text-align: center'>
+ {$this->lang->words['img_move_to_album']}
+ <input type='hidden' id='albumParentId' name='move_to_album_id' value=0 /><div class='albumSelected' id='asDiv'>{$album['_parent']['album_name']}</div>
+ <a href='#' class='ipsButton_secondary' data-album-selector-auto-update='{"field": "albumParentId", "div": "asDiv"}' data-album-selector='type=moveImage&moderate=1&album_id={$album['album_id']}'>{$this->lang->words['as_select_album']}</a>
+ <br /><br />
+ <input type='submit' class="input_submit" value="{$this->lang->words['img_move_submit']}" />
+</div>
+</form>]]></template_content>
+      <template_name>moveDialogue</template_name>
+      <template_data>$image, $album</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_img</template_group>
+      <template_content><![CDATA[<div class="img_new_sticker_{$size}"></div>]]></template_content>
+      <template_name>newSticker</template_name>
+      <template_data>$size=24</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_img</template_group>
+      <template_content><![CDATA[<php>
+	/* Always return as UTF-8 */
+	array_walk_recursive( $images, array( 'IPSText', 'arrayWalkCallbackConvert' ) );
+	$jsonEncoded = json_encode( $images );
+	$jsonEncoded = IPSText::convertCharsets($jsonEncoded, "UTF-8", IPS_DOC_CHAR_SET);
+</php>
+<div id='photostripwrap'>
+	<div id='photostrip'>
+		<ul id='strip'></ul>
+	</div>
+</div>
+{parse js_module="gallery_photostrip"}
+<script type="text/javascript">
+	ipb.vars['img_url'] = "{$this->settings['img_url']}";
+	
+	document.observe("dom:loaded", function(){
+		ipb.photostrip.setPhotoData( {$jsonEncoded} );
+		ipb.photostrip.display();
+	} );
+</script>]]></template_content>
+      <template_name>photostrip</template_name>
+      <template_data>$album, $images=array()</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_img</template_group>
+      <template_content><![CDATA[{parse js_module="editor"}
+{parse js_module="imagenotes"}
+{parse js_module="gallery_lightbox"}
+{parse js_module="gallery_albumchooser"}
+<link rel="stylesheet" type="text/css" media="screen" href="{$this->settings['public_dir']}js/3rd_party/cropper/cropper.css" />
+<script type='text/javascript' src='{$this->settings['public_dir']}js/3rd_party/cropper/cropper.uncompressed.js'></script>
+<script type="text/javascript">
+//<!#^#|CDATA|
+	ipb.gallery.inSection = 'image';
+	ipb.gallery.imageID = parseInt( {$info['id']} );
+	ipb.gallery.isMedia = parseInt( {$info['media']} );
+	var curnotes = \$H( {
+	<foreach loop="$info['image_notes'] as $k => $v">
+		{$k}: { 'top': {$v['top']}, 'left': {$v['left']}, 'height': {$v['height']}, 'width': {$v['width']},
+				'content': '{$v['note']}',
+				'noteId': '{$v['id']}'
+			}<if test="$k != $info['_last_image_note']">,</if>
+	</foreach>
+						});
+								
+	var noteTemplate = new Template("<div id='note_#{id}' class='note_wrap rounded ipsPad_half'><div id='note_box_#{id}' class='note_box'><div class='internal'><div id='note_fill_#{id}' class='note_fill'><div id='note_handle_#{id}' class='handle'></div></div></div></div><div id='note_text_#{id}' class='note_text ipsPad_half rounded' style='display: none'>#{text}</div></div>");
+	var editTemplate = new Template("<div id='note_form_#{id}' class='note_form rounded ipsPad ipsType_small'><textarea rows='3' cols='20' id='note_content_#{id}'>#{content}</textarea><br /><input type='submit' class='input_submit' value='{$this->lang->words['save']}' id='note_save_#{id}' /> <input type='submit' class='input_submit alt' value='{$this->lang->words['cancel']}' id='note_cancel_#{id}' />&nbsp;&nbsp;<a href='#' class='cancel' id='note_delete_#{id}'>{$this->lang->words['delete']}</a></div>");
+//|#^#]>
+</script>
+<div class='topic_controls right'>
+	<if test="hasFollow:|:$follow">
+		{$follow}
+		<br /><br /><br />
+	</if>
+	<ul class='topic_buttons'>
+		<li><a id='imageOptions' class='ipbmenu' href='#imageOptions'>{$this->lang->words['options_ucfirst']} &nbsp;<img src='{$this->settings['img_url']}/opts_arrow.png' alt='&gt;' /></a></li>
+	</ul>
+</div>
+<a href='{parse url="showuser={$author['member_id']}" seotitle="{$author['members_seo_name']}" template="showuser" base="public"}' class='ipsUserPhotoLink'>
+	<img src='{$author['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_medium left' />
+</a>
+<div class='ipsBox_withphoto'>
+	<span class='rating ipsType_smaller'>
+		<if test="canRate:|:$this->registry->gallery->helper('rate')->canRate($album) !== false && $this->memberData['member_id'] != $info['member_id']">
+			<strong>{$this->lang->words['rate_image']}</strong>&nbsp;&nbsp;
+			<foreach loop="voteRatingLoop:array(1,2,3,4,5) as $_rating">
+				<a href='{parse url="app=gallery&amp;module=images&amp;section=rate&amp;where=image&amp;id={$info['id']}&amp;rating=$_rating&amp;secure_key={$this->member->form_hash}" base="public"}' id='album_rate_{$_rating}' title='{$this->lang->words[ 'rate_file_'.$_rating ]}'><if test="voteImageRate:|:$info['rating'] >= $_rating">{parse replacement="rate_on"}<else />{parse replacement="rate_off"}</if></a>
+			</foreach>
+			<span id='rating_text' class='desc'>
+				<if test="filevotes:|:$info['ratings_count'] > 0">{$info['ratings_count']} {$this->lang->words['votes_cnt']}</if>
+				<if test="fileyourvote:|:$info['rate']">({$this->lang->words['you_voted']} {$info['rate']})</if>
+			</span>
+			<script type='text/javascript'>
+				rating = new ipb.rating( 'album_rate_', { 
+									url: 		'{parse url="app=gallery&amp;module=ajax&amp;section=rate&amp;id={$info['id']}&where=image" base="public"}&md5check=' + ipb.vars['secure_hash'],
+									cur_rating: {parse expression="intval($info['rating'])"},
+									rated: 		<if test="jsRated:|:$info['ratings_count']">1<else />0</if>,
+									allow_rate: 1
+								  } );
+			</script>
+		<else />
+			<foreach loop="viewRatingLoop:array(1,2,3,4,5) as $_rating">
+				<if test="viewImageRate:|:$info['rating'] >= $_rating">{parse replacement="rate_on"}<else />{parse replacement="rate_off"}</if>
+			</foreach>
+		</if>
+	</span>
+	
+	<h1 class='ipsType_pagetitle'>{$info['caption']}</h1>
+	<div class='desc lighter blend_links'>
+		 {$this->lang->words['viewimg_uploaded_by']} {parse template="userHoverCard" group="global" params="$author"}, {parse date="$info['idate']" format="SHORT"}
+	</div>
+	<if test="hasTags:|:is_array($info['tags'])">
+		{$info['tags']['formatted']['parsedWithoutComma']}
+	</if>
+</div>
+<ul class="ipbmenu_content" id='imageOptions_menucontent' style='display:none' >
+	<if test="showSizesLink:|:!$info['media']">
+		<li><a href='{parse url="app=gallery&amp;image={$info['id']}&amp;size=medium" seotitle="{$info['caption_seo']}" template="viewsizes" base="public"}'>{$this->lang->words['view_all_sizes']}</a></li>
+	</if>
+	<if test="metahtml:|:$info['metahtml'] != ''">
+		<li><a href='#metaInfo' data-clicklaunch="showMeta" data-scope="gallery" title='{$this->lang->words['view_exif_prop']}'>{$this->lang->words['view_exif_prop']}</a></li>
+	</if>
+	<if test="setascover:|:$info['set_as_cover']">
+		<li id='menu_set_cover'><a data-clicklaunch="imageSetAsCover" data-scope="gallery" href='{parse url="app=gallery&amp;module=images&amp;section=mod&amp;imageId={$info['id']}&amp;do=setAsCover" base="public"}' title='{$this->lang->words['cover_set_title']}'> {$this->lang->words['set_as_cover']}</a></li>
+	</if>
+	<if test="makeProfilePhoto:|:$info['can_set_as_profile_photo'] && $info['image']">
+		<li><a href='#' id='profileTrigger'>{$this->lang->words['set_as_photo']}</a></li>
+	</if>
+	<li><a href='#shareLinks' data-clicklaunch="showShareLinks" data-scope="gallery">{$this->lang->words['gallery_share_links']}</a></li>
+</ul>
+
+<br class='clear' />
+<div class='ipsLayout ipsLayout_withright ipsLayout_hugeright'>
+	<div class='ipsLayout_right'>
+		<div class='ipsBox'>
+			<div class='ipsBox_container ipsPad'>
+				<ul class='image_info ipsType_small'>
+				<li><strong>{$this->lang->words['viewimg_owner']}:</strong> {parse template="userHoverCard" group="global" params="$author"}<if test="notGuest:|:$info['member_id']"> (<a href="{parse url="app=gallery&amp;user={$author['member_id']}" seotitle="{$author['members_seo_name']}" template="useralbum" base="public"}">{$this->lang->words['view_all_albums']}</a>)</if></li>
+					<li><strong>{$this->lang->words['uploaded_ucfirst']}:</strong> {parse date="$info['idate']" format="short"}</li>
+					<if test="$info['_camera_model']">
+						<li><strong>{$this->lang->words['camera_ucfirst']}:</strong> {$info['_camera_model']}</li>
+					</if>
+					<if test="$info['_date_taken']">
+						<li><strong>{$this->lang->words['taken_ucfirst']}:</strong> {parse date="$info['_date_taken']" format="short"}</li>
+					</if>
+					<li><strong>{$this->lang->words['views']}</strong> {$info['views']}</li>
+					<if test="imageHasNotes:|:count($info['image_notes'])">
+						<li><strong>{$this->lang->words['note_count']}</strong> {parse format_number="count($info['image_notes'])"}</li>
+					</if>
+					<li><strong>{$this->lang->words['viewimg_album']}</strong> <a href="{parse url="app=gallery&amp;album={$album['album_id']}" seotitle="{$album['album_name_seo']}" template="viewalbum" base="public"}">{$album['album_name']}</a></li>
+				</ul>
+				{$photostrip}
+				<if test="hascopyright:|:$info['copyright'] != ''">
+					<div class='ipsBox ipsType_small'>
+						<strong>{$this->lang->words['user_copyright_name']}</strong>
+						<p class='desc'>{$info['copyright']}</p>
+					</div>
+				</if>
+			</div>
+			<if test="$info['_latLon']">
+				<br />
+				<div class='ipsBox_container ipsPad'>
+					<if test="gpsOn:|:$info['image_gps_show']">
+						<h4 id='map_on_header' class='__mapon'>Location
+						<if test="geoData:|:$info['_locShort']">
+							<span class='desc' style='font-weight:normal'>
+								&nbsp; {$info['_locShort']}
+							</span>
+						</if>
+						</h4>
+					<else />
+					<if test="isMe:|:$this->memberData['member_id'] == $info['member_id']">
+						<h4 id='map_off_header'>Location
+							<span class='desc __mapoff' style='font-weight:normal'>&nbsp;({$this->lang->words['private_ucfirst']})</span>
+						</h4>
+						<div class='desc __mapoff'>
+							{$this->lang->words['photo_taken_at']}: {$info['_locShort']}.
+							<br /><br /><a href='#addMap' data-clicklaunch="addMap" data-scope="gallery">{$this->lang->words['img_make_loc_public']}</a>
+						</div>
+					</if>
+					</if>
+					<div id="map" class='__mapon ipsPad_half' style="margin:0 auto; width: 300px; display: none">
+						<a href="{$info['_mapUrl']}" rel="newwindow"><img id='map_0' src="{$info['_maps'][0]}" alt="map" /></a>
+						<img style='display:none' id='map_1' src="{$info['_maps'][1]}" alt="map" />
+						<if test="isStillMe:|:$this->memberData['member_id'] == $info['member_id']"><div class='desc' style='text-align:right;padding-top:3px'><a href='#removeMap' data-clicklaunch="removeMap" data-scope="gallery">{$this->lang->words['img_remove_map']}</a></div></if>
+					</div>
+				</div>
+			</if>
+		</div>
+		<if test="hasShareReportLinks:|:$this->settings['sl_enable']">
+			<div class='ipsPad'>
+				{IPSLib::shareLinks( $info['caption'], array( 'skip' => array( 'print', 'download' ) ) )}
+			</div>
+		</if>
+	</div>
+	<div class='ipsLayout_content' id='image_content'>
+		<div class='ipsBox'>
+			<div class='ipsBox_container ipsPad short'>
+				<div id='theImage'>
+					<ul id='image_nav_links' class='ipsPad'>
+						<if test="onOffPrev:|:$nextPrev['prev'] !== null">
+							<li><a class='ipsButton_secondary' href='{parse url="app=gallery&amp;image={$nextPrev['prev']['id']}" base="public" template="viewimage" seotitle="{$nextPrev['prev']['caption_seo']}"}'>&larr; {$this->lang->words['previous_ucfirst']}</a></li>
+						<else />
+							<li class="off">&larr; {$this->lang->words['previous_ucfirst']}</li>
+						</if>
+						<if test="onOffNext:|:$nextPrev['next'] !== null">
+							<li><a class='ipsButton_secondary' href='{parse url="app=gallery&amp;image={$nextPrev['next']['id']}" base="public" template="viewimage" seotitle="{$nextPrev['next']['caption_seo']}"}'>{$this->lang->words['next_ucfirst']} &rarr;</a></li>
+						<else />
+							<li class="off">{$this->lang->words['next_ucfirst']} &rarr;</li>
+						</if>
+					</ul>
+					<if test="unApproved:|: ! $info['approved']">
+						<div class='message error'>{parse expression="sprintf($this->lang->words['gallery_unapproved_image_view'], $this->registry->output->buildUrl("app=gallery&amp;module=images&amp;section=mod&amp;do=approveToggle&amp;val=1&amp;imageid={$info['id']}&amp;auth_key={$this->member->form_hash}", 'public') )"}</div>
+						<br />
+					</if>
+					<if test="isMedia:|:$info['media']">
+						{$info['movie']}
+					<else />
+						{$info['image']}
+					</if>	
+				</div>
+				
+				<if test="hasDescription:|:$info['description']">
+					<p class='ipsPad'>
+						{$info['description']}
+					</p>
+				</if>
+				<br />
+				<if test="hasOptions:|:$info['mod_buttons'] || $info['image_control_mod'] || $info['_canReport']">
+					<ul class='ipsList_inline left'>
+						<if test="showImageOptions:|:$info['image_control_mod']">
+							<li id='add_note'><a href='#' title='{$this->lang->words['add_note']}' class='ipsButton_secondary'><img src="{$this->settings['img_url']}/gallery/add_note.png"></a></li>
+							<li><a href='{parse url="app=gallery&amp;module=images&amp;section=mod&amp;imageId={$info['id']}&amp;do=rotate&amp;dir=left" base="public"}' id='rotate_left' title='{$this->lang->words['rotate_left']}' class='ipsButton_secondary'><img src="{$this->settings['img_url']}/gallery/rotate_left.png"></a></li>
+							<li><a href='{parse url="app=gallery&amp;module=images&amp;section=mod&amp;imageId={$info['id']}&amp;do=rotate&amp;dir=right" base="public"}' id='rotate_right' title='{$this->lang->words['rotate_right']}' class='ipsButton_secondary'><img src="{$this->settings['img_url']}/gallery/rotate_right.png"></a></li>
+						</if>
+						<if test="showImageModerationOptions:|:$info['mod_buttons']">
+							<li><a href='#modOptions' id='modOptions' class='ipsButton_secondary ipbmenu'>{$this->lang->words['image_moderation']}</a></li>
+							<ul class='ipbmenu_content' id='modOptions_menucontent' style='display:none'>
+								<if test="approve_button:|:$info['approve_button']">
+									<li>
+										<if test="is_approved:|:$info['approved']">
+											<a href='{parse url="app=gallery&amp;module=images&amp;section=mod&amp;do=approveToggle&amp;val=0&amp;imageid={$info['id']}&amp;auth_key={$this->member->form_hash}" base="public"}'>{$this->lang->words['unapprove_image']}</a>
+										<else />
+											<a href='{parse url="app=gallery&amp;module=images&amp;section=mod&amp;do=approveToggle&amp;val=1&amp;imageid={$info['id']}&amp;auth_key={$this->member->form_hash}" base="public"}'>{$this->lang->words['approve_image']}</a>
+										</if>
+									</li>
+								</if>
+								<if test="edit_button:|:$info['edit_button']">
+									<li><a href='{parse url="app=gallery&amp;module=post&amp;section=image&amp;do=editImage&amp;img={$info['id']}" base="public"}'>{$this->lang->words['edit_post']}</a></li>
+								</if>
+								<if test="move_button:|:$info['move_button']">
+									<li><a data-clicklaunch="imageMoveDialogue" data-scope="gallery" href="{parse url="app=gallery&amp;module=images&amp;section=mod&amp;do=move&amp;imageid={$info['id']}" base="public"}">{$this->lang->words['submit_move']}</a></li>
+								</if>
+								<if test="delete_button:|:$info['delete_button']">
+									<li><a data-clicklaunch="imageDeleteDialogue" data-scope="gallery" href="{parse url="app=gallery&amp;module=images&amp;section=mod&amp;do=delete&amp;imageid={$info['id']}&amp;secure_key={$this->member->form_hash}" base="public"}">{$this->lang->words['delete_image']}</a></li>
+								</if>
+							</ul>
+						</if>
+						<if test="canReportImage:|:$info['_canReport']">
+							<li><a class='ipsButton_secondary' href='{parse url="app=core&amp;module=reports&amp;rcom=gallery&amp;imageId={$info['id']}&amp;ctyp=image" base="public"}'>{$this->lang->words['report_image']}</a></li>
+						</if>
+					</ul>
+				</if>
+				<!-- Reputation: -->
+				<div class='clearfix'>
+				{parse template="repButtons" group="global_other" params="$info, array_merge( array( 'primaryId' => $info['id'], 'domLikeStripId' => 'like_post_' . $info['id'], 'domCountId' => 'rep_post_' . $info['id'], 'app' => 'gallery', 'type' => 'id', 'likeFormatted' => $info['like']['formatted'] ), $info )"}
+				</div>
+			</div>
+		</div>
+		
+		<if test="hasComments:|:$comments">
+			{$comments}
+		</if>
+	</div>
+</div>
+<br class='clear' />
+{$info['metahtml']}
+<div id='share_links_content' style='display: none'>
+	<h3>{$this->lang->words['gallery_share_links']}</h3>
+		<table class='ipb_table'>
+			<if test="isNotMedia:|:!$info['media']">
+				<tr class='{parse striping="shareLinks"}'>
+					<td class='altrow'><strong>{$this->lang->words['gal_bbcode_pre']}</strong></td>
+					<td><input onclick="this.select();" type='text' size='50' readonly='readonly' name='bbcode1' value='[URL={parse url="app=gallery&amp;image={$info['id']}" base="public" template="viewimage" seotitle="{$info['caption_seo']}"}][IMG]{$info['image_url']}[/IMG][/URL]' class='input_text' /></td>
+				</tr>
+				<tr class='{parse striping="shareLinks"}'>
+					<td class='altrow'><strong>{$this->lang->words['gal_html_pre']}</strong></td>
+					<td><input onclick="this.select();" type='text' size='50' readonly='readonly' name='html1' value='&lt;a href=&#39;{parse url="app=gallery&amp;image={$info['id']}" base="public" template="viewimage" seotitle="{$info['caption_seo']}"}&#39;&gt;&lt;img src=&#39;{$info['image_url']}&#39; alt=&#39;<if test="set_cleancaption:|:$info['clean_caption'] = htmlspecialchars( $info['caption'], ENT_QUOTES )">{$info['clean_caption']}</if>&#39; /&gt;&lt;/a&gt;' class='input_text'/></td>
+				</tr>
+				<tr class='{parse striping="shareLinks"}'>
+					<td class='altrow'><strong>{$this->lang->words['gal_imgurl_pre']}</strong></td>
+					<td><input onclick="this.select();" type='text' size='50' readonly='readonly' name='link1' value='{$info['image_url']}' class='input_text' /></td>
+				</tr>
+			</if>
+			<tr class='{parse striping="shareLinks"}'>
+				<td class='altrow'><strong>{$this->lang->words['gal_pgurl_pre']}</strong></td>
+				<td><input onclick="this.select();" type='text' size='50' readonly='readonly' name='link2' value='{parse url="app=gallery&amp;image={$info['id']}" base="public" template="viewimage" seotitle="{$info['caption_seo']}"}' class='input_text' /></td>
+			</tr>
+		</table>
+</div>
+<div id='template_sizes' style='display:none'>
+	<div class='ipsBox short'>
+		{$this->lang->words['view_sizes']}: <a href='{parse url="app=gallery&amp;image={$info['id']}&amp;size=square" seotitle="{$info['caption_seo']}" template="viewsizes" base="public"}'>{$this->lang->words['square_ucfirst']}</a> &middot;
+		<a href='{parse url="app=gallery&amp;image={$info['id']}&amp;size=small" seotitle="{$info['caption_seo']}" template="viewsizes" base="public"}'>{$this->lang->words['small_ucfirst']}</a> &middot;
+		<a href='{parse url="app=gallery&amp;image={$info['id']}&amp;size=medium" seotitle="{$info['caption_seo']}" template="viewsizes" base="public"}'>{$this->lang->words['medium_ucfirst']}</a> &middot;
+		<a href='{parse url="app=gallery&amp;image={$info['id']}&amp;size=large" seotitle="{$info['caption_seo']}" template="viewsizes" base="public"}'>{$this->lang->words['large_ucfirst']}</a>
+		<br />
+		<p class='ipsPad_half'>
+			<a href='{$info['image_url']}' class='desc'>{$this->lang->words['img_rc_direct']}</a>
+		</p>
+	</div>
+</div>
+<div id='template_delete' style='display:none'>
+	<form action="{parse url="app=gallery&amp;module=images&amp;section=mod&amp;do=delete&amp;imageid={$info['id']}&amp;secure_key={$this->member->form_hash}" base="public"}" method="post">
+		<h3>{$this->lang->words['mod_img_del_title']}</h3>
+		<div class='ipsBox short'>
+			{$this->lang->words['mod_img_del_desc']}
+			<br /><br />
+			<input type='submit' class='input_submit' value="{$this->lang->words['mod_img_del_go']}" />
+		</div>
+	</form>
+</div>
+<div id='template_photo' style='display:none'>
+	<h3>{$this->lang->words['set_as_photo']}</h3>
+	<div class='ipsBox short'>
+		<div id='ipsPad'>{parse expression="str_replace( 'image_view_', 'photo_view_', $info['image'])"}</div>
+		<br />
+		<div class='ipsPad'>
+			<span id='setAsPhoto_accept' class='input_submit'>{$this->lang->words['save_ucfirst']}</span>&nbsp;&nbsp;<span id='setAsPhoto_cancel' class='input_submit alt'>{$this->lang->words['cancel_ucfirst']}</span>
+		</div>
+	</div>
+</div>
+<script type='text/javascript'>
+	document.observe("dom:loaded", function()
+	{
+		var notes = new ipb.imagenotes( $('theImage').down('img'), curnotes, { editable: <if test="$info['image_control_mod']">true<else />false</if>, add_note: $('add_note') } );
+	} );
+	
+	<if test="$info['image_gps_show']">
+		ipb.gallery.latLon = "{$info['_latLon']}";
+	</if>
+</script>
+<style type="text/css">
+ @import url("{$this->settings['public_dir']}style_css/{$this->registry->output->skin['_csscacheid']}/ipgallery_lightbox.css");
+</style>
+<div id="ips_lightbox" style='display:none' setup="false" available="true" dimensions="{$info['_data']['sizes']['full'][0]}-{$info['_data']['sizes']['full'][1]}" caption="{$info['caption']}" fullimage="{$info['image_url-full']}"></div>]]></template_content>
+      <template_name>show_image</template_name>
+      <template_data>$info=array(), $author=array(), $can_do_avatar=0, $photostrip, $comments, $nextPrev=array(), $follow, $album</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_img</template_group>
+      <template_content><![CDATA[<div class='gallery_wrap'>
+	<h2 class="gallery_title">{$image['caption']}</h2>
+	<div id="photo_sizes">
+		<ul class='gallery_buttons'>
+			<li>
+				<a <if test="$size == 'square'">class="on"</if> href='{parse url="app=gallery&amp;image={$image['id']}&amp;size=square" seotitle="{$image['caption_seo']}" template="viewsizes" base="public"}'>{$this->lang->words['square_ucfirst']}</a>
+				<span>({$image['_data']['sizes']['thumb'][0]} x {$image['_data']['sizes']['thumb'][1]})</span>
+			</li>
+	 		<li>
+	 			<a <if test="$size == 'small'">class="on"</if> href='{parse url="app=gallery&amp;image={$image['id']}&amp;size=small" seotitle="{$image['caption_seo']}" template="viewsizes" base="public"}'>{$this->lang->words['small_ucfirst']}</a>
+	 			<span>({$image['_data']['sizes']['small'][0]} x {$image['_data']['sizes']['small'][1]})</span>
+	 		</li>
+	 		<li>
+	 			<a <if test="$size == 'medium'">class="on"</if> href='{parse url="app=gallery&amp;image={$image['id']}&amp;size=medium" seotitle="{$image['caption_seo']}" template="viewsizes" base="public"}'>{$this->lang->words['medium_ucfirst']}</a>
+	 			<span>({$image['_data']['sizes']['medium'][0]} x {$image['_data']['sizes']['medium'][1]})</span>
+	 		</li>
+	 		<li>
+	 			<a <if test="$size == 'large'">class="on"</if> href='{parse url="app=gallery&amp;image={$image['id']}&amp;size=large" seotitle="{$image['caption_seo']}" template="viewsizes" base="public"}'>{$this->lang->words['large_ucfirst']}</a>
+	 			<span>({$image['_data']['sizes']['max'][0]} x {$image['_data']['sizes']['max'][1]})</span>
+	 		</li>
+	 	</ul>
+	 	<p>
+	 		{$image['tag']}
+	 	</p>
+	 </div>
+</div>]]></template_content>
+      <template_name>sizes</template_name>
+      <template_data><![CDATA[$image, $album="", $size=""]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_gallery_post">
+    <template>
+      <template_group>skin_gallery_post</template_group>
+      <template_content><![CDATA[<html>
+	<body style='background-color: transparent;'>
+		<form id='mtiframeUploadForm' method='post' enctype="multipart/form-data" action=''>
+			<script type='text/javascript'>
+				parent.ipb.gallery.mediaUpload._setJSON( '$id', $JSON );
+			</script>
+			<input type='file' id='mtiframeUploadBox_{$id}' style='display: inline' name='FILE_UPLOAD' /> <input type='reset' value='{$this->lang->words['clear_selection']}' style='display: inline' />
+		</form>
+	</body>
+</html>]]></template_content>
+      <template_name>attachiFrameMediaThumb</template_name>
+      <template_data><![CDATA[$id, $JSON='{}']]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_post</template_group>
+      <template_content><![CDATA[<html>
+	<head>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			#waitImg {
+				position: relative;
+				top: 4px;
+			}
+			
+			.input {
+				padding: 4px;
+				background-color: #1D3652;
+				border-color: #4F7298 #113051 #113051 #4F7298;
+				color: white;
+			}
+		</style>
+	</head>
+	<body style='background-color: transparent; width: 400px;'>
+		<form id='iframeUploadForm' method='post' enctype="multipart/form-data" action=''>
+			<script type='text/javascript'>
+				parent.ipb.uploader._jsonPass( '$id', $JSON );
+			</script>
+			<input type='file' id='iframeUploadBox_{$id}' style='display: inline' class='input' name='FILE_UPLOAD' /> <input type='reset' class='input' value='{$this->lang->words['clear_selection']}' style='display: inline' />
+			<img src="{$this->settings['img_url']}/loading.gif" style='display: none' id="waitImg" />
+		</form>
+	</body>
+</html>]]></template_content>
+      <template_name>attachiFrameUpload</template_name>
+      <template_data><![CDATA[$id, $JSON='{}']]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_post</template_group>
+      <template_content><![CDATA[<h1 class='ipsType_pagetitle'>{parse expression="sprintf( $this->lang->words['editing_image'], $image['caption'] )"}</h1>
+<br />
+<if test="hasErrors:|:is_array($errors) && count($errors)">
+	<div class='message error'>
+		{parse expression="implode( '<br />', $errors )"}
+	</div>
+	<br />
+</if>
+<if test="hasPreview:|:$preview">
+	<h3 class='maintitle'>{$this->lang->words['form_preview']}</h3>
+	<div class='ipsBox'>
+		<div class='ipsBox_container ipsPad'>
+			{$preview}
+		</div>
+	</div>
+	<br />
+</if>
+<form method='post' action="{parse url="app=gallery&amp;module=post&amp;section=image&amp;do=editImageSave" base="public"}" enctype="multipart/form-data">
+	<input type="hidden" name="img" value="{$image['id']}" />
+	<div class='ipsBox'>
+		<div class='ipsBox_container ipsPad'>
+			<div class='ipsLayout ipsLayout_withleft ipsLayout_smallleft clearfix'>
+				<div class='ipsLayout_left'>
+					{$image['thumb']}
+				</div>
+				<div class='ipsLayout_content'>
+					<ul class='ipsForm ipsForm_vertical'>
+						<li class='ipsField'>
+							<label class='ipsField_title'>{$this->lang->words['title_ucfirst']}</label>
+							<p class='ipsField_content'><input type='text' name='caption' class='input_text' style='width:95%;' value='{$image['_caption']}' /></p>
+						</li>
+						<if test="hasTags:|:$image['_tagBox']">
+							<li class='ipsField'>
+								<label class='ipsField_title'>{$this->lang->words['review_tags']}</label>
+								<div class='ipsField_content'>
+								{$image['_tagBox']}
+								</div>
+							</li>
+						</if>
+						<li class='ipsField'>
+							<label class='ipsField_title'>{$this->lang->words['description_ucfirst']}</label>
+							<div class='ipsField_content'>
+								{$image['editor']}
+							</div>
+						</li>
+						<if test="geo:|:$image['image_gps_lat'] AND $image['image_loc_short']">
+							<li class='ipsField ipsField_checkbox'>
+								<input type='checkbox' id='image_gps_show' name='image_gps_show' <if test="clickGps:|:$image['image_gps_show']">checked='checked'</if>value='1'>
+								<label for='image_gps_show'>
+									<p class='class='ipsField_content'>
+										&nbsp;{$this->lang->words['review_show_loc']} <span class='desc'>({$image['image_loc_short']})</span>
+									<p>
+								</label>
+							</li>
+						</if>
+						<li class='ipsField'>
+							<label class='ipsField_title'>{$this->lang->words['copyright_ucfirst']}</label>
+							<p class='ipsField_content'><input type='text'name='copyright' class='input_text' style='width:95%;' value='{$image['copyright']}' /></p>
+						</li>
+						<li class='ipsField'>
+							<label class='ipsField_title'>{$this->lang->words['upload_new_image']}</label>
+							<p class='ipsField_content'>
+								<input type='file' class='input_upload' name='newImage' />
+								<div class='desc'>{$this->lang->words['upload_new_image_desc']}</div>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>				
+		</div>
+		<br />
+	</div>
+	<fieldset class='submit'>
+		<input type='submit' name='dosubmit' value='{$this->lang->words['edit_post']}' class='input_submit' tabindex='0' />&nbsp;<input type='submit' name='preview' value='{$this->lang->words['form_preview']}' class='input_submit alt' tabindex='0' />
+		{$this->lang->words['or']} <a href='{parse url="app=gallery&amp;image={$image['id']}" template="viewimage" seotitle="{$image['caption_seo']}" base="public"}' title='{$this->lang->words['cancel']}' class='cancel' tabindex='0'>{$this->lang->words['cancel']}</a>
+	</fieldset>
+</form>]]></template_content>
+      <template_name>editImageForm</template_name>
+      <template_data><![CDATA[$image=array(), $album=array(), $errors=array(), $preview='']]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_post</template_group>
+      <template_content><![CDATA[<script type='text/javascript' src='{$this->settings['public_dir']}js/3rd_party/swfupload/swfupload.js'></script>
+<script type='text/javascript' src='{$this->settings['public_dir']}js/3rd_party/swfupload/plugins/swfupload.swfobject.js'></script>
+<script type='text/javascript' src='{$this->settings['public_dir']}js/3rd_party/swfupload/plugins/swfupload.cookies.js'></script>
+<script type='text/javascript' src='{$this->settings['public_dir']}js/3rd_party/swfupload/plugins/swfupload.queue.js'></script>
+<script type='text/javascript'>
+//<!#^#|CDATA|
+	ipb.lang['used_space'] = "{parse expression="sprintf( $this->lang->words['used_space_js'], "{$stats['maxItemHuman']}" )"}";
+//|#^#]>
+</script>
+{parse js_module="gallery_uploader"}
+{parse js_module="gallery_albumchooser"}
+
+<h1 class='ipsType_pagetitle'>{$this->lang->words['upload_ucfirst']}</h1>
+<br />
+<div class='ipsSteps clearfix'>
+	<ul>
+		<li class="ipsSteps_active">
+			<strong class='ipsSteps_title'>{parse expression="sprintf( $this->lang->words['step'], '1' )"}</strong>
+			<span class='ipsSteps_desc'>{$this->lang->words['review_step_upload']}</span>
+			<span class='ipsSteps_arrow'>&nbsp;</span>
+		</li>
+		<li>
+			<strong class='ipsSteps_title'>{parse expression="sprintf( $this->lang->words['step'], '2' )"}</strong>
+			<span class='ipsSteps_desc'>{$this->lang->words['review_step_publish']}</span>
+			<span class='ipsSteps_arrow'>&nbsp;</span>
+		</li>	
+	</ul>
+</div>
+<br />
+<if test="isModerating:|:$album['album_g_approve_img'] AND ! $this->registry->gallery->helper('albums')->canModerate( $album )">
+<div class='message unspecific'>
+<h3>{$this->lang->words['image_approval_required']}</h3>
+<p>{$this->lang->words['image_approval_required_text']}</p>
+</div>
+<br />
+</if>
+<div id='albumBoxWrap' class='ipsBox'>
+	<div class='ipsBox_container ipsPad'>
+		<div id='albumWrap'></div>
+		<div id='albumWrapNone' style='display: none'>
+			<div class='ipsLayout ipsLayout_withleft'>
+				<div class='ipsLayout_left'>
+					<img src="{$this->settings['img_url']}/gallery/missingphotothumb.png" class="ipsUserPhoto galattach" />
+				</div>
+				<div class='ipsLayout_content'>
+					<br />
+					<h4>{$this->lang->words['no_album_selected']}</h4><br />
+					<br />
+					<p class='desc'>
+						<if test="canCreate1:|:$this->registry->gallery->helper('albums')->canCreate()"><a href='javascript:void(0);' data-parentid="{parse expression="intval($album['_parent_id'])"}"class='ipsButton_secondary _albumNew'>{$this->lang->words['new_album']}</a>&nbsp;&nbsp;</if>
+						<a href='javascript:void(0);' class='ipsButton_secondary' data-album-selector-callback='ipb.gallery.callBackForUploadFormForAlbumSelector' data-album-selector='type=upload'>{$this->lang->words['select_album']}</a>
+					</p>
+				</div>
+			</div>
+			<br class='clear' />
+		</div>
+	</div>
+</div>
+<div class='ipsBox' id='uploadBoxWrapParent'>
+	<div id='uploadBoxWrap' class='ipsBox_container ipsPad' style='display:none'>
+		<div id='attachWrap'>
+			<ul id='attachments'><li style='display: none'></li></ul>
+		</div>
+	</div>
+	<div id='attach_error_box' class='message error forum_rules' style='display:none'></div>
+	<!--SKINNOTE: traditional uploader needs this. -->
+	<input type='file' id='nojs_attach_{$sessionKey}_1' class='input_upload' name='FILE_UPLOAD' tabindex='1' />
+	<input type='file' id='nojs_attach_{$sessionKey}_2' class='input_upload' name='FILE_UPLOAD' tabindex='1' />
+	<div id='uploadFieldWrap' style='display:none'>
+		<div class='ipsBox_container'>
+			<div class='ipsPad'>
+				<div class='galleryNextButton' style='display:none'><a class='input_submit right' href='{parse url="app=gallery&module=images&section=review&do=show&sessionKey={$sessionKey}" base="public"}'>{$this->lang->words['review_next_button']}</a></div>
+				<span id='buttonPlaceholder'></span>
+				<input type='button' id='add_files_attach_{$sessionKey}' class='input_submit ipsType_small clear' value='{$this->lang->words['upload_ucfirst']}' style='display: none;' tabindex='1' />
+				&nbsp;<span class='desc ipsType_smaller' id='space_info_attach_{$sessionKey}'>{parse expression="sprintf( $this->lang->words['upload_used_txt'], '<strong>'.IPSLib::sizeFormat( $stats['used'] ).'</strong>', "<strong>{$stats['maxTotalHuman']}</strong>", '<strong>'.IPSLib::sizeFormat( $stats['maxItem'] ).'</strong>')"}</span> <span class='desc ipsType_smaller'><a href='javascript:void(0);' id='showFileTypes'>{$this->lang->words['upload_types']}</a></span>
+				<if test="!IN_ACP AND $this->settings['uploadFormType']">
+				<br /><br/><span class='desc lighter ipsType_smaller' id='help_msg'>
+					<if test="flashuploadhelp:|:$this->memberData['member_uploader'] == 'flash'">
+						 {$this->lang->words['trouble_uploading']} <a href='#' data-switch='default' title='{$this->lang->words['switch']}' tabindex='1'>{$this->lang->words['switch_to_basic']}</a>
+					<else />
+						<a href='#' data-switch='flash' title='{$this->lang->words['switch']}' tabindex='-1'>{$this->lang->words['switch_to_advanced']}</a>
+					</if>
+				</span>
+				</if>
+			</div>
+		</div>
+	</div>
+</div>
+<div id='showFileTypesContent' style='display:none'>
+	<div class='ipsPad_double'>
+		<strong>{$this->lang->words['upload_allowed']}</strong>: {$allowed_file_types}
+	</div>
+</div>
+<script type='text/javascript'>
+//<!#^#|CDATA|
+	// Show the button and info
+	$('add_files_attach_{$sessionKey}').show();
+	$('space_info_attach_{$sessionKey}').show();
+	
+	ipb.delegate.register("[data-switch]", function(e, elem){
+		ipb.uploader.switchUploadType( elem.readAttribute('data-switch') );
+	});
+	
+	var useType       = 'simple';
+	var uploadURL     = ipb.vars['base_url'] + "app=gallery&module=post&section=image&do=upload&type=album&sessionKey={$sessionKey}&album_id={$album['album_id']}&fetch_all=1&s={$this->member->session_id}&_nsc=1";
+	var albumTemplate = new Template( "<div id='albumWrap_#{album_id}'><div class='ipsLayout ipsLayout_withleft'><div class='ipsLayout_left'>#{thumb}</div><div class='ipsLayout_content'><br /><h4>{$this->lang->words['selected_album']}: #{album_name}</h4><br /><p class='desc'>#{album_count_imgs} {$this->lang->words['images_lower']}, #{album_count_comments} {$this->lang->words['comments_lower']}<br /><br /><if test="canCreate:|:$this->registry->gallery->helper('albums')->canCreate()"><a href='javascript:void(0);' class='ipsButton_secondary _albumNew'>{$this->lang->words['new_album']}</a>&nbsp;&nbsp;</if><a href='javascript:void(0);' class='ipsButton_secondary' data-album-selector-callback='ipb.gallery.callBackForUploadFormForAlbumSelector' data-album-selector='type=upload&album_id=#{album_id}'>{$this->lang->words['change_album']}</a></p></div></div><br class='clear' /></div>" );
+	
+	if ( ipb.vars['use_swf_upload'] && ipb.vars['swfupload_enabled'] && jaaulde.utils.flashsniffer.meetsMinVersion( 9 ) )
+	{
+		useType = 'swf';
+		var uploadURL = "{$this->settings['base_url']}app=gallery&module=post&section=image&do=process&sessionKey={$sessionKey}&album_id={$album['album_id']}&s={$this->member->session_id}&_nsc=1";
+		
+		$('add_files_attach_{$sessionKey}').observe('mouseover', function(e){  } );
+	}
+	
+	ipb.uploader.template = "<li id='ali_[id]' class='attach_row' style='display: none'><div><h4 class='attach_name'>[name]</h4><p class='info'>[info]</p><span class='img_holder'></span><p class='progress_bar'><span style='width: 0%'>0%</span></p><p class='links'> <a href='javascript:void(0);' class='cancel delete' title='{$this->lang->words['attach_delete_title']}'>{$this->lang->words['attach_delete']}</a></p></div></li>"; 
+	
+	document.observe('dom:loaded', function(){
+		/* Load album box */
+		ipb.uploader.setCurrentAlbumId( {parse expression="intval($album['album_id'])"} );
+		ipb.uploader.buildAlbumBox( {parse expression="intval($album['album_id'])"}, albumTemplate, 'albumWrap' );
+		
+		/* Load up uploaders */
+		ipb.uploader.registerUploader( 'attach_{$sessionKey}', useType, 'attachments', {
+			'upload_url': uploadURL,
+			'album_id': "{parse expression="intval($album['album_id'])"}",
+			'sessionKey': "{$sessionKey}",
+			'file_size_limit': "{$stats['maxItem']}"
+		} )});
+//|#^#]>
+</script>]]></template_content>
+      <template_name>uploadForm</template_name>
+      <template_data><![CDATA[$sessionKey='', $album=array(), $stats=array(), $allowed_file_types]]></template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_gallery_user">
+    <template>
+      <template_group>skin_gallery_user</template_group>
+      <template_content><![CDATA[<fieldset class='{parse striping="search"}'>
+	<span class='search_msg'>
+		{$this->lang->words['s_gallery_desc']}
+	</span>
+	<ul class='ipsForm_horizontal'>
+		<if test="$options">
+			<li class='ipsField ipsField_select clear'>
+				<label class='ipsField_title' for='album_filter'>{$this->lang->words['find_in_category']}</label>
+				<p class='ipsField_content'>
+					<select name='search_app_filters[gallery][albumids][]' class='input input_select' size='6' multiple='multiple'>
+						{$options}
+					</select>
+				</p>
+			</li>
+		</if>
+		<li class='ipsField ipsField_checkbox clear'>
+			<input type='checkbox' id='exclude_albums' name='search_app_filters[gallery][excludeAlbums]' value='1' class='input_check' />
+			<label for='exclude_albums'>{$this->lang->words['find_in_albums']}</label>
+		</li>
+	</ul>
+</fieldset>
+<br />]]></template_content>
+      <template_name>galleryAdvancedSearchFilters</template_name>
+      <template_data>$options</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_user</template_group>
+      <template_content><![CDATA[<tr class='{parse striping="searchResults"}'>
+	<td class='col_c_icon short altrow'>
+		{parse gallery_resize="$data['thumb']" width="thumb_medium"}
+	</td>
+	<td>
+		<span class='right'>
+			<foreach loop="ratingLoop:array(1,2,3,4,5) as $_rating">
+				<if test="albumrate:|:$data['album_rating_aggregate'] >= $_rating">{parse replacement="mini_rate_on"}<else />{parse replacement="mini_rate_off"}</if>
+			</foreach>
+		</span>
+		
+		<h4>
+			<if test="albumIsGlobal:|:$this->registry->gallery->helper('albums')->isGlobal($data)">
+				<span class='ipsBadge ipsBadge_grey reset_cursor'>{$this->lang->words['global_album']}</span>
+			</if>
+			<a href='{parse url="app=gallery&amp;album={$data['album_id']}" base="public" template="viewalbum" seotitle="{$data['album_name_seo']}"}'>{IPSText::truncate( $data['album_name'], 150)}</a>
+		</h4>
+		<p class='desc lighter blend_links toggle_notify_off'>
+			<if test="hasDescription:|:$data['album_description']">{IPSText::truncate( strip_tags( IPSText::getTextClass('bbcode')->stripAllTags( $data['album_description'] ), '<br />' ), 230 )}<else />&nbsp;</if>
+		</p>
+		
+		<if test="isFollowedStuff:|:count($data['_followData'])">
+			{parse template="followData" group="search" params="$data['_followData']"}
+		</if>
+		
+		<if test="hasLittleWeeBabbies:|:$data['_childrenCount']">
+			<br class='clear' /><span class='right'><a href="{parse url="app=gallery&amp;browseAlbum={$data['album_id']}" base="public" template="browsealbum" seotitle="{$data['album_name_seo']}"}"><span class='ipsBadge ipsBadge_lightgrey reset_cursor'>{parse expression="sprintf( $this->lang->words['view_child_albums'], $data['_childrenCount'] )"}</span></a></span>
+		</if>
+	</td>
+	<td class='col_f_views'>
+		<ul>
+			<li>{parse format_number="$data['_totalImages']"} {$this->lang->words['images_lower']}</li>
+			<li class='views desc'>{parse format_number="$data['_totalComments']"} {$this->lang->words['comments_lower']}</li>
+		</ul>
+	</td>
+	<td class='col_f_post'>
+		<if test="albumIsMember:|:!$this->registry->gallery->helper('albums')->isGlobal($data)">
+			<a href='{parse url="showuser={$data['member_id']}" seotitle="{$data['members_seo_name']}" template="showuser" base="public"}' class='ipsUserPhotoLink left'>
+				<img src='{$data['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_mini' />
+			</a>
+			<ul class='last_post ipsType_small'>
+				<li>{parse template="userHoverCard" group="global" params="$data"}</li>
+				<li>{parse date="$data['album_last_img_date']" format="DATE"}</li>
+			</ul>
+		</if>
+	</td>
+	<if test="isFollowedStuff:|:count($data['_followData'])">
+		<td class='col_f_mod'>
+			<input class='input_check checkall toggle_notify_on' type="checkbox" name="likes[]" value="{$data['_followData']['like_app']}-{$data['_followData']['like_area']}-{$data['_followData']['like_rel_id']}" />
+		</td>
+	</if>
+</tr>]]></template_content>
+      <template_name>galleryAlbumSearchResult</template_name>
+      <template_data>$data, $resultAsTitle=false</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_user</template_group>
+      <template_content><![CDATA[<tr class='{parse striping="searchResults"}'>
+	<td class='col_f_icon short altrow'>
+		{parse gallery_resize="$data['thumb']" width="thumb_medium"}
+	</td>
+	<td>
+		<span class='right'>
+			<foreach loop="ratingLoop:array(1,2,3,4,5) as $_rating">
+				<if test="imagerate:|:$data['rating'] >= $_rating">{parse replacement="mini_rate_on"}<else />{parse replacement="mini_rate_off"}</if>
+			</foreach>
+		</span>
+		
+		<h4><a href='{parse url="app=gallery&amp;image={$data['id']}" base="public" template="viewimage" seotitle="{$data['caption_seo']}"}' title='{$data['caption']}'>{IPSText::truncate( $data['caption'], 100)}</a></h4>
+		<span class='desc blend_links'>
+			<span class='desc lighter'>{$this->lang->words['in_lower']}</span> <a href='{parse url="app=gallery&amp;album={$data['album_id']}" base="public" template="viewalbum" seotitle="{$data['album_name_seo']}"}' title='{$data['album_name']}'>{IPSText::truncate( $data['album_name'], 75)}</a>
+		</span>
+		<p class='desc lighter blend_links'>{$data['content']}</p>
+	</td>
+	<td class='col_f_views'>
+		<ul>
+			<li>{parse format_number="$data['comments']"} {$this->lang->words['comments_lower']}</li>
+			<li class='views desc'>{parse format_number="$data['views']"} {$this->lang->words['views_lower']}</li>
+		</ul>
+	</td>
+	<td class='col_f_post'>
+		<a href='#' class='ipsUserPhotoLink left'>
+			<img src='{$data['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_mini' />
+		</a>
+		<ul class='last_post ipsType_small'>
+			<li>{parse template="userHoverCard" group="global" params="$data"}</li>
+			<li>{parse date="$data['post_date']" format="short"}</li>
+		</ul>
+	</td>
+</tr>]]></template_content>
+      <template_name>galleryCommentSearchResult</template_name>
+      <template_data>$data, $resultAsTitle=false</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_user</template_group>
+      <template_content><![CDATA[<tr class='{parse striping="searchResults"}<if test="imageIsUnapproved:|:!$data['approved']"> moderated</if>'>
+	<td class='col_c_icon short altrow'>
+		{parse gallery_resize="$data['thumb']" width="thumb_medium"}
+	</td>
+	<td>
+		<span class='right'>
+			<foreach loop="ratingLoop:array(1,2,3,4,5) as $_rating">
+				<if test="imagerate:|:$data['rating'] >= $_rating">{parse replacement="mini_rate_on"}<else />{parse replacement="mini_rate_off"}</if>
+			</foreach>
+		</span>
+		
+		<h4><a href='{parse url="app=gallery&amp;image={$data['id']}" base="public" template="viewimage" seotitle="{$data['caption_seo']}"}' title='{$data['caption']}'>{IPSText::truncate( $data['caption'], 100)}</a></h4>
+		<span class='desc blend_links'>
+			<span class='desc lighter'>{$this->lang->words['in_lower']}</span> <a href='{parse url="app=gallery&amp;album={$data['album_id']}" base="public" template="viewalbum" seotitle="{$data['album_name_seo']}"}' title='{$data['album_name']}'>{IPSText::truncate( $data['album_name'], 75)}</a>
+		</span>
+		<p class='desc lighter blend_links toggle_notify_off'>
+			<if test="hasDescription:|:$data['description']">{IPSText::truncate( strip_tags( IPSText::getTextClass('bbcode')->stripAllTags( $data['description'] ), '<br />' ), 230 )}<else />&nbsp;</if>
+		</p>
+		<if test="isFollowedStuff:|:count($data['_followData'])">
+			{parse template="followData" group="search" params="$data['_followData']"}
+		</if>
+		<if test="hasTags:|:count($data['tags']['formatted'])">
+			<img src='{$this->settings['img_url']}/icon_tag.png' /> {$data['tags']['formatted']['truncatedWithLinks']}
+		</if>
+		
+	</td>
+	<td class='col_f_views'>
+		<ul>
+			<li>{parse format_number="$data['comments']"} {$this->lang->words['comments_lower']}</li>
+			<li class='views desc'>{parse format_number="$data['views']"} {$this->lang->words['views_lower']}</li>
+		</ul>
+	</td>
+	<td class='col_f_post'>
+		<a href='{parse url="showuser={$data['member_id']}" seotitle="{$data['members_seo_name']}" template="showuser" base="public"}' class='ipsUserPhotoLink left'>
+			<img src='{$data['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_mini' />
+		</a>
+		<ul class='last_post ipsType_small'>
+			<li>{parse template="userHoverCard" group="global" params="$data"}</li>
+			<li>{parse date="$data['idate']" format="DATE"}</li>
+		</ul>
+	</td>
+	<if test="isFollowedStuff:|:count($data['_followData'])">
+		<td class='col_f_mod'>
+			<input class='input_check checkall toggle_notify_on' type="checkbox" name="likes[]" value="{$data['_followData']['like_app']}-{$data['_followData']['like_area']}-{$data['_followData']['like_rel_id']}" />
+		</td>
+	</if>
+</tr>]]></template_content>
+      <template_name>galleryImageSearchResult</template_name>
+      <template_data>$data, $resultAsTitle=false</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_user</template_group>
+      <template_content><![CDATA[{parse template="galleryCss" group="gallery_global" params=""}
+{parse striping="albumData" classes="row1,row2"}
+<if test="hasAnything:|: ! count( $albums ) && ! count( $images )">
+	<div class='no_messages'>{$this->lang->words['gallery_prof_tabs_aint_none']}</div>
+</if>
+<if test="hasAlbums:|:count($albums)">
+	<h3 class='maintitle clearfix'>
+		<if test="hasMoreAlbums:|:$hasMore">
+			<span class='right ipsType_small'>
+				<a href="{parse url="app=gallery&amp;user={$member['member_id']}" seotitle="{$member['members_seo_name']}" template="useralbum" base="public"}">{$this->lang->words['view_all_albums']}</a>
+			</span>
+			{parse expression="sprintf( $this->lang->words['last_x_albums'], count($albums) )"}
+		<else />
+			{$this->lang->words['advsearch_albums']}
+		</if>
+	</h3>
+	<div class='ipsBox'>
+		<div class='ipsBox_container'>
+			<table class='ipb_table'>
+				<foreach loop="albumsLoop:$albums as $id => $data">
+					{parse template="galleryAlbumSearchResult" group="gallery_user" params="$data"}
+				</foreach>
+			</table>
+		</div>
+	</div>
+</if>
+<br />
+<if test="hasImages:|:count($images)">
+<h3 class='maintitle clearfix'>{$this->lang->words['advsearch_images']}</h3>
+<div class='ipsBox'>
+	<div class='ipsBox_container'>
+		<table class='ipb_table'>
+			<foreach loop="imagesLoop:$images as $id => $data">
+				{parse template="galleryImageSearchResult" group="gallery_user" params="$data"}
+			</foreach>
+		</table>
+	</div>
+</div>
+</if>]]></template_content>
+      <template_name>profileBlock</template_name>
+      <template_data>$member, $albums=array(), $images=array(), $hasMore=false</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_user</template_group>
+      <template_content><![CDATA[{parse template="galleryCss" group="gallery_global" params=""}
+<if test="hasResults:|:count($results)">
+	<table class='ipb_table'>
+		<foreach loop="results:$results as $result">
+			{$result['html']}
+		</foreach>
+	</table>
+</if>]]></template_content>
+      <template_name>searchResultsAsGallery</template_name>
+      <template_data>$results, $titlesOnly=false</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_user</template_group>
+      <template_content><![CDATA[{parse template="subTabLoop" group="modcp" params=""}
+<div class='clearfix'>
+	<if test="hasPosts:|:is_array( $comments ) AND count( $comments )">
+		<div id='ips_Posts2'>
+			<foreach loop="post_data:$comments as $comment">
+				<div class='post_block hentry clear no_sidebar'>
+					<div class='post_wrap'>
+						<if test="postMid:|:$comment['member_id']">
+						<h3 class='row2'>
+						<else />
+						<h3 class='guest row2'>
+						</if>
+							<img src='{$comment['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_tiny' />&nbsp;
+							<if test="postMember:|:$comment['member_id']">
+								<span class="author vcard">{parse template="userHoverCard" group="global" params="$comment"}</span>
+							<else />
+								{$comment['members_display_name']}
+							</if>
+						</h3>
+						
+						<div class='post_body'>
+							<ul class='ipsList_inline modcp_post_controls'>
+								<li class='post_edit'>
+									<a href='{parse url="app=core&module=global&section=comments&do=showEdit&comment_id={$comment['pid']}&parentId={$comment['img_id']}&fromApp=gallery-images&modcp=gallerycomments" base="public"}' title='{$this->lang->words['post_edit_title']}' class='ipsButton_secondary ipsType_smaller' id='edit_post_{$comment['pid']}'>{$this->lang->words['post_edit']}</a>
+								</li>
+								<li>
+									<a href='{parse url="app=core&amp;module=global&amp;section=comments&amp;do=approve&amp;comment_id={$comment['pid']}&amp;parentId={$comment['img_id']}&amp;fromApp=gallery-images&amp;modcp=gallerycomments&amp;auth_key={$this->member->form_hash}" base="public"}' title='{$this->lang->words['post_toggle_visible']}' class='ipsButton_secondary ipsType_smaller'>{$this->lang->words['post_approve']}</span></a>
+								</li>
+								<li class='post_del'>
+									<a href='{parse url="app=core&amp;module=global&amp;section=comments&amp;do=delete&amp;comment_id={$comment['pid']}&amp;parentId={$comment['img_id']}&amp;fromApp=gallery-images&amp;modcp=gallerycomments&amp;auth_key={$this->member->form_hash}" base="public"}' title='{$this->lang->words['post_delete_title']}' class='delete_post ipsButton_secondary important ipsType_smaller'>{$this->lang->words['post_delete']}</a>
+								</li>
+								<li class='desc'>
+									<strong>{$this->lang->words['posted']}:</strong> <a rel='bookmark' class='desc lighter ipsType_smaller' href='{parse url="app=core&amp;module=global&amp;section=comments&amp;do=findComment&amp;comment_id={$comment['id']}&amp;parentId={$comment['img_id']}&amp;fromApp=gallery-images" base="public"}' title='{$this->lang->words['comment_permalink']}'>{parse date="$comment['post_date']" format="short"}</a>
+								</li>
+								<li class='desc'>
+									<strong>{$this->lang->words['modcp_gal_caption']}:</strong> <a class='desc lighter ipsType_smaller' href='{parse url="app=gallery&amp;image={$comment['img_id']}" seotitle="{$comment['caption_seo']}" template="viewimage" base="public"}'>{$comment['album_name']} &rarr; {IPSText::truncate( $comment['caption'], 35 )}</a>
+								</li>
+							</ul>
+							<div class='post entry-content'>
+								{$comment['comment']}
+							</div>
+							<br />
+						</div>
+					</div>
+				</div>
+			</foreach>
+		</div>
+	<else />
+		<div class='no_messages'>
+			{$this->lang->words['no_unapproved_posts']}
+		</div>
+	</if>
+	<div>{$pagelinks}</div>
+</div>]]></template_content>
+      <template_name>unapprovedComments</template_name>
+      <template_data>$comments</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_gallery_user</template_group>
+      <template_content><![CDATA[{parse template="subTabLoop" group="modcp" params=""}
+<div class='clearfix'>
+	<if test="hasPosts:|:is_array( $images ) AND count( $images )">
+		<div id='ips_Posts2'>
+			<foreach loop="post_data:$images as $image">
+				<div class='post_block hentry clear no_sidebar'>
+					<div class='post_wrap'>
+						<if test="postMid:|:$image['member_id']">
+						<h3 class='row2'>
+						<else />
+						<h3 class='guest row2'>
+						</if>
+							<img src='{$image['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_tiny' />&nbsp;
+							<if test="postMember:|:$comment['member_id']">
+								<span class="author vcard">{parse template="userHoverCard" group="global" params="$image"}</span>
+							<else />
+								{$image['members_display_name']}
+							</if>
+						</h3>
+						
+						<div class='post_body'>
+							<ul class='ipsList_inline modcp_post_controls'>
+								<li>
+									<a href='{parse url="app=gallery&amp;module=images&amp;section=mod&amp;do=approveToggle&amp;val=1&amp;imageid={$image['id']}&amp;modcp=galleryimages&amp;auth_key={$this->member->form_hash}" base="public"}' title='{$this->lang->words['post_toggle_visible']}' class='ipsButton_secondary ipsType_smaller'>{$this->lang->words['post_approve']}</span></a>
+								</li>
+								<li class='post_del'>
+									<a href='{parse url="app=gallery&amp;module=images&amp;section=mod&amp;do=delete&amp;imageid={$image['id']}&amp;modcp=galleryimages&amp;auth_key={$this->member->form_hash}" base="public"}' title='{$this->lang->words['post_delete_title']}' class='delete_img ipsButton_secondary important ipsType_smaller'>{$this->lang->words['post_delete']}</a>
+								</li>
+								<li class='desc'>
+									<strong>{$this->lang->words['posted']}:</strong> <a rel='bookmark' class='desc lighter ipsType_smaller' href='{parse url="app=core&amp;module=global&amp;section=comments&amp;do=findComment&amp;comment_id={$comment['id']}&amp;parentId={$comment['img_id']}&amp;fromApp=gallery-images" base="public"}' title='{$this->lang->words['comment_permalink']}'>{parse date="$image['idate']" format="short"}</a>
+								</li>
+								<li class='desc'>
+									<strong>{$this->lang->words['modcp_gal_caption']}:</strong> <a class='desc lighter ipsType_smaller' href='{parse url="app=gallery&amp;image={$image['id']}" seotitle="{$image['caption_seo']}" template="viewimage" base="public"}'>{$image['album_name']} &rarr; {IPSText::truncate( $image['caption'], 35 )}</a>
+								</li>
+							</ul>
+							<div class='post entry-content'>
+								{$image['tag']}
+								<if test="hasDesc:|:$image['description']"><p class='ipsPad'>{$image['description']}</p></if>
+							</div>
+							<br />
+						</div>
+					</div>
+				</div>
+			</foreach>
+		</div>
+	<else />
+		<div class='no_messages'>
+			{$this->lang->words['no_unapproved_posts']}
+		</div>
+	</if>
+	<div>{$pagelinks}</div>
+</div>
+<script type="text/javascript">
+ipb.delegate.register('.delete_img', deletePopUp );
+function deletePopUp(e, elem)
+{
+	Event.stop(e);
+	
+	if ( confirm( ipb.lang['delete_confirm'] ) )
+	{
+		window.location = elem.href;
+	}
+}
+</script>]]></template_content>
+      <template_name>unapprovedImages</template_name>
+      <template_data>$images</template_data>
+      <template_updated>1324415215</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+</templates>

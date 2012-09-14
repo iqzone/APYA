@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>Timeline</hook_name>
+      <hook_desc>Línea de tiempo con los últimos n estados actualizados por los usuarios.</hook_desc>
+      <hook_author>@codebit_org</hook_author>
+      <hook_email>juliobarreraa@gmail.com</hook_email>
+      <hook_website>http://www.codebit.org/</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:3:{s:21:"required_applications";a:0:{}s:20:"hook_php_version_min";s:0:"";s:20:"hook_php_version_max";s:0:"";}]]></hook_requirements>
+      <hook_version_human>1.0</hook_version_human>
+      <hook_version_long>1000</hook_version_long>
+      <hook_extra_data><![CDATA[a:3:{s:7:"display";a:5:{s:6:"custom";s:12:"timeline.php";s:8:"settings";s:71:"Settings: Número de estados a cargar, Número de estados por petición";s:8:"language";s:36:"From portal_public_portal: noupdates";s:9:"templates";s:138:"From skin_portal: globalTimeline, pluginTimeline, repButtons, skeletonTemplate, statusAjax, statusIndividual, statusReplies, statusUpdates";s:3:"css";s:20:"CSS Files:  timeline";}s:9:"templates";a:1:{s:11:"skin_portal";a:8:{i:0;s:14:"globalTimeline";i:1;s:14:"pluginTimeline";i:2;s:10:"repButtons";i:3;s:16:"skeletonTemplate";i:4;s:10:"statusAjax";i:5;s:16:"statusIndividual";i:6;s:13:"statusReplies";i:7;s:13:"statusUpdates";}}s:3:"css";a:1:{s:0:"";s:8:"timeline";}}]]></hook_extra_data>
+      <hook_key>timeline</hook_key>
+      <hook_global_caches/>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>timeline.php</hook_file_real>
+      <hook_type>templateHooks</hook_type>
+      <hook_classname>timeline</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_portal";s:12:"skinFunction";s:14:"pluginTimeline";s:4:"type";s:2:"if";s:2:"id";s:14:"pluginTimeline";s:8:"position";s:12:"post.startif";}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+
+/**
+ * <pre>
+ * Codebit.org
+ * IP.Board v3.3.0
+ * @description
+ * Last Updated: $Date: 09-may-2012 -006  $
+ * </pre>
+ * @filename            timeline.php
+ * @author 		$Author: juliobarreraa@gmail.com $
+ * @package		PRI
+ * @subpackage	        
+ * @link		http://www.codebit.org
+ * @since		09-may-2012
+ * @timestamp           15:52:10
+ * @version		$Rev:  $
+ *
+ */
+
+/**
+ * Description of timeline
+ *
+ * @author juliobarreraa@gmail.com
+ */
+class timeline {
+    //Private
+    private $timeline;
+    //Protected
+    protected $registry;
+    protected $memberData;
+    protected $DB;
+    //Public
+    public $lang;
+    
+    public function __construct() {
+        $this->registry = ipsRegistry::instance();
+        $this->settings = & $this->registry->fetchSettings(); //Get settings timeline_max_status
+        $this->memberData = & $this->registry->member()->fetchMemberData(); //This member data 
+        $this->lang = $this->registry->getClass('class_localization'); //Load language
+        $this->DB = $this->registry->DB();
+        //Obsolete
+        $this->member		=  $this->registry->member();
+    }
+    
+    public function getOutput() {
+        $this->lang->loadLanguageFile(array('public_profile', 'public_portal'), 'members');
+        $classToLoad = IPSLib::loadLibrary( IPSLib::getAppDir( 'portal' ) . '/sources/timeline.php', 'timelineClass', 'portal' );
+        $this->timeline = new $classToLoad(0);
+        $pages = $this->timeline->getPager();
+        
+        $rows = $this->timeline->getStatus();
+        return $this->registry->output->getTemplate('portal')->globalTimeline($rows, $pages);
+    }    
+}
+
+?>
+]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings/>
+  <hookextras_language/>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<div>
+    {parse template="header" group="timeline"}
+    <div style="clear:both"></div>
+    <br />
+    <div class="stream-item" id="stream-load">
+        <div class="new-tweets-bar js-new-tweets-bar">
+                <span id='news-bar-item' data-count-id='0'>0</span> {$this->lang->words['news_pub']}
+        </div>
+    </div>
+    <div id="statuses">
+    <if test="isArray:|:is_array($rows)">
+        <foreach loop="recentLoop:$rows as $index => $data">
+            {parse variable="finalPage" default="" oncondition="$index == (count($rows) - 1)" value=" ipsBoxFinal"}
+            {parse template="statusIndividual" group="portal" params="$data"}
+        </foreach>
+        <else />
+        <div class="ipsBox">
+            <div class="ipsBox_container ipsPad">
+                <h1>{$this->lang->words['noupdates']}</h1>
+            </div>
+        </div>
+    </if>
+    </div>
+    <div id="container"></div>
+</div>
+<div id="pages">
+    {$pages}
+</div>]]></template_content>
+      <template_name>globalTimeline</template_name>
+      <template_data>$rows, $pages</template_data>
+      <template_updated>1337816775</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<div>
+    {parse template="header" group="timeline"}
+    <div style="clear:both"></div>
+    <br />
+    <div class="stream-item" id="stream-load">
+        <div class="new-tweets-bar js-new-tweets-bar">
+                <span id='news-bar-item' data-count-id='0'>0</span> {$this->lang->words['news_pub']}
+        </div>
+    </div>
+    <div id="statuses">
+    <if test="isArray:|:is_array($rows)">
+        <foreach loop="recentLoop:$rows as $index => $data">
+            {parse variable="finalPage" default="" oncondition="$index == (count($rows) - 1)" value=" ipsBoxFinal"}
+            {parse template="statusIndividual" group="portal" params="$data"}
+        </foreach>
+        <else />
+        <div class="ipsBox">
+            <div class="ipsBox_container ipsPad">
+                <h1>{$this->lang->words['noupdates']}</h1>
+            </div>
+        </div>
+    </if>
+    </div>
+    <div id="container"></div>
+</div>
+<div id="pages">
+    {$pages}
+</div>]]></template_content>
+      <template_name>globalTimeline</template_name>
+      <template_data>$rows, $pages</template_data>
+      <template_updated>1337816777</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>xmlskin</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<div>
+    {parse template="header" group="timeline"}
+    <div style="clear:both"></div>
+    <br />
+    <div class="stream-item" id="stream-load">
+        <div class="new-tweets-bar js-new-tweets-bar">
+                <span id='news-bar-item' data-count-id='0'>0</span> {$this->lang->words['news_pub']}
+        </div>
+    </div>
+    <div id="statuses">
+    <if test="isArray:|:is_array($rows)">
+        <foreach loop="recentLoop:$rows as $index => $data">
+            {parse variable="finalPage" default="" oncondition="$index == (count($rows) - 1)" value=" ipsBoxFinal"}
+            {parse template="statusIndividual" group="portal" params="$data"}
+        </foreach>
+        <else />
+        <div class="ipsBox">
+            <div class="ipsBox_container ipsPad">
+                <h1>{$this->lang->words['noupdates']}</h1>
+            </div>
+        </div>
+    </if>
+    </div>
+    <div id="container"></div>
+</div>
+<div id="pages">
+    {$pages}
+</div>]]></template_content>
+      <template_name>globalTimeline</template_name>
+      <template_data>$rows, $pages</template_data>
+      <template_updated>1337816780</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="pluginTimeline:|:$active">
+</if>]]></template_content>
+      <template_name>pluginTimeline</template_name>
+      <template_data>$active = false</template_data>
+      <template_updated>1337816775</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="pluginTimeline:|:$active">
+</if>]]></template_content>
+      <template_name>pluginTimeline</template_name>
+      <template_data>$active = false</template_data>
+      <template_updated>1337816777</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>xmlskin</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="pluginTimeline:|:$active">
+</if>]]></template_content>
+      <template_name>pluginTimeline</template_name>
+      <template_data>$active = false</template_data>
+      <template_updated>1337816780</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<php>
+    // Apps can set the key empty to disable, but this will allow all apps to use the popup to show who repped
+    if( !isset($data['jsCallback']) )
+    {
+        $data['jsCallback'] = "ipb.global.repPopUp( this, {$data['primaryId']}, '{$data['app']}', '{$data['type']}' );";
+    }
+    $repClickable   = ( $this->memberData['gbw_view_reps'] AND $data['jsCallback'] ) ? 'onclick="' . $data['jsCallback'] . '"' : '';
+</php>
+<div style="display:inline-block; width: 100%;">
+<if test="reputationBox:|:$this->settings['reputation_enabled']">
+    <if test="canRep:|:!( $this->settings['reputation_protected_groups'] && in_array( $member['member_group_id'], explode( ',', $this->settings['reputation_protected_groups'] ) ) ) and $this->memberData['member_id']">   
+        <if test="isLike:|:$this->settings['reputation_point_types'] == 'like'">
+            <div class='ipsLikeBar right clearfix' id='{$data['domCountId']}' style="margin: 0px;">
+                <ul class='ipsList_inline'>
+                    <if test="!isset($data['hide_text']) OR !$data['hide_text']">
+                        <li id="{$data['domLikeStripId']}" class='ipsLikeBar_info' <if test="hasNoLikes:|:!$data['likeFormatted']">style="display:none"</if>>
+                            {$data['likeFormatted']}
+                        </li>
+                    </if>
+                    <if test="canGiveRep:|:IPSMember::canGiveRep( $data, $member ) !== false">
+                        <li <if test="giveRepUp:|:IPSMember::canRepUp( $data, $member ) === false">style="display:none"</if>>
+                            <a class='ipsLikeButton ipsLikeButton_enabled rep_up' href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' title='{$this->lang->words['do_like_up']}'>{$this->lang->words['like_this']}</a>
+                        </li>
+                        <li <if test="giveRepDown:|:IPSMember::canRepDown( $data, $member ) === false">style="display:none"</if>>
+                            <a class='ipsLikeButton ipsLikeButton_disabled rep_down' href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=-1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' title='{$this->lang->words['do_like_down']}'>{$this->lang->words['unlike_this']}</a>
+                        </li>
+                    </if>
+                </ul>
+            </div>
+        <else />
+            <div class='rep_bar clearfix <if test="pos:|:!$data['position'] || $data['position'] == 'right'">right</if>' id='{$data['domCountId']}'>
+                {parse variable="repClickable" default="" oncondition="$this->memberData['gbw_view_reps']" value=" clickable"}
+                <ul class='ipsList_inline'>
+                    <if test="canGiveRep:|:IPSMember::canGiveRep( $data, $member ) !== false">
+                        <li <if test="giveRepUp:|:IPSMember::canRepUp( $data, $member ) === false">style="display:none"</if>>
+                            <a href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' class='rep_up' title='{$this->lang->words['reputation_up']}'>{parse replacement="rep_up"}</a>
+                        </li>
+                        <li <if test="giveRepDown:|:IPSMember::canRepDown( $data, $member ) === false">style="display:none"</if>>
+                            <a href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=-1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' class='rep_down' title='{$this->lang->words['reputation_down']}'>{parse replacement="rep_down"}</a>
+                        </li>
+                    </if>
+                    <if test="isNotLike:|:$this->settings['reputation_point_types'] != 'like'">
+                        <if test="hasNoRep:|:$data['rep_points'] == 0">
+                            <li><span class='reputation zero rep_show{parse variable="repClickable"}' title='{$this->lang->words['reputation']}' {$repClickable}>
+                        </if>
+                        <if test="hasPosRep:|:$data['rep_points'] > 0">
+                            <li><span class='reputation positive rep_show{parse variable="repClickable"}' title='{$this->lang->words['reputation']}' {$repClickable}>
+                        </if>
+                        <if test="hasNegRep:|:$data['rep_points'] < 0">
+                            <li><span class='reputation negative rep_show{parse variable="repClickable"}' title='{$this->lang->words['reputation']}' {$repClickable}>
+                        </if>
+                            {parse expression="intval($data['rep_points'])"}
+                            </span>
+                        </li>
+                    </if>
+                </ul>
+            </div>
+        </if>
+    </if>
+</if>
+</div>
+<script type='text/javascript'>
+    ipb.global.registerReputation( '{$data['domCountId']}', { domLikeStripId: '{$data['domLikeStripId']}', app: '{$data['app']}', type: '{$data['type']}', typeid: '{$data['primaryId']}' }, parseInt('{$data['rep_points']}') );
+</script>]]></template_content>
+      <template_name>repButtons</template_name>
+      <template_data>$member, $data=array()</template_data>
+      <template_updated>1337816775</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<php>
+    // Apps can set the key empty to disable, but this will allow all apps to use the popup to show who repped
+    if( !isset($data['jsCallback']) )
+    {
+        $data['jsCallback'] = "ipb.global.repPopUp( this, {$data['primaryId']}, '{$data['app']}', '{$data['type']}' );";
+    }
+    $repClickable   = ( $this->memberData['gbw_view_reps'] AND $data['jsCallback'] ) ? 'onclick="' . $data['jsCallback'] . '"' : '';
+</php>
+<div style="display:inline-block; width: 100%;">
+<if test="reputationBox:|:$this->settings['reputation_enabled']">
+    <if test="canRep:|:!( $this->settings['reputation_protected_groups'] && in_array( $member['member_group_id'], explode( ',', $this->settings['reputation_protected_groups'] ) ) ) and $this->memberData['member_id']">   
+        <if test="isLike:|:$this->settings['reputation_point_types'] == 'like'">
+            <div class='ipsLikeBar right clearfix' id='{$data['domCountId']}' style="margin: 0px;">
+                <ul class='ipsList_inline'>
+                    <if test="!isset($data['hide_text']) OR !$data['hide_text']">
+                        <li id="{$data['domLikeStripId']}" class='ipsLikeBar_info' <if test="hasNoLikes:|:!$data['likeFormatted']">style="display:none"</if>>
+                            {$data['likeFormatted']}
+                        </li>
+                    </if>
+                    <if test="canGiveRep:|:IPSMember::canGiveRep( $data, $member ) !== false">
+                        <li <if test="giveRepUp:|:IPSMember::canRepUp( $data, $member ) === false">style="display:none"</if>>
+                            <a class='ipsLikeButton ipsLikeButton_enabled rep_up' href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' title='{$this->lang->words['do_like_up']}'>{$this->lang->words['like_this']}</a>
+                        </li>
+                        <li <if test="giveRepDown:|:IPSMember::canRepDown( $data, $member ) === false">style="display:none"</if>>
+                            <a class='ipsLikeButton ipsLikeButton_disabled rep_down' href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=-1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' title='{$this->lang->words['do_like_down']}'>{$this->lang->words['unlike_this']}</a>
+                        </li>
+                    </if>
+                </ul>
+            </div>
+        <else />
+            <div class='rep_bar clearfix <if test="pos:|:!$data['position'] || $data['position'] == 'right'">right</if>' id='{$data['domCountId']}'>
+                {parse variable="repClickable" default="" oncondition="$this->memberData['gbw_view_reps']" value=" clickable"}
+                <ul class='ipsList_inline'>
+                    <if test="canGiveRep:|:IPSMember::canGiveRep( $data, $member ) !== false">
+                        <li <if test="giveRepUp:|:IPSMember::canRepUp( $data, $member ) === false">style="display:none"</if>>
+                            <a href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' class='rep_up' title='{$this->lang->words['reputation_up']}'>{parse replacement="rep_up"}</a>
+                        </li>
+                        <li <if test="giveRepDown:|:IPSMember::canRepDown( $data, $member ) === false">style="display:none"</if>>
+                            <a href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=-1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' class='rep_down' title='{$this->lang->words['reputation_down']}'>{parse replacement="rep_down"}</a>
+                        </li>
+                    </if>
+                    <if test="isNotLike:|:$this->settings['reputation_point_types'] != 'like'">
+                        <if test="hasNoRep:|:$data['rep_points'] == 0">
+                            <li><span class='reputation zero rep_show{parse variable="repClickable"}' title='{$this->lang->words['reputation']}' {$repClickable}>
+                        </if>
+                        <if test="hasPosRep:|:$data['rep_points'] > 0">
+                            <li><span class='reputation positive rep_show{parse variable="repClickable"}' title='{$this->lang->words['reputation']}' {$repClickable}>
+                        </if>
+                        <if test="hasNegRep:|:$data['rep_points'] < 0">
+                            <li><span class='reputation negative rep_show{parse variable="repClickable"}' title='{$this->lang->words['reputation']}' {$repClickable}>
+                        </if>
+                            {parse expression="intval($data['rep_points'])"}
+                            </span>
+                        </li>
+                    </if>
+                </ul>
+            </div>
+        </if>
+    </if>
+</if>
+</div>
+<script type='text/javascript'>
+    ipb.global.registerReputation( '{$data['domCountId']}', { domLikeStripId: '{$data['domLikeStripId']}', app: '{$data['app']}', type: '{$data['type']}', typeid: '{$data['primaryId']}' }, parseInt('{$data['rep_points']}') );
+</script>]]></template_content>
+      <template_name>repButtons</template_name>
+      <template_data>$member, $data=array()</template_data>
+      <template_updated>1337816777</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>xmlskin</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<php>
+    // Apps can set the key empty to disable, but this will allow all apps to use the popup to show who repped
+    if( !isset($data['jsCallback']) )
+    {
+        $data['jsCallback'] = "ipb.global.repPopUp( this, {$data['primaryId']}, '{$data['app']}', '{$data['type']}' );";
+    }
+    $repClickable   = ( $this->memberData['gbw_view_reps'] AND $data['jsCallback'] ) ? 'onclick="' . $data['jsCallback'] . '"' : '';
+</php>
+<div style="display:inline-block; width: 100%;">
+<if test="reputationBox:|:$this->settings['reputation_enabled']">
+    <if test="canRep:|:!( $this->settings['reputation_protected_groups'] && in_array( $member['member_group_id'], explode( ',', $this->settings['reputation_protected_groups'] ) ) ) and $this->memberData['member_id']">   
+        <if test="isLike:|:$this->settings['reputation_point_types'] == 'like'">
+            <div class='ipsLikeBar right clearfix' id='{$data['domCountId']}' style="margin: 0px;">
+                <ul class='ipsList_inline'>
+                    <if test="!isset($data['hide_text']) OR !$data['hide_text']">
+                        <li id="{$data['domLikeStripId']}" class='ipsLikeBar_info' <if test="hasNoLikes:|:!$data['likeFormatted']">style="display:none"</if>>
+                            {$data['likeFormatted']}
+                        </li>
+                    </if>
+                    <if test="canGiveRep:|:IPSMember::canGiveRep( $data, $member ) !== false">
+                        <li <if test="giveRepUp:|:IPSMember::canRepUp( $data, $member ) === false">style="display:none"</if>>
+                            <a class='ipsLikeButton ipsLikeButton_enabled rep_up' href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' title='{$this->lang->words['do_like_up']}'>{$this->lang->words['like_this']}</a>
+                        </li>
+                        <li <if test="giveRepDown:|:IPSMember::canRepDown( $data, $member ) === false">style="display:none"</if>>
+                            <a class='ipsLikeButton ipsLikeButton_disabled rep_down' href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=-1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' title='{$this->lang->words['do_like_down']}'>{$this->lang->words['unlike_this']}</a>
+                        </li>
+                    </if>
+                </ul>
+            </div>
+        <else />
+            <div class='rep_bar clearfix <if test="pos:|:!$data['position'] || $data['position'] == 'right'">right</if>' id='{$data['domCountId']}'>
+                {parse variable="repClickable" default="" oncondition="$this->memberData['gbw_view_reps']" value=" clickable"}
+                <ul class='ipsList_inline'>
+                    <if test="canGiveRep:|:IPSMember::canGiveRep( $data, $member ) !== false">
+                        <li <if test="giveRepUp:|:IPSMember::canRepUp( $data, $member ) === false">style="display:none"</if>>
+                            <a href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' class='rep_up' title='{$this->lang->words['reputation_up']}'>{parse replacement="rep_up"}</a>
+                        </li>
+                        <li <if test="giveRepDown:|:IPSMember::canRepDown( $data, $member ) === false">style="display:none"</if>>
+                            <a href='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=reputation&amp;do=add_rating&amp;app_rate={$data['app']}&amp;type={$data['type']}&amp;type_id={$data['primaryId']}&amp;rating=-1&amp;secure_key={$this->member->form_hash}&amp;post_return={$data['primaryId']}' class='rep_down' title='{$this->lang->words['reputation_down']}'>{parse replacement="rep_down"}</a>
+                        </li>
+                    </if>
+                    <if test="isNotLike:|:$this->settings['reputation_point_types'] != 'like'">
+                        <if test="hasNoRep:|:$data['rep_points'] == 0">
+                            <li><span class='reputation zero rep_show{parse variable="repClickable"}' title='{$this->lang->words['reputation']}' {$repClickable}>
+                        </if>
+                        <if test="hasPosRep:|:$data['rep_points'] > 0">
+                            <li><span class='reputation positive rep_show{parse variable="repClickable"}' title='{$this->lang->words['reputation']}' {$repClickable}>
+                        </if>
+                        <if test="hasNegRep:|:$data['rep_points'] < 0">
+                            <li><span class='reputation negative rep_show{parse variable="repClickable"}' title='{$this->lang->words['reputation']}' {$repClickable}>
+                        </if>
+                            {parse expression="intval($data['rep_points'])"}
+                            </span>
+                        </li>
+                    </if>
+                </ul>
+            </div>
+        </if>
+    </if>
+</if>
+</div>
+<script type='text/javascript'>
+    ipb.global.registerReputation( '{$data['domCountId']}', { domLikeStripId: '{$data['domLikeStripId']}', app: '{$data['app']}', type: '{$data['type']}', typeid: '{$data['primaryId']}' }, parseInt('{$data['rep_points']}') );
+</script>]]></template_content>
+      <template_name>repButtons</template_name>
+      <template_data>$member, $data=array()</template_data>
+      <template_updated>1337816780</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[{parse addtohead="{$this->settings['css_base_url']}style_css/{$this->registry->output->skin['_csscacheid']}/timeline.css" type="importcss"}
+{parse addtohead="{$this->settings['css_base_url']}style_css/{$this->registry->output->skin['_csscacheid']}/podio.style.css" type="importcss"}
+{parse addtohead="https://fonts.googleapis.com/css?family=PT+Sans&subset=latin" type="importcss"}
+{parse addtohead="{$this->settings['js_base_url']}js/ips.like.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/ips.status.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/jquery.js" type="javascript"}
+{parse addtohead="http://documentcloud.github.com/underscore/underscore-min.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/waypoints.min.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.events.input.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.mentionsInput.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.elastic.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/timeline.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/ips.portal.js" type="javascript"}
+<if test="disablelightbox:|:!$this->settings['disable_lightbox']">
+{parse template="include_lightbox" group="global" params=""}
+</if>
+<div class='ipsLayout <if test="setupLeftBlockSide:|:is_array( $leftBlocks ) AND count( $leftBlocks )">ipsLayout_withleft ipsLayout_largeleft</if> <if test="setupRightBlockSide:|:is_array( $rightBlocks ) AND count( $rightBlocks )">ipsLayout_withright ipsLayout_largeright</if> clearfix'>
+      <div class='ipsLayout_left'>
+           {parse template="showBlocks" group="portal" params="$leftBlocks"}
+      </div>
+      <div class='ipsLayout_content clearfix'>
+           {parse template="showBlocks" group="portal" params="$mainBlocks"}
+      </div>
+      <div class='ipsLayout_right'>
+           {parse template="showBlocks" group="portal" params="$rightBlocks"} 
+      </div>
+</div>
+{parse template="include_highlighter" group="global" params="1"}]]></template_content>
+      <template_name>skeletonTemplate</template_name>
+      <template_data>$leftBlocks, $mainBlocks, $rightBlocks</template_data>
+      <template_updated>1337816775</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[{parse addtohead="{$this->settings['css_base_url']}style_css/{$this->registry->output->skin['_csscacheid']}/timeline.css" type="importcss"}
+{parse addtohead="{$this->settings['css_base_url']}style_css/{$this->registry->output->skin['_csscacheid']}/podio.style.css" type="importcss"}
+{parse addtohead="https://fonts.googleapis.com/css?family=PT+Sans&subset=latin" type="importcss"}
+{parse addtohead="{$this->settings['js_base_url']}js/ips.like.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/ips.status.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/jquery.js" type="javascript"}
+{parse addtohead="http://documentcloud.github.com/underscore/underscore-min.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/waypoints.min.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.events.input.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.mentionsInput.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.elastic.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/timeline.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/ips.portal.js" type="javascript"}
+<if test="disablelightbox:|:!$this->settings['disable_lightbox']">
+{parse template="include_lightbox" group="global" params=""}
+</if>
+<div class='ipsLayout <if test="setupLeftBlockSide:|:is_array( $leftBlocks ) AND count( $leftBlocks )">ipsLayout_withleft ipsLayout_largeleft</if> <if test="setupRightBlockSide:|:is_array( $rightBlocks ) AND count( $rightBlocks )">ipsLayout_withright ipsLayout_largeright</if> clearfix'>
+      <div class='ipsLayout_left'>
+           {parse template="showBlocks" group="portal" params="$leftBlocks"}
+      </div>
+      <div class='ipsLayout_content clearfix'>
+           {parse template="showBlocks" group="portal" params="$mainBlocks"}
+      </div>
+      <div class='ipsLayout_right'>
+           {parse template="showBlocks" group="portal" params="$rightBlocks"} 
+      </div>
+</div>
+{parse template="include_highlighter" group="global" params="1"}]]></template_content>
+      <template_name>skeletonTemplate</template_name>
+      <template_data>$leftBlocks, $mainBlocks, $rightBlocks</template_data>
+      <template_updated>1337816777</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>xmlskin</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[{parse addtohead="{$this->settings['css_base_url']}style_css/{$this->registry->output->skin['_csscacheid']}/timeline.css" type="importcss"}
+{parse addtohead="{$this->settings['css_base_url']}style_css/{$this->registry->output->skin['_csscacheid']}/podio.style.css" type="importcss"}
+{parse addtohead="https://fonts.googleapis.com/css?family=PT+Sans&subset=latin" type="importcss"}
+{parse addtohead="{$this->settings['js_base_url']}js/ips.like.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/ips.status.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/jquery.js" type="javascript"}
+{parse addtohead="http://documentcloud.github.com/underscore/underscore-min.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/waypoints.min.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.events.input.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.mentionsInput.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.elastic.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/timeline.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/ips.portal.js" type="javascript"}
+<if test="disablelightbox:|:!$this->settings['disable_lightbox']">
+{parse template="include_lightbox" group="global" params=""}
+</if>
+<div class='ipsLayout <if test="setupLeftBlockSide:|:is_array( $leftBlocks ) AND count( $leftBlocks )">ipsLayout_withleft ipsLayout_largeleft</if> <if test="setupRightBlockSide:|:is_array( $rightBlocks ) AND count( $rightBlocks )">ipsLayout_withright ipsLayout_largeright</if> clearfix'>
+      <div class='ipsLayout_left'>
+           {parse template="showBlocks" group="portal" params="$leftBlocks"}
+      </div>
+      <div class='ipsLayout_content clearfix'>
+           {parse template="showBlocks" group="portal" params="$mainBlocks"}
+      </div>
+      <div class='ipsLayout_right'>
+           {parse template="showBlocks" group="portal" params="$rightBlocks"} 
+      </div>
+</div>
+{parse template="include_highlighter" group="global" params="1"}]]></template_content>
+      <template_name>skeletonTemplate</template_name>
+      <template_data>$leftBlocks, $mainBlocks, $rightBlocks</template_data>
+      <template_updated>1337816780</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="isArray:|:is_array($rows)">
+    <foreach loop="recentLoop:$rows as $index => $data">
+        {parse variable="finalPage" default="" oncondition="$index == (count($rows) - 1)" value=" ipsBoxFinal"}
+        {parse template="statusIndividual" group="portal" params="$data"}
+    </foreach>
+    <else />
+    <div class="ipsBox">
+        <div class="ipsBox_container ipsPad">
+            <h1>{$this->lang->words['noupdates']}</h1>
+        </div>
+    </div>
+</if>]]></template_content>
+      <template_name>statusAjax</template_name>
+      <template_data>$rows</template_data>
+      <template_updated>1337816775</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="isArray:|:is_array($rows)">
+    <foreach loop="recentLoop:$rows as $index => $data">
+        {parse variable="finalPage" default="" oncondition="$index == (count($rows) - 1)" value=" ipsBoxFinal"}
+        {parse template="statusIndividual" group="portal" params="$data"}
+    </foreach>
+    <else />
+    <div class="ipsBox">
+        <div class="ipsBox_container ipsPad">
+            <h1>{$this->lang->words['noupdates']}</h1>
+        </div>
+    </div>
+</if>]]></template_content>
+      <template_name>statusAjax</template_name>
+      <template_data>$rows</template_data>
+      <template_updated>1337816777</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>xmlskin</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="isArray:|:is_array($rows)">
+    <foreach loop="recentLoop:$rows as $index => $data">
+        {parse variable="finalPage" default="" oncondition="$index == (count($rows) - 1)" value=" ipsBoxFinal"}
+        {parse template="statusIndividual" group="portal" params="$data"}
+    </foreach>
+    <else />
+    <div class="ipsBox">
+        <div class="ipsBox_container ipsPad">
+            <h1>{$this->lang->words['noupdates']}</h1>
+        </div>
+    </div>
+</if>]]></template_content>
+      <template_name>statusAjax</template_name>
+      <template_data>$rows</template_data>
+      <template_updated>1337816780</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[{parse template="statusUpdates" group="portal" params="array(
+array(
+   'status_id' => $data['id'],
+   'status_member_id' => $data['member_id'],
+   'status_date' => $data['status_date'],
+   'status_content' => $data['textStatus'],
+   'status_replies' => '0',
+   'status_last_ids' => 'a:0:{}',
+   'status_is_latest' => '1',
+   'status_is_locked' => '0',
+   'status_hash' => 'c07123b4b45600e9d97f6be68d758208',
+   'status_imported' => '0',
+   'status_creator' => 'ipb',
+   'status_author_id' => $data['member_id'],
+   'status_author_ip' => '::1',
+   'status_approved' => '1',
+   'member_id' => $data['member_id'],
+   'name' => $data['member_display_name'],
+   'member_group_id' => '4',
+   'email' => $data['email'],
+   'joined' => $data['joined'],
+   'ip_address' => '::1',
+   'posts' => '1',
+   'title' => 'Administrator',
+   'allow_admin_mails' => '0',
+   'time_offset' => '',
+   'skin' => '',
+   'warn_level' => '',
+   'warn_lastwarn' => '0',
+   'language' => '1',
+   'last_post' => '',
+   'restrict_post' => '0',
+   'view_sigs' => '1',
+   'view_img' => '1',
+   'bday_day' => '0',
+   'bday_month' => '0',
+   'bday_year' => '0',
+   'msg_count_new' => '0',
+   'msg_count_total' => '0',
+   'msg_count_reset' => '0',
+   'msg_show_notification' => '1',
+   'misc' => '',
+   'last_visit' => '1337707293',
+   'last_activity' => '1337712229',
+   'dst_in_use' => '1',
+   'coppa_user' => '0',
+   'mod_posts' => '0',
+   'auto_track' => '0',
+   'temp_ban' => '0',
+   'login_anonymous' => '0&1',
+   'ignored_users' => 'a:0:{}',
+   'mgroup_others' => '',
+   'org_perm_id' => '',
+   'member_login_key' => 'e1c43dbb884afe6da191343f632c05d0',
+   'member_login_key_expire' => $data['member_login_key_expire'],
+   'has_blog' => '',
+   'blogs_recache' => '',
+   'has_gallery' => '0',
+   'members_auto_dst' => '1',
+   'members_display_name' => $data['members_display_name'],
+   'members_seo_name' => $data['members_seo_name'],
+   'members_created_remote' => '0',
+   'members_disable_pm' => '0',
+   'members_l_display_name' => $data['members_l_display_name'],
+   'members_l_username' => $data['members_l_username'],
+   'failed_logins' => '',
+   'failed_login_count' => '0',
+   'members_profile_views' => '0',
+   'members_pass_hash' => '98fdc8bdd1352c66649071b0fb5b248e',
+   'members_pass_salt' => ',CUT;',
+   'member_banned' => '0',
+   'member_uploader' => 'flash',
+   'members_bitoptions' => '0',
+   'fb_uid' => '0',
+   'fb_emailhash' => '',
+   'fb_lastsync' => '0',
+   'members_day_posts' => '0,0',
+   'live_id' => '',
+   'twitter_id' => '',
+   'twitter_token' => '',
+   'twitter_secret' => '',
+   'notification_cnt' => '0',
+   'tc_lastsync' => '0',
+   'fb_session' => '',
+   'fb_token' => '',
+   'ips_mobile_token' => '',
+   'unacknowledged_warnings' => '',
+   'gallery_perms' => '1:1:1',
+   'pp_member_id' => '1',
+    'pp_last_visitors' => '',
+   'pp_rating_hits' => '0',
+   'pp_rating_value' => '0',
+   'pp_rating_real' => '0',
+   'pp_main_photo' => $data['pp_main_photo'],
+   'pp_main_width' => $data['pp_main_width'],
+   'pp_main_height' => $data['pp_main_height'],
+   'pp_thumb_photo' => $data['pp_thumb_photo'],
+   'pp_thumb_width' => '100',
+   'pp_thumb_height' => '100',
+   'pp_setting_moderate_comments' => '0',
+   'pp_setting_moderate_friends' => '0',
+   'pp_setting_count_friends' => '1',
+   'pp_setting_count_comments' => '1',
+   'pp_setting_count_visitors' => '1',
+   'pp_about_me' => '',
+   'pp_reputation_points' => '1',
+   'pp_gravatar' => '',
+   'pp_photo_type' => '',
+   'signature' => '',
+   'avatar_location' => '',
+   'avatar_size' => '0',
+   'avatar_type' => '',
+   'pconversation_filters' => '',
+   'fb_photo' => '',
+   'fb_photo_thumb' => '',
+   'fb_bwoptions' => '0',
+   'tc_last_sid_import' => '0',
+   'tc_photo' => '',
+   'tc_bwoptions' => '0',
+   'pp_customization' => '',
+   'pp_profile_update' => '0',
+   'status_date_formatted_short' => 'Today, 07:32 PM',
+   '_isLocked' => '0',
+   '_userCanReply' => '1',
+   '_canDelete' => '1',
+   '_canLock' => '1',
+   '_canUnlock' => '',
+   '_creatorImg' => 'http://localhost/nsocial/developer/public/style_status/ipb.png',
+   '_creatorText' => 'Board',
+   'bw_is_spammer' => '0',
+   'bw_from_sfs' => '0',
+   'bw_vnc_type' => '0',
+   'bw_forum_result_type' => '0',
+   'bw_no_status_update' => '0',
+   'bw_status_email_mine' => '0',
+   'bw_status_email_all' => '0',
+   'bw_disable_customization' => '0',
+   'bw_local_password_set' => '0',
+   'bw_disable_tagging' => '0',
+   'bw_disable_prefixes' => '0',
+   'bw_using_skin_gen' => '0',
+   'bw_disable_gravatar' => '0',
+   'member_rank_img' => 'http://localhost/nsocial/developer/public/style_extra/team_icons/admin.png',
+   'member_rank_img_i' => 'img',
+   'show_warn' => '',
+   'custom_fields' =>  '',
+   '_has_photo' => '0',
+   'pp_small_photo' => $data['pp_small_photo'],
+   'pp_small_width' => $data['pp_small_width'],
+   'pp_small_height' => $data['pp_small_height'],
+   'pp_mini_photo' => $data['pp_mini_photo'],
+   'pp_mini_width' => $data['pp_mini_width'],
+   'pp_mini_height' => $data['pp_mini_height'],
+   '_online' => '1',
+   '_last_active' => 'Today, 07:43 PM',
+   '_pp_rating_real' => '0',
+   'members_display_name_short' => $data['members_display_name_short'],
+   'member_title' => 'Administrator',
+   'status_replies' => $data['status_replies'],
+   'like' => $data['like'],
+   'replies' => $data['replies'],
+))"}]]></template_content>
+      <template_name>statusIndividual</template_name>
+      <template_data>$data</template_data>
+      <template_updated>1337816775</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[{parse template="statusUpdates" group="portal" params="array(
+array(
+   'status_id' => $data['id'],
+   'status_member_id' => $data['member_id'],
+   'status_date' => $data['status_date'],
+   'status_content' => $data['textStatus'],
+   'status_replies' => '0',
+   'status_last_ids' => 'a:0:{}',
+   'status_is_latest' => '1',
+   'status_is_locked' => '0',
+   'status_hash' => 'c07123b4b45600e9d97f6be68d758208',
+   'status_imported' => '0',
+   'status_creator' => 'ipb',
+   'status_author_id' => $data['member_id'],
+   'status_author_ip' => '::1',
+   'status_approved' => '1',
+   'member_id' => $data['member_id'],
+   'name' => $data['member_display_name'],
+   'member_group_id' => '4',
+   'email' => $data['email'],
+   'joined' => $data['joined'],
+   'ip_address' => '::1',
+   'posts' => '1',
+   'title' => 'Administrator',
+   'allow_admin_mails' => '0',
+   'time_offset' => '',
+   'skin' => '',
+   'warn_level' => '',
+   'warn_lastwarn' => '0',
+   'language' => '1',
+   'last_post' => '',
+   'restrict_post' => '0',
+   'view_sigs' => '1',
+   'view_img' => '1',
+   'bday_day' => '0',
+   'bday_month' => '0',
+   'bday_year' => '0',
+   'msg_count_new' => '0',
+   'msg_count_total' => '0',
+   'msg_count_reset' => '0',
+   'msg_show_notification' => '1',
+   'misc' => '',
+   'last_visit' => '1337707293',
+   'last_activity' => '1337712229',
+   'dst_in_use' => '1',
+   'coppa_user' => '0',
+   'mod_posts' => '0',
+   'auto_track' => '0',
+   'temp_ban' => '0',
+   'login_anonymous' => '0&1',
+   'ignored_users' => 'a:0:{}',
+   'mgroup_others' => '',
+   'org_perm_id' => '',
+   'member_login_key' => 'e1c43dbb884afe6da191343f632c05d0',
+   'member_login_key_expire' => $data['member_login_key_expire'],
+   'has_blog' => '',
+   'blogs_recache' => '',
+   'has_gallery' => '0',
+   'members_auto_dst' => '1',
+   'members_display_name' => $data['members_display_name'],
+   'members_seo_name' => $data['members_seo_name'],
+   'members_created_remote' => '0',
+   'members_disable_pm' => '0',
+   'members_l_display_name' => $data['members_l_display_name'],
+   'members_l_username' => $data['members_l_username'],
+   'failed_logins' => '',
+   'failed_login_count' => '0',
+   'members_profile_views' => '0',
+   'members_pass_hash' => '98fdc8bdd1352c66649071b0fb5b248e',
+   'members_pass_salt' => ',CUT;',
+   'member_banned' => '0',
+   'member_uploader' => 'flash',
+   'members_bitoptions' => '0',
+   'fb_uid' => '0',
+   'fb_emailhash' => '',
+   'fb_lastsync' => '0',
+   'members_day_posts' => '0,0',
+   'live_id' => '',
+   'twitter_id' => '',
+   'twitter_token' => '',
+   'twitter_secret' => '',
+   'notification_cnt' => '0',
+   'tc_lastsync' => '0',
+   'fb_session' => '',
+   'fb_token' => '',
+   'ips_mobile_token' => '',
+   'unacknowledged_warnings' => '',
+   'gallery_perms' => '1:1:1',
+   'pp_member_id' => '1',
+    'pp_last_visitors' => '',
+   'pp_rating_hits' => '0',
+   'pp_rating_value' => '0',
+   'pp_rating_real' => '0',
+   'pp_main_photo' => $data['pp_main_photo'],
+   'pp_main_width' => $data['pp_main_width'],
+   'pp_main_height' => $data['pp_main_height'],
+   'pp_thumb_photo' => $data['pp_thumb_photo'],
+   'pp_thumb_width' => '100',
+   'pp_thumb_height' => '100',
+   'pp_setting_moderate_comments' => '0',
+   'pp_setting_moderate_friends' => '0',
+   'pp_setting_count_friends' => '1',
+   'pp_setting_count_comments' => '1',
+   'pp_setting_count_visitors' => '1',
+   'pp_about_me' => '',
+   'pp_reputation_points' => '1',
+   'pp_gravatar' => '',
+   'pp_photo_type' => '',
+   'signature' => '',
+   'avatar_location' => '',
+   'avatar_size' => '0',
+   'avatar_type' => '',
+   'pconversation_filters' => '',
+   'fb_photo' => '',
+   'fb_photo_thumb' => '',
+   'fb_bwoptions' => '0',
+   'tc_last_sid_import' => '0',
+   'tc_photo' => '',
+   'tc_bwoptions' => '0',
+   'pp_customization' => '',
+   'pp_profile_update' => '0',
+   'status_date_formatted_short' => 'Today, 07:32 PM',
+   '_isLocked' => '0',
+   '_userCanReply' => '1',
+   '_canDelete' => '1',
+   '_canLock' => '1',
+   '_canUnlock' => '',
+   '_creatorImg' => 'http://localhost/nsocial/developer/public/style_status/ipb.png',
+   '_creatorText' => 'Board',
+   'bw_is_spammer' => '0',
+   'bw_from_sfs' => '0',
+   'bw_vnc_type' => '0',
+   'bw_forum_result_type' => '0',
+   'bw_no_status_update' => '0',
+   'bw_status_email_mine' => '0',
+   'bw_status_email_all' => '0',
+   'bw_disable_customization' => '0',
+   'bw_local_password_set' => '0',
+   'bw_disable_tagging' => '0',
+   'bw_disable_prefixes' => '0',
+   'bw_using_skin_gen' => '0',
+   'bw_disable_gravatar' => '0',
+   'member_rank_img' => 'http://localhost/nsocial/developer/public/style_extra/team_icons/admin.png',
+   'member_rank_img_i' => 'img',
+   'show_warn' => '',
+   'custom_fields' =>  '',
+   '_has_photo' => '0',
+   'pp_small_photo' => $data['pp_small_photo'],
+   'pp_small_width' => $data['pp_small_width'],
+   'pp_small_height' => $data['pp_small_height'],
+   'pp_mini_photo' => $data['pp_mini_photo'],
+   'pp_mini_width' => $data['pp_mini_width'],
+   'pp_mini_height' => $data['pp_mini_height'],
+   '_online' => '1',
+   '_last_active' => 'Today, 07:43 PM',
+   '_pp_rating_real' => '0',
+   'members_display_name_short' => $data['members_display_name_short'],
+   'member_title' => 'Administrator',
+   'status_replies' => $data['status_replies'],
+   'like' => $data['like'],
+   'replies' => $data['replies'],
+))"}]]></template_content>
+      <template_name>statusIndividual</template_name>
+      <template_data>$data</template_data>
+      <template_updated>1337816777</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>xmlskin</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[{parse template="statusUpdates" group="portal" params="array(
+array(
+   'status_id' => $data['id'],
+   'status_member_id' => $data['member_id'],
+   'status_date' => $data['status_date'],
+   'status_content' => $data['textStatus'],
+   'status_replies' => '0',
+   'status_last_ids' => 'a:0:{}',
+   'status_is_latest' => '1',
+   'status_is_locked' => '0',
+   'status_hash' => 'c07123b4b45600e9d97f6be68d758208',
+   'status_imported' => '0',
+   'status_creator' => 'ipb',
+   'status_author_id' => $data['member_id'],
+   'status_author_ip' => '::1',
+   'status_approved' => '1',
+   'member_id' => $data['member_id'],
+   'name' => $data['member_display_name'],
+   'member_group_id' => '4',
+   'email' => $data['email'],
+   'joined' => $data['joined'],
+   'ip_address' => '::1',
+   'posts' => '1',
+   'title' => 'Administrator',
+   'allow_admin_mails' => '0',
+   'time_offset' => '',
+   'skin' => '',
+   'warn_level' => '',
+   'warn_lastwarn' => '0',
+   'language' => '1',
+   'last_post' => '',
+   'restrict_post' => '0',
+   'view_sigs' => '1',
+   'view_img' => '1',
+   'bday_day' => '0',
+   'bday_month' => '0',
+   'bday_year' => '0',
+   'msg_count_new' => '0',
+   'msg_count_total' => '0',
+   'msg_count_reset' => '0',
+   'msg_show_notification' => '1',
+   'misc' => '',
+   'last_visit' => '1337707293',
+   'last_activity' => '1337712229',
+   'dst_in_use' => '1',
+   'coppa_user' => '0',
+   'mod_posts' => '0',
+   'auto_track' => '0',
+   'temp_ban' => '0',
+   'login_anonymous' => '0&1',
+   'ignored_users' => 'a:0:{}',
+   'mgroup_others' => '',
+   'org_perm_id' => '',
+   'member_login_key' => 'e1c43dbb884afe6da191343f632c05d0',
+   'member_login_key_expire' => $data['member_login_key_expire'],
+   'has_blog' => '',
+   'blogs_recache' => '',
+   'has_gallery' => '0',
+   'members_auto_dst' => '1',
+   'members_display_name' => $data['members_display_name'],
+   'members_seo_name' => $data['members_seo_name'],
+   'members_created_remote' => '0',
+   'members_disable_pm' => '0',
+   'members_l_display_name' => $data['members_l_display_name'],
+   'members_l_username' => $data['members_l_username'],
+   'failed_logins' => '',
+   'failed_login_count' => '0',
+   'members_profile_views' => '0',
+   'members_pass_hash' => '98fdc8bdd1352c66649071b0fb5b248e',
+   'members_pass_salt' => ',CUT;',
+   'member_banned' => '0',
+   'member_uploader' => 'flash',
+   'members_bitoptions' => '0',
+   'fb_uid' => '0',
+   'fb_emailhash' => '',
+   'fb_lastsync' => '0',
+   'members_day_posts' => '0,0',
+   'live_id' => '',
+   'twitter_id' => '',
+   'twitter_token' => '',
+   'twitter_secret' => '',
+   'notification_cnt' => '0',
+   'tc_lastsync' => '0',
+   'fb_session' => '',
+   'fb_token' => '',
+   'ips_mobile_token' => '',
+   'unacknowledged_warnings' => '',
+   'gallery_perms' => '1:1:1',
+   'pp_member_id' => '1',
+    'pp_last_visitors' => '',
+   'pp_rating_hits' => '0',
+   'pp_rating_value' => '0',
+   'pp_rating_real' => '0',
+   'pp_main_photo' => $data['pp_main_photo'],
+   'pp_main_width' => $data['pp_main_width'],
+   'pp_main_height' => $data['pp_main_height'],
+   'pp_thumb_photo' => $data['pp_thumb_photo'],
+   'pp_thumb_width' => '100',
+   'pp_thumb_height' => '100',
+   'pp_setting_moderate_comments' => '0',
+   'pp_setting_moderate_friends' => '0',
+   'pp_setting_count_friends' => '1',
+   'pp_setting_count_comments' => '1',
+   'pp_setting_count_visitors' => '1',
+   'pp_about_me' => '',
+   'pp_reputation_points' => '1',
+   'pp_gravatar' => '',
+   'pp_photo_type' => '',
+   'signature' => '',
+   'avatar_location' => '',
+   'avatar_size' => '0',
+   'avatar_type' => '',
+   'pconversation_filters' => '',
+   'fb_photo' => '',
+   'fb_photo_thumb' => '',
+   'fb_bwoptions' => '0',
+   'tc_last_sid_import' => '0',
+   'tc_photo' => '',
+   'tc_bwoptions' => '0',
+   'pp_customization' => '',
+   'pp_profile_update' => '0',
+   'status_date_formatted_short' => 'Today, 07:32 PM',
+   '_isLocked' => '0',
+   '_userCanReply' => '1',
+   '_canDelete' => '1',
+   '_canLock' => '1',
+   '_canUnlock' => '',
+   '_creatorImg' => 'http://localhost/nsocial/developer/public/style_status/ipb.png',
+   '_creatorText' => 'Board',
+   'bw_is_spammer' => '0',
+   'bw_from_sfs' => '0',
+   'bw_vnc_type' => '0',
+   'bw_forum_result_type' => '0',
+   'bw_no_status_update' => '0',
+   'bw_status_email_mine' => '0',
+   'bw_status_email_all' => '0',
+   'bw_disable_customization' => '0',
+   'bw_local_password_set' => '0',
+   'bw_disable_tagging' => '0',
+   'bw_disable_prefixes' => '0',
+   'bw_using_skin_gen' => '0',
+   'bw_disable_gravatar' => '0',
+   'member_rank_img' => 'http://localhost/nsocial/developer/public/style_extra/team_icons/admin.png',
+   'member_rank_img_i' => 'img',
+   'show_warn' => '',
+   'custom_fields' =>  '',
+   '_has_photo' => '0',
+   'pp_small_photo' => $data['pp_small_photo'],
+   'pp_small_width' => $data['pp_small_width'],
+   'pp_small_height' => $data['pp_small_height'],
+   'pp_mini_photo' => $data['pp_mini_photo'],
+   'pp_mini_width' => $data['pp_mini_width'],
+   'pp_mini_height' => $data['pp_mini_height'],
+   '_online' => '1',
+   '_last_active' => 'Today, 07:43 PM',
+   '_pp_rating_real' => '0',
+   'members_display_name_short' => $data['members_display_name_short'],
+   'member_title' => 'Administrator',
+   'status_replies' => $data['status_replies'],
+   'like' => $data['like'],
+   'replies' => $data['replies'],
+))"}]]></template_content>
+      <template_name>statusIndividual</template_name>
+      <template_data>$data</template_data>
+      <template_updated>1337816780</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="!$no_wrapper">
+	<ul class='ipsList_withtinyphoto clear'>
+</if>
+<foreach loop="innerLoop:$replies as $reply">
+	<li id='statusReply-{$reply['reply_id']}' class='ipsPad row2'>
+		<a href='{parse url="showuser={$reply['member_id']}" seotitle="{$reply['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink left'><img src='{$reply['pp_mini_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$reply['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_tiny' /></a>	
+		<div class="status_mini_content list_content">
+			<h5><strong>{parse template="userHoverCard" group="global" params="$reply"}</strong></h5>
+			{$reply['reply_content']}
+			<br />
+			<span class='desc lighter'>{$reply['reply_date_formatted']}</span>
+			<span class='desc mod_links'>
+				<if test="canDelete:|:$reply['_canDelete']"> &middot; <a href="{$this->settings['base_url']}app=members&amp;module=profile&amp;section=status&amp;do=deleteReply&amp;status_id={$reply['reply_status_id']}&amp;reply_id={$reply['reply_id']}&amp;k={$this->member->form_hash}" id="statusReplyDelete-{$reply['reply_status_id']}-{$reply['reply_id']}" class="__sDR __dr{$reply['reply_status_id']}-{$reply['reply_id']}">{$this->lang->words['status_delete_link']}</a></if>
+                <span class="right">{parse template="repButtons" group="portal" params="$this->memberData, array_merge( array( 'primaryId' => $reply['reply_id'], 'domLikeStripId' => 'like_status_' . $reply['reply_id'], 'domCountId' => 'rep_status_' . $reply['reply_id'], 'app' => 'portal', 'type' => 'log_id', 'likeFormatted' => $reply['like']['formatted'], 'has_given_rep' => $reply['like']['iLike'],$reply) )"}</span>
+			</span>
+		</div>
+	</li>
+</foreach>
+<if test="!$no_wrapper">
+	</ul>
+</if>]]></template_content>
+      <template_name>statusReplies</template_name>
+      <template_data>$replies=array(), $no_wrapper=false</template_data>
+      <template_updated>1337816775</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="!$no_wrapper">
+	<ul class='ipsList_withtinyphoto clear'>
+</if>
+<foreach loop="innerLoop:$replies as $reply">
+	<li id='statusReply-{$reply['reply_id']}' class='ipsPad row2'>
+		<a href='{parse url="showuser={$reply['member_id']}" seotitle="{$reply['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink left'><img src='{$reply['pp_mini_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$reply['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_tiny' /></a>	
+		<div class="status_mini_content list_content">
+			<h5><strong>{parse template="userHoverCard" group="global" params="$reply"}</strong></h5>
+			{$reply['reply_content']}
+			<br />
+			<span class='desc lighter'>{$reply['reply_date_formatted']}</span>
+			<span class='desc mod_links'>
+				<if test="canDelete:|:$reply['_canDelete']"> &middot; <a href="{$this->settings['base_url']}app=members&amp;module=profile&amp;section=status&amp;do=deleteReply&amp;status_id={$reply['reply_status_id']}&amp;reply_id={$reply['reply_id']}&amp;k={$this->member->form_hash}" id="statusReplyDelete-{$reply['reply_status_id']}-{$reply['reply_id']}" class="__sDR __dr{$reply['reply_status_id']}-{$reply['reply_id']}">{$this->lang->words['status_delete_link']}</a></if>
+			</span>
+		</div>
+	</li>
+</foreach>
+<if test="!$no_wrapper">
+	</ul>
+</if>]]></template_content>
+      <template_name>statusReplies</template_name>
+      <template_data>$replies=array(), $no_wrapper=false</template_data>
+      <template_updated>1337816777</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>xmlskin</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="!$no_wrapper">
+	<ul class='ipsList_withtinyphoto clear'>
+</if>
+<foreach loop="innerLoop:$replies as $reply">
+	<li id='statusReply-{$reply['reply_id']}' class='ipsPad row2'>
+		<a href='{parse url="showuser={$reply['member_id']}" seotitle="{$reply['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink left'><img src='{$reply['pp_mini_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$reply['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_tiny' /></a>	
+		<div class="status_mini_content list_content">
+			<h5><strong>{parse template="userHoverCard" group="global" params="$reply"}</strong></h5>
+			{$reply['reply_content']}
+			<br />
+			<span class='desc lighter'>{$reply['reply_date_formatted']}</span>
+			<span class='desc mod_links'>
+				<if test="canDelete:|:$reply['_canDelete']"> &middot; <a href="{$this->settings['base_url']}app=members&amp;module=profile&amp;section=status&amp;do=deleteReply&amp;status_id={$reply['reply_status_id']}&amp;reply_id={$reply['reply_id']}&amp;k={$this->member->form_hash}" id="statusReplyDelete-{$reply['reply_status_id']}-{$reply['reply_id']}" class="__sDR __dr{$reply['reply_status_id']}-{$reply['reply_id']}">{$this->lang->words['status_delete_link']}</a></if>
+			</span>
+		</div>
+	</li>
+</foreach>
+<if test="!$no_wrapper">
+	</ul>
+</if>]]></template_content>
+      <template_name>statusReplies</template_name>
+      <template_data>$replies=array(), $no_wrapper=false</template_data>
+      <template_updated>1337816780</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<script type="text/javascript">
+//ipb.status.maxReplies = {parse expression="intval($this->settings['su_max_replies'])"};
+//ipb.status.smallSpace = {parse expression="intval($smallSpace)"};
+</script>
+<foreach loop="outerLoop:$updates as $id => $status">
+    <if test="isValid:|:isset($status['member_id'])">
+        <div  data-id="{$status['status_id']}">
+                <if test="$this->memberData['member_id'] AND $latestOnly AND $status['member_id'] == $this->memberData['member_id']">
+                <script type="text/javascript">
+                        ipb.status.myLatest = {$status['status_id']};
+                </script>
+                </if>
+                <div class='ipsBox_container ipsPad' id='statusWrap-{$status['status_id']}'>
+                        <a href='{parse url="showuser={$status['member_id']}" seotitle="{$status['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink left'>
+                                <img src='{$status['pp_small_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$status['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_medium' />
+                        </a>	
+                        <div class="ipsBox_withphoto status_content">
+                                <div id="statusContent-{$status['status_id']}">
+                                        <h4>
+                                                {parse template="userHoverCard" group="global" params="$status"}
+                                                <if test="forSomeoneElse:|:$status['status_member_id'] != $status['status_author_id']">
+                                                        &rarr;
+                                                        {parse template="userHoverCard" group="global" params="$status['owner']"}
+                                                </if>
+                                        </h4>
+                                        <div class='status_status'>
+                                                {parse expression="html_entity_decode($status['status_content'])"}
+                                        </div>
+                                        <span class='desc lighter blend_links'>
+                                                <img src="{$this->settings['img_url']}/icon_lock.png" id='statusLockImg-{$status['status_id']}' alt="{$this->lang->words['status__locked']}" <if test="noLocked:|:!$status['status_is_locked']">style='display: none'</if> />
+                                                <if test="cImg:|:! $smallSpace AND $status['_creatorImg']"><img src="{$status['_creatorImg']}" alt='' /></if>
+                                                <a href='{parse url="app=members&amp;module=profile&amp;section=status&amp;type=single&amp;status_id={$status['status_id']}" seotitle="true" template="members_status_single" base="public"}'>{$status['status_date_formatted_short']}</a><if test="creatorText:|:$smallSpace AND $status['_creatorText'] AND $status['status_creator'] AND $status['status_creator'] != 'ipb'"> {$this->lang->words['su_via']} {$status['_creatorText']}</if>
+                                        </span>
+                                        <span class='mod_links'>
+                                                <if test="canDelete:|:$status['_canDelete']"> &middot; <a rel="nofollow" href="{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=status&amp;do=deleteStatus&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}" id="statusDelete-{$status['status_id']}" class="___sD __d{$status['status_id']}">{$this->lang->words['status_delete_link']}</a></if>
+                                                <span id='statusUnlock-{$status['status_id']}' <if test="isLocked:|:$status['_isLocked'] AND $status['_canUnlock']">style='display:inline'<else />style='display:none'</if>> &middot; <a rel="nofollow"  href="{$this->settings['base_url']}app=members&amp;module=profile&amp;section=status&amp;do=unlockStatus&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}" id="statusUnlockLink-{$status['status_id']}" class="__sU __u{$status['status_id']}">{$this->lang->words['status_unlock_link']}</a></span>
+                                                <span id='statusLock-{$status['status_id']}' <if test="canLock:|:$status['_canLock'] AND ! $status['_isLocked']">style='display:inline'<else />style='display:none'</if>> &middot; <a rel="nofollow"  href="{$this->settings['base_url']}app=members&amp;module=profile&amp;section=status&amp;do=lockStatus&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}" id="statusLockLink-{$status['status_id']}" class="__sL __l{$status['status_id']}">{$this->lang->words['status_lock_link']}</a></span>
+                                                <span class="right">{parse template="repButtons" group="portal" params="$this->memberData, array_merge( array( 'primaryId' => $status['status_id'], 'domLikeStripId' => 'like_status_' . $status['status_id'], 'domCountId' => 'rep_status_' . $status['status_id'], 'app' => 'portal', 'type' => 'id', 'likeFormatted' => $status['like']['formatted'], 'has_given_rep' => $status['like']['iLike'],$status) )"}</span>
+                                        </span>
+                                </div>
+                                <div id="statusFeedback-{$status['status_id']}" class='status_feedback'>
+                                        <if test="$status['status_replies'] AND count( $status['replies'] )">
+                                                <if test="hasMore:|:$status['status_replies'] > 3">
+                                                        <div class='status_mini_wrap row2 altrow' id='statusMoreWrap-{$status['status_id']}'>
+                                                                <img src="{$this->settings['img_url']}/comments.png" alt="" /> &nbsp;<a href="#" id="statusMore-{$status['status_id']}" class='__showAll __x{$status['status_id']}'>{parse expression="sprintf( $this->lang->words['status_show_all_x'], $status['status_replies'] )"}</a>
+                                                        </div>
+                                                </if>
+                                                <ul id='statusReplies-{$status['status_id']}' class='ipsList_withtinyphoto clear'>
+                                                        {parse template="statusReplies" group="portal" params="$status['replies'], 1"}
+                                                </ul>
+                                        </if>
+                                        <div id='statusReplyBlank-{$status['status_id']}'></div>
+                                        <div id='statusReply-{$status['status_id']}'>
+                                        <if test="$status['_userCanReply']">
+                                                <ul class='ipsList_withtinyphoto reply row2 ipsPad'>
+                                                        <li>
+                                                                <form id='statusReplyForm-{$status['status_id']}' action='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=status&amp;do=reply&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}&amp;id={$this->memberData['member_id']}' method='post'>
+                                                                        <a href='{parse url="showuser={$this->memberData['member_id']}" seotitle="{$this->memberData['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink left'><img src='{$this->memberData['pp_mini_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$this->memberData['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_tiny' /></a>
+                                                                        <div class='list_content'>
+                                                                                <div class="status_mini_content">
+                                                                                        <textarea class='status_textarea input_text' rows='3' cols='50' name='comment-{$status['status_id']}' id='statusText-{$status['status_id']}'></textarea>
+                                                                                        <div class="status_submit"><input type='submit' class='__submit input_submit' id='statusSubmit-{$status['status_id']}' value='{$this->lang->words['status__dfcomment']}' /></div>
+                                                                                </div>									
+                                                                        </div>
+                                                                </form>
+                                                                <a href='#' class='__showform' id='statusReplyFormShow-{$status['status_id']}' style='display: none'>{$this->lang->words['status__addcomment']}</a>
+                                                        </li>
+                                                </ul>
+                                                <script type='text/javascript'>
+                                                        if( $('statusReplyForm-{$status['status_id']}') )
+                                                        {
+                                                                $('statusReplyForm-{$status['status_id']}').hide();
+                                                        }
+                                                        if( $('statusReplyFormShow-{$status['status_id']}') )
+                                                        {
+                                                                $('statusReplyFormShow-{$status['status_id']}').show();
+                                                        }
+                                                </script>
+                                        </if>
+                                        </div>
+                                        <div class='status_mini_wrap row2 altrow' id='statusMaxWrap-{$status['status_id']}' <if test="maxReplies:|:$status['status_replies'] < $this->settings['su_max_replies']">style='display:none'</if>>
+                                                <img src="{$this->settings['img_url']}/locked_replies.png" title="{$this->lang->words['status_too_many_replies']}" alt='x' /> {$this->lang->words['status_too_many_replies']}
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+    </if>
+</foreach>]]></template_content>
+      <template_name>statusUpdates</template_name>
+      <template_data>$updates=array(), $smallSpace=0, $latestOnly=0</template_data>
+      <template_updated>1337816775</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<script type="text/javascript">
+//ipb.status.maxReplies = {parse expression="intval($this->settings['su_max_replies'])"};
+//ipb.status.smallSpace = {parse expression="intval($smallSpace)"};
+</script>
+<foreach loop="outerLoop:$updates as $id => $status">
+    <if test="isValid:|:isset($status['member_id'])">
+        <div  data-id="{$status['status_id']}">
+                <if test="$this->memberData['member_id'] AND $latestOnly AND $status['member_id'] == $this->memberData['member_id']">
+                <script type="text/javascript">
+                        ipb.status.myLatest = {$status['status_id']};
+                </script>
+                </if>
+                <div class='ipsBox_container ipsPad' id='statusWrap-{$status['status_id']}'>
+                        <a href='{parse url="showuser={$status['member_id']}" seotitle="{$status['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink left'>
+                                <img src='{$status['pp_small_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$status['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_medium' />
+                        </a>	
+                        <div class="ipsBox_withphoto status_content">
+                                <div id="statusContent-{$status['status_id']}">
+                                        <h4>
+                                                {parse template="userHoverCard" group="global" params="$status"}
+                                                <if test="forSomeoneElse:|:$status['status_member_id'] != $status['status_author_id']">
+                                                        &rarr;
+                                                        {parse template="userHoverCard" group="global" params="$status['owner']"}
+                                                </if>
+                                        </h4>
+                                        <div class='status_status'>
+                                                {parse expression="html_entity_decode($status['status_content'])"}
+                                        </div>
+                                        <span class='desc lighter blend_links'>
+                                                <img src="{$this->settings['img_url']}/icon_lock.png" id='statusLockImg-{$status['status_id']}' alt="{$this->lang->words['status__locked']}" <if test="noLocked:|:!$status['status_is_locked']">style='display: none'</if> />
+                                                <if test="cImg:|:! $smallSpace AND $status['_creatorImg']"><img src="{$status['_creatorImg']}" alt='' /></if>
+                                                <a href='{parse url="app=members&amp;module=profile&amp;section=status&amp;type=single&amp;status_id={$status['status_id']}" seotitle="true" template="members_status_single" base="public"}'>{$status['status_date_formatted_short']}</a><if test="creatorText:|:$smallSpace AND $status['_creatorText'] AND $status['status_creator'] AND $status['status_creator'] != 'ipb'"> {$this->lang->words['su_via']} {$status['_creatorText']}</if>
+                                        </span>
+                                        <span class='mod_links'>
+                                                <if test="canDelete:|:$status['_canDelete']"> &middot; <a rel="nofollow" href="{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=status&amp;do=deleteStatus&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}" id="statusDelete-{$status['status_id']}" class="___sD __d{$status['status_id']}">{$this->lang->words['status_delete_link']}</a></if>
+                                                <span id='statusUnlock-{$status['status_id']}' <if test="isLocked:|:$status['_isLocked'] AND $status['_canUnlock']">style='display:inline'<else />style='display:none'</if>> &middot; <a rel="nofollow"  href="{$this->settings['base_url']}app=members&amp;module=profile&amp;section=status&amp;do=unlockStatus&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}" id="statusUnlockLink-{$status['status_id']}" class="__sU __u{$status['status_id']}">{$this->lang->words['status_unlock_link']}</a></span>
+                                                <span id='statusLock-{$status['status_id']}' <if test="canLock:|:$status['_canLock'] AND ! $status['_isLocked']">style='display:inline'<else />style='display:none'</if>> &middot; <a rel="nofollow"  href="{$this->settings['base_url']}app=members&amp;module=profile&amp;section=status&amp;do=lockStatus&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}" id="statusLockLink-{$status['status_id']}" class="__sL __l{$status['status_id']}">{$this->lang->words['status_lock_link']}</a></span>
+                                                <span class="right">{parse template="repButtons" group="portal" params="$this->memberData, array_merge( array( 'primaryId' => $status['status_id'], 'domLikeStripId' => 'like_status_' . $status['status_id'], 'domCountId' => 'rep_status_' . $status['status_id'], 'app' => 'portal', 'type' => 'id', 'likeFormatted' => $status['like']['formatted'], 'has_given_rep' => $status['like']['iLike'],$status) )"}</span>
+                                        </span>
+                                </div>
+                                <div id="statusFeedback-{$status['status_id']}" class='status_feedback'>
+                                        <if test="$status['status_replies'] AND count( $status['replies'] )">
+                                                <if test="hasMore:|:$status['status_replies'] > 3">
+                                                        <div class='status_mini_wrap row2 altrow' id='statusMoreWrap-{$status['status_id']}'>
+                                                                <img src="{$this->settings['img_url']}/comments.png" alt="" /> &nbsp;<a href="#" id="statusMore-{$status['status_id']}" class='__showAll __x{$status['status_id']}'>{parse expression="sprintf( $this->lang->words['status_show_all_x'], $status['status_replies'] )"}</a>
+                                                        </div>
+                                                </if>
+                                                <ul id='statusReplies-{$status['status_id']}' class='ipsList_withtinyphoto clear'>
+                                                        {parse template="statusReplies" group="profile" params="$status['replies'], 1"}
+                                                </ul>
+                                        </if>
+                                        <div id='statusReplyBlank-{$status['status_id']}'></div>
+                                        <div id='statusReply-{$status['status_id']}'>
+                                        <if test="$status['_userCanReply']">
+                                                <ul class='ipsList_withtinyphoto reply row2 ipsPad'>
+                                                        <li>
+                                                                <form id='statusReplyForm-{$status['status_id']}' action='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=status&amp;do=reply&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}&amp;id={$this->memberData['member_id']}' method='post'>
+                                                                        <a href='{parse url="showuser={$this->memberData['member_id']}" seotitle="{$this->memberData['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink left'><img src='{$this->memberData['pp_mini_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$this->memberData['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_tiny' /></a>
+                                                                        <div class='list_content'>
+                                                                                <div class="status_mini_content">
+                                                                                        <textarea class='status_textarea input_text' rows='3' cols='50' name='comment-{$status['status_id']}' id='statusText-{$status['status_id']}'></textarea>
+                                                                                        <div class="status_submit"><input type='submit' class='__submit input_submit' id='statusSubmit-{$status['status_id']}' value='{$this->lang->words['status__dfcomment']}' /></div>
+                                                                                </div>									
+                                                                        </div>
+                                                                </form>
+                                                                <a href='#' class='__showform' id='statusReplyFormShow-{$status['status_id']}' style='display: none'>{$this->lang->words['status__addcomment']}</a>
+                                                        </li>
+                                                </ul>
+                                                <script type='text/javascript'>
+                                                        if( $('statusReplyForm-{$status['status_id']}') )
+                                                        {
+                                                                $('statusReplyForm-{$status['status_id']}').hide();
+                                                        }
+                                                        if( $('statusReplyFormShow-{$status['status_id']}') )
+                                                        {
+                                                                $('statusReplyFormShow-{$status['status_id']}').show();
+                                                        }
+                                                </script>
+                                        </if>
+                                        </div>
+                                        <div class='status_mini_wrap row2 altrow' id='statusMaxWrap-{$status['status_id']}' <if test="maxReplies:|:$status['status_replies'] < $this->settings['su_max_replies']">style='display:none'</if>>
+                                                <img src="{$this->settings['img_url']}/locked_replies.png" title="{$this->lang->words['status_too_many_replies']}" alt='x' /> {$this->lang->words['status_too_many_replies']}
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+    </if>
+</foreach>]]></template_content>
+      <template_name>statusUpdates</template_name>
+      <template_data>$updates=array(), $smallSpace=0, $latestOnly=0</template_data>
+      <template_updated>1337816777</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>xmlskin</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<script type="text/javascript">
+//ipb.status.maxReplies = {parse expression="intval($this->settings['su_max_replies'])"};
+//ipb.status.smallSpace = {parse expression="intval($smallSpace)"};
+</script>
+<foreach loop="outerLoop:$updates as $id => $status">
+    <if test="isValid:|:isset($status['member_id'])">
+        <div  data-id="{$status['status_id']}">
+                <if test="$this->memberData['member_id'] AND $latestOnly AND $status['member_id'] == $this->memberData['member_id']">
+                <script type="text/javascript">
+                        ipb.status.myLatest = {$status['status_id']};
+                </script>
+                </if>
+                <div class='ipsBox_container ipsPad' id='statusWrap-{$status['status_id']}'>
+                        <a href='{parse url="showuser={$status['member_id']}" seotitle="{$status['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink left'>
+                                <img src='{$status['pp_small_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$status['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_medium' />
+                        </a>	
+                        <div class="ipsBox_withphoto status_content">
+                                <div id="statusContent-{$status['status_id']}">
+                                        <h4>
+                                                {parse template="userHoverCard" group="global" params="$status"}
+                                                <if test="forSomeoneElse:|:$status['status_member_id'] != $status['status_author_id']">
+                                                        &rarr;
+                                                        {parse template="userHoverCard" group="global" params="$status['owner']"}
+                                                </if>
+                                        </h4>
+                                        <div class='status_status'>
+                                                {parse expression="html_entity_decode($status['status_content'])"}
+                                        </div>
+                                        <span class='desc lighter blend_links'>
+                                                <img src="{$this->settings['img_url']}/icon_lock.png" id='statusLockImg-{$status['status_id']}' alt="{$this->lang->words['status__locked']}" <if test="noLocked:|:!$status['status_is_locked']">style='display: none'</if> />
+                                                <if test="cImg:|:! $smallSpace AND $status['_creatorImg']"><img src="{$status['_creatorImg']}" alt='' /></if>
+                                                <a href='{parse url="app=members&amp;module=profile&amp;section=status&amp;type=single&amp;status_id={$status['status_id']}" seotitle="true" template="members_status_single" base="public"}'>{$status['status_date_formatted_short']}</a><if test="creatorText:|:$smallSpace AND $status['_creatorText'] AND $status['status_creator'] AND $status['status_creator'] != 'ipb'"> {$this->lang->words['su_via']} {$status['_creatorText']}</if>
+                                        </span>
+                                        <span class='mod_links'>
+                                                <if test="canDelete:|:$status['_canDelete']"> &middot; <a rel="nofollow" href="{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=status&amp;do=deleteStatus&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}" id="statusDelete-{$status['status_id']}" class="___sD __d{$status['status_id']}">{$this->lang->words['status_delete_link']}</a></if>
+                                                <span id='statusUnlock-{$status['status_id']}' <if test="isLocked:|:$status['_isLocked'] AND $status['_canUnlock']">style='display:inline'<else />style='display:none'</if>> &middot; <a rel="nofollow"  href="{$this->settings['base_url']}app=members&amp;module=profile&amp;section=status&amp;do=unlockStatus&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}" id="statusUnlockLink-{$status['status_id']}" class="__sU __u{$status['status_id']}">{$this->lang->words['status_unlock_link']}</a></span>
+                                                <span id='statusLock-{$status['status_id']}' <if test="canLock:|:$status['_canLock'] AND ! $status['_isLocked']">style='display:inline'<else />style='display:none'</if>> &middot; <a rel="nofollow"  href="{$this->settings['base_url']}app=members&amp;module=profile&amp;section=status&amp;do=lockStatus&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}" id="statusLockLink-{$status['status_id']}" class="__sL __l{$status['status_id']}">{$this->lang->words['status_lock_link']}</a></span>
+                                                <span class="right">{parse template="repButtons" group="portal" params="$this->memberData, array_merge( array( 'primaryId' => $status['status_id'], 'domLikeStripId' => 'like_status_' . $status['status_id'], 'domCountId' => 'rep_status_' . $status['status_id'], 'app' => 'portal', 'type' => 'id', 'likeFormatted' => $status['like']['formatted'], 'has_given_rep' => $status['like']['iLike'],$status) )"}</span>
+                                        </span>
+                                </div>
+                                <div id="statusFeedback-{$status['status_id']}" class='status_feedback'>
+                                        <if test="$status['status_replies'] AND count( $status['replies'] )">
+                                                <if test="hasMore:|:$status['status_replies'] > 3">
+                                                        <div class='status_mini_wrap row2 altrow' id='statusMoreWrap-{$status['status_id']}'>
+                                                                <img src="{$this->settings['img_url']}/comments.png" alt="" /> &nbsp;<a href="#" id="statusMore-{$status['status_id']}" class='__showAll __x{$status['status_id']}'>{parse expression="sprintf( $this->lang->words['status_show_all_x'], $status['status_replies'] )"}</a>
+                                                        </div>
+                                                </if>
+                                                <ul id='statusReplies-{$status['status_id']}' class='ipsList_withtinyphoto clear'>
+                                                        {parse template="statusReplies" group="profile" params="$status['replies'], 1"}
+                                                </ul>
+                                        </if>
+                                        <div id='statusReplyBlank-{$status['status_id']}'></div>
+                                        <div id='statusReply-{$status['status_id']}'>
+                                        <if test="$status['_userCanReply']">
+                                                <ul class='ipsList_withtinyphoto reply row2 ipsPad'>
+                                                        <li>
+                                                                <form id='statusReplyForm-{$status['status_id']}' action='{$this->settings['base_url']}app=portal&amp;module=ajax&amp;section=status&amp;do=reply&amp;status_id={$status['status_id']}&amp;k={$this->member->form_hash}&amp;id={$this->memberData['member_id']}' method='post'>
+                                                                        <a href='{parse url="showuser={$this->memberData['member_id']}" seotitle="{$this->memberData['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink left'><img src='{$this->memberData['pp_mini_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$this->memberData['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_tiny' /></a>
+                                                                        <div class='list_content'>
+                                                                                <div class="status_mini_content">
+                                                                                        <textarea class='status_textarea input_text' rows='3' cols='50' name='comment-{$status['status_id']}' id='statusText-{$status['status_id']}'></textarea>
+                                                                                        <div class="status_submit"><input type='submit' class='__submit input_submit' id='statusSubmit-{$status['status_id']}' value='{$this->lang->words['status__dfcomment']}' /></div>
+                                                                                </div>									
+                                                                        </div>
+                                                                </form>
+                                                                <a href='#' class='__showform' id='statusReplyFormShow-{$status['status_id']}' style='display: none'>{$this->lang->words['status__addcomment']}</a>
+                                                        </li>
+                                                </ul>
+                                                <script type='text/javascript'>
+                                                        if( $('statusReplyForm-{$status['status_id']}') )
+                                                        {
+                                                                $('statusReplyForm-{$status['status_id']}').hide();
+                                                        }
+                                                        if( $('statusReplyFormShow-{$status['status_id']}') )
+                                                        {
+                                                                $('statusReplyFormShow-{$status['status_id']}').show();
+                                                        }
+                                                </script>
+                                        </if>
+                                        </div>
+                                        <div class='status_mini_wrap row2 altrow' id='statusMaxWrap-{$status['status_id']}' <if test="maxReplies:|:$status['status_replies'] < $this->settings['su_max_replies']">style='display:none'</if>>
+                                                <img src="{$this->settings['img_url']}/locked_replies.png" title="{$this->lang->words['status_too_many_replies']}" alt='x' /> {$this->lang->words['status_too_many_replies']}
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+    </if>
+</foreach>]]></template_content>
+      <template_name>statusUpdates</template_name>
+      <template_data>$updates=array(), $smallSpace=0, $latestOnly=0</template_data>
+      <template_updated>1337816780</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </templates>
+  </hookextras_templates>
+  <hookextras_css>
+    <css>
+      <css_updated>1337816773</css_updated>
+      <css_group>timeline</css_group>
+      <css_content>/************************************************************************/
+/* IP.Board 3 CSS - By Julio Barreraa - (c)2010 Codebit.org     	*/
+/************************************************************************/
+/* timeline.css - Timeline styles					*/
+/************************************************************************/
+
+#pages {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.stream-item, .unfocusable-stream-item {
+    background: none repeat scroll 0 0 padding-box #FFFFFF;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.new-tweets-bar {
+    background-color: #F5F5F5;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05) inset;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 10px 1px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    top: -1px;
+    z-index: 2;
+}
+
+.stream-item {
+    display: none;
+}</css_content>
+      <css_position>1</css_position>
+      <css_added_to>0</css_added_to>
+      <css_app>portal</css_app>
+      <css_app_hide>0</css_app_hide>
+      <css_attributes><![CDATA[title="Main" media="screen,print"]]></css_attributes>
+      <css_modules>portal</css_modules>
+      <css_removed>0</css_removed>
+      <css_master_key>root</css_master_key>
+    </css>
+    <css>
+      <css_updated>1337816776</css_updated>
+      <css_group>timeline</css_group>
+      <css_content>/************************************************************************/
+/* IP.Board 3 CSS - By Julio Barreraa - (c)2010 Codebit.org     	*/
+/************************************************************************/
+/* timeline.css - Timeline styles					*/
+/************************************************************************/
+
+#pages {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.stream-item, .unfocusable-stream-item {
+    background: none repeat scroll 0 0 padding-box #FFFFFF;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.new-tweets-bar {
+    background-color: #F5F5F5;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05) inset;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 10px 1px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    top: -1px;
+    z-index: 2;
+}
+
+.stream-item {
+    display: none;
+}</css_content>
+      <css_position>1</css_position>
+      <css_added_to>0</css_added_to>
+      <css_app>portal</css_app>
+      <css_app_hide>0</css_app_hide>
+      <css_attributes><![CDATA[title="Main" media="screen,print"]]></css_attributes>
+      <css_modules>portal</css_modules>
+      <css_removed>0</css_removed>
+      <css_master_key>xmlskin</css_master_key>
+    </css>
+    <css>
+      <css_updated>1337816778</css_updated>
+      <css_group>timeline</css_group>
+      <css_content>/************************************************************************/
+/* IP.Board 3 CSS - By Julio Barreraa - (c)2010 Codebit.org     	*/
+/************************************************************************/
+/* timeline.css - Timeline styles					*/
+/************************************************************************/
+
+#pages {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.stream-item, .unfocusable-stream-item {
+    background: none repeat scroll 0 0 padding-box #FFFFFF;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.new-tweets-bar {
+    background-color: #F5F5F5;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05) inset;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 10px 1px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    top: -1px;
+    z-index: 2;
+}
+
+.stream-item {
+    display: none;
+}</css_content>
+      <css_position>1</css_position>
+      <css_added_to>0</css_added_to>
+      <css_app>portal</css_app>
+      <css_app_hide>0</css_app_hide>
+      <css_attributes><![CDATA[title="Main" media="screen,print"]]></css_attributes>
+      <css_modules>portal</css_modules>
+      <css_removed>0</css_removed>
+      <css_master_key>mobile</css_master_key>
+    </css>
+  </hookextras_css>
+  <hookextras_replacements/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

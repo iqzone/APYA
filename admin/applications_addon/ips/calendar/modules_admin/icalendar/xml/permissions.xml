@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Import iCalendar Feeds</grouptitle>
+		<grouplang>calendar_import</grouplang>
+		<items>
+			<item>
+				<key>calendar_ical</key>
+				<string>Can import ical and webcal feeds?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <help>
+    <row>
+      <title>Searching</title>
+      <text><![CDATA[The search feature can be used to search all areas of the community quickly based on keywords you enter.<br />
+<br />
+&lt;strong&gt;Quick Search&lt;/strong&gt;<br />
+You can start a quick search by typing your keywords into the quick-search bar at the top of any page and pressing the &quot;Search&quot; button.<br />
+<br />
+&lt;strong&gt;Advanced Options&lt;/strong&gt;<br />
+If instead of typing your keywords into the quick-search bar, you click the &quot;Advanced&quot; link next to it, you will see some advanced options for searching.<br />
+<br />
+The first option, &quot;Find &lt;strong&gt;words&lt;/strong&gt;&quot; is where you can enter the keywords to search for.<br />
+<br />
+The next option, &quot;Find &lt;strong&gt;author&lt;/strong&gt;&quot; can be used to only find content from a specific user. As you begin typing ausername, you should see a dropdown with username suggestions that you can select from.<br />
+<br />
+The next option, &quot;Find by &lt;strong&gt;date&lt;/strong&gt;&quot; allows you to restrict the results to content added between particular dates. To select your date, click the &lt;img src=&#39;{style_image_url}/date.png&#39; /&gt; button - this will bring up a calendar. From here you can select any date and your option will be filled into the search form.<br />
+<br />
+The next option, &quot;Find in &lt;strong&gt;forum&lt;/strong&gt; allows you to restrict your results to content within particular forums. You can select multiple options by holding the Ctrl key on your keyboard (or the cmd key if you use a Mac) and clicking on your options.<br />
+<br />
+You can leave any of these options blank, however you must supply at least one search criteria when submitting the form.  Once you have filled in the options that you require, press the &lt;span class=&#39;input_submit&#39;&gt;Do Search&lt;/span&gt; button.<br />
+<br />
+&lt;strong&gt;Inline Search&lt;/strong&gt;<br />
+When you are viewing a particular topic, or a particular forum, you will notice that the search bar changes from "Search Forum" to "Search This Topic" - this allows you to easily and quickly search through the current topic, forum, or application, without getting search results for other areas of the forum.<br />
+<br />
+&lt;strong&gt;Results&lt;/strong&gt;<br />
+Once you have submitted your search, a tabbed page of results will appear - you can change the selected tab to choose which area of the community you wish to search. For example, results under the &quot;Forums&quot; tab will bring up any topics and posts that contain your search keywords, while the &quot;Members&quot; tab will bring up any member accounts that match your search criteria.<br />
+<br />
+You can change the order of the results to sort by relevance or to sort by date using the options at the top of the results page.<br />
+<br />
+The keywords that you searched for will be highlighted like &lt;span class=&#39;searchlite&#39;&gt;this&lt;/span&gt;.<br />
+<br />
+Once you have found the result you are looking for, you can click on it to bring up the page, or, if you are searching through the forums, you can click on the preview icon to preview the search results without having to leave the search page.]]></text>
+      <description>How to use the search feature.</description>
+      <position>8</position>
+      <app>core</app>
+    </row>
+    <row>
+      <title>Your Settings</title>
+      <text><![CDATA[<p>
+	You can access your settings from any page by selecting your name at the top of the screen and then selecting &quot;My Settings&quot;.<br />
+	<br />
+	There are several tabs on the side of the page, which allow you to configure and update different board settings:<br />
+	<br />
+	<br />
+	<br />
+	<strong><em>Profile Settings</em></strong><br />
+	From the Profile Settings area of your UserCP, you can configure various aspects of your profile, including:</p>
+<ul>
+	<li>
+		Profile Picture: This is the photo used to identify you throughtout the community.</li>
+	<li>
+		Timezome</li>
+	<li>
+		Allow Comments: If checked, other forum members can leave comments on your profile.</li>
+	<li>
+		Friends</li>
+	<li>
+		Edit your &quot;About Me&quot; information</li>
+	<li>
+		Change your Member Title</li>
+	<li>
+		Update your Birthday</li>
+	<li>
+		Add profile information, such as interests</li>
+	<li>
+		Share contact information such as AIM usernames.</li>
+</ul>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><em>Profile Customization</em></strong></p>
+<p>
+	From the Profile Customization tab of your UserCP, you can setup a custom profile background, change the colors of your profile, and perform other ways to customize the look and feel of your profile.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Email &amp; Password</strong></em></p>
+<p>
+	The Email &amp; Password area allows you to update the password or email address associated with your account.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Display Name</strong></em></p>
+<p>
+	The Display Name page allows you to change the name that is shown to members throughout the community. The board administrator limits the number of times you can change your display name, so make changes wisely.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><em>Signature</em></strong></p>
+<p>
+	The signature page allows you to modify the custom signature that is shown below all of your posts.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Ignore</strong></em></p>
+<p>
+	The &quot;ignore&quot; tab allows you to configure your Ignore settings - you can choose to hide individual member&#39;s posts, signatures, chats, status updates, or other aspects of a member that you wish to hide.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><em>Manage Facebook/Twitter</em></strong></p>
+<p>
+	If you have connected your forum profile to Facebook or Twitter, you can manage your connection here, including settings on importing status updates, linking your user photo, and more.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Manage Attachments</strong></em></p>
+<p>
+	This page will display all attachments that you have uploaded to the forum. If you are running close to your global attachment limit, you can delete attachments from this area.&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Notification Options</strong></em></p>
+<p>
+	The Notification Options page allows you to configure how you should be notified of certain events, such as a reply to a topic, a private message, or a new topic. You can configure how you would like to recieve these notifications as well, such as via the mobile application, email, or inline notifications.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Your Notifications</strong></em></p>
+<p>
+	This tab will display the most recent notifications that you have recieved.</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>]]></text>
+      <description>Editing contact information, personal information, signatures, board settings, languages and style choices.</description>
+      <position>3</position>
+      <app>core</app>
+    </row>
+    <row>
+      <title>How to Register</title>
+      <text><![CDATA[To be able to enjoy all of the features available to the community, you will need to sign up for a member account. Registration is easy and only takes a moment to complete. <br />
+ <br />
+ To sign up, click the &quot;&lt;a href=&#39;{board_url}app=core&amp;module=global&amp;section=register&#39;&gt;<img src="http://content.community.invisionpower.com/global_remote_files/help_files/A3xHoa.png"/>&lt;/a&gt;&quot; link at the top of any page.  You can then provide your email address and password to complete the registration process.
+ <br />
+Some communities may have an easier way to register without filling out the registration form. If enabled, you will see a Facebook or Twitter icon next to the Create Account button. If you use these services, you can use your existing login information from those services to link your account. Registration via this method takes only 3 clicks and will return you back to the forum after you authorize it.
+ <br />
+ You may be registered and logged straight in, or you may have to verify your email address by clicking a link in an email that we will send you. If this is the case, a screen will appear with further instructions. You will receive a confirmation of your membership as an email.]]></text>
+      <description>How to register and the added benefits of being a registered member.</description>
+      <position>1</position>
+      <app>core</app>
+    </row>
+    <row>
+      <title>Logging In and Out</title>
+      <text><![CDATA[&lt;strong&gt;Logging In&lt;/strong&gt;<br />
+Once you have signed up for an account, you can log in by pressing the &quot;Sign In&quot; button at the top of any page.<br />
+<br />
+From here, you should enter your username or email address, and the password you used when you registered.  If you tick the &quot;Remember Me&quot; box you will not have to sign in when you visit the community in future. This ability can be very useful, but should not be used if other people have access to your computer or if you are using a public computer.<br />
+<br />
+You may also be able to hide your username from the online list by checking the &quot;Sign in anonymously&quot; box.  Administrators will still be able to see you online if you do so, however other members will not be able to.<br />
+<br />
+When you are ready, click &lt;span class=&#39;input_submit&#39;&gt;Sign In&lt;/span&gt;.<br />
+Once logged in, you should be taken back to whatever page you were previously viewing.<br />
+<br />
+You may also see additional log in options such as Twitter or Facebook Connect. If these features are available and you would prefer to use one of these options to log in, click on the appropriate button and follow the on-screen instructions.<br />
+<br />
+<br />
+&lt;strong&gt;Forgotten your password&lt;/strong&gt;<br />
+If you have forgotten your password, you can click the &quot;I&#39;ve forgotten my password&quot; link on the sign in page below the password box.  This will take you to a page where you can enter your username or email address, and we will then either email you a new password that you can use or a link for you to reset your password.<br />
+<br />
+Note that if you locked your account by typing in the wrong password too many times, you will still need to unlock your account before you can use your new password. Please contact an administrator for assistance if you encounter trouble with a locked account.<br />
+<br />
+<br />
+&lt;strong&gt;Logging Out&lt;/strong&gt;<br />
+To log out click the &quot;Sign Out&quot; link at the top of the screen from any page.]]></text>
+      <description>How to log in and out from the board, how to remain anonymous and not be shown on the active users list and what to do if you forget your password.</description>
+      <position>2</position>
+      <app>core</app>
+    </row>
+    <row>
+      <title>Contacting the staff</title>
+      <text><![CDATA[If you need to contact a moderator, or simply wish to view the complete administration team, you can click the link &#39;The moderating team&#39; found at the bottom of the main board page. This list will show you administrators and moderators. <br />
+<br />
+Note that you can report content to all staff by pressing the &quot;Report&quot; button when viewing the content.]]></text>
+      <description>Where to find a list of the board moderators and administrators.</description>
+      <position>10</position>
+      <app>core</app>
+    </row>
+  </help>
+</export>

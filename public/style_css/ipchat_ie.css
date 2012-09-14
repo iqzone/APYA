@@ -1,0 +1,9 @@
+#chatters-online .chat-photo {
+	display: inline;
+	text-align: center;
+}
+
+#chatters-online .names {
+	position: relative;
+	left: 5px;
+}

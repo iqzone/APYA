@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<mediaexport exported="1235484290">
+	<mediagroup>
+		<media>
+			<id>1</id>
+			<icon>quicktime.gif</icon>
+			<title>Quicktime Movie</title>
+			<mime_type>video/quicktime</mime_type>
+			<extension>.mov</extension>
+			<allowed>1</allowed>
+			<allow_user_thumb>0</allow_user_thumb>
+			<display_code><![CDATA[&lt;embed autoplay=&quot;true&quot; showcontrols=&quot;true&quot; showstatusbar=&quot;true&quot; showtracker=&quot;true&quot; src=&quot;{FILE}&quot; width=&quot;320&quot; height=&quot;240&quot;&gt;]]></display_code>
+			<default_type>0</default_type>
+		</media>
+
+		<media>
+			<id>2</id>
+			<icon>win_player.gif</icon>
+			<title>Windows Media Player</title>
+			<mime_type>video/x-ms-wmv</mime_type>
+			<extension>.wmv</extension>
+			<allowed>1</allowed>
+			<allow_user_thumb>1</allow_user_thumb>
+			<display_code><![CDATA[&lt;embed autoplay=&quot;true&quot; showcontrols=&quot;true&quot; showstatusbar=&quot;true&quot; showtracker=&quot;true&quot; src=&quot;{FILE}&quot; width=&quot;320&quot; height=&quot;240&quot;&gt;]]></display_code>
+			<default_type>0</default_type>
+		</media>
+
+		<media>
+			<id>3</id>
+			<icon>gif.gif</icon>
+			<title>JPEG</title>
+			<mime_type>image/jpeg</mime_type>
+			<extension>.jpg,.jpeg</extension>
+			<allowed>1</allowed>
+			<allow_user_thumb>0</allow_user_thumb>
+			<display_code><![CDATA[<#IMAGE#>]]></display_code>
+			<default_type>1</default_type>
+		</media>
+
+		<media>
+			<id>4</id>
+			<icon>gif.gif</icon>
+			<title>PNG</title>
+			<mime_type>image/png</mime_type>
+			<extension>.png</extension>
+			<allowed>1</allowed>
+			<allow_user_thumb>0</allow_user_thumb>
+			<display_code><![CDATA[<#IMAGE#>]]></display_code>
+			<default_type>1</default_type>
+		</media>
+
+		<media>
+			<id>5</id>
+			<icon>gif.gif</icon>
+			<title>GIF</title>
+			<mime_type>image/gif</mime_type>
+			<extension>.gif</extension>
+			<allowed>1</allowed>
+			<allow_user_thumb>0</allow_user_thumb>
+			<display_code><![CDATA[<#IMAGE#>]]></display_code>
+			<default_type>1</default_type>
+		</media>
+
+		<media>
+			<id>6</id>
+			<icon>win_player.gif</icon>
+			<title>MPEG</title>
+			<mime_type>video/mpeg</mime_type>
+			<extension>.mpg, .mpeg</extension>
+			<allowed>1</allowed>
+			<allow_user_thumb>0</allow_user_thumb>
+			<display_code><![CDATA[&lt;embed src=&quot;{FILE}&quot; width=&quot;320&quot; height=&quot;240&quot; autostart=&#39;true&#39;&gt;]]></display_code>
+			<default_type>0</default_type>
+		</media>
+
+		<media>
+			<id>7</id>
+			<icon>win_player.gif</icon>
+			<title>AVI</title>
+			<mime_type>video/x-ms-asf</mime_type>
+			<extension>.avi</extension>
+			<allowed>1</allowed>
+			<allow_user_thumb>0</allow_user_thumb>
+			<display_code><![CDATA[&lt;embed src=&quot;{FILE}&quot; width=&quot;320&quot; height=&quot;240&quot; name=&quot;Player&quot; animationatStart=&quot;1&quot; quality=&quot;high&quot; SendOpenStateChangeEvents=&quot;1&quot; align=&quot;middle&quot; uimode=&quot;1&quot; showstatusbar=&quot;1&quot; showControls=&quot;0&quot; type=&quot;application/x-mplayer2&quot; pluginspage=&quot;http://activex.microsoft.com/activex/controls/mplayer/&quot;&gt;]]></display_code>
+			<default_type>0</default_type>
+		</media>
+
+		<media>
+			<id>8</id>
+			<icon>flash.gif</icon>
+			<title>Flash</title>
+			<mime_type>application/x-shockwave-flash</mime_type>
+			<extension>.swf</extension>
+			<allowed>1</allowed>
+			<allow_user_thumb>1</allow_user_thumb>
+			<display_code><![CDATA[&lt;object width=&quot;550&quot; height=&quot;400&quot;&gt;
+&lt;param name=&quot;movie&quot; value=&quot;{FILE}&quot;&gt;
+&lt;embed src=&quot;{FILE}&quot; width=&quot;550&quot; height=&quot;400&quot;&gt;
+&lt;/embed&gt;
+&lt;/object&gt;]]></display_code>
+			<default_type>0</default_type>
+		</media>
+	</mediagroup>
+
+</mediaexport>

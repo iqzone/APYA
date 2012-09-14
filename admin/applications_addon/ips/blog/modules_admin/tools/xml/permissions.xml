@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Blog Akismet Logs</grouptitle>
+		<grouplang>blogs_akismet</grouplang>
+		<items>
+			<item>
+				<key>blogs_akismet_view</key>
+				<string>Can view Akismet logs?</string>
+			</item>
+			<item>
+				<key>blogs_akismet_delete</key>
+				<string>Can delete Akismet logs?</string>
+			</item>
+			<item>
+				<key>blogs_akismet_spamham</key>
+				<string>Can submit spam and ham to Akismet?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Blog Pings Management</grouptitle>
+		<grouplang>blogs_pings</grouplang>
+		<items>
+			<item>
+				<key>blog_ping_manage</key>
+				<string>Can add/edit ping services?</string>
+			</item>
+			<item>
+				<key>blog_ping_remove</key>
+				<string>Can remove ping services?</string>
+			</item>
+			<item>
+				<key>blog_tb_view</key>
+				<string>Can view trackback logs?</string>
+			</item>
+			<item>
+				<key>blog_tb_manage</key>
+				<string>Can restore and remove trackbacks?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Blog Tools</grouptitle>
+		<grouplang>blogs_tools</grouplang>
+		<items>
+			<item>
+				<key>blog_tool_resync</key>
+				<string>Can resynchronize blogs and entries?</string>
+			</item>
+			<item>
+				<key>blog_furls</key>
+				<string>Can check and fix friendly urls?</string>
+			</item>
+			<item>
+				<key>blog_stats</key>
+				<string>Can rebuild stats?</string>
+			</item>
+			<item>
+				<key>blog_attach</key>
+				<string>Can fix old attachments?</string>
+			</item>
+			<item>
+				<key>blog_thumbs</key>
+				<string>Can rebuild entry thumbnails?</string>
+			</item>
+		</items>
+	</group>	
+</permissions>

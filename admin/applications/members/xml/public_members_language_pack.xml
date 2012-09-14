@@ -1,0 +1,3452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sort_by</word_key>
+      <word_default>Sort by: </word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>mlist_view_start_title</word_key>
+      <word_default>View members starting with</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>mlist_adv_filt</word_key>
+      <word_default>More Search Options</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>mlist_adv_filt_opt</word_key>
+      <word_default>Advanced Filter Options</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>mlist_view_all_title</word_key>
+      <word_default>View all members</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>mlist_header</word_key>
+      <word_default>Member List</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>page_title</word_key>
+      <word_default>Member List</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sort_by_joined</word_key>
+      <word_default>Join Date</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sort_submit</word_key>
+      <word_default>Apply Filters</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>ascending_order</word_key>
+      <word_default>Ascending Order</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>descending_order</word_key>
+      <word_default>Descending Order</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sorting_text_results</word_key>
+      <word_default>results per page</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>member_posts</word_key>
+      <word_default>posts</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>member_name</word_key>
+      <word_default>Name</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sorting_text_with</word_key>
+      <word_default>with</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sorting_text_in</word_key>
+      <word_default>in</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sorting_text_by</word_key>
+      <word_default>by</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>member_joined</word_key>
+      <word_default>Joined</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>member_group</word_key>
+      <word_default>Group</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sort_by_name</word_key>
+      <word_default>Member Name</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>no_results</word_key>
+      <word_default>No Results</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_after</word_key>
+      <word_default>after</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_before</word_key>
+      <word_default>before</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_contains</word_key>
+      <word_default>contains</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_begins</word_key>
+      <word_default>begins with</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_lessthan</word_key>
+      <word_default>less than</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_dateformat</word_key>
+      <word_default>(MM-DD-YYYY)</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>m_stars</word_key>
+      <word_default>stars</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>m_views</word_key>
+      <word_default>Views</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_posts</word_key>
+      <word_default>Post count is</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_joined</word_key>
+      <word_default>Join date is</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_lastpost</word_key>
+      <word_default>Last post is</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_lastvisit</word_key>
+      <word_default>Last visit is</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>photo_only</word_key>
+      <word_default>Must have a photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_morethan</word_key>
+      <word_default>more than</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_name</word_key>
+      <word_default>Member name</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>s_signature</word_key>
+      <word_default>Signature contains</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>m_rating_morethan</word_key>
+      <word_default>Rating is higher than</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>m_rating</word_key>
+      <word_default>Rating</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>m_dd_views</word_key>
+      <word_default>Profile Views</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>members_start_with</word_key>
+      <word_default>View members starting with </word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>pcount</word_key>
+      <word_default>Post Count</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sorty_by_jdate</word_key>
+      <word_default>Sort by Joined Date</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>reputation</word_key>
+      <word_default>Reputation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sort_by_mname</word_key>
+      <word_default>Sort by Member Name</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>sort_by_posts</word_key>
+      <word_default>Sort by Total Posts</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>show_all</word_key>
+      <word_default>Show All</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>edit_member</word_key>
+      <word_default>Edit Member</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>member_has_x_rep</word_key>
+      <word_default>%s has %s reputation points</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>member_has_x_rep_like</word_key>
+      <word_default>%s has %s likes</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_list</word_pack>
+      <word_key>mlist_view_all_txt</word_key>
+      <word_default>ALL</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>submit_send</word_key>
+      <word_default>Send Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>c_msg_full</word_key>
+      <word_default><![CDATA[<br /><b>WARNING: YOUR FOLDERS ARE FULL<b><br />You MUST delete some saved messages in your inbox or folders before you can receive any more personal messages]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>full</word_key>
+      <word_default>full</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>deleted_member</word_key>
+      <word_default>Deleted Member</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>blocked</word_key>
+      <word_default>Blocked</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pms_send_later</word_key>
+      <word_default>Save (Send later)</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_FLOOD_STOP</word_key>
+      <word_default>You cannot start another PM topic until #DATE#</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>to_whom</word_key>
+      <word_default><![CDATA[Recipient's Name]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>sent_text</word_key>
+      <word_default><![CDATA[Your message '<#MESSAGE_TITLE#>' has been sent. The recipient(s) will be informed that they have a new message.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pm_preview</word_key>
+      <word_default>Preview</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pm_pre_button</word_key>
+      <word_default>Preview Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pme_none_sent</word_key>
+      <word_default>This personal message has not been sent</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pmpc_unlimited</word_key>
+      <word_default>an unlimited amount of</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pmpc_info_string</word_key>
+      <word_default>You have %s messages out of %s maximum storable messages</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pmpc_full_string</word_key>
+      <word_default>Your messenger folders are %s percent full</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>messenger__nav</word_key>
+      <word_default>Messenger</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pro_message</word_key>
+      <word_default>Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pro_recips</word_key>
+      <word_default>Recipients</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_no_title</word_key>
+      <word_default>You must enter a message title longer than 2 characters.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_errors</word_key>
+      <word_default>The following errors were found</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>mess_new</word_key>
+      <word_default>Compose New Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_no_chosen_member</word_key>
+      <word_default>You must enter their name in the appropriate field fully.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>deleted_user</word_key>
+      <word_default>Deleted Member</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>m_messenger</word_key>
+      <word_default>Messenger</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_CANT_INVITE_SELF</word_key>
+      <word_default>You cannot invite yourself to this conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_FROM_USER_BLOCKED</word_key>
+      <word_default>The member #TONAME# has chosen to not receive any new messages from you</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_CANNOT_SAVE_TO_SENT_FOLDER</word_key>
+      <word_default>You do not have any space left to store this message in your sent folder</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>search_convo_no_keywords</word_key>
+      <word_default>You did not enter any words to search for</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_CANT_INVITE_RECIPIENT_EXIST</word_key>
+      <word_default>One or more recipients are already participating in this conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>search_convo_no_results</word_key>
+      <word_default>Sorry, no conversations were found that match your search criteria</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>t_welcome</word_key>
+      <word_default>Your Messenger</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>search_results_pt</word_key>
+      <word_default>: Search Results</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_CANT_INVITE_RECIPIENT</word_key>
+      <word_default>You cannot invite the main recipient</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_NO_ONE_TO_INVITE</word_key>
+      <word_default>There is no one to invite either because you entered an incorrect name or they are currently participating</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_CANT_SEND_TO_SELF</word_key>
+      <word_default>You cannot send a conversation to yourself</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_UNKNOWN</word_key>
+      <word_default>An untrapped error occurred: </word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_no_msg</word_key>
+      <word_default>You must enter a message larger than 3 characters.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_INVITE_USERS_BLOCKED</word_key>
+      <word_default>The following CC users have chosen to not receive messages from you: #NAMES#</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_TO_USER_FULL</word_key>
+      <word_default>The member #TONAME# cannot receive any new messages</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_FROM_USER_DOES_NOT_EXIST</word_key>
+      <word_default>The member #FROMNAME# does not exist</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_TO_USER_CANNOT_USE_PM</word_key>
+      <word_default>The member #TONAME# can not use the messaging system</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_TO_USER_DOES_NOT_EXIST</word_key>
+      <word_default>The member #TONAME# does not exist</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_NOT_ALL_INVITE_USERS_CAN_PM</word_key>
+      <word_default>The following users cannot use the messaging system: #NAMES#</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_MAX_USER_PM_LIMIT_HIT</word_key>
+      <word_default>You have attempted to invite more users to this conversation than you are allowed to (your limit is #LIMIT#)</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_NOT_ALL_INVITE_USERS_EXIST</word_key>
+      <word_default>The following users do not exist: #NAMES#</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_NO_SUCH_FOLDER</word_key>
+      <word_default>The folder you are attempting to move into does not exist</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_NO_IDS_TO_DELETE</word_key>
+      <word_default>You did not select any messages to remove</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_NO_IDS_TO_MOVE</word_key>
+      <word_default>You did not select any messages to move</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_NO_IDS_SELECTED</word_key>
+      <word_default>You did not select any messages to perform this action on</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_unspecifed</word_key>
+      <word_default>An unspecified error occurred</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>err_auth</word_key>
+      <word_default>Authorization Error</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>sendMsgTitle</word_key>
+      <word_default>Composing Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>search_term_short</word_key>
+      <word_default><![CDATA[One or all of your search keywords were below %s characters or you searched for words which are not allowed, such as 'html', 'img', etc, please increase the length of these search keywords or choose different keywords.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>copy__desc</word_key>
+      <word_default>will send a separate conversation to each member</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>message_subject_send</word_key>
+      <word_default>Message Subject</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>maxperday_hit</word_key>
+      <word_default>You have sent the maximum number of private messages per day that the administrator allows.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>invite__desc</word_key>
+      <word_default>allows all invited members to participate in a single conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>send__copy</word_key>
+      <word_default>Copy</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>send__invite</word_key>
+      <word_default>Invitation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>send_to_as</word_key>
+      <word_default>Send to others as</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>youmay_suffix</word_key>
+      <word_default>other recipients</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>youmay_add_to</word_key>
+      <word_default>You may add up to</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>other_recipients</word_key>
+      <word_default>Other Recipients</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>editing_message</word_key>
+      <word_default>Editing Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>compose_reply</word_key>
+      <word_default>Compose Reply</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_use_full_reply</word_key>
+      <word_default>Use Full Editor</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_fast_reply</word_key>
+      <word_default>Fast Reply</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_post_button</word_key>
+      <word_default>Post</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>delete_this_post</word_key>
+      <word_default>Delete this post</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_edit</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>edit_this_post</word_key>
+      <word_default>Edit this post</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_reply</word_key>
+      <word_default>Reply</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_report</word_key>
+      <word_default>Report</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>find_info_about_ip</word_key>
+      <word_default>Find information about this IP</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_sent</word_key>
+      <word_default>Sent</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>add_reply</word_key>
+      <word_default>Add Reply</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>you_cannot_reply</word_key>
+      <word_default>You cannot reply</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>filters__update</word_key>
+      <word_default>Update</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>filters__i</word_key>
+      <word_default>Conversations I Started</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>filter__others</word_key>
+      <word_default>Conversations Others Started</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>filter__show</word_key>
+      <word_default>Show:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>filter__all</word_key>
+      <word_default>All Conversations</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>option__turnoff</word_key>
+      <word_default>Turn Off Notifications</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>option__markread</word_key>
+      <word_default>Mark Read</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>option__markunread</word_key>
+      <word_default>Mark Unread</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>move_to_opt</word_key>
+      <word_default>Or Move To...</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>option__turnon</word_key>
+      <word_default>Turn On Notifications</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>option__delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>with_selected_opt</word_key>
+      <word_default>With Selected...</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>info_not_available</word_key>
+      <word_default>Information Not Available</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>goto_last_post</word_key>
+      <word_default>Go to last post</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_by</word_key>
+      <word_default>By</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>folder_no_messages_row</word_key>
+      <word_default>There are no messages to view in this folder</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>goto_page</word_key>
+      <word_default>Go to page</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>first_unread_reply</word_key>
+      <word_default>Go to first unread post</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>compose_new</word_key>
+      <word_default>Compose New</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>go_to_compose</word_key>
+      <word_default>Go to compose screen</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>no_messages_row</word_key>
+      <word_default>There are no messages to view</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_other</word_key>
+      <word_default>other</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_others</word_key>
+      <word_default>others</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pc_and</word_key>
+      <word_default>and</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>label_pc</word_key>
+      <word_default>Folder:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>col_last_message</word_key>
+      <word_default>Last Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>col_to</word_key>
+      <word_default>To</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>col_starter</word_key>
+      <word_default>Starter</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>col_topic</word_key>
+      <word_default>Topic</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>col_date</word_key>
+      <word_default>Date</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>col_recipient</word_key>
+      <word_default>Recipient</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>col_replies</word_key>
+      <word_default>Replies</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>col_subject</word_key>
+      <word_default>Subject</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>your_search_results</word_key>
+      <word_default>Your Search Results</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>search_messages</word_key>
+      <word_default>Search Messages</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>messages</word_key>
+      <word_default>messages</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>of_your_quota</word_key>
+      <word_default>of your quota</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>storage</word_key>
+      <word_default>Storage</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>your_messenger_storage</word_key>
+      <word_default>Your messenger storage</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>folders_edit</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>edit_folders</word_key>
+      <word_default>Edit Folders</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>folder_add</word_key>
+      <word_default>Add</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>add_folder</word_key>
+      <word_default>Add Folder</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>delete_folder_title</word_key>
+      <word_default>Delete this folder</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>empty_folder_title</word_key>
+      <word_default>Empty this folder</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>go_to_folder</word_key>
+      <word_default>Go to folder</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>add_participants</word_key>
+      <word_default>Add Participants</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>folders</word_key>
+      <word_default>Folders</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>more_members</word_key>
+      <word_default>more members</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>may_invite_upto</word_key>
+      <word_default>You may invite up to</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>turn_noti_on</word_key>
+      <word_default><![CDATA[Turn Notifications <strong>ON</strong>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>turn_noti_off</word_key>
+      <word_default><![CDATA[Turn Notifications <strong>OFF</strong>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>can_invite_unlimited</word_key>
+      <word_default><![CDATA[You may invite an <strong>unlimited</strong> number of members]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>invite_part</word_key>
+      <word_default>Invite Participants</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>toggle_noti_title</word_key>
+      <word_default>Toggle notification status for this conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>has_left_convo</word_key>
+      <word_default>Has left the conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>unblock</word_key>
+      <word_default>Unblock</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>is_unable_part</word_key>
+      <word_default>Is unable to participate</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>user_is_blocked</word_key>
+      <word_default><![CDATA[User is blocked &amp; can't participate]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>unblock_this_user</word_key>
+      <word_default>Unblock this user</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>block</word_key>
+      <word_default>Block</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>block_this_user</word_key>
+      <word_default>Block this user</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>not_yet_read</word_key>
+      <word_default>Not yet read</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>last_read</word_key>
+      <word_default>Read:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>topic_deleted</word_key>
+      <word_default>Unavailable: Topic Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>part_add</word_key>
+      <word_default>Add</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>participants</word_key>
+      <word_default>Participants</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>separated_with_commas</word_key>
+      <word_default>, separated with commas</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>enter_member_names</word_key>
+      <word_default>Enter member names:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>invite_more_part</word_key>
+      <word_default>Invite More Participants</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pm_flood_stop</word_key>
+      <word_default>You cannot start another PM topic until %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msgFolder_drafts</word_key>
+      <word_default>Drafts</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msgFolder_myconvo</word_key>
+      <word_default>My Conversations</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msgFolder_new</word_key>
+      <word_default>New</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>folder_prefix</word_key>
+      <word_default>Folder:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>macro__notifyon</word_key>
+      <word_default>Notifications On</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>edit_msg_title</word_key>
+      <word_default>Editing Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>macro__nonewmsg</word_key>
+      <word_default>No new messages</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>macro__deletedmsg</word_key>
+      <word_default>Deleted Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>macro__newmsg</word_key>
+      <word_default>New Messages</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>macro__folder</word_key>
+      <word_default>Folder</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>macro__trash</word_key>
+      <word_default>Trash</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>macro__notifyoff</word_key>
+      <word_default>Notifications Off</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>macro__myconvo</word_key>
+      <word_default>My Conversations</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>ajax_no_topic_id</word_key>
+      <word_default>Could not locate a conversation with that ID</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_email_convo</word_key>
+      <word_default>Archive Conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_email_convo_text</word_key>
+      <word_default>Send a copy of this conversation to %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>macro__new</word_key>
+      <word_default>New</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>saved_as_a_draft</word_key>
+      <word_default>Your message has been saved as a draft</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>save_message_button</word_key>
+      <word_default>Save Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_email_go</word_key>
+      <word_default>Send Now</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>email_participants</word_key>
+      <word_default>Participants:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>ajax_no_permission</word_key>
+      <word_default>You do not have permission to view that conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>email_has_been_sent</word_key>
+      <word_default>The email has been sent to %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>disable_messenger</word_key>
+      <word_default>Disable Messenger</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>go_board_index</word_key>
+      <word_default>Community Home</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pm_disabled_reactivate</word_key>
+      <word_default>Click here to re-activate your messenger</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_xreplies</word_key>
+      <word_default>%s replies</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>your_pm_is_disabled</word_key>
+      <word_default>Your personal messenger has been disabled. You are unable to send or receive personal messages.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>pm_disabled_title</word_key>
+      <word_default>Personal Messenger Disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_all_alone_desc</word_key>
+      <word_default>All other recipients have left this conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>cannot_send_new_limit</word_key>
+      <word_default>You already have the maximum number of messages that you are allowed to store. In order to send a new message, you must delete some existing messages.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_startedby</word_key>
+      <word_default>Started by</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_sentto</word_key>
+      <word_default>sent to</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_no_notify</word_key>
+      <word_default>No notifications</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_view_conversation</word_key>
+      <word_default>View this conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_all_alone_title</word_key>
+      <word_default>You cannot reply</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_messaging</word_pack>
+      <word_key>msg_deleted</word_key>
+      <word_default>Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_reports</word_key>
+      <word_default>Viewing Reports</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_profile</word_key>
+      <word_default>Viewing Profile:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_stats</word_key>
+      <word_default>Viewing Stats</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_invite</word_key>
+      <word_default>Inviting a friend to the community</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_mail</word_key>
+      <word_default>Contacting member via email</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_usercp</word_key>
+      <word_default>Using User CP</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_msg</word_key>
+      <word_default>Using Personal Messenger</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_forward</word_key>
+      <word_default>Emailing a topic</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_print</word_key>
+      <word_default>Printing a topic</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_search</word_key>
+      <word_default>Searching...</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_help</word_key>
+      <word_default>Viewing the Help Files</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_members</word_key>
+      <word_default>Viewing the Members List</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_online</word_key>
+      <word_default>Viewing Online List</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_reg</word_key>
+      <word_default>Registering...</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_postrep</word_key>
+      <word_default>Posting in topic:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_postnew</word_key>
+      <word_default>Posting in forum:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_login</word_key>
+      <word_default>Logging in...</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_st</word_key>
+      <word_default>Viewing Topic:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_sr</word_key>
+      <word_default>Viewing Forum Rules:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_sf</word_key>
+      <word_default>Viewing Forum:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>board_index</word_key>
+      <word_default>Viewing Community Index</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_portal</word_key>
+      <word_default>Viewing the portal</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_boardrules</word_key>
+      <word_default>Viewing Community Guidelines</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>WHERE_calendar</word_key>
+      <word_default>Viewing the Calendar</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>not_online</word_key>
+      <word_default>Not online</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>no_options_available</word_key>
+      <word_default>No options available</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>users_online</word_key>
+      <word_default>Users online</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>online_page_title</word_key>
+      <word_default>Online Users</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>where</word_key>
+      <word_default>Location</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>time</word_key>
+      <word_default>Time</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>member_name</word_key>
+      <word_default>Member Name</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>s_go</word_key>
+      <word_default>Update</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>s_show_mem_all</word_key>
+      <word_default>Show All Users</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>s_show_mem_reg</word_key>
+      <word_default>Show Registered Only</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>s_sort_order_desc</word_key>
+      <word_default>Descending</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>s_sort_order_asc</word_key>
+      <word_default>Ascending</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>s_show_mem_guest</word_key>
+      <word_default>Show Guests Only</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>s_sort_key_name</word_key>
+      <word_default>Member Name</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>s_sort_key_click</word_key>
+      <word_default>Last Click</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_online</word_pack>
+      <word_key>s_by</word_key>
+      <word_default>Sort by: </word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_reason</word_key>
+      <word_default>Reason</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>user_controls</word_key>
+      <word_default>User Controls</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>edit_profile</word_key>
+      <word_default>Edit my Profile</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>edit_my_sig</word_key>
+      <word_default>Edit my Signature</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>dname_name_from</word_key>
+      <word_default>From</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>online_offline</word_key>
+      <word_default>Offline</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>online_online</word_key>
+      <word_default>Online</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>posts_per_day</word_key>
+      <word_default>per day</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>total_percent</word_key>
+      <word_default>of total forum posts</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>fav_posts</word_key>
+      <word_default>posts</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>fav_percent</word_key>
+      <word_default><![CDATA[of this member&#39;s active posts]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>private</word_key>
+      <word_default><![CDATA[<i>Private</i>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>photo_title</word_key>
+      <word_default>Photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>supmod_edit_member</word_key>
+      <word_default>Edit Member</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>dname_name_to</word_key>
+      <word_default>To</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>view_topic</word_key>
+      <word_default>View Topic</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>dname_date</word_key>
+      <word_default>Change Date</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>display_name_history</word_key>
+      <word_default>Display name history</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>view_dname_history</word_key>
+      <word_default>View display name history</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_confirm</word_key>
+      <word_default>Please confirm that you wish to proceed</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>no_info</word_key>
+      <word_default><![CDATA[<i>No Information</i>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>dname_window_title</word_key>
+      <word_default>Display Name History For:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>get_photo</word_key>
+      <word_default>Personal Photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>dname_title</word_key>
+      <word_default><![CDATA[Member's Display Name History]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_go_button</word_key>
+      <word_default>Go</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_profile_title</word_key>
+      <word_default><![CDATA['s Profile]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_no_comments</word_key>
+      <word_default>Other users have left no comments for</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_title_friends</word_key>
+      <word_default>Friends</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_comment_app</word_key>
+      <word_default>Approve Selected Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_comment_unapp</word_key>
+      <word_default>Un-approve Selected Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_comment_delete</word_key>
+      <word_default>Delete Selected Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_approve</word_key>
+      <word_default>Approve</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_friends_pending</word_key>
+      <word_default>Friends Pending Approval</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_friends_list</word_key>
+      <word_default>My Friends</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_years_old</word_key>
+      <word_default>years old</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_age_unknown</word_key>
+      <word_default>Age Unknown</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_birthday_prefix</word_key>
+      <word_default>Birthday</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_age_prefix</word_key>
+      <word_default>Age</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_bday_unknown</word_key>
+      <word_default>Birthday Unknown</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_title_comments</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_member_since</word_key>
+      <word_default>Member Since</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_last_active</word_key>
+      <word_default>Last Active</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_profile_views</word_key>
+      <word_default>Profile Views</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_group</word_key>
+      <word_default>Group</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_posts</word_key>
+      <word_default>Active Posts</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>err_no_topics_to_show</word_key>
+      <word_default>There are no topics to display</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>err_no_posts_to_show</word_key>
+      <word_default>There are no posts to display</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>profile_read_topic</word_key>
+      <word_default>Read Topic</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>profile_in_topic</word_key>
+      <word_default>In Topic: </word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_gallery</word_key>
+      <word_default>Gallery</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_blog</word_key>
+      <word_default>Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_aboutme</word_key>
+      <word_default>About Me</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>err_no_aboutme_to_show</word_key>
+      <word_default><![CDATA[%s hasn't written anything about themself yet]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_topics</word_key>
+      <word_default>Topics</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>page_title_pp</word_key>
+      <word_default>Viewing Profile</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_posts</word_key>
+      <word_default>Posts</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>ajax_no_meminfo</word_key>
+      <word_default><![CDATA[You do not have access to view a user's profile]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>ajax_no_member</word_key>
+      <word_default>We could not find the member you were attempting to view</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_was_changed</word_key>
+      <word_default>You have updated your status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>profile_field_error__blacklist</word_key>
+      <word_default>A URL you supplied is not allowed</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>profile_field_error__invalid</word_key>
+      <word_default>The data you entered is not in the correct format</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>profile_field_error__empty</word_key>
+      <word_default>Cannot be left blank</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>profile_field_error__too_big</word_key>
+      <word_default>The data you entered exceeds the maximum allowed</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>profile_field_error__too_small</word_key>
+      <word_default>The data you entered is not long enough</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>dname_no_history</word_key>
+      <word_default>No history to display</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>nofriendid</word_key>
+      <word_default>We could not find the member whose friends you requested to view</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>comment_was_deleted</word_key>
+      <word_default>The comment has been deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>comment_was_approved</word_key>
+      <word_default>The comment has been approved</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>no_profile_comments</word_key>
+      <word_default>has no profile comments yet. Why not say hello?</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>chars_remaining</word_key>
+      <word_default>Characters remaining:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>friends_view_all</word_key>
+      <word_default><![CDATA[See all &rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>your_photo</word_key>
+      <word_default>Your photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>showing_50_rand_friends</word_key>
+      <word_default>Showing %s random friends of</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>click_to_email</word_key>
+      <word_default>Click here to e-mail me</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_email</word_key>
+      <word_default>E-mail</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>contact_info</word_key>
+      <word_default>Contact Information</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_member_title</word_key>
+      <word_default>Member Title</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>my_info</word_key>
+      <word_default>My Information</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>save</word_key>
+      <word_default>Save</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>view</word_key>
+      <word_default>View</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>update</word_key>
+      <word_default>Update</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>update_to</word_key>
+      <word_default>Update to:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>not_set_status</word_key>
+      <word_default>has not set their status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>no_latest_visitors</word_key>
+      <word_default>No latest visitors to show</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>latest_visitors</word_key>
+      <word_default>Latest Visitors</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_currently</word_key>
+      <word_default>Currently</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_active_in</word_key>
+      <word_default>Most Active In</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>ignore</word_key>
+      <word_default>Ignore user</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>send_message</word_key>
+      <word_default>Send me a message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>unignore</word_key>
+      <word_default>Unignore user</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>add_me_friend</word_key>
+      <word_default>Add me as a friend</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_rate_4</word_key>
+      <word_default>Rate user 4 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_rating</word_key>
+      <word_default>User Rating:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>no_friends_yet</word_key>
+      <word_default><![CDATA[hasn't added any friends yet.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>remove_as_friend</word_key>
+      <word_default>Remove me as a friend</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>report_member</word_key>
+      <word_default>Report This Member</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_rate_3</word_key>
+      <word_default>Rate user 3 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_rate_2</word_key>
+      <word_default>Rate user 2 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_rate_5</word_key>
+      <word_default>Rate user 5 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_rate_1</word_key>
+      <word_default>Rate user 1 star</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>topics_started</word_key>
+      <word_default><![CDATA[Topics I've Started]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>posts_made</word_key>
+      <word_default><![CDATA[Posts I've Made]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>posted</word_key>
+      <word_default>Posted</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>approve_this_comment</word_key>
+      <word_default>Approve this comment</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>delete_comment_text</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>delete_this_comment</word_key>
+      <word_default>Delete this comment</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>no_friends_to_display</word_key>
+      <word_default>No friends to display</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>m_reputation</word_key>
+      <word_default>Reputation:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>no_friends_awaiting_approval</word_key>
+      <word_default>No friends awaiting approval</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>deny_request</word_key>
+      <word_default>Deny Request</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>approve_request</word_key>
+      <word_default>Approve Request</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>spm_off</word_key>
+      <word_default>Flag As Spammer</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>spm_on</word_key>
+      <word_default>Flagged As Spammer</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>tab_message_h</word_key>
+      <word_default>Message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>comment_submit_post</word_key>
+      <word_default>Post</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_locked</word_key>
+      <word_default>Status Locked</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>err_no_status_to_show</word_key>
+      <word_default>No recent status updates to show</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_comment_added_mod</word_key>
+      <word_default>Your comment will have to be approved before it becomes visible</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_statusupdates</word_key>
+      <word_default>Profile Feed</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_reply_done</word_key>
+      <word_default>You have replied to a status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_unlocked</word_key>
+      <word_default>Status Unlocked</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_show_all_x</word_key>
+      <word_default>Show all %s comments</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_deleted</word_key>
+      <word_default>Status Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_unlock_link</word_key>
+      <word_default>Unlock</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_lock_link</word_key>
+      <word_default>Lock</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_delete_link</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_reply_deleted</word_key>
+      <word_default>Reply Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_actions_none</word_key>
+      <word_default>There are no actions to display</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_updates_title</word_key>
+      <word_default>Status Updates</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_updates_none</word_key>
+      <word_default>There are no status updates to display</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_no_reply</word_key>
+      <word_default>You cannot reply to this status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_off</word_key>
+      <word_default>An error occurred with this status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_too_many_replies</word_key>
+      <word_default>This status update has reached the maximum number of replies allowed</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>view_comments_only</word_key>
+      <word_default>Show comments (%s)</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>add_comments_only</word_key>
+      <word_default>Add comment</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>view_comments_and_add</word_key>
+      <word_default>Add / Show comments (%s)</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>email_title_blurb_other</word_key>
+      <word_default><![CDATA[New reply to %s's status]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>view_comments_collapse</word_key>
+      <word_default>Hide Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>email_blurb_other</word_key>
+      <word_default><![CDATA[has made a reply to %s's status]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>email_title_blurb_yours</word_key>
+      <word_default>New reply to your status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>email_blurb_theirs</word_key>
+      <word_default>has made a reply to their status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>st_update</word_key>
+      <word_default>Update:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>email_blurb_yours</word_key>
+      <word_default>has made a reply to your status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>cust_remove</word_key>
+      <word_default>Remove Customizations</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>cust_disable</word_key>
+      <word_default>Remove And Disable Customizations</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>js_gender_female</word_key>
+      <word_default>Female</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>js_gender_mystery</word_key>
+      <word_default>Not Telling</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>js_gender_male</word_key>
+      <word_default>Male</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__addcomment</word_key>
+      <word_default>Add A Comment...</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__viewall</word_key>
+      <word_default><![CDATA[View All Updates&rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__dfcomment</word_key>
+      <word_default>Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__locked</word_key>
+      <word_default>Locked Status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__singleupdate</word_key>
+      <word_default>Single Update</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__membersupdats</word_key>
+      <word_default><![CDATA[Member's Profile Feed]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__myfriends</word_key>
+      <word_default><![CDATA[Friends' Updates]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__all_updates</word_key>
+      <word_default>All Updates</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__newstring</word_key>
+      <word_default><![CDATA[<a href='%s'>%s</a>%s posted a new <a href='%s'>status</a>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__repliedstring</word_key>
+      <word_default><![CDATA[<a href='%s'>%s</a>%s replied to <a href='%s'>%s</a>'s%s <a href='%s'>status</a>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__status</word_key>
+      <word_default>status</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__repliedto</word_key>
+      <word_default>replied to</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status__recent_actions</word_key>
+      <word_default>Recent Actions</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>status_updates__overview</word_key>
+      <word_default>Community Status Updates</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>no_status_sent</word_key>
+      <word_default>You did not submit a status message</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_info</word_key>
+      <word_default>Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_friends</word_key>
+      <word_default>Friends</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_idm</word_key>
+      <word_default>Files</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>allfriendstab</word_key>
+      <word_default>All Friends</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>change_photo_desc</word_key>
+      <word_default>Update your current photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>change_photo_link</word_key>
+      <word_default>Change</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>leave_message</word_key>
+      <word_default>Leave a message...</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>user_tools</word_key>
+      <word_default>User Tools</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>community_stats</word_key>
+      <word_default>Community Stats</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>rep_description</word_key>
+      <word_default>%s has %s reputation points</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_photo_edited</word_key>
+      <word_default>The photo has been updated</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>rep_description_like</word_key>
+      <word_default>%s has %s likes</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_facebook_desc</word_key>
+      <word_default>If you choose this option, your photo will automatically synchronize with your Facebook photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_twitter_desc</word_key>
+      <word_default>If you choose this option, your photo will automatically synchronize with your Twitter photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_enter_gravatar_email</word_key>
+      <word_default>Enter your linked Gravatar email address</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_what_is_gravatar</word_key>
+      <word_default>Gravatar allows remotely hosted photos, click for more information.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_formats</word_key>
+      <word_default>Formats: JPEG, PNG, GIF</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_upload_rec</word_key>
+      <word_default>Recommend an image 200px or larger</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_upload_desc</word_key>
+      <word_default><![CDATA[Once uploaded, you can <a href='javascript:void(0);' class='cropperStart'>adjust the cropped image</a>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_done_button</word_key>
+      <word_default>Done</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_use_facebook</word_key>
+      <word_default>Use Facebook Photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_remove_button</word_key>
+      <word_default>Remove Photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_use_gravatar</word_key>
+      <word_default>Use Gravatar</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_use_twitter</word_key>
+      <word_default>Use Twitter Photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_cancel</word_key>
+      <word_default>Cancel</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_use_custom_photo</word_key>
+      <word_default>Use a custom photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_ok</word_key>
+      <word_default>Ok</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_title</word_key>
+      <word_default>Photo Editor</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_upload_to_big</word_key>
+      <word_default>The file selected is too large. Max %skb</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_generic_error</word_key>
+      <word_default>Failed to set a new photo</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_invalid_file_extension</word_key>
+      <word_default>Incorrect image format</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>comment_diff</word_key>
+      <word_default>You did not provide a new comment</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>member_posts</word_key>
+      <word_default>posts</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>friend_added_ok</word_key>
+      <word_default>The member has been added to your friends list</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>ps_comments</word_key>
+      <word_default>comments</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>ps_updated</word_key>
+      <word_default>Updated</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>err_not_save_urlphoto</word_key>
+      <word_default>Could not save the URL image specified</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>adjust_crop_lnk</word_key>
+      <word_default>Adjust Crop</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>comments_disabled_profile</word_key>
+      <word_default>The member has disabled commenting on their profile.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>err_not_contact_server</word_key>
+      <word_default>The server could not be contacted</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>err_not_photo_url</word_key>
+      <word_default>That is not a valid image type</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>err_not_correct_url_format</word_key>
+      <word_default><![CDATA[The entered URL doesn't appear to be valid]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>err_not_allowed_url_photo</word_key>
+      <word_default>You are not permitted to use URLs as photos</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_already_change</word_key>
+      <word_default>. This setting will override this unless it is set to 0.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_import_button</word_key>
+      <word_default>Import</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_import_from_url</word_key>
+      <word_default>Import a photo from a URL</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pe_upload_from_file</word_key>
+      <word_default>Upload from file</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_already_autochange</word_key>
+      <word_default>, this will be overwritten.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_already_suspend_perm</word_key>
+      <word_default>%s is already banned</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_notify_text</word_key>
+      <word_default>%s,
+
+You have been given a warning by %s.
+
+Reason: %s
+%s
+%s
+</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_profile_badge_ban</word_key>
+      <word_default>Banned</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_profile_badge_suspend</word_key>
+      <word_default>Suspended</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_details</word_key>
+      <word_default>Warning Details</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_points_explain_1</word_key>
+      <word_default>Points are used to automatically give a member an appropriate punishment. The more severe the behaviour, the more points should be issued. The administrator has defined the following guidelines for issuing points:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_already_suspend_time</word_key>
+      <word_default>%s is already suspended until %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_already_rpa_perm</word_key>
+      <word_default>%s is already permanently restricted from posting</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_acknowledge_desc</word_key>
+      <word_default>You have been issued a warning by a moderator. Before you can post again, you must acknowledge the warning.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_already_rpa_time</word_key>
+      <word_default>%s is already restricted from posting until %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_already_mq_perm</word_key>
+      <word_default>%s is already on permanent moderation queue</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_already_mq_time</word_key>
+      <word_default>%s is already on moderation queue until %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_profile_badge_mq</word_key>
+      <word_default>Mod Queue</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_profile_badge_rpa</word_key>
+      <word_default>Posting Disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_acknowledged</word_key>
+      <word_default>Warning Acknowledged</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warning_blurb_nn</word_key>
+      <word_default>Warning issued by %s.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warning_blurb_yn</word_key>
+      <word_default>Warning issued by %s for %s.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warning_blurb_yy</word_key>
+      <word_default>Warning issued by %s for %s in %s.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warning_blurb_ny</word_key>
+      <word_default>Warning issued by %s from %s.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_err_reason</word_key>
+      <word_default>You must select a reason for giving this warning.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_acknowledge_confirm</word_key>
+      <word_default>I acknowledge this warning</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_notify_text_mod</word_key>
+      <word_default>%s has been given a warning by %s.
+
+To view the full details for this warning, visit the warning log at the link below:
+%s
+
+</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_acknowledge</word_key>
+      <word_default>Acknowledge Warning</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_acknowledge_review</word_key>
+      <word_default><![CDATA[View Warning &rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_notify_member_note</word_key>
+      <word_default><![CDATA[<div class='callout'>
+----------------------------------------------------------------------
+%s
+----------------------------------------------------------------------
+</div>
+
+]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_notify_view_link</word_key>
+      <word_default>To view the full details for this warning, visit your warning log at the link below:
+%s
+
+</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_profile</word_key>
+      <word_default>Profile</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_notify</word_key>
+      <word_default><![CDATA[You have <a href='%s'>been given a warning</a>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_done</word_key>
+      <word_default>Member Warned</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_notify_mod</word_key>
+      <word_default><![CDATA[%s has <a href='%s'>been given a warning</a> by %s]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_points_explain_2</word_key>
+      <word_default>When warning a member, they will be given a punishment according to the number of points they will have after the warning. You may be able to set custom punishments in certain circumstances. The pre-defined punishments are:</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_ban_group</word_key>
+      <word_default>Also move to</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_remove_points</word_key>
+      <word_default>Remove points</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_after</word_key>
+      <word_default>After</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_remove_points_desc</word_key>
+      <word_default>You can use this to automatically remove the points given from this warning after a specified period of time. Leave blank to not remove points.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_or_for</word_key>
+      <word_default>or for</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_punishment_content_desc</word_key>
+      <word_default><![CDATA['Content' applies to posts, comments, etc.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_punishment_select</word_key>
+      <word_default>Select a reason to determine punishment.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_punishment_mq</word_key>
+      <word_default>Moderate content</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_punishment_rpa</word_key>
+      <word_default>Remove ability to create content</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_punishment_suspend</word_key>
+      <word_default>Suspend</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_points_explain</word_key>
+      <word_default>More Information</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_note_member_desc</word_key>
+      <word_default>This note will be shown to the member. You should explain here why you are warning the member.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_note_mods_desc</word_key>
+      <word_default>This note will only be shown to other moderators and administrators. The member being warned will not be able to see it.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_member_add</word_key>
+      <word_default>%s: Add Warning</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_reason_select</word_key>
+      <word_default>--Select a Reason--</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_punishment</word_key>
+      <word_default>Punishment</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_no_note</word_key>
+      <word_default>No Note</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_note_member</word_key>
+      <word_default>Note for member</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_note_mods</word_key>
+      <word_default>Note for moderators</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_note</word_key>
+      <word_default>Note</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_given_points_expire</word_key>
+      <word_default>Given %d points - expire on %s.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_information</word_key>
+      <word_default>Information</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_given_points_expired</word_key>
+      <word_default>Given %d points - expired.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_given_points</word_key>
+      <word_default>Given %d points.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_time_d</word_key>
+      <word_default>days</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_time_h</word_key>
+      <word_default>hours</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings__permanently</word_key>
+      <word_default>Permanently</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_permanently</word_key>
+      <word_default>permanently</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_for</word_key>
+      <word_default>for %d %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_suspend</word_key>
+      <word_default>Suspended %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_rpa</word_key>
+      <word_default>Ability to create content removed %s.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_mq</word_key>
+      <word_default>Content moderated %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_moderator</word_key>
+      <word_default>Moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_verbal_change</word_key>
+      <word_default>Change</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_verbal_only</word_key>
+      <word_default>Verbal warning only.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_content</word_key>
+      <word_default>Content</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_content_unknown</word_key>
+      <word_default>Unknown</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_add_for</word_key>
+      <word_default>Warn %s</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_add</word_key>
+      <word_default>Warn Member</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_moreinfo</word_key>
+      <word_default>More Details</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_points</word_key>
+      <word_default>Points</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_date</word_key>
+      <word_default>Date</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_reasons_other</word_key>
+      <word_default>Other</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_empty</word_key>
+      <word_default>There are no warnings to display.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings_member</word_key>
+      <word_default><![CDATA[%s's Warnings]]></word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>warnings</word_key>
+      <word_default>Warnings</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>reputation_received</word_key>
+      <word_default>Received</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>reputation_empty</word_key>
+      <word_default>There is no content to display.</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>reputation_given</word_key>
+      <word_default>Given</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_rep_likes</word_key>
+      <word_default>Likes</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>pp_tab_rep_rep</word_key>
+      <word_default>Reputation</word_default>
+    </lang>
+    <lang>
+      <word_app>members</word_app>
+      <word_pack>public_profile</word_pack>
+      <word_key>profiles_not_active</word_key>
+      <word_default>This member is no longer active.</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

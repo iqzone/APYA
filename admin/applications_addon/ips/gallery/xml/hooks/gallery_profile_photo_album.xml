@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>Profile Photo Album</hook_name>
+      <hook_desc>Displays photos from the users profile photo album</hook_desc>
+      <hook_author>Invision Power Services</hook_author>
+      <hook_email/>
+      <hook_website>www.invisionpower.com</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:4:{s:20:"hook_ipb_version_min";i:0;s:20:"hook_ipb_version_max";i:0;s:20:"hook_php_version_min";s:0:"";s:20:"hook_php_version_max";s:0:"";}]]></hook_requirements>
+      <hook_version_human>1.0.0</hook_version_human>
+      <hook_version_long>10000</hook_version_long>
+      <hook_extra_data/>
+      <hook_key>profile_photo_album</hook_key>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>galleryProfilePhotoAlbum.php</hook_file_real>
+      <hook_type>templateHooks</hook_type>
+      <hook_classname>galleryProfilePhotoAlbum</hook_classname>
+      <hook_data><![CDATA[a:6:{s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:8:"skin_ucp";s:12:"skinFunction";s:16:"membersPhotoForm";s:4:"type";s:2:"if";s:2:"id";s:8:"hasPhoto";s:8:"position";s:10:"post.endif";}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+
+class galleryProfilePhotoAlbum
+{
+	public $registry;
+	
+	public function __construct()
+	{
+		$this->registry = ipsRegistry::instance();
+		$this->settings =& $this->registry->fetchSettings();
+		$this->DB       = ipsRegistry::DB();
+		$this->memberData =& $this->registry->member()->fetchMemberData();
+	}
+	
+	public function getOutput()
+	{
+		if( ! $this->memberData['g_gallery_use'] )
+		{
+			return '';
+		}
+
+		/* Setup Gallery Environment */
+		require_once( IPS_ROOT_PATH . '/applications_addon/ips/gallery/sources/classes/gallery.php' );
+		$this->registry->setClass( 'gallery', new ipsGallery( $this->registry ) );
+		
+		$this->albums = $this->registry->gallery->helper('albums');
+		$this->images = $this->registry->gallery->helper('image');
+		
+		/* Find the users profile photo album */
+		$photoAlbum = $this->DB->buildAndFetch( array( 'select' => '*', 'from' => 'gallery_albums_main', 'where' => "album_is_profile=1 AND album_owner_id={$this->memberData['member_id']}" ) );
+		
+		if( ! $photoAlbum['album_id'] )
+		{
+			return '';
+		}
+		
+		/* Query images */
+		$this->DB->build( array( 
+									'select'	=> '*', 
+									'from'		=> 'gallery_images', 
+									'where'		=> "img_album_id={$photoAlbum['album_id']} AND approved=1",
+									'order'		=> "id DESC",
+									'limit'		=> array( 0, 5 )
+						)	);
+		$q = $this->DB->execute();
+		
+		$profileImages = array();
+		while( $image = $this->DB->fetch( $q ) )
+		{
+			$image['_image'] = $this->images->makeImageTag( $image, array( 'type' => 'thumb', 'link-type' => 'src' ) );
+			$profileImages[] = $image;
+		}
+		
+		return $this->registry->output->getTemplate('gallery_albums')->galleryPhotoAlbum( $profileImages, $photoAlbum['id'] );
+	}
+}]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings/>
+  <hookextras_language/>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

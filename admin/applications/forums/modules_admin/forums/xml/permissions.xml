@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Manage Forums</grouptitle>
+		<grouplang>forums_forums</grouplang>
+		<items>
+			<item>
+				<key>forums_add</key>
+				<string>Can add new forums?</string>
+			</item>
+			<item>
+				<key>forums_edit</key>
+				<string>Can edit forums?</string>
+			</item>
+			<item>
+				<key>forums_delete</key>
+				<string>Can delete forums?</string>
+			</item>
+			<item>
+				<key>forums_reorder</key>
+				<string>Can reorder forums?</string>
+			</item>
+			<item>
+				<key>forums_permissions</key>
+				<string>Can edit permissions for forums?</string>
+			</item>
+			<item>
+				<key>forums_empty</key>
+				<string>Can empty forums?</string>
+			</item>
+			<item>
+				<key>forums_rules</key>
+				<string>Can edit forum rules?</string>
+			</item>
+			<item>
+				<key>forums_skins</key>
+				<string>Can assign/unassign skins to forums?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Manage Forum Moderators</grouptitle>
+		<grouplang>forums_moderators</grouplang>
+		<items>
+			<item>
+				<key>mods_add</key>
+				<string>Can add new moderators?</string>
+			</item>
+			<item>
+				<key>mods_edit</key>
+				<string>Can edit moderators?</string>
+			</item>
+			<item>
+				<key>mods_delete</key>
+				<string>Can delete moderators?</string>
+			</item>
+			<item>
+				<key>mods_view</key>
+				<string>Can list forum moderators?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Manage Multi-Moderation</grouptitle>
+		<grouplang>forums_multimods</grouplang>
+		<items>
+			<item>
+				<key>mmod_add</key>
+				<string>Can add new multi-moderation routines?</string>
+			</item>
+			<item>
+				<key>mmod_edit</key>
+				<string>Can edit multi-moderation routines?</string>
+			</item>
+			<item>
+				<key>mmod_delete</key>
+				<string>Can delete multi-moderation routines?</string>
+			</item>
+			<item>
+				<key>mmod_view</key>
+				<string>Can view multi-moderation routines?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

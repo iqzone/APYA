@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Custom Profile Fields</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Custom Profile Fields</subitemtitle>
+					<subitemlang>customfields</subitemlang>
+					<subsection>customfields</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>profilefields_global</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

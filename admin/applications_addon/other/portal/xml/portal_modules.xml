@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moduleexport>
+  <modulegroup>
+    <module>
+      <sys_module_title>Portal</sys_module_title>
+      <sys_module_application>portal</sys_module_application>
+      <sys_module_key>portal</sys_module_key>
+      <sys_module_description>Main portal module</sys_module_description>
+      <sys_module_version>1.0.1</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>0</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Portal Management</sys_module_title>
+      <sys_module_application>portal</sys_module_application>
+      <sys_module_key>portal</sys_module_key>
+      <sys_module_description>Manage your portal homepage</sys_module_description>
+      <sys_module_version>1.0.1</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>0</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Manage Blocks</sys_module_title>
+      <sys_module_application>portal</sys_module_application>
+      <sys_module_key>blocks</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>2.0.0</sys_module_version>
+      <sys_module_protected>0</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>22</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Actualizaciones</sys_module_title>
+      <sys_module_application>portal</sys_module_application>
+      <sys_module_key>status</sys_module_key>
+      <sys_module_description>Administración de actualizaciones. Creación de disparadores de eventos.</sys_module_description>
+      <sys_module_version>1.0</sys_module_version>
+      <sys_module_protected>0</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>23</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Dominios de correo</sys_module_title>
+      <sys_module_application>portal</sys_module_application>
+      <sys_module_key>invitations</sys_module_key>
+      <sys_module_description>Dominios de correo válidos para gestionar las invitaciones</sys_module_description>
+      <sys_module_version>1.0</sys_module_version>
+      <sys_module_protected>0</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>25</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+  </modulegroup>
+</moduleexport>

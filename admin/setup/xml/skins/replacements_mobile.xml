@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<replacements>
+  <replacement>
+    <replacement_key>f_read</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_read.png' alt='{lang:macro__readf}' title='{lang:macro__readf}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_redirect</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_redirect.png' alt='{lang:macro__redirect}' title='{lang:macro__redirect}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_unread</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_unread.png' alt='{lang:macro__unreadf}' title='{lang:macro__markread}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>mini_rate_off</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/bullet_star_off.png' alt='-' class='mini_rate' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>mini_rate_on</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/bullet_star.png' alt='*' class='mini_rate' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>msg_deleted</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/cross.png' title='{lang:macro__deletedmsg}' alt='*' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>msg_icon</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/pm_nonew.png' title='{lang:macro__nonewmsg}' alt='*' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>msg_icon_new</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/pm_new.png' title='{lang:macro__newmsg}' alt='*' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>rate_off</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/star_off.png' alt='-' class='rate_img' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>rate_on</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/star.png' alt='*' class='rate_img' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>snapback</replacement_key>
+    <replacement_content><![CDATA[&nbsp;]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_announcement</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_announcement.png' alt='{lang:announce_row}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_closed</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_locked.png' alt='{lang:pm_locked}' /><br />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_moved</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_moved.png' alt='{lang:pm_moved}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_read_dot</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_read_dot.png' alt='{lang:you_posted_here}' title='{lang:you_posted_here}' /><br />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_unread</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_unread.png' alt='{lang:pm_open_new}' /><br />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_unread_dot</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_unread_dot.png' alt='{lang:you_posted_here}' /><br />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>mobile</replacement_master_key>
+  </replacement>
+</replacements>

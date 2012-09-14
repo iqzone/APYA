@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Custom Profile Fields</grouptitle>
+		<grouplang>members_cfields</grouplang>
+		<items>
+			<item>
+				<key>profilefields_global</key>
+				<string>Can access custom profile fields management?</string>
+			</item>
+			<item>
+				<key>profilefields_add</key>
+				<string>Can add new profile fields?</string>
+			</item>
+			<item>
+				<key>profilefields_edit</key>
+				<string>Can edit profile fields?</string>
+			</item>
+			<item>
+				<key>profilefields_delete</key>
+				<string>Can delete profile fields?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Custom Profile Field Groups</grouptitle>
+		<grouplang>members_cfieldgroups</grouplang>
+		<items>
+			<item>
+				<key>profilefieldgroups_global</key>
+				<string>Can access custom profile field group management?</string>
+			</item>
+			<item>
+				<key>profilefieldgroups_add</key>
+				<string>Can add new profile field group?</string>
+			</item>
+			<item>
+				<key>profilefieldgroups_edit</key>
+				<string>Can edit profile field group?</string>
+			</item>
+			<item>
+				<key>profilefieldgroups_delete</key>
+				<string>Can delete profile field group?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

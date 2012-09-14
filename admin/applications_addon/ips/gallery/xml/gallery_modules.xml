@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moduleexport>
+  <modulegroup>
+    <module>
+      <sys_module_title>Albums</sys_module_title>
+      <sys_module_application>gallery</sys_module_application>
+      <sys_module_key>albums</sys_module_key>
+      <sys_module_description>View and manage albums</sys_module_description>
+      <sys_module_version>4.0.3</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>1</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Images</sys_module_title>
+      <sys_module_application>gallery</sys_module_application>
+      <sys_module_key>images</sys_module_key>
+      <sys_module_description>Viewing and managing images</sys_module_description>
+      <sys_module_version>4.0.3</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>2</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Posting</sys_module_title>
+      <sys_module_application>gallery</sys_module_application>
+      <sys_module_key>post</sys_module_key>
+      <sys_module_description>Manage posting functions</sys_module_description>
+      <sys_module_version>4.0.3</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>3</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Statistics</sys_module_title>
+      <sys_module_application>gallery</sys_module_application>
+      <sys_module_key>stats</sys_module_key>
+      <sys_module_description>View statistics</sys_module_description>
+      <sys_module_version/>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>4</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Subscribe</sys_module_title>
+      <sys_module_application>gallery</sys_module_application>
+      <sys_module_key>subscribe</sys_module_key>
+      <sys_module_description>Managing subscriptions</sys_module_description>
+      <sys_module_version/>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>5</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>User</sys_module_title>
+      <sys_module_application>gallery</sys_module_application>
+      <sys_module_key>user</sys_module_key>
+      <sys_module_description>Deals with user functions</sys_module_description>
+      <sys_module_version/>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>6</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Overview</sys_module_title>
+      <sys_module_application>gallery</sys_module_application>
+      <sys_module_key>overview</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>4.0.3</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>1</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Album Manager</sys_module_title>
+      <sys_module_application>gallery</sys_module_application>
+      <sys_module_key>albums</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>4.0.3</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>3</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Statistics</sys_module_title>
+      <sys_module_application>gallery</sys_module_application>
+      <sys_module_key>stats</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>4.0.3</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>8</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+  </modulegroup>
+</moduleexport>

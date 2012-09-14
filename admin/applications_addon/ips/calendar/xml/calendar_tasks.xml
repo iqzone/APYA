@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <group>
+    <row>
+      <task_id>31</task_id>
+      <task_title>Clean up minical caches</task_title>
+      <task_file>cleancaches.php</task_file>
+      <task_next_run>1331431200</task_next_run>
+      <task_week_day>0</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>2</task_hour>
+      <task_minute>0</task_minute>
+      <task_cronkey>2beae653a6c3c6d131e948bcd8237c33</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Clears out minical caches older than one week</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>calendarcleancaches</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>calendar</task_application>
+    </row>
+    <row>
+      <task_id>32</task_id>
+      <task_title>Birthday and Events Cache</task_title>
+      <task_file>calendarevents.php</task_file>
+      <task_next_run>1331020500</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>12</task_hour>
+      <task_minute>-1</task_minute>
+      <task_cronkey>1ce2122aae0a5bc2376693225e9fd246</task_cronkey>
+      <task_log>1</task_log>
+      <task_description><![CDATA[Caches calendar events &amp; birthdays]]></task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>calendarevents</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>calendar</task_application>
+    </row>
+    <row>
+      <task_id>33</task_id>
+      <task_title>Recache calendar feeds</task_title>
+      <task_file>importfeeds.php</task_file>
+      <task_next_run>1330980900</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>1</task_hour>
+      <task_minute>-1</task_minute>
+      <task_cronkey>29dd18163586192582922fdf96bf437c</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Recaches stored iCalendar feeds</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>importcalendarfeeds</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>calendar</task_application>
+    </row>
+  </group>
+</export>

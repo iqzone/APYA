@@ -1,0 +1,2585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>blog_complete_fully</word_key>
+      <word_default>You must complete the form fully</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>blog_edit_group_blog</word_key>
+      <word_default>Edit Group Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>blog_add_group_blog</word_key>
+      <word_default>Add Group Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>blog_could_not_remove</word_key>
+      <word_default>Could not remove: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>blog_resized</word_key>
+      <word_default>Resized: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blockedtbs</word_key>
+      <word_default>Blocked Trackbacks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_deleteall</word_key>
+      <word_default>Delete All</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_addservice</word_key>
+      <word_default>Add Ping Service</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_deleteservice</word_key>
+      <word_default>Delete Service</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_editservice</word_key>
+      <word_default>Edit Service</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_servicename</word_key>
+      <word_default>Service Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_installedservices</word_key>
+      <word_default>Installed Blog Ping Services</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_deletetb</word_key>
+      <word_default>Delete Trackback</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_restoretb</word_key>
+      <word_default>Restore Trackback</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_tb_blogname</word_key>
+      <word_default>Trackback Blog Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_excerptdetails</word_key>
+      <word_default>Excerpt Details</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_tb_details</word_key>
+      <word_default>Trackback Details</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_trackedentry</word_key>
+      <word_default>Tracked Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_trackedblog</word_key>
+      <word_default>Tracked Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_trackeddate</word_key>
+      <word_default>Tracked Date</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_exportthemexml</word_key>
+      <word_default>Export Theme XML</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_last5tb</word_key>
+      <word_default>Last 5 Trackbacks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_edittheme</word_key>
+      <word_default>Edit Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_tbsetup</word_key>
+      <word_default><![CDATA[Trackback &amp; Blog Ping Services Setup]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_deletetheme</word_key>
+      <word_default>Delete Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_createnewtheme</word_key>
+      <word_default>Create New Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_author</word_key>
+      <word_default>Author</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blogthemes</word_key>
+      <word_default>IP.Blog Themes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_name</word_key>
+      <word_default>Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_import</word_key>
+      <word_default>Import</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_enterxml_info</word_key>
+      <word_default><![CDATA[The file must be uploaded into the root folder and end with either '.xml' or '.xml.gz']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_enterxml</word_key>
+      <word_default><![CDATA[<u>OR</u> enter the filename of the XML file]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_toggleendis</word_key>
+      <word_default>Toggle Enabled/Disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_enabled</word_key>
+      <word_default>Enabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_uploadxml</word_key>
+      <word_default>Upload XML file from your computer</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_uploadxml_info</word_key>
+      <word_default><![CDATA[The file must end with either '.xml' or '.xml.gz']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_numofpblogs</word_key>
+      <word_default>Number of Private Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_totalcomments</word_key>
+      <word_default>Total Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_default</word_key>
+      <word_default>Default</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_bloghistory</word_key>
+      <word_default>Blog Version History </word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_totaldentries</word_key>
+      <word_default>Total Draft Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_totalpentries</word_key>
+      <word_default>Total Published Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_numoflblogs</word_key>
+      <word_default>Number of Linked Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_numofhblogs</word_key>
+      <word_default>Number of Hosted Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_numofblogs</word_key>
+      <word_default>Number of Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_plugin</word_key>
+      <word_default>Plugin</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_install</word_key>
+      <word_default>Install</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_communityblogstats</word_key>
+      <word_default>Community Blog Stats</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_uninstalledplugins</word_key>
+      <word_default>Uninstalled Plugins</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_cbplugins</word_key>
+      <word_default>Custom Content Block Plugins</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_cbplugins_info</word_key>
+      <word_default>Please ensure that you only install content blocks from trusted sources, as they could contain malicious code.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_addnewcb</word_key>
+      <word_default>Add New Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_savecbsettings</word_key>
+      <word_default>Save Content Block Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_content</word_key>
+      <word_default>Content</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_cbmanager</word_key>
+      <word_default>Content Blocks Manager</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_uninstall</word_key>
+      <word_default>Uninstall</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_cb_name</word_key>
+      <word_default>Content Block Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_editcb</word_key>
+      <word_default>Edit Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_cb_info</word_key>
+      <word_default><![CDATA[Below you can add content to the Block. HTML, smilies and BB-code are allowed. Newlines are NOT automatically converted, you should use &lt;br /&gt;<br/>The following variables are available: {blog.id}, {blog.name}, {blog.memberid}, {member.id}, {blog.url}, {base.url}]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_cboverview</word_key>
+      <word_default>Content Block Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_enterpartorall</word_key>
+      <word_default>Enter part or all of the username</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_addcb</word_key>
+      <word_default>Add Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_findmember</word_key>
+      <word_default>Find Member</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_addthisgroup</word_key>
+      <word_default>Add this group</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_selectgroup</word_key>
+      <word_default>Select a group</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_choosegroup</word_key>
+      <word_default>Choose a group as a moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_choosemember</word_key>
+      <word_default>Choose Member</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_choosematches</word_key>
+      <word_default>Choose from the matches</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_searchformember</word_key>
+      <word_default>Search for a member</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_candisable</word_key>
+      <word_default>Can disable blogs?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_caneditccb</word_key>
+      <word_default>Can edit/delete Custom Content Blocks?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_modblogsettings</word_key>
+      <word_default>Moderator Blog Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_canpin</word_key>
+      <word_default>Can pin blogs?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_viewprivate</word_key>
+      <word_default>Can view private entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_canwarn</word_key>
+      <word_default>Can warn?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_canfeature</word_key>
+      <word_default>Can feature entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_viewdraft</word_key>
+      <word_default>Can view draft entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_deletetrack</word_key>
+      <word_default>Can delete entry trackbacks?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_delotherentry</word_key>
+      <word_default>Can delete other entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_approvecomments</word_key>
+      <word_default>Can approve comments?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_lockentries</word_key>
+      <word_default>Can lock entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_publishentries</word_key>
+      <word_default>Can publish entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bm_title_search</word_key>
+      <word_default>Your Blog Search Results</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_editothercomment</word_key>
+      <word_default>Can edit others comments?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_editotherentry</word_key>
+      <word_default>Can edit others entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_delothercomment</word_key>
+      <word_default>Can delete others comments?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_editingmod</word_key>
+      <word_default>Editing a moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_entryoptions</word_key>
+      <word_default>Entry Options</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_addmod</word_key>
+      <word_default>Add a moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_addmodgroup</word_key>
+      <word_default>Add a moderator group</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_members</word_key>
+      <word_default>Members</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blogs</word_key>
+      <word_default>Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_savesettings</word_key>
+      <word_default>Save Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_createhosted</word_key>
+      <word_default>Create Hosted Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_groupoverview</word_key>
+      <word_default>Group Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_moderator</word_key>
+      <word_default>Moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_group</word_key>
+      <word_default>Group</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_modoverview</word_key>
+      <word_default>Moderator Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_modgroupoverview</word_key>
+      <word_default>Moderator and Group Permission Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_modownblog</word_key>
+      <word_default>Moderate Own Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_createlinked</word_key>
+      <word_default>Create Linked Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_viewblog</word_key>
+      <word_default>View Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_permissions</word_key>
+      <word_default>Permissions</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gmaxsize_info</word_key>
+      <word_default>Enter 0 to disable a per entry limit. This number must be less than the total amount.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_postcomments</word_key>
+      <word_default>Post Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gtotalsize_info</word_key>
+      <word_default>Enter -1 to disable uploads or enter 0 to disable the limit</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gtotalsize</word_key>
+      <word_default>Total upload size for attachments (in KB)?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_geditors_info</word_key>
+      <word_default>This will allow others to post on their blog(s).</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_attachmentsettings</word_key>
+      <word_default>Attachment Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_maxblogs</word_key>
+      <word_default>Maximum number of blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gskin</word_key>
+      <word_default>Allow member to lock a skin to their blog(s)?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_maxblogs_info</word_key>
+      <word_default>This is the maximum number of blogs that members of this group are allowed to create. Enter 0 to allow unlimited blogs.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gmaxsize</word_key>
+      <word_default>Maximum upload size for attachments per entry (in KB)?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gskin_info</word_key>
+      <word_default>This will let the user choose a skin for their Blog. Skins available are settable in the blog settings.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_geditors</word_key>
+      <word_default>Allow member to assign editors to their blog(s)?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gprivate_info</word_key>
+      <word_default>This will only have effect if the user is allowed to create a hosted blog.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gpublish</word_key>
+      <word_default>Prevent member to publish entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gclub_info</word_key>
+      <word_default>This will allow the member to create a private blog but specify additional members who can view it. Will only have effect if the user is allowed to create a private blog.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gclub</word_key>
+      <word_default>Allow member to create private club blogs?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gpublish_info</word_key>
+      <word_default>When set, only (super-)moderators are able to publish the entries made.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gprivate</word_key>
+      <word_default>Allow member to create private blogs?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_gpoll</word_key>
+      <word_default>Allow member to add polls in entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_ghtmlcomment_info</word_key>
+      <word_default><![CDATA[This will also have effect on other members' blogs.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themehomepage</word_key>
+      <word_default>Theme Author Homepage</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_configcusttheme</word_key>
+      <word_default>Configure custom themes for your members</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_ghtmlentry</word_key>
+      <word_default>Allow member to use HTML in entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_securitysettings</word_key>
+      <word_default>Security Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_ghtmlcomment</word_key>
+      <word_default>Allow member to use HTML in entry comments?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_configcusttheme2</word_key>
+      <word_default>Configure Custom Theme Options</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themesawaiting</word_key>
+      <word_default>Member-customized themes awaiting approval</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_viewall</word_key>
+      <word_default>View All</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_customthemes</word_key>
+      <word_default>Custom Themes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themecssoverwritedesc</word_key>
+      <word_default>This will cause any default skin CSS not to be loaded - only the CSS defined below will be loaded</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themecssoverwrite</word_key>
+      <word_default>Overwrite CSS completely?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themecss_info</word_key>
+      <word_default><![CDATA[Use '{images}' as a macro for the 'Theme Images URL'.  This CSS will override the skin CSS to customize the blog.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themecss</word_key>
+      <word_default>Theme CSS</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themeimg_info</word_key>
+      <word_default>If your theme CSS calls images, enter the url to those images here</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themeimg</word_key>
+      <word_default>Theme Images URL</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themeemail</word_key>
+      <word_default>Theme Author Email</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themeauthor</word_key>
+      <word_default>Theme Author</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themeen</word_key>
+      <word_default>Theme Enabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_noresults</word_key>
+      <word_default>No Results</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themename</word_key>
+      <word_default>Theme Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_search</word_key>
+      <word_default>Search</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_configtheme</word_key>
+      <word_default>Configure your theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_onlyshow</word_key>
+      <word_default>Only show</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_filterlogs</word_key>
+      <word_default>Filter Akismet Logs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_moredata</word_key>
+      <word_default>More Data</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_removeall</word_key>
+      <word_default>Remove All?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themedesc</word_key>
+      <word_default>Theme Description</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_removedchecked</word_key>
+      <word_default>Remove checked logs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_log</word_key>
+      <word_default>Log</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_convertbb_info</word_key>
+      <word_default><![CDATA[This will convert old attachment BBcode ([attachmentid=xxx]) to new style ([attachment=yyy:file.ext]) where yyy is the best guessed new ID of xxx.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_isspam</word_key>
+      <word_default>Is Spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_submit</word_key>
+      <word_default>Submit</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_connecterror</word_key>
+      <word_default>Connect Error</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_message</word_key>
+      <word_default>Message</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_akismetlogs</word_key>
+      <word_default>Akismet Logs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_resynchent</word_key>
+      <word_default>Resynchronize Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_resynchent_info</word_key>
+      <word_default>This will recount comments and the entry last comment information for all your entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_rebuildthumbs</word_key>
+      <word_default>Rebuild Thumbnails</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_refreshrss</word_key>
+      <word_default>Refresh RSS Feeds</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_refreshrss_info</word_key>
+      <word_default>If you have recently changed your domain name or moved your blogs to a new URL, you can use this tool to refresh the RSS feed caches.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_convertbb</word_key>
+      <word_default>Convert Old Attachment BBCode</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_resynchblogs</word_key>
+      <word_default>Resynchronize Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_date</word_key>
+      <word_default>Date</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_type</word_key>
+      <word_default>Type</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_rebuildstats</word_key>
+      <word_default>Rebuild Blog Statistics</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_rebuildstats_info</word_key>
+      <word_default>This will recount the number of blogs, entries and comments and rebuild the last Blog created as shown in the Blog Statistics.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_rebuildthumbs_info</word_key>
+      <word_default>This will rebuild the thumbnails of the attachments. This will apply any changes made to the thumbnail size settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_resynchblogs_info</word_key>
+      <word_default>This will recount entries, comments and the blog last post information for all your blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_percycle</word_key>
+      <word_default>Per Cycle</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blogtools</word_key>
+      <word_default>Community Blog Tools</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_pingextended</word_key>
+      <word_default>Ping Service Extended Ping</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_savechanges</word_key>
+      <word_default>Save Changes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_pingmethodname</word_key>
+      <word_default>Ping Service Methodname</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_pingport</word_key>
+      <word_default>Ping Service Port</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_pingpath</word_key>
+      <word_default>Ping Service Path</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_pingkey</word_key>
+      <word_default>Ping Service Key</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_pinghost</word_key>
+      <word_default>Ping Service Host</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_deleteblog</word_key>
+      <word_default>Delete Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_pingname</word_key>
+      <word_default>Ping Service Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_pingsettings</word_key>
+      <word_default>Ping Service Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_newpingservset</word_key>
+      <word_default>New Blog Ping service settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_bloggroupname_desc</word_key>
+      <word_default><![CDATA[This is the name for your group and will be used in place of an owner's name]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_entries</word_key>
+      <word_default>Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_searchresults</word_key>
+      <word_default>Blog Search Results: %s result(s) found</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_externallink</word_key>
+      <word_default>External Link</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blogtype</word_key>
+      <word_default>Blog Type</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_views</word_key>
+      <word_default>Views</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_pingsetfor</word_key>
+      <word_default>Ping service settings for</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blogsetgroups_desc</word_key>
+      <word_default>Members with a primary group or secondary group matching the selected groups will be able to access the blog as if it were their own</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_editthisblog</word_key>
+      <word_default>Edit This Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blogsetgroups</word_key>
+      <word_default>Set for Groups</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_bloggroupname</word_key>
+      <word_default>Group Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blogdescription</word_key>
+      <word_default>Blog Description</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_findbymname</word_key>
+      <word_default>Edit Blog by Member Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_bloginformation</word_key>
+      <word_default>Blog Information</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_dnamehere</word_key>
+      <word_default>Enter display name here</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_mnamehere</word_key>
+      <word_default>Enter member name here</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blogname</word_key>
+      <word_default>Blog Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_mustenterdname</word_key>
+      <word_default>You must enter a display name!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_bnamehere</word_key>
+      <word_default>Enter blog name here</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_findblog</word_key>
+      <word_default>Find Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_findbydname</word_key>
+      <word_default>Edit Blog by Display Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_findbybname</word_key>
+      <word_default>Edit Blog by Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_editblog</word_key>
+      <word_default>Edit Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_removetheme</word_key>
+      <word_default>Remove Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_mustentermname</word_key>
+      <word_default>You must enter a member name!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_mustenterbname</word_key>
+      <word_default>You must enter a blog name!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_approvetheme</word_key>
+      <word_default>Approve Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_withselected</word_key>
+      <word_default>With Selected</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_go</word_key>
+      <word_default>Go</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_suspicious</word_key>
+      <word_default>Suspicious</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_edit</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_viewcss</word_key>
+      <word_default>View CSS</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_nothemesawait</word_key>
+      <word_default>No member customized themes awaiting approval</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_blog</word_key>
+      <word_default>Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_approved</word_key>
+      <word_default>Approved</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_view</word_key>
+      <word_default>View</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_member</word_key>
+      <word_default>Member</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_owner</word_key>
+      <word_default>Owner</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_membercusttheme</word_key>
+      <word_default>Member-Customized Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_savetheme</word_key>
+      <word_default>Save Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_ipboardmsg</word_key>
+      <word_default>IP.Board Message</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_customthemecss</word_key>
+      <word_default>Custom Theme CSS</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_editcssfor</word_key>
+      <word_default>Edit Theme CSS for</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_editcss</word_key>
+      <word_default>Edit CSS</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_previewtheme</word_key>
+      <word_default>Preview Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_cssareyousure</word_key>
+      <word_default>Are you sure?  If this user has included malicious CSS code in their theme, viewing the theme could result in your account being compromised.  Only preview the theme after you have confirmed the theme CSS code is not malicious.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_actiontaken</word_key>
+      <word_default>Action Taken</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_submittoakismet</word_key>
+      <word_default>Submit to Akismet</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_datarecorded</word_key>
+      <word_default>Data Recorded</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_csswarning</word_key>
+      <word_default><![CDATA[<b>WARNING</b>: Be sure to thoroughly inspect the CSS before approving it. Be suspicious of anything you do not know of the meaning of.  It is advised you do not approve any CSS that loads data from a remote url, otherwise the user could change the contents of that file at any time without your knowledge.  <span style='color: red; font-weight: bold;'>Be suspicious of things like @import, behavior, expression and moz-binding.</span>  These could be used to compromise your site in the right circumstances.  If in doubt, do not approve the custom theme CSS]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_markedasspam</word_key>
+      <word_default>Marked as Spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_communicationerror</word_key>
+      <word_default>Communication Error</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_entry</word_key>
+      <word_default>Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_logmessage</word_key>
+      <word_default>Log Message</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_lastentry</word_key>
+      <word_default>Last Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_logdate</word_key>
+      <word_default>Log Date</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_noblogs</word_key>
+      <word_default>This member has no blogs, currently.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_or</word_key>
+      <word_default>OR</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_insertedsuc</word_key>
+      <word_default>IP.Blog theme %s inserted successfully</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_nofileleftbehind</word_key>
+      <word_default>Could not read the uploaded file.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_fileat</word_key>
+      <word_default>Could not find the file to open at: </word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_nofileimp</word_key>
+      <word_default>No upload file was found and no filename was specified.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_nolocthemeexp</word_key>
+      <word_default>We could not find the theme you were trying to export</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_themewhat</word_key>
+      <word_default>Theme %s successfully</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_enabled</word_key>
+      <word_default>enabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_disabled</word_key>
+      <word_default>disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_theme_enabled</word_key>
+      <word_default>Theme enabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_theme_disabled</word_key>
+      <word_default>Theme disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_nolocthemetog</word_key>
+      <word_default>We could not find the theme you were trying to toggle</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_nolocthemedel</word_key>
+      <word_default>We could not find the theme you were trying to delete</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_themesaved</word_key>
+      <word_default>Theme saved successfully</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_themecustomization</word_key>
+      <word_default>IP.Blog Theme Customization</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_fillform</word_key>
+      <word_default>You must fill in the form completely - you forgot to give the theme a name, or you did not enter in any CSS</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_noloctheme</word_key>
+      <word_default>We could not find the theme you were trying to edit</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_newtheme</word_key>
+      <word_default>New Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_thisorthat</word_key>
+      <word_default>The blog custom themes have been %s successfully</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_nolocblog</word_key>
+      <word_default>We could not find the blog you wish to view the customized theme for</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_desctheme</word_key>
+      <word_default>Description of your new theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_approved</word_key>
+      <word_default>approved</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_cleared</word_key>
+      <word_default>cleared</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_noaction</word_key>
+      <word_default>You did not select the action to take</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_noselmod</word_key>
+      <word_default>You did not select any customized blogs to moderate</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_uptodis</word_key>
+      <word_default><![CDATA[<b>Up to %s processed so far, continuing...</b><br />]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_contentblock</word_key>
+      <word_default>Processed content block </word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_overview</word_key>
+      <word_default>IP.Blog Customization Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_themeedited</word_key>
+      <word_default>The blog custom theme has been edited successfully</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_rebuildstatsdone</word_key>
+      <word_default>Successfully Rebuilt Blog Statistics</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cc_determineid</word_key>
+      <word_default><![CDATA[We could not determine which user's custom theme CSS you were trying to edit]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_entryrebuild</word_key>
+      <word_default>Entry Rebuild Complete</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_rebuildrssdone</word_key>
+      <word_default>Successfully forced RSS feeds to refresh</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_rebuildrss</word_key>
+      <word_default>Refreshed RSS Feeds</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_rebuildstats</word_key>
+      <word_default>Rebuild Blog Statistics</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_processedblog</word_key>
+      <word_default>Processed blog </word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_processedentry</word_key>
+      <word_default>Processed entry </word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_processedsofar</word_key>
+      <word_default>processed so far, continuing...</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tr_completed</word_key>
+      <word_default>Rebuild Completed</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_trackdeleted</word_key>
+      <word_default><![CDATA[Trackback '%s' deleted]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_deletetrack</word_key>
+      <word_default><![CDATA[Deleted Trackback '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_alltrack</word_key>
+      <word_default>All trackbacks deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_noexcerpt</word_key>
+      <word_default>No excerpt available</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_purgetrack</word_key>
+      <word_default>Purged trackback spam logs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_restoretrack</word_key>
+      <word_default><![CDATA[Restore Trackback '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_trackrestored</word_key>
+      <word_default><![CDATA[Trackback '%s' restored]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_invalidtrack</word_key>
+      <word_default>Invalid Trackback</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_pingdeleted</word_key>
+      <word_default><![CDATA[Blog Ping Service '%s' deleted]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_deletedping</word_key>
+      <word_default><![CDATA[Deleted Blog Ping Service '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_addedping</word_key>
+      <word_default><![CDATA[Adding Blog Ping Service '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_pingadded</word_key>
+      <word_default><![CDATA[Blog Ping Service '%s' added]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_pingmanager</word_key>
+      <word_default>Community Blog Ping Service Manager</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_nohost</word_key>
+      <word_default>No service host provided</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_editedping</word_key>
+      <word_default><![CDATA[Edited Blog Ping Service Settings for '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_pingedited</word_key>
+      <word_default><![CDATA[Blog Ping Service settings for '%s' are saved]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_noname</word_key>
+      <word_default>No service name provided</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_nokey</word_key>
+      <word_default>No service key provided</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_serviceexists</word_key>
+      <word_default>Service with this key already exists</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_no_trackbacks_yet</word_key>
+      <word_default>No trackbacks available yet!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_messages</word_key>
+      <word_default>Messages</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_invalidservice</word_key>
+      <word_default>Invalid Service</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>tp_view_blockedtrackbacks</word_key>
+      <word_default>View Blocked Trackbacks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_connecterror</word_key>
+      <word_default>connection errors</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_markedspam</word_key>
+      <word_default>content marked as spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_trackbacks</word_key>
+      <word_default>trackbacks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_searchresults</word_key>
+      <word_default> (Search Results)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_comments</word_key>
+      <word_default>comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_spamsubmitted</word_key>
+      <word_default>Spam submitted to Akismet</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_hamsubmitted</word_key>
+      <word_default>Ham submitted to Akismet</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_unablespam</word_key>
+      <word_default>No data logged for this communication, unable to report as spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_noneselected</word_key>
+      <word_default>You did not select any log entries to delete</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_unableham</word_key>
+      <word_default>No data logged for this communication, unable to report as ham</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_logsremoved</word_key>
+      <word_default>Blog: Akismet log entires removed</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_none</word_key>
+      <word_default>None</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_akismetlogs</word_key>
+      <word_default>Akismet Logs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_submitspam</word_key>
+      <word_default>Submit Spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_alreadysub</word_key>
+      <word_default>Already Submitted</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_modedited</word_key>
+      <word_default>Moderator Edited</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_submitham</word_key>
+      <word_default>Submit Ham</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_no</word_key>
+      <word_default>No</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_nologid</word_key>
+      <word_default>Could not resolve the log ID. Please try again.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>ta_nokey</word_key>
+      <word_default><![CDATA[You have not entered an Akismet API key under <a href='%sapp=core&module=settings&section=settings&do=setting_view&search=Akismet+spam+protection&code=setting_view'>Settings</a> yet]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_moddel</word_key>
+      <word_default>Moderator Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_moddellog</word_key>
+      <word_default>Blog Moderator (ID: %s) deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_modeditedlog</word_key>
+      <word_default>Blog Moderator (ID: %s) edited</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_novalidmodin</word_key>
+      <word_default>No valid Blog moderator input</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_nomodid</word_key>
+      <word_default>No moderator ID selected</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_modoverview</word_key>
+      <word_default>Moderator and Groups Permissions Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_noidresolve</word_key>
+      <word_default>Could not resolve the member ID.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_addedgroup</word_key>
+      <word_default><![CDATA[Added group '%s' as Blog moderator]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_modadded</word_key>
+      <word_default>Moderator Added</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_alreadymod</word_key>
+      <word_default>This member/group is already a Blog moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_nomodlocate</word_key>
+      <word_default><![CDATA[Could not retrieve that moderator&#39;s record]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_nomemberlocate</word_key>
+      <word_default>Sorry, we could not find any members that matched the search string you entered</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_validmod</word_key>
+      <word_default>You must choose a valid moderator to edit</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_nogrouplocate</word_key>
+      <word_default>Sorry, we could not find that group</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_nomember</word_key>
+      <word_default><![CDATA[You didn't choose a member name to look for!]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_addedmember</word_key>
+      <word_default><![CDATA[Added member '%s' as a Blog moderator]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_gmanager</word_key>
+      <word_default>Community Blog Group Manager</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_editedgs</word_key>
+      <word_default><![CDATA[Edited Blog Group Settings for '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_gsedited</word_key>
+      <word_default><![CDATA[Group Settings for '%s' were modified]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gm_invalidg</word_key>
+      <word_default>Invalid Group</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_cbsettingsmod</word_key>
+      <word_default>Content Block Settings were modified</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_keyinvalid</word_key>
+      <word_default>Key is invalid</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_deletedcb</word_key>
+      <word_default>Deleted Admin Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_editedcbsettings</word_key>
+      <word_default>Edited Blog Content Block Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_editedcb</word_key>
+      <word_default>Edited Admin Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_addedcb</word_key>
+      <word_default>Added Admin Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_editcb</word_key>
+      <word_default>Edit Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_invalidcb</word_key>
+      <word_default>Invalid Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_cbinstalled</word_key>
+      <word_default>Content block installed</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_addcb</word_key>
+      <word_default>Add Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_installed</word_key>
+      <word_default><![CDATA[Installed new content block '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_cbmanager</word_key>
+      <word_default>Content Block Manager</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_uninstalled</word_key>
+      <word_default><![CDATA[Uninstalled content block '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_noconfigdata</word_key>
+      <word_default>No configuration data found for plugin</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_cbuninstalled</word_key>
+      <word_default>Content block uninstalled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cm_no_uninstalled</word_key>
+      <word_default>No uninstalled plugins to show at this time!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bm_groupblogsave</word_key>
+      <word_default>Group Blog Saved</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bm_editedblog</word_key>
+      <word_default><![CDATA[Edited Blog '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bm_blogmanager</word_key>
+      <word_default>Community Blog Manager</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bm_deletedblog</word_key>
+      <word_default>Deleted Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bm_deletebloglog</word_key>
+      <word_default>Deleted Blog (ID: %s)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bm_noblogs</word_key>
+      <word_default>Your search did not return any Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bm_idnotexist</word_key>
+      <word_default>Blog (ID: %s) does not exist!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bm_wronguse</word_key>
+      <word_default>Wrong use of this function</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>rebuild__comment</word_key>
+      <word_default>IP.Blog: Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>rebuild__cblocks</word_key>
+      <word_default>IP.Blog: Custom Blocks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>rebuild__entry</word_key>
+      <word_default>IP.Blog: Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>cp_welcome_dude</word_key>
+      <word_default>Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_allow_delete</word_key>
+      <word_default>Allowed to Delete Own Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_rsspergo</word_key>
+      <word_default>Number of RSS items imported per blog per import</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>gf_bl_rsspergo_desc</word_key>
+      <word_default>Enter 0 to disable RSS imports for this group. 5-10 items is recommended</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_cthemes_info</word_key>
+      <word_default><![CDATA[You can approve or remove any custom themes a user has created.<br /><br />Custom themes are currently <strong>%s</strong>. Click <a href='%s'>here</a> to adjust the blog setting</a>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>bl_themes_info</word_key>
+      <word_default><![CDATA[You can create pre-set themes that your members can choose for their blogs.<br /><br />Themes are currently <strong>%s</strong>. Click <a href='%s'>here</a> to adjust the blog setting</a>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>nogroupblogssetup</word_key>
+      <word_default>You have no group blogs currently.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>overview_g_nosetup</word_key>
+      <word_default>(Cannot start or view blogs. Edit group to allow access.)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>blog_add_group</word_key>
+      <word_default>Add Group</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>blog_edited_admin_log</word_key>
+      <word_default><![CDATA[Edited Blog '%s' (ID: %s)]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>blog_add_member</word_key>
+      <word_default>Add Member</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>edit_blogs_title</word_key>
+      <word_default>Edit Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>no_blogs_moderators_yet</word_key>
+      <word_default>You have no blogs moderates setup currently!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>blog_assigned_groups</word_key>
+      <word_default>Assigned Groups</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>add_new_group_blog</word_key>
+      <word_default>Add New Group Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>theme_import_xml</word_key>
+      <word_default>Import XML Theme File</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>group_blogs_title</word_key>
+      <word_default>Group Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_blog</word_pack>
+      <word_key>no_group_blogs_yet</word_key>
+      <word_default>You have no group blogs currently!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_thumbs</word_key>
+      <word_default>Can rebuild entry thumbnails?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_attach</word_key>
+      <word_default>Can fix old attachments?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_stats</word_key>
+      <word_default>Can rebuild stats?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_furls</word_key>
+      <word_default>Can check and fix friendly urls?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_tb_manage</word_key>
+      <word_default>Can restore and remove trackbacks?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_tool_resync</word_key>
+      <word_default>Can resynchronize blogs and entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_tools</word_key>
+      <word_default>Blog Tools</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_tb_view</word_key>
+      <word_default>Can view trackback logs?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_ping_remove</word_key>
+      <word_default>Can remove ping services?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_ping_manage</word_key>
+      <word_default>Can add/edit ping services?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_pings</word_key>
+      <word_default>Blog Pings Management</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_akismet_delete</word_key>
+      <word_default>Can delete Akismet logs?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_akismet_spamham</word_key>
+      <word_default>Can submit spam and ham to Akismet?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_akismet_view</word_key>
+      <word_default>Can view Akismet logs?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_akismet</word_key>
+      <word_default>Blog Akismet Logs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_theme_delete</word_key>
+      <word_default>Can delete themes?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_header_delete</word_key>
+      <word_default>Can delete custom headers?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_theme_manage</word_key>
+      <word_default>Can add/edit themes?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_header_manage</word_key>
+      <word_default>Can add/edit custom headers?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_cheaders</word_key>
+      <word_default>Blog Custom Header Management</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_theme_approve</word_key>
+      <word_default>Can approve custom themes?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_themes</word_key>
+      <word_default>Blog Theme Management</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blog_dheader</word_key>
+      <word_default>Can manage dynamic headers?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_cdelete</word_key>
+      <word_default>Can delete content blocks?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_cblocks</word_key>
+      <word_default>Blog Content Block Management</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_dheaders</word_key>
+      <word_default>Blog Dynamic Headers Management</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_manage</word_key>
+      <word_default>Can edit blogs?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_cmanage</word_key>
+      <word_default>Can add/edit content blocks?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_delete</word_key>
+      <word_default>Can delete blogs?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>r__blogs_managet</word_key>
+      <word_default>Blog Management</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_trackbacks</word_key>
+      <word_default><![CDATA[Trackback &amp; Ping Services]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_overview</word_key>
+      <word_default>Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_akismet</word_key>
+      <word_default>Akismet Logs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_rebuild</word_key>
+      <word_default>Rebuild</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_settings</word_key>
+      <word_default>Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_mem_themes</word_key>
+      <word_default>Manage Member Themes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_dheaders</word_key>
+      <word_default>Dynamic Headers Set-Up</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_themes</word_key>
+      <word_default>Manage Custom Themes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_managech</word_key>
+      <word_default>Manage Custom Headers</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_manage</word_key>
+      <word_default>Blog Manager</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__blog_cblocks</word_key>
+      <word_default>Content Blocks</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

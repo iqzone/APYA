@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Manage Languages</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Manage Languages</subitemtitle>
+					<subitemlang>languages</subitemlang>
+					<subsection>manage_languages</subsection>
+					<subitemurl></subitemurl>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

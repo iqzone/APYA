@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Overview</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Overview</subitemtitle>
+					<subitemlang>overview</subitemlang>
+					<subsection>overview</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Settings</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Settings</subitemtitle>
+					<subitemlang>settings</subitemlang>
+					<subsection>settings</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

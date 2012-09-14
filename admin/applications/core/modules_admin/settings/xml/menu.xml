@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>System Settings</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>System Settings</subitemtitle>
+					<subitemlang>settings</subitemlang>
+					<subsection>settings</subsection>
+					<subitemurl>do=settingsview</subitemurl>
+					<subitemrolekey>settings_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

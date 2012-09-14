@@ -1,0 +1,86 @@
+.sub_albums{margin:2px
+0 3px 80px;padding-left:20px;background:url(http://www.alvarezpuga.net/public/style_images/network/subforum_stem.png) no-repeat left 4px}.galattach{padding:3px}.galattach.cover_img_50{background:url(http://www.alvarezpuga.net/public/style_images/network/gallery/50x50.png) no-repeat 4px 4px;padding:13px}.galattach.cover_img_75{background:url(http://www.alvarezpuga.net/public/style_images/network/gallery/75x75.png) no-repeat 0px 0px;padding:13px}.divattach.cover_img_50{background:url(http://www.alvarezpuga.net/public/style_images/network/gallery/50x50.png) no-repeat 4px 4px;padding:13px;width:50px;height:50px}.divattach.cover_img_75{background:url(http://www.alvarezpuga.net/public/style_images/network/gallery/75x75.png) no-repeat 5px 5px;padding:15px;width:75px;height:75px;display:inline-block !important}#home_recent_albums
+li{width:110px}#home_recent_albums li
+div.desc.homepage{text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gallery_photo_wrap,
+#theImage
+.image_view_wrap{padding:1px;border:1px
+solid #d5d5d5;background:#fff;-webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.2);-moz-box-shadow:0px 2px 2px rgba(0,0,0,0.2);box-shadow:0px 2px 2px rgba(0,0,0,0.2)}#ipg_category{}#ipg_category.no_screenshots
+.screenshot{display:none}#ipg_category
+.ipg_category_row{padding:10px;border-bottom:1px solid #eaeaea;line-height:1.4;position:relative}#ipg_category
+.galattach{max-width:75px;max-height:75px;float:left;margin-right:15px;padding:0px;background:transparent !important}#ipg_category
+h3{font-weight:bold;font-size:18px;padding:0;display:inline-block}#ipg_category
+.cat_name{font-size:12px;margin-left:6px}#ipg_category .cat_name, #ipg_category .cat_name
+a{color:#bebebe}#ipg_category
+.album_desc{color:#999;margin-top:10px}.image_info
+li{padding:5px
+0px 5px 2px}.image_info li
+STRONG{width:30% !important;display:block;float:left}#theImage{padding-top:8px;z-index:999;width:100%}#theImage
+.image_view_wrap{cursor:url(http://www.alvarezpuga.net/public/style_images/network/gallery/zoom.png), pointer;max-width:100% !important;height:auto !important}#theImage .image_view_wrap
+img{max-width:100% !important;height:auto !important}em.inline-moderated{display:inline;clear:none;margin-left:5px;vertical-align:middle}.image_view_wrap{margin:0px
+auto;clear:both}.note_wrap{position:absolute;font-size:12px}.note_box{border:1px
+solid #000;position:relative;cursor:pointer;opacity:0.7}.note_box
+.internal{width:100%;height:100%;border:1px
+solid #cacaca}.note_wrap .note_box:hover{opacity:1}.note_wrap.editable.selected
+.note_box{border:1px
+dashed #000;cursor:move}.note_wrap.editable.selected .note_box
+.internal{border:1px
+dashed #fff}.note_wrap.editable
+.handle{width:11px;height:11px;background:url(http://www.alvarezpuga.net/public/style_images/network/gallery/drag_handle.png) no-repeat;position:absolute;right:0;bottom:0;cursor:se-resize}.note_text,.note_form{background:#e3eff3;border:1px
+solid #789098;font-size:11px;margin-top:4px;text-align:left;display:inline-block}.note_form
+textarea{margin-bottom:5px}.album.horizontal{min-height:75px}.album.horizontal
+img{float:left}.album.horizontal p,
+.album.horizontal
+em{font-size:0.9em;color:#444;font-weight:bold;padding-top:10px}.album.horizontal
+em{color:#888;font-size:0.8em;font-weight:normal;text-transform:none}.album.horizontal.showMore{text-align:right;padding:6px;font-weight:bold;height:10px !important;min-height:0px !important;background-color:#D5DDE5;display:block;width:100%;margin-left: -5px}.album.horizontal
+.sub_album_children{margin-top:2px;padding-right:16px;background:#F0F0F7 url(http://www.alvarezpuga.net/public/style_images/network/dropdown.png) no-repeat 98% 10px;border:1px
+dotted #C9C9C9;width:auto;display:inline-block;clear:both;cursor:pointer}.albumdd.ipbmenu_content{background-color:#fff;padding:0px}.album.horizontal .sub_album_children
+span.desc{float:left;display:inline-block;padding:6px
+2px 0px 2px}.album.horizontal.mini{min-height:50px}.album.horizontal.mini
+p{padding-top:4px}.album.horizontal.mini
+img{margin-top:5px;margin-right:3px}#home_side_recents
+.galattach{padding:3px
+0px}#uploadBoxWrap{margin-bottom:10px}#attachments{margin-top:10px !important}#attachments
+li{margin-right:5px;margin-left:5px;min-height:50px;padding-left:62px;display:inline-block;width:190px;overflow:hidden}#attachments li
+.thumb_img{width:50px;height:50px}#attachments li.error .links,
+#attachments li.complete
+.links{top:40px !important;left:63px !important}#attachments li
+h4{overflow:hidden !important;white-space:nowrap !important}#attachments li
+.progress_bar{top:43px !important;left:60px !important;width:185px !important}#attachments li
+p.info{width:180px !important}.block_inner{background:#fff;margin-bottom:10px;-moz-box-shadow:#e5e5e5 2px 2px 2px;-webkit-box-shadow:#e5e5e5 2px 2px 2px;overflow:hidden}.pad{padding:15px}.block_inner
+.ipb_table{border-bottom:0}.block_inner .ipb_table
+td{background:#fff;border-bottom:1px solid #e9e9e9}.ipb_table
+td.last{border:0px}ul#strip{overflow:;margin:0px
+0px 0px 122px;position:relative;display:block;width:307px;padding:3px
+0px 0px 0px;height:60px}ul#strip
+li{display:block;position:absolute;float:left;list-style:none;margin: -2px 1px 0px 0px;padding:1px}ul#strip
+img{width:56px;height:56px}#photostripwrap{display:block;width:320px;z-index:1000}#photostrip{overflow:hidden;display:block;position:relative;margin-left:10px;margin-right:0px;width:307px}.photoStipNav{height:56px;position:absolute;width:20px;z-index:10000;top:0px;left:0px}.photoStipNav.nleft{background:url(http://www.alvarezpuga.net/public/style_images/network/gallery/slider/slideLeft.png) no-repeat}.photoStipNav.nright{background:url(http://www.alvarezpuga.net/public/style_images/network/gallery/slider/slideRight.png) no-repeat}.photoStipNav.nleft:hover,.photoStipNav.nright:hover{background-color:#fafbfc;cursor:pointer}img.galmedium{clear:both}#photo_sizes
+ul{margin:20px
+2px;float:none;display:block;width:100%}#photo_sizes ul
+li{display:inline-block;width:22%;color:#333}#photo_sizes ul li
+span{font-size:0.8em;color:#555}#photo_sizes ul li
+a{font-weight:bold;font-size:1.1em;text-transform:smallcaps}.image_is_new_box{position:absolute !important;display:inline-block !important;background:#f60 !important;z-index:5;margin:0px
+0px 0px 0px !important;width:auto !important;height:14px !important;color:#fff !important;font-weight:bold !important;font-size:0.8em !important;text-decoration:none !important;padding:0px
+4px 0px 4px !important;font-variant:small-caps !important;-moz-box-shadow:2px 2px 3px #666 !important;-webkit-box-shadow:2px 2px 3px #666 !important;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}.image_is_hidden_box{position:absolute !important;display:inline-block !important;background:#A20 !important;z-index:5;margin:0px
+0px 0px 3px !important;width:auto !important;text-align:center !important;height:12px !important;color:#fff !important;font-weight:bold !important;font-size:0.8em !important;text-decoration:none !important;padding:0px
+2px 0px 2px !important;font-variant:small-caps !important;-moz-box-shadow:0px 0px 3px #666 !important;-webkit-box-shadow:0px 0px 3px #666 !important}input[type="checkbox"].albumModBox{position:absolute !important;z-index:9999;margin:90px
+0px 0px 90px !important}.featured{padding:15px
+0px;margin:0
+auto;max-width:670px}.imageDescription{background:url(http://www.alvarezpuga.net/public/style_images/network/gallery/trans_bg2.png);color:#e2e2e2;position:absolute;padding:10px
+0px 10px 10px;bottom:0;left:0;width:100%}.gallery_pane{margin-top:15px;-moz-box-shadow:0px 0px 8px rgba(0,0,0,0.10) inset;-moz-border-radius:6px;-webkit-box-shadow:0px 0px 8px rgba(0,0,0,0.10) inset;-webkit-border-radius:6px}.gallery_pane
+h2{font-weight:bold;margin-bottom:20px;border-bottom:1px solid #eaeaea}ul.wrap
+li{width:100px;min-height:140px;vertical-align:top}ul.wrap li
+.small{position:absolute;background-color:#528f6c;margin-left:90px;width:18px;font-size:0.8em;color:#fff;font-weight:bold;padding:1px
+0px;text-align:center;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px}.album_thumbnails.detail{margin:10px
+auto 0 auto;padding:15px
+15px 30px 15px;max-width:680px}.album_thumbnails.detail ul.wrap
+li{width:100px}.album_thumbnails.detail ul.wrap
+.desc{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%;line-height:140%}#imageOptions_menucontent{width:145px}#image_nav_links{margin-top: -15px}#image_nav_links
+li{padding:0px
+0px 0px 5px;display:inline-block}#image_nav_links
+li.off{color:#a4a4a4}#image_nav_links li a:hover{color:#000}#slide_left{z-index:9999}#slide_right{z-index:9999}.albumSelected{padding:4px
+10px;border:1px
+solid #d5d5d5;background:#fff;-webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.1);-moz-box-shadow:0px 2px 2px rgba(0,0,0,0.1);box-shadow:0px 2px 2px rgba(0,0,0,0.1);display:inline-block;border-radius:3px;margin:0
+3px;cursor:default}#albumDetailTable
+td{width:33%;border-width:10px !important;border-color:#ebf0f3 !important;vertical-align:top}#albumDetailTable td
+div.short{min-height:180px}#albumDetailTable input[type="checkbox"].albumModBox{position:static !important;z-index:9999;margin:0px
+!important}

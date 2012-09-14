@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Stats Reports</grouptitle>
+		<grouplang>stats_reports</grouplang>
+		<items>
+			<item>
+				<key>galstats_files</key>
+				<string>Can run file reports?</string>
+			</item>
+			<item>
+				<key>galstats_filealter</key>
+				<string>Can change file ownership?</string>
+			</item>
+			<item>
+				<key>galstats_members</key>
+				<string>Can run member reports?</string>
+			</item>
+			<item>
+				<key>galstats_memberalter</key>
+				<string>Can change member access privileges?</string>
+			</item>
+			<item>
+				<key>galstats_groups</key>
+				<string>Can run group reports?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

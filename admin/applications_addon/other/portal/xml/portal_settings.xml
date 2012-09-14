@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settingexport>
+  <settinggroup>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>suggest_friends</conf_title_keyword>
+      <conf_title_title>Número de sugerencias</conf_title_title>
+      <conf_title_desc>Máximo número de amigos a sugerir</conf_title_desc>
+      <conf_title_tab>Portal</conf_title_tab>
+      <conf_title_app>portal</conf_title_app>
+      <conf_title_noshow>0</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>Número de sugerencias</conf_title>
+      <conf_description>Máximo número de usuarios amigos a sugerir</conf_description>
+      <conf_group>34</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>suggest_max_friends</conf_key>
+      <conf_default>5</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>suggest_friends</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_title_title>Portal</conf_title_title>
+      <conf_title_desc>Settings for the Portal application.</conf_title_desc>
+      <conf_title_tab>DevFuse</conf_title_tab>
+      <conf_title_app>portal</conf_title_app>
+      <conf_title_noshow>0</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>Show Site Navigation Menu?</conf_title>
+      <conf_description/>
+      <conf_group>33</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>portal_show_nav</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group>Default Portal Blocks</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Site Navigation Menu Links</conf_title>
+      <conf_description><![CDATA[One per line in this format<br />http://www.apple.com [Apple's Website]]]></conf_description>
+      <conf_group>33</conf_group>
+      <conf_type>textarea</conf_type>
+      <conf_key>portal_nav</conf_key>
+      <conf_default><![CDATA[{board_url} [Forums]
+{board_url}app=forums&module=extras&section=stats [Today's Top 20 Posters]
+{board_url}app=forums&module=extras&section=stats&do=leaders [Contact Staff]]]></conf_default>
+      <conf_extra/>
+      <conf_evalphp><![CDATA[if ( $show == 1)
+{
+    $value = preg_replace( "/&(middot|quot|copy|amp)/", "&&#092;&#092;&#092;&#092;&#092;&#092;&#092;&#092;&#092;&#092;&#092;&#092;&#092;&#092;&#092;&#092;1", $value );
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>2</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Show Affiliates / Favoured Sites box?</conf_title>
+      <conf_description/>
+      <conf_group>33</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>portal_show_fav</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>3</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Show Affiliates / Favoured Sites box content</conf_title>
+      <conf_description>Raw HTML enabled</conf_description>
+      <conf_group>33</conf_group>
+      <conf_type>textarea</conf_type>
+      <conf_key>portal_fav</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp><![CDATA[if ( $show == 1)
+{
+ $value = preg_replace( "/&(middot|quot|copy|amp)/", "&\\\\\\\\1", $value );
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>4</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Enter URL to poll topic for inclusion</conf_title>
+      <conf_description>Leave blank to not show a poll or the poll box</conf_description>
+      <conf_group>33</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>portal_poll_url</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>5</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Latest Topics (Main)</conf_title>
+      <conf_description>The number of full topics you want to display.</conf_description>
+      <conf_group>33</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>latest_topics_main</conf_key>
+      <conf_default>3</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>6</conf_position>
+      <conf_start_group>Latest Topics</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Latest Topics (Sidebar)</conf_title>
+      <conf_description>The number of topic titles you want to display in the sidebar.</conf_description>
+      <conf_group>33</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>latest_topics_sidebar</conf_key>
+      <conf_default>5</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>7</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Don&#39;t pin pinned topics]]></conf_title>
+      <conf_description>Enabling this setting causes pinned topics to be treated normally, instead of being pinned on the portal</conf_description>
+      <conf_group>33</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>portal_exclude_pinned</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>8</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Latest Topics (Main) - Forums</conf_title>
+      <conf_description>Select the forums you want to appear in the Latest Topics (Main) setting.</conf_description>
+      <conf_group>33</conf_group>
+      <conf_type>multi</conf_type>
+      <conf_key>portal_latest_topics_forums</conf_key>
+      <conf_default/>
+      <conf_extra>#show_forums#</conf_extra>
+      <conf_evalphp><![CDATA[if ( $save == 1)
+{
+	if ( is_array($_POST['portal_latest_topics_forums']) )
+	{
+		$_POST['portal_latest_topics_forums'] = implode(",",$_POST['portal_latest_topics_forums']);
+	}
+	else
+	{
+		$_POST['portal_latest_topics_forums'] = "";
+	}
+	
+	$key = 'portal_latest_topics_forums';
+}
+if ( $show == 1 )
+{
+$key = 'portal_latest_topics_forums[]';
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>9</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>portal</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>timelineplugin</conf_title_keyword>
+      <conf_title_title>Timeline</conf_title_title>
+      <conf_title_desc>Configuración global línea de tiempo</conf_title_desc>
+      <conf_title_tab>Portal</conf_title_tab>
+      <conf_title_app>portal</conf_title_app>
+      <conf_title_noshow>0</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>Número de estados a cargar</conf_title>
+      <conf_description>Número máximo de actualizaciones de estado que cargaremos en la portada. Esto con referencia al historial de actualizaciones pasadas.</conf_description>
+      <conf_group>35</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>timeline_max_status</conf_key>
+      <conf_default>1000</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>timelineplugin</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Número de estados por petición</conf_title>
+      <conf_description>Número máximo de estados a cargar por cada petición.</conf_description>
+      <conf_group>35</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_status_per_page</conf_key>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>2</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>timelineplugin</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+  </settinggroup>
+</settingexport>

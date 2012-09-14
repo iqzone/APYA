@@ -1,0 +1,5508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subject__gallery_new_comment</word_key>
+      <word_default>Gallery Image Subscription Notification</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gallery_new_comment</word_key>
+      <word_default><![CDATA[<#NAME#>,
+
+<#POSTER#> has just posted a comment to an image that you have subscribed to titled "<#CAPTION#>".
+
+The image can be found here:
+<#BOARD_ADDRESS#>?app=gallery&module=images&img=<#IMG_ID#>
+
+There may be more comments to this image, but only 1 email is sent per board visit for each subscribed image. This is
+to limit the amount of mail that is sent to your inbox.
+
+Unsubscribing:
+--------------
+
+You can unsubscribe at any time by logging into your control panel and clicking on the "Image Subscriptions" link.
+]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subject__gallery_new_aimage</word_key>
+      <word_default>Gallery Album Subscription Notification</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>most_recent</word_key>
+      <word_default>Most Recent</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>download_image</word_key>
+      <word_default>Download this image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>most_comments</word_key>
+      <word_default>Most Commented</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>most_popular</word_key>
+      <word_default>Most Popular</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>most_viewed</word_key>
+      <word_default>Most Viewed</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>show_me</word_key>
+      <word_default>Show me:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subcat_count</word_key>
+      <word_default>%s subcategories</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subcat_popup_title</word_key>
+      <word_default>Subcategories in %s</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>awaiting_approval</word_key>
+      <word_default>Awaiting approval:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_full_image</word_key>
+      <word_default>View full sized image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_list_stats</word_key>
+      <word_default>%s comments %s / %s views / %s notes</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>rotate_right</word_key>
+      <word_default>Rotate Right</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>rotate_left</word_key>
+      <word_default>Rotate Left</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>like_this_image</word_key>
+      <word_default>Like This Image?</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>camera_data</word_key>
+      <word_default>Camera Data:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>add_note</word_key>
+      <word_default>Add A Note</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>save</word_key>
+      <word_default>Save</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_information</word_key>
+      <word_default>Image Information</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>note_count</word_key>
+      <word_default>Note(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_forum_filter</word_key>
+      <word_default>Show all images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>filter_forum</word_key>
+      <word_default>View only pictures posted in forum </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>where_all_ipb</word_key>
+      <word_default>Images posted in the forum</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>edit_albums</word_key>
+      <word_default>Edit my albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>where_album</word_key>
+      <word_default>User Album: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>controls</word_key>
+      <word_default>Controls</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>where_all</word_key>
+      <word_default>Category Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>dp_percent</word_key>
+      <word_default>of total disk space used</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>dp_used</word_key>
+      <word_default>Disk space Used: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>total_comments</word_key>
+      <word_default>Total Comments: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>total_imgs</word_key>
+      <word_default>Total Images: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>user_priv_albums</word_key>
+      <word_default>Private User Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>user_pub_albums</word_key>
+      <word_default>Public User Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>user_stats</word_key>
+      <word_default>Stats</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>user_info</word_key>
+      <word_default>User Information</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_deleted</word_key>
+      <word_default>Your album was removed.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>a_img_limit</word_key>
+      <word_default>Sorry, but you have reached your total allowable album size</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>select_op</word_key>
+      <word_default>Select an operation</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>edit_album</word_key>
+      <word_default>Edit Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_edited</word_key>
+      <word_default>Your album was successfully edited.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_private</word_key>
+      <word_default>Private</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_public</word_key>
+      <word_default>Public</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_controls</word_key>
+      <word_default>Controls</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_status</word_key>
+      <word_default>Status</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_info</word_key>
+      <word_default>Information</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_manage</word_key>
+      <word_default>Album Manager</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_public_chk</word_key>
+      <word_default>Checking this box will allow other users to view your album.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_no_name</word_key>
+      <word_default>You did not enter a name for this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_no_desc</word_key>
+      <word_default>You did not enter a description for this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>errors_found</word_key>
+      <word_default>The following errors were found, please correct them: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_created</word_key>
+      <word_default>Your album was successfully created!</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_desc</word_key>
+      <word_default>Album Description</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_public_frm</word_key>
+      <word_default>Public Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_sorting</word_key>
+      <word_default>Album Sorting</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_type</word_key>
+      <word_default>Album Type</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_name</word_key>
+      <word_default>Album Name</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>create_album</word_key>
+      <word_default>Create Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>first_album</word_key>
+      <word_default>Click here to create your first album!</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_favs</word_key>
+      <word_default>You do not have any favorite images!</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>rem_fav</word_key>
+      <word_default>Remove from Favorites</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>fav_removed</word_key>
+      <word_default>The image has been removed from your favorites list</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>fav_exists</word_key>
+      <word_default>This image is already in your favorites, sending you back to the image now</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_album</word_key>
+      <word_default>No Albums Found</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_no_move</word_key>
+      <word_default><![CDATA[<i>If you would like to have your album moved, please contact an administrator.</i>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>fav_added</word_key>
+      <word_default>The image has been added to your favorites, sending you back to the image now</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>img_pinned</word_key>
+      <word_default>Image Pinned</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>img_unpinned</word_key>
+      <word_default>Image Unpinned</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>uploaded_by</word_key>
+      <word_default>Uploaded By: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>on</word_key>
+      <word_default>on</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>views</word_key>
+      <word_default>Views: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>img_comments</word_key>
+      <word_default>Comments: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>filesize</word_key>
+      <word_default>File Size:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>l_comments</word_key>
+      <word_default>Comments:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>l_views</word_key>
+      <word_default>Views: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>slideshow</word_key>
+      <word_default>Slide Show</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>img_not_found</word_key>
+      <word_default>Sorry, but that does not appear to be a valid image.  If you arrived at this screen by following a link on this site, please notify a system administrator</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>photostrip</word_key>
+      <word_default>Photostrip for </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>viewing_img</word_key>
+      <word_default>Viewing image </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_move</word_key>
+      <word_default>Image to move: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>img_moved</word_key>
+      <word_default>The image has been moved.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>submit_multi</word_key>
+      <word_default>Post Multiple Files</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>mv_invalid_ac</word_key>
+      <word_default>You can not move images to this category, it is set to album only</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>mv_same_cat</word_key>
+      <word_default>The image is already in the category or album you selected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>submit_move</word_key>
+      <word_default>Move Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>custom_empty</word_key>
+      <word_default>You left a required field empty, please go back and recheck the form</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>moving</word_key>
+      <word_default>Moving image </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comment_edited</word_key>
+      <word_default>Your comment has been edited</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>edit_comment</word_key>
+      <word_default>Edit Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>editing</word_key>
+      <word_default>Editing a comment for </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comment_deleted</word_key>
+      <word_default>The comment has been deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comment_moderated</word_key>
+      <word_default>Your comment has been added, but will have to be approved by a moderator before it appears</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_comment</word_key>
+      <word_default>You forgot to leave a comment!</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comment_added</word_key>
+      <word_default>Your comment has been added</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>submit_comment</word_key>
+      <word_default>Add your comment</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>commenting</word_key>
+      <word_default>Commenting on </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_delete</word_key>
+      <word_default>The image was successfully deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_edited</word_key>
+      <word_default>Your image was successfully updated!</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>editing_img</word_key>
+      <word_default>Editing an image in </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>edit_media</word_key>
+      <word_default>Edit Media</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>edit_post</word_key>
+      <word_default>Edit Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_uploaded</word_key>
+      <word_default>Image(s) successfully uploaded!</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_moderated</word_key>
+      <word_default>Image(s) successfully uploaded, but will have to be approved by a moderator before appearing</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>img_up_fail</word_key>
+      <word_default>The image upload failed, please contact a system administrator</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>out_of_diskspace</word_key>
+      <word_default>Sorry, but you have used all of your allotted disk space</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>file_too_big</word_key>
+      <word_default>Sorry, but the file you uploaded is too large</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_img_post</word_key>
+      <word_default>Sorry, but you do not have permission to upload images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_caption</word_key>
+      <word_default>You did not enter a caption</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_description</word_key>
+      <word_default>You did not enter a description</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>bad_file_type</word_key>
+      <word_default>You are not allowed to upload this type of image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image</word_key>
+      <word_default>Image to upload</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>description</word_key>
+      <word_default>Description</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>caption</word_key>
+      <word_default>Caption</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>nav_submit_media</word_key>
+      <word_default>Posting media in </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>submit_post</word_key>
+      <word_default>Submit Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>nav_submit_post</word_key>
+      <word_default>Posting picture in </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>user_copyright_name</word_key>
+      <word_default>Copyright</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>user_copyright_desc</word_key>
+      <word_default><![CDATA[( use &amp;copy; for the &copy; symbol )]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>report_img_msg</word_key>
+      <word_default><![CDATA[<b>Enter your report</b>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>report_comment_page</word_key>
+      <word_default>Report this comment to a moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>report_comment_msg</word_key>
+      <word_default><![CDATA[<b>Enter your report</b>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>report_img_page</word_key>
+      <word_default>Report this image to a moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>report_img_title</word_key>
+      <word_default>Image Caption</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>unapprove_images</word_key>
+      <word_default>Unapprove Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>approve_images</word_key>
+      <word_default>Approve Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>delete_images</word_key>
+      <word_default>Delete Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>unpin_images</word_key>
+      <word_default>Unpin Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>pin_images</word_key>
+      <word_default>Pin Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_rated</word_key>
+      <word_default>The album has been rated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>rated</word_key>
+      <word_default>The image has been rated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>inline_mod</word_key>
+      <word_default>Moderation done</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comments10</word_key>
+      <word_default>Recent Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>views10</word_key>
+      <word_default>Most Viewed Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>top10</word_key>
+      <word_default>Top Rated Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>enter_pass</word_key>
+      <word_default>Enter password</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>none_found</word_key>
+      <word_default>No images were found</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>stats</word_key>
+      <word_default>Gallery Statistics</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>random5</word_key>
+      <word_default>Random Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>last5</word_key>
+      <word_default>Recent Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_sort_opts</word_key>
+      <word_default><![CDATA[<#SORT_KEY_HTML#> in <#ORDER_HTML#> from <#PRUNE_HTML#>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_hfoff</word_key>
+      <word_default>Hide forum header/footer?</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_seconds</word_key>
+      <word_default>Seconds</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_sorting</word_key>
+      <word_default>Slide Sorting</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_duration</word_key>
+      <word_default>Slide Duration</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_stop</word_key>
+      <word_default>Stop slide show</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_end</word_key>
+      <word_default>End of slide show, redirecting you to where you were</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_options</word_key>
+      <word_default>Slide show Options</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_start</word_key>
+      <word_default>Start slide show for </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ss_go</word_key>
+      <word_default>Start the slide show!</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>go</word_key>
+      <word_default>Go</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_all</word_key>
+      <word_default>the beginning</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_90</word_key>
+      <word_default>the last 90 days</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_60</word_key>
+      <word_default>the last 60 days</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_30</word_key>
+      <word_default>the last 30 days</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_25</word_key>
+      <word_default>the last 25 days</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_20</word_key>
+      <word_default>the last 20 days</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_15</word_key>
+      <word_default>the last 15 days</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_10</word_key>
+      <word_default>the last 10 days</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_asc</word_key>
+      <word_default>Ascending</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_desc</word_key>
+      <word_default>Descending</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_1</word_key>
+      <word_default>the last 24 hours</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_5</word_key>
+      <word_default>the last 5 days</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_7</word_key>
+      <word_default>the last week</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_rating</word_key>
+      <word_default>Rating</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_comments</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_views</word_key>
+      <word_default>Views</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_date</word_key>
+      <word_default>Uploaded Date</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_name</word_key>
+      <word_default>Member</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_caption</word_key>
+      <word_default>Caption</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sort_options</word_key>
+      <word_default><![CDATA[, sorted by <#SORT_KEY_HTML#> in <#ORDER_HTML#> from <#PRUNE_HTML#>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>none</word_key>
+      <word_default>--</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>showing</word_key>
+      <word_default><![CDATA[Showing <#NOW_SHOWING#> of <#TOTAL#>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>by</word_key>
+      <word_default>By</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>last_updated</word_key>
+      <word_default>On:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_private</word_key>
+      <word_default><![CDATA[<i>Private</i>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comments</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>galleries</word_key>
+      <word_default>Galleries</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>bwlimit</word_key>
+      <word_default>You have reached your bandwidth limit and can not view this image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>images</word_key>
+      <word_default>Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>sub_cats</word_key>
+      <word_default><![CDATA[<b>Subcategories</b>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gallery_cat_name</word_key>
+      <word_default>Category</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>cat_select</word_key>
+      <word_default>Select a category</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>upload_media</word_key>
+      <word_default>New Media</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>upload</word_key>
+      <word_default>Upload</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view</word_key>
+      <word_default>View</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>move</word_key>
+      <word_default>Move</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>edit</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>link_to_image</word_key>
+      <word_default>Link to Image:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>approve_comment</word_key>
+      <word_default><![CDATA[<strong><#NUM#></strong> comment(s)]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>move_images</word_key>
+      <word_default>Move Images To...</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>warn_offline_desc</word_key>
+      <word_default><![CDATA[Your members cannot see this, instead they are seeing the offline page with the following description:<br />-----<br /><#MSG#><br />-----<br />This message will remain until you set the Gallery back online.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>approve_img</word_key>
+      <word_default><![CDATA[<strong><#NUM#></strong> image(s)]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_not_valid</word_key>
+      <word_default>The image you tried to upload appears to be an invalid image.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_allowed_cats</word_key>
+      <word_default>Sorry, there are no available categories to create your album.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ecard_no_send</word_key>
+      <word_default>There was an error sending the E-card: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gallery_nogcids</word_key>
+      <word_default>No comments selected to multi-moderate.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gallery_noimgids</word_key>
+      <word_default>No images selected to multi-moderate.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>logged_in</word_key>
+      <word_default>You are now authorized to view this category.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>mod_button</word_key>
+      <word_default>With selected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>need_password</word_key>
+      <word_default>Password Required</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>need_password_txt</word_key>
+      <word_default>The Gallery administrator requires a password before viewing this Gallery category.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>f_pass_submit</word_key>
+      <word_default>Proceed</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_select_cat</word_key>
+      <word_default>You must select a category</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>warn_offline_title</word_key>
+      <word_default>Invision Gallery Currently Offline</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>types_allowed</word_key>
+      <word_default>File types allowed: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>can_thumb</word_key>
+      <word_default><![CDATA[Only valid for: %s<br />Allowed formats: %s]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>media_form</word_key>
+      <word_default>Media to Upload</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>thumb</word_key>
+      <word_default>Thumbnail for Media</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_comments_were_found</word_key>
+      <word_default>There were no comments found</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>meta_table_header</word_key>
+      <word_default>Image META information</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>approve_image</word_key>
+      <word_default>Approve Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>delete_image</word_key>
+      <word_default>Delete Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>unapprove_image</word_key>
+      <word_default>Unapprove Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>report_image</word_key>
+      <word_default>Report Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>unpin_image</word_key>
+      <word_default>Unpin Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>pin_image</word_key>
+      <word_default>Pin Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>opt_dd_unapp_comm</word_key>
+      <word_default>Unapprove Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>opt_dd_app_comm</word_key>
+      <word_default>Approve Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>opt_dd_delete_comm</word_key>
+      <word_default>Delete Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_no_mem</word_key>
+      <word_default>No Information</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>with_selected</word_key>
+      <word_default>Unsubscribe From Selected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_removed</word_key>
+      <word_default>You have been successfully unsubscribed from the selected entries</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>notify_default</word_key>
+      <word_default>Notify me of comments to this image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>notify_default_bulk</word_key>
+      <word_default>Notify me of comments to these images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>newest10</word_key>
+      <word_default>Latest Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gallery_no_categories</word_key>
+      <word_default>There are no categories that you have permission to view</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>dimensions</word_key>
+      <word_default>Dimensions: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ipbimages_view_post</word_key>
+      <word_default>View Post</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_suf_type_image</word_key>
+      <word_default>comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_none</word_key>
+      <word_default>No Subscriptions Found</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_start</word_key>
+      <word_default>Subscribed on: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>new_window</word_key>
+      <word_default>Open in new window</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_suf_type_album</word_key>
+      <word_default>images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_suf_type_cat</word_key>
+      <word_default>images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_type_cat</word_key>
+      <word_default>Category: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_type_album</word_key>
+      <word_default>Album: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_image</word_key>
+      <word_default>Subscription</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_count</word_key>
+      <word_default>Count</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_last_action</word_key>
+      <word_default>Last Action</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_type_image</word_key>
+      <word_default>Image: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subs_header</word_key>
+      <word_default>Gallery Notification Subscriptions</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>subbed_succesfully</word_key>
+      <word_default>You have been successfully subscribed to %s</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>already_subbed</word_key>
+      <word_default>You are already subscribed to %s</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gallery_avatar_set</word_key>
+      <word_default>Your avatar selection has been updated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>where_all_member</word_key>
+      <word_default>View all gallery files</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>dd_album_pre</word_key>
+      <word_default>Album: </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>last_post_info</word_key>
+      <word_default>Latest Information</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_sort_options</word_key>
+      <word_default><![CDATA[<#SORT_KEY_HTML#> in <#ORDER_HTML#> order from <#PRUNE_HTML#>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_sort_text</word_key>
+      <word_default>Sort album by</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_pgurl_pre</word_key>
+      <word_default>Page Link</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gallery_setasavatar</word_key>
+      <word_default>Set this image as your avatar?</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_mediaurl_pre</word_key>
+      <word_default>Media Link</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_imgurl_pre</word_key>
+      <word_default>Image Link</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_html_pre</word_key>
+      <word_default>HTML</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_move_multi</word_key>
+      <word_default>(Multiple Images)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_bbcode_pre</word_key>
+      <word_default>BBCode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_album_sssfound</word_key>
+      <word_default>We did not find any albums matching your criteria</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_album_specified</word_key>
+      <word_default>You did not specify an album to move the image to</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Yellow</word_key>
+      <word_default>Yellow</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_select_diff_cat</word_key>
+      <word_default>You are not allowed to post images in this category so there is no reason for you to create an album in it</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_imgs_bulk</word_key>
+      <word_default>You did not select any images to upload</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>cat_moveto_album</word_key>
+      <word_default>Or move to album called...</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>White</word_key>
+      <word_default>White</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Teal</word_key>
+      <word_default>Teal</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Silver</word_key>
+      <word_default>Silver</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Red</word_key>
+      <word_default>Red</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Olive</word_key>
+      <word_default>Olive</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Purple</word_key>
+      <word_default>Purple</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Maroon</word_key>
+      <word_default>Maroon</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Navy</word_key>
+      <word_default>Navy</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Lime</word_key>
+      <word_default>Lime</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Green</word_key>
+      <word_default>Green</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Gray</word_key>
+      <word_default>Gray</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Fuchsia</word_key>
+      <word_default>Fuchsia</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Blue</word_key>
+      <word_default>Blue</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Black</word_key>
+      <word_default>Black</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>Aqua</word_key>
+      <word_default>Aqua</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_albums_found</word_key>
+      <word_default>No albums were found</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>none_tl_cat</word_key>
+      <word_default>None (Top-Level Category)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>task_gallerystats</word_key>
+      <word_default>Gallery stats cache updated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>task_nogallerystats</word_key>
+      <word_default><![CDATA[Could not load required 'lib_gallery.php'.  Is Gallery installed?]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_post</word_key>
+      <word_default>You must enter a post</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>avatar_invalid_ext</word_key>
+      <word_default>Sorry, that is not a valid file extension</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>wrong_pass</word_key>
+      <word_default>Sorry, you have entered an incorrect password. Please try again.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>active_users_guests</word_key>
+      <word_default>guests</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comment_button_full</word_key>
+      <word_default>Use Full Editor</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>active_users_header</word_key>
+      <word_default>user(s) active in the past %s minutes</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comment_button_post</word_key>
+      <word_default>Add Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comment_on_image</word_key>
+      <word_default>Comment On This Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>add_comment</word_key>
+      <word_default>Add Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>send_ecard</word_key>
+      <word_default>Send E-card</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>favorite</word_key>
+      <word_default>Favorite</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>stop_watching</word_key>
+      <word_default>Stop Watching</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>watch_image</word_key>
+      <word_default>Watch Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_share</word_key>
+      <word_default>Share Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>set_as_avatar</word_key>
+      <word_default>Set As Avatar</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>mod_options</word_key>
+      <word_default>Mod Options</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_exif_prop</word_key>
+      <word_default>View EXIF properties</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_rating</word_key>
+      <word_default>Rating:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_details</word_key>
+      <word_default>Image Details</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>last_image</word_key>
+      <word_default>Last Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>next_image</word_key>
+      <word_default>Next Newest Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>previous_image</word_key>
+      <word_default>Previous Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>first_image</word_key>
+      <word_default>First Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>post_options</word_key>
+      <word_default>Post Options</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>options</word_key>
+      <word_default>Options</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>your_comment</word_key>
+      <word_default>Your Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>you_voted</word_key>
+      <word_default>You voted</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ecard_details</word_key>
+      <word_default>E-card Details</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ecard_message</word_key>
+      <word_default>Message</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>guest_information</word_key>
+      <word_default>Guest Information</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>slides_sort_by</word_key>
+      <word_default>Sort by</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>show_slides_for</word_key>
+      <word_default>Number of seconds to show</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>anon_users</word_key>
+      <word_default>Anonymous Users</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>stats_total_albums</word_key>
+      <word_default>Total Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>stats_total_views</word_key>
+      <word_default>Total Image Views</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>stats_total_size</word_key>
+      <word_default>Total Gallery Size</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>stats_total_comments</word_key>
+      <word_default>Total Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>stats_total_images</word_key>
+      <word_default>Total Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>categories_summary</word_key>
+      <word_default>Categories in Gallery</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_latest</word_key>
+      <word_default>View latest image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_unapproved</word_key>
+      <word_default>View unapproved images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>private_album_mark</word_key>
+      <word_default>(Private)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_album</word_key>
+      <word_default>View album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>photo_galleries</word_key>
+      <word_default>Photo Galleries</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_category</word_key>
+      <word_default>Go to this category</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>cannot_create_album</word_key>
+      <word_default>You cannot create a new album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>mark_cat_as_read</word_key>
+      <word_default>Mark this category as read</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>watch_category</word_key>
+      <word_default>Watch Category</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>random_gallery_image</word_key>
+      <word_default>Random Gallery Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>watch_album</word_key>
+      <word_default>Watch Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>cannot_post_image</word_key>
+      <word_default>You cannot post a new image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>images_to_forum</word_key>
+      <word_default>Images Posted To Forum</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>users_photos</word_key>
+      <word_default><![CDATA[%s's Photos]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_rules</word_key>
+      <word_default>View rules</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>report_link</word_key>
+      <word_default>Report</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>check_all</word_key>
+      <word_default>Check all</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>mq_image_add</word_key>
+      <word_default>MultiQuote</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comment_reply</word_key>
+      <word_default>Reply</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>permalink</word_key>
+      <word_default>Permalink:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_it_anyway</word_key>
+      <word_default>View it anyway?</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ignored_comments_not</word_key>
+      <word_default>This comment is hidden because you have chosen to ignore posts by</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_comment</word_key>
+      <word_default>View comment</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comments_header</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>edit_link</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>delete_link</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>delete_comment</word_key>
+      <word_default>Delete comment</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>create_new_album</word_key>
+      <word_default>New Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>img_subs</word_key>
+      <word_default>Image Subscriptions</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>your_favs</word_key>
+      <word_default>Your Favorite Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>your_albums</word_key>
+      <word_default>Your Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>col_comments</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_js_5star</word_key>
+      <word_default>Rate image 5 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>col_stats</word_key>
+      <word_default>Stats</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>col_images</word_key>
+      <word_default>Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_js_3star</word_key>
+      <word_default>Rate image 3 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_js_4star</word_key>
+      <word_default>Rate image 4 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_js_2star</word_key>
+      <word_default>Rate image 2 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>image_already_rated</word_key>
+      <word_default>You have already rated this image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>missing_id</word_key>
+      <word_default>We could not determine the image you were trying to rate.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>invalid_rating</word_key>
+      <word_default>The rating you submitted was not valid</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_js_1star</word_key>
+      <word_default>Rate image 1 star</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>unsub_successfully</word_key>
+      <word_default>You have been unsubscribed successfully.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>category_no_images</word_key>
+      <word_default>There are no images to display</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>queued_suffix</word_key>
+      <word_default>unapproved</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>poll_s_votes</word_key>
+      <word_default>vote(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>reg_code_enter</word_key>
+      <word_default><![CDATA[The administrator requires all guests to confirm their post before it will be accepted.  Please enter the code displayed below and press 'Add Reply' to submit your reply.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>no_unsub_id</word_key>
+      <word_default>We could not find the item you were attempting to unsubscribe from.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>macro__new</word_key>
+      <word_default>New Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>macro__nonew</word_key>
+      <word_default>No New Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>view_all_images</word_key>
+      <word_default>View all images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>task_updateimageviews</word_key>
+      <word_default>Image view counts updated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>cover_unset_link</word_key>
+      <word_default>Unset As Cover Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>cover_image_updated</word_key>
+      <word_default>Updated cover image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>cover_set_title</word_key>
+      <word_default>Make this the cover image for this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>cover_set_link</word_key>
+      <word_default>Set As Cover Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>cover_unset_title</word_key>
+      <word_default>Unset this image as the cover for this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>none_tl_album</word_key>
+      <word_default>None (Top-Level Album)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>parent_album</word_key>
+      <word_default>Parent Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_friend_only_chk</word_key>
+      <word_default>Checking this box will allow only your friends to view your album.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_friend_only_frm</word_key>
+      <word_default>Friend Only Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>comment_ignored_rep</word_key>
+      <word_default>This comment is hidden because the author has a reputation lower than your threshold. If you change the threshold underneath the last comment, you can view this comment by</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>profile_album_chk</word_key>
+      <word_default>This is a special album that allows you to upload pictures to be used as your photo</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_only_one_profile</word_key>
+      <word_default>You are only allowed to create one profile photo album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>profile_album_frm</word_key>
+      <word_default>Profile Photo Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>profile_photo_updated</word_key>
+      <word_default>Profile Photo Updated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>profile_photo_album</word_key>
+      <word_default>Gallery Photo Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>profile_photo_thumb_title</word_key>
+      <word_default>Click to make this image your profile photo</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>profile_photo_view_album</word_key>
+      <word_default>Click here to view the entire album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>profile_set_as_photo</word_key>
+      <word_default>Set As Profile Photo</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>friend_album_on</word_key>
+      <word_default>This album is only viewable by your friends</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ucp_friend</word_key>
+      <word_default>Friend</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>ucp_profile</word_key>
+      <word_default>Profile</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>profile_album_on</word_key>
+      <word_default>This album is a profile photo album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>g_rep_f_hiding</word_key>
+      <word_default>hiding comments below</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>last_upload_was</word_key>
+      <word_default>Last upload was</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>g_rep_f_viewing_all</word_key>
+      <word_default>viewing all comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>g_rep_f_all_posts</word_key>
+      <word_default>View all comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>err_album_parent_same</word_key>
+      <word_default><![CDATA[You can not set an album to be it's own parent.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_nm</word_key>
+      <word_default>You are only allowed to create %s albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>share_with</word_key>
+      <word_default>Share with </word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>mod_deleted_image</word_key>
+      <word_default><![CDATA[Deleted image '%s' (%d)]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>s_gallery_desc</word_key>
+      <word_default><![CDATA[These additional filters can be used to find <strong>images or comments</strong>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>find_in_albums</word_key>
+      <word_default><![CDATA[Exclude <strong>albums</strong> from search]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_select</word_key>
+      <word_default>Select album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>advsearch_images</word_key>
+      <word_default>Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>advsearch_comments</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>find_in_category</word_key>
+      <word_default>Find in global album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gerror_no_items</word_key>
+      <word_default>No items were available to process</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gal_review_title</word_key>
+      <word_default>Review Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>4_no_album</word_key>
+      <word_default>Could not locate this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>4_move_fail</word_key>
+      <word_default>You are not allowed to move the images into that album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>review_title_album</word_key>
+      <word_default>Edit Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>review_title_uploads</word_key>
+      <word_default>Review Media</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>review_finish_album</word_key>
+      <word_default><![CDATA[Finish &amp; Save &rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>review_finish_uploads</word_key>
+      <word_default><![CDATA[Finish &amp; Publish &rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_sort_desc</word_key>
+      <word_default>Descending (Z-A)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_sort_asc</word_key>
+      <word_default>Ascending (A-Z)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_sort_rating</word_key>
+      <word_default>Sort by rating</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_sort_comments</word_key>
+      <word_default>Sort by comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_sort_views</word_key>
+      <word_default>Sort by views</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_sort_idate</word_key>
+      <word_default>Sort by upload date</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_detail_subalbums</word_key>
+      <word_default>sub albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_detail_default</word_key>
+      <word_default><![CDATA[Use 'detail' mode as default listing]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>container_noup_title</word_key>
+      <word_default>Create a new album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>container_noup_desc</word_key>
+      <word_default><![CDATA[This album is a 'container'. This means that you cannot upload directly into it but you can create a new album inside this one.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>album_detail_default_frm</word_key>
+      <word_default>Checking this box will show your album in the detail mode with larger thumbnails</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>rate_image</word_key>
+      <word_default>Rate Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>rate_album</word_key>
+      <word_default>Rate Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery</word_pack>
+      <word_key>gallery_new_aimage</word_key>
+      <word_default><![CDATA[<#NAME#>,
+
+<#AUTHOR#> has just posted an image in an album you are subscribed to: "<#TITLE#>".
+
+The album can be found here: <#URL#>
+]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>upload_allowed</word_key>
+      <word_default>Allowed</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>upload_types</word_key>
+      <word_default>What file types can I upload?</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>home_active_albums</word_key>
+      <word_default>Active Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>home_active_global_albums</word_key>
+      <word_default>Global Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>home_recent_albums</word_key>
+      <word_default>Recently Updated Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>home_recent_images</word_key>
+      <word_default>Recent Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>home_recent_comments</word_key>
+      <word_default>Latest Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>img_move_title</word_key>
+      <word_default>Move Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>img_move_submit</word_key>
+      <word_default>Move</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>advsearch_albums</word_key>
+      <word_default>Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>tools_no_old_album_table</word_key>
+      <word_default><![CDATA[The table 'gallery_albums' no longer exists so rules cannot be restored]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>img_move_to_album</word_key>
+      <word_default>Move to album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>notify__new_image</word_key>
+      <word_default>Notify me of new images in albums I follow</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filter_show_member</word_key>
+      <word_default>Member Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>votes_cnt</word_key>
+      <word_default>votes</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>you_voted</word_key>
+      <word_default>you voted</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filter_show_global</word_key>
+      <word_default>Global Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filter_show_all</word_key>
+      <word_default>Global and Member Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filter_most_comments</word_key>
+      <word_default>Most Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filter_most_images</word_key>
+      <word_default>Most Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filter_highest_rated</word_key>
+      <word_default>Highest Rated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>4_move_fail</word_key>
+      <word_default>You are not allowed to move the images into that album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>browse_gallery_title</word_key>
+      <word_default>Browse Gallery</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_finish_uploads</word_key>
+      <word_default><![CDATA[Finish &amp; Publish &rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_finish_album</word_key>
+      <word_default><![CDATA[Finish &amp; Save &rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filter_most_recent</word_key>
+      <word_default>Most Recent</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_title_album</word_key>
+      <word_default>Edit Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_title_uploads</word_key>
+      <word_default>Review Media</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>albums_no_image</word_key>
+      <word_default>There are no images to display</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>albums_none_to_see</word_key>
+      <word_default>There are no albums to list</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gbutton_browse</word_key>
+      <word_default>Browse</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_img_comm</word_key>
+      <word_default>%s images, %s comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_step_publish</word_key>
+      <word_default>Review and Publish</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_sel_album</word_key>
+      <word_default>Selected Album:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_next_button</word_key>
+      <word_default><![CDATA[Review &amp; Publish &rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_step_upload</word_key>
+      <word_default>Upload Media</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_upload_thumb</word_key>
+      <word_default>Upload Media Thumbnail</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_show_loc</word_key>
+      <word_default>Display image map and location</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_rotate_alt</word_key>
+      <word_default>Rotate 90 Degrees</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_delete_img</word_key>
+      <word_default>Delete Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_rotate</word_key>
+      <word_default>Rotate Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_delete_movie</word_key>
+      <word_default>Delete Movie</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_desc</word_key>
+      <word_default>Description</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>view_child_albums</word_key>
+      <word_default>Browse %s child albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_cover_img</word_key>
+      <word_default>Cover Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>sel_sel_comm</word_key>
+      <word_default>Community Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>upload_used_txt</word_key>
+      <word_default>You have used %s of %s (max per upload: %s)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>sel_sel_yours</word_key>
+      <word_default>Your Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>ss_next_img</word_key>
+      <word_default>Next Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>ss_back</word_key>
+      <word_default>Go back</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>sel_sel_album</word_key>
+      <word_default>Select an album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>ss_playpause</word_key>
+      <word_default>Play/Pause Slideshow</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>ss_title</word_key>
+      <word_default>Slideshow</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_select_all</word_key>
+      <word_default><![CDATA[Select <strong>ALL</strong> Album Images]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_img_delete</word_key>
+      <word_default>Delete images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_img_move</word_key>
+      <word_default>Move images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_img_unapprove</word_key>
+      <word_default>Un-approve images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_img_approve</word_key>
+      <word_default>Approve images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_img_del_go</word_key>
+      <word_default><![CDATA[Confirm &amp; Delete]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_img_del_desc</word_key>
+      <word_default><![CDATA[Delete this image <strong>permanently</strong>?]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_img_del_title</word_key>
+      <word_default>Delete Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_alb_del_move</word_key>
+      <word_default>Move media to</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_alb_del_go</word_key>
+      <word_default><![CDATA[Confirm &amp; Delete Album]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_alb_del_desc</word_key>
+      <word_default><![CDATA[<strong><em>Delete</em></strong> media permanently]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_alb_del_title</word_key>
+      <word_default><![CDATA[Delete this album <strong>permanently</strong>?]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>new_alb_prv_desc</word_key>
+      <word_default>Selecting this will hide your album from others except moderators and administrators</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>show_all_dots</word_key>
+      <word_default>Show all...</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>total_images</word_key>
+      <word_default>total images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>latest_commments</word_key>
+      <word_default>Latest Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>img_remove_map</word_key>
+      <word_default>Remove Map</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>img_make_loc_public</word_key>
+      <word_default>Make this location public and add a map.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>posts_ucfirst</word_key>
+      <word_default>Posts</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>img_rc_direct</word_key>
+      <word_default>Direct link to this image file</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_ucfirst</word_key>
+      <word_default>Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>edit_ucfirst</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>delete_ucfirst</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>uploaded_ucfirst</word_key>
+      <word_default>Uploaded</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>overview_ucfirst</word_key>
+      <word_default>Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>updated_ucfirst</word_key>
+      <word_default>Updated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>detail_ucfirst</word_key>
+      <word_default>Detail</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>private_ucfirst</word_key>
+      <word_default>Private</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>previous_ucfirst</word_key>
+      <word_default>Previous</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>next_ucfirst</word_key>
+      <word_default>Next</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>in_lower</word_key>
+      <word_default>in</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>others_lower</word_key>
+      <word_default>others</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>images_lower</word_key>
+      <word_default>images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>comments_lower</word_key>
+      <word_default>comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>views_lower</word_key>
+      <word_default>views</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>by_lower</word_key>
+      <word_default>by</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>last_ucfirst</word_key>
+      <word_default>Last</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>joined_ucfirst</word_key>
+      <word_default>Joined</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>on_ucfirst</word_key>
+      <word_default>On</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>upload_ucfirst</word_key>
+      <word_default>Upload</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>cancel_ucfirst</word_key>
+      <word_default>Cancel</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>in_ucfirst</word_key>
+      <word_default>In</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>square_ucfirst</word_key>
+      <word_default>Square</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>small_ucfirst</word_key>
+      <word_default>Small</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>medium_ucfirst</word_key>
+      <word_default>Medium</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>large_ucfirst</word_key>
+      <word_default>Large</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>description_ucfirst</word_key>
+      <word_default>Description</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>save_ucfirst</word_key>
+      <word_default>Save</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>caption_ucfirst</word_key>
+      <word_default>Caption</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>options_ucfirst</word_key>
+      <word_default>Options</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>browsing_ucfirst</word_key>
+      <word_default>Browsing</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>toggle_ucfirst</word_key>
+      <word_default>Toggle</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>comment_by</word_key>
+      <word_default>Comment by</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>uploaded_media</word_key>
+      <word_default>Uploaded Media</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>no_album_selected</word_key>
+      <word_default>No Album Selected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>upload_media</word_key>
+      <word_default>Upload Media</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>set_as_cover</word_key>
+      <word_default>Set as Cover</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>set_as_photo</word_key>
+      <word_default>Set as Photo</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>view_all_sizes</word_key>
+      <word_default>View all sizes</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>add_note</word_key>
+      <word_default>Add Note</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>rotate_left</word_key>
+      <word_default>Rotate Left</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>rotate_right</word_key>
+      <word_default>Rotate Right</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>select_album</word_key>
+      <word_default>Select Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>selected_album</word_key>
+      <word_default>Selected Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>view_all_albums</word_key>
+      <word_default>View all albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>view_album</word_key>
+      <word_default>View Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>change_album</word_key>
+      <word_default>Change Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>new_album</word_key>
+      <word_default>New Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>sub_albums</word_key>
+      <word_default>Sub albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>from_album</word_key>
+      <word_default>From Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>browse_albums</word_key>
+      <word_default>Browse Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>share_image</word_key>
+      <word_default>Share Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>share_album</word_key>
+      <word_default>Share Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>report_image</word_key>
+      <word_default>Report Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>root_album</word_key>
+      <word_default>Root</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>global_album</word_key>
+      <word_default>Global Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>friend_album</word_key>
+      <word_default>Friend Only Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>public_album</word_key>
+      <word_default>Public Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>member_x_albums</word_key>
+      <word_default><![CDATA[%s's albums]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>private_album</word_key>
+      <word_default>Private Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>size_ucfirst</word_key>
+      <word_default>Size</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>home_ucfirst</word_key>
+      <word_default>Home</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>copyright_ucfirst</word_key>
+      <word_default>Copyright</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>title_ucfirst</word_key>
+      <word_default>Title</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>taken_ucfirst</word_key>
+      <word_default>Taken</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mobile_image_data</word_key>
+      <word_default>Image Data</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>camera_ucfirst</word_key>
+      <word_default>Camera</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gerror_no_title</word_key>
+      <word_default>You must specify at least a title for the images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>photo_taken_at</word_key>
+      <word_default>This photo was taken at</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>modlog_delete_album</word_key>
+      <word_default><![CDATA[Deleted album '%s' (ID: %s)]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>untitled_album</word_key>
+      <word_default>Untitled Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_apply_watermark</word_key>
+      <word_default>Apply watermark</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_dont_watermark</word_key>
+      <word_default><![CDATA[Don't Watermark]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_watermark_check</word_key>
+      <word_default>Watermark images?</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>modlog_unapprove_images</word_key>
+      <word_default>Unapproved image ID(s) %s</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>parent_zero_not_global</word_key>
+      <word_default>You must select a parent album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>modlog_approve_images</word_key>
+      <word_default>Approved image ID(s) %s</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>modlog_move_images</word_key>
+      <word_default><![CDATA[Move to album '%s' (ID: %s) image(s) with ID(s) %s]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>modlog_delete_images</word_key>
+      <word_default>Deleted image(s) with ID(s) %s</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>reports_image_title</word_key>
+      <word_default>Report image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_watermark_check_desc</word_key>
+      <word_default>Watermarks uploaded images with an image chosen by the administrator</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>modlog_delete_album_move</word_key>
+      <word_default><![CDATA[Deleted album '%s' (ID: %s) and moved content to '%s' (ID: %s)]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>reports_comment_title</word_key>
+      <word_default>Report image comment</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>reports_no_imageid</word_key>
+      <word_default>We could not determine which gallery image you were attempting to report</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>reports_no_commentid</word_key>
+      <word_default>We could not determine which gallery image comment you were attempting to report</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>comment_ucfirst</word_key>
+      <word_default>Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_cannot_create_limit</word_key>
+      <word_default>You are not allowed to create more albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>slideshow_no_images</word_key>
+      <word_default>There are no images available for the slideshow</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_unfollow_image</word_key>
+      <word_default>unfollow this image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>followed_type__images</word_key>
+      <word_default>Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_follow_image</word_key>
+      <word_default>follow this image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_ucfirst_unfollow_image</word_key>
+      <word_default>Unfollow this image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_totalcount_follow_image</word_key>
+      <word_default>%s member(s) follow this image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_ucfirst_follow_image</word_key>
+      <word_default>Follow this image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_totalcount_follow_album</word_key>
+      <word_default>%s member(s) follow this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_follow_album</word_key>
+      <word_default>follow this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_unfollow_album</word_key>
+      <word_default>unfollow this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_ucfirst_unfollow_album</word_key>
+      <word_default>Unfollow this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>like_ucfirst_follow_album</word_key>
+      <word_default>Follow this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_modaction_count</word_key>
+      <word_default><![CDATA[With <span id='images_modcount'>#{count}</span> checked images]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>unlimited_ucfirst</word_key>
+      <word_default>Unlimited</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>media_add_thumb</word_key>
+      <word_default>Add Thumb</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>media_save_thumb</word_key>
+      <word_default>Save Thumb</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_modaction_moveto</word_key>
+      <word_default>Move to</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_modaction_noimages</word_key>
+      <word_default>You need to select at least 1 image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>current_cover</word_key>
+      <word_default>Current cover</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>followed_type__albums</word_key>
+      <word_default>Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>sharedmedia_galalbums</word_key>
+      <word_default>Gallery Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>sharedmedia_galimages</word_key>
+      <word_default>Gallery Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>upload_new_image_desc</word_key>
+      <word_default>Select a new image to upload or leave blank to keep the current one</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>form_preview</word_key>
+      <word_default>Preview</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>upload_new_image</word_key>
+      <word_default>Upload a new image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>editing_image</word_key>
+      <word_default><![CDATA[Editing image '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>error_img_not_found</word_key>
+      <word_default><![CDATA[The specified image doesn't exist, please go back and try again]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>view_sizes</word_key>
+      <word_default>View sizes</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>last_x_albums</word_key>
+      <word_default>Last %s albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>image_moderation</word_key>
+      <word_default>Image Moderation</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>friend_only_prefix_desc</word_key>
+      <word_default>This album is visible only to the author friends</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gallery_share_links</word_key>
+      <word_default>Share links</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>last_upload</word_key>
+      <word_default>Last upload</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>friend_only_prefix</word_key>
+      <word_default>FRIENDS ONLY</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>global_prefix</word_key>
+      <word_default>GLOBAL</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>delete_album</word_key>
+      <word_default>Delete Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>user_album_no_member</word_key>
+      <word_default>We could not locate the member specified</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>exception_NO_PERMISSION_TO_CREATE_IN_ALBUM</word_key>
+      <word_default>You cannot create an album inside that parent. Check the permissions for the parent album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>image_approval_required</word_key>
+      <word_default>Image Approval Required</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>image_approval_required_text</word_key>
+      <word_default>The administrator has enabled new image moderation for this album and any child albums. This means that a moderator will need to approve any uploaded images before they are visible.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>mod_alb_del_not_able_children</word_key>
+      <word_default>Unable to delete this album as it contains child albums. Please delete or move these first.</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_preset_tags_desc</word_key>
+      <word_default>Separate with a comma. These will over-ride the global pre-defined tags for this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_preset_tags</word_key>
+      <word_default>Pre-defined Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_can_tag</word_key>
+      <word_default>Enable Tagging</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>review_tags</word_key>
+      <word_default>Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>viewimg_owner</word_key>
+      <word_default>Owner</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>viewimg_uploaded_by</word_key>
+      <word_default>Uploaded by</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>viewimg_album</word_key>
+      <word_default>Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>acp_tool_rebuild_trees</word_key>
+      <word_default>Rebuild Parent/Child Tree Caches</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>acp_glb_album_header</word_key>
+      <word_default>Global Album Management</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_update</word_key>
+      <word_default>Update</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_desc</word_key>
+      <word_default>descending</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_sort_comments</word_key>
+      <word_default>sorted by comment count</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_asc</word_key>
+      <word_default>ascending</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_sort_images</word_key>
+      <word_default>sorted by image count</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_sort_name</word_key>
+      <word_default>sorted by name</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_albums_parent</word_key>
+      <word_default>Album Parent ID</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_is</word_key>
+      <word_default>is</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_contains</word_key>
+      <word_default>contains</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_sort_upload</word_key>
+      <word_default>sorted by last upload</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_albums_name</word_key>
+      <word_default><![CDATA[Album's Name]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>acp_contains_n_albums</word_key>
+      <word_default>Contains %s member albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_find_memberalbums_by_parents</word_key>
+      <word_default>Find all member albums in this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_owners_name</word_key>
+      <word_default>Owned By</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_show_all_where</word_key>
+      <word_default>Show albums where</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_find_all_by_members</word_key>
+      <word_default>Find all albums by this member</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_no_albums_show</word_key>
+      <word_default>No albums are suitable to display</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_select</word_key>
+      <word_default>Select Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_last_upload</word_key>
+      <word_default>Last upload:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_images_comments</word_key>
+      <word_default><![CDATA[<strong>%s images</strong>, %s comments]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_search_albums</word_key>
+      <word_default>Search Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_your_albums</word_key>
+      <word_default>Your Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_global_albums</word_key>
+      <word_default>Global Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_search_global</word_key>
+      <word_default>and is a global album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_title</word_key>
+      <word_default>Album Selector</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>filters_search</word_key>
+      <word_default>Search</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_search_member</word_key>
+      <word_default>and is a member album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_recent_albums</word_key>
+      <word_default>Recently Selected Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_select_album</word_key>
+      <word_default>Select Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_select_root</word_key>
+      <word_default>Selecting this album removes any parents</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>as_root</word_key>
+      <word_default><![CDATA[&lt; Root &gt;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>acp_contains_n_public_albums</word_key>
+      <word_default>Contains %s public member albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>acp_tool_restats</word_key>
+      <word_default>Rebuild Gallery Statistics</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>acp_private_album</word_key>
+      <word_default>Private album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>acp_friends_album</word_key>
+      <word_default>Friends Only Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>g_nav_your</word_key>
+      <word_default>Your Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_mode_album</word_key>
+      <word_default>Albums Only: Allow album creation only (do not allow direct image uploads)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>modcp_gal_caption</word_key>
+      <word_default>Image</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>modcp_tab_gallerycomments</word_key>
+      <word_default>Gallery Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>modcp_tab_galleryimages</word_key>
+      <word_default>Gallery Images</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_sort_name</word_key>
+      <word_default>Sort by image name</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_mode</word_key>
+      <word_default>Album Mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_mode_desc</word_key>
+      <word_default>Specify what you allow your members to create in this album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_mode_all</word_key>
+      <word_default><![CDATA[Albums &amp; Images: Allow image uploads directly into this album and album creation]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>sort_by_name</word_key>
+      <word_default>Title</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>g_nav_global</word_key>
+      <word_default>Global Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gal_redirect_mod_album</word_key>
+      <word_default>Your images have been posted and will need approving before they are displayed</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gallery_prof_tabs_aint_none</word_key>
+      <word_default>No albums or images to display</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gallery_404</word_key>
+      <word_default>Sorry, that item does not exist</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>album_mode_img</word_key>
+      <word_default>Images Only: Allow image uploads only (do not allow members to create albums)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gal_and_n_more</word_key>
+      <word_default>and %s more...</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gallery_img_meta_description</word_key>
+      <word_default>%s uploaded in %s: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gallery_unapproved_image_view</word_key>
+      <word_default><![CDATA[This image is currently unapproved.<br />Click <a href='%s'>here</a> to approve this image]]></word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_gallery_four</word_pack>
+      <word_key>gallery_untitled_album</word_key>
+      <word_default>Untitled Album</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>gallery_loci_album</word_key>
+      <word_default>Viewing Album:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>gallery_loci_si</word_key>
+      <word_default>Viewing Image:</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>gallery_loci_idx</word_key>
+      <word_default>Viewing Gallery Index</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2010</word_key>
+      <word_default>IPTC.Urgency</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2005</word_key>
+      <word_default>IPTC.ObjectName</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>INTEROP.InterOperabilityIndex</word_key>
+      <word_default>Inter-operability Index</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>INTEROP.InterOperabilityVersion</word_key>
+      <word_default>Inter-operability Version</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SensingMethod_map_2</word_key>
+      <word_default>One-chip color area sensor</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SensingMethod_map_3</word_key>
+      <word_default>Two-chip color area sensor</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SensingMethod_map_4</word_key>
+      <word_default>Three-chip color area sensor</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SensingMethod_map_5</word_key>
+      <word_default>Color sequential area sensor</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SceneCaptureType_map_0</word_key>
+      <word_default>Standard</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SensingMethod_map_7</word_key>
+      <word_default>Trilinear sensor</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SensingMethod_map_8</word_key>
+      <word_default>Color sequential linear sensor</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ColorSpace_map_FFFF</word_key>
+      <word_default>Uncalibrated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExifImageWidth</word_key>
+      <word_default>Image Width</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExifImageLength</word_key>
+      <word_default>Image Length</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.InteroperabilityOffset</word_key>
+      <word_default>Interoperability Offset</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SensingMethod</word_key>
+      <word_default>Sensing Method</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_5F</word_key>
+      <word_default>Flash fired, auto mode, return light detected, red-eye reduction mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.UserComment</word_key>
+      <word_default/>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ColorSpace</word_key>
+      <word_default>Color Space</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ColorSpace_map_1</word_key>
+      <word_default>sRGB</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SensingMethod_map_1</word_key>
+      <word_default>Not Defined</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_5D</word_key>
+      <word_default>Flash fired, auto mode, return light not detected, red-eye reduction mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_59</word_key>
+      <word_default>Flash fired, auto mode, red-eye reduction mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_4F</word_key>
+      <word_default>Flash fired, compulsory flash mode, red-eye reduction mode, return light detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_4D</word_key>
+      <word_default>Flash fired, compulsory flash mode, red-eye reduction mode, return light not detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_47</word_key>
+      <word_default>Flash fired, red-eye reduction mode, return light detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_49</word_key>
+      <word_default>Flash fired, compulsory flash mode, red-eye reduction mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_45</word_key>
+      <word_default>Flash fired, red-eye reduction mode, return light not detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_41</word_key>
+      <word_default>Flash fired, red-eye reduction mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_1F</word_key>
+      <word_default>Flash fired, auto mode, return light detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_20</word_key>
+      <word_default>No flash function</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_1D</word_key>
+      <word_default>Flash fired, auto mode, return light not detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_18</word_key>
+      <word_default>Flash did not fire, auto mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_19</word_key>
+      <word_default>Flash fired, auto mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_10</word_key>
+      <word_default>Flash did not fire, compulsory flash mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_F</word_key>
+      <word_default>Flash fired, compulsory flash mode, return light detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_D</word_key>
+      <word_default>Flash fired, compulsory flash mode, return light not detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_5</word_key>
+      <word_default>Strobe return light not detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_7</word_key>
+      <word_default>Strobe return light detected</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_9</word_key>
+      <word_default>Flash fired, compulsory flash mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_1</word_key>
+      <word_default>Flash fired</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash</word_key>
+      <word_default>Flash</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Flash_map_0</word_key>
+      <word_default>Flash did not fire</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_255</word_key>
+      <word_default>Other light source</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_24</word_key>
+      <word_default>ISO studio tungsten</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_19</word_key>
+      <word_default>Standard light C</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_20</word_key>
+      <word_default>D55</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_21</word_key>
+      <word_default>D65</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_22</word_key>
+      <word_default>D75</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_23</word_key>
+      <word_default>D50</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_15</word_key>
+      <word_default>White fluorescent (WW 3200 - 3700K)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_18</word_key>
+      <word_default>Standard light B</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_17</word_key>
+      <word_default>Standard light A</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_14</word_key>
+      <word_default>Cool white fluorescent (W 3900 - 4500K)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_13</word_key>
+      <word_default>Day white fluorescent (N 4600 - 5400K)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_12</word_key>
+      <word_default>Daylight fluorescent (D 5700 - 7100K)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MeteringMode_map_255</word_key>
+      <word_default>Other</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource</word_key>
+      <word_default>Light Source</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_0</word_key>
+      <word_default>Unknown</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_1</word_key>
+      <word_default>Daylight</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_2</word_key>
+      <word_default>Fluorescent</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_3</word_key>
+      <word_default>Tungsten (incandescent light)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_4</word_key>
+      <word_default>Flash</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_9</word_key>
+      <word_default>Fine weather</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_10</word_key>
+      <word_default>Cloudy weather</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.LightSource_map_11</word_key>
+      <word_default>Shade</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MeteringMode_map_5</word_key>
+      <word_default>Pattern</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MeteringMode_map_6</word_key>
+      <word_default>Partial</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MeteringMode_map_4</word_key>
+      <word_default>MultiSpot</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MeteringMode_map_3</word_key>
+      <word_default>Spot</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MeteringMode_map_2</word_key>
+      <word_default>CenterWeightedAverage</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MeteringMode_map_1</word_key>
+      <word_default>Average</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MeteringMode_map_0</word_key>
+      <word_default>Unknown</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MeteringMode</word_key>
+      <word_default>Metering Mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ISOSpeedRatings</word_key>
+      <word_default>ISO Speed Ratings</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram_map_8</word_key>
+      <word_default>Landscape mode (for landscape photos with the background in focus)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram_map_6</word_key>
+      <word_default>Action program (biased toward fast shutter speed)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram_map_4</word_key>
+      <word_default>Shutter priority</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram_map_7</word_key>
+      <word_default>Portrait mode (for closeup photos with the background out of focus)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram_map_5</word_key>
+      <word_default>Creative program (biased toward depth of field)</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram_map_3</word_key>
+      <word_default>Aperture priority</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram_map_2</word_key>
+      <word_default>Normal program</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram_map_1</word_key>
+      <word_default>Manual</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram_map_0</word_key>
+      <word_default>Not defined</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureProgram</word_key>
+      <word_default>Exposure Program</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.WhiteBalance_map_1</word_key>
+      <word_default>Manual white balance</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.WhiteBalance</word_key>
+      <word_default>White Balance</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.WhiteBalance_map_0</word_key>
+      <word_default>Auto white balance</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureMode_map_2</word_key>
+      <word_default>Auto bracket</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureMode_map_1</word_key>
+      <word_default>Manual exposure</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureMode_map_0</word_key>
+      <word_default>Auto exposure</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureMode</word_key>
+      <word_default>Exposure Mode</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Sharpness_map_2</word_key>
+      <word_default>Hard</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Sharpness_map_1</word_key>
+      <word_default>Soft</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Sharpness_map_0</word_key>
+      <word_default>Normal</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Sharpness</word_key>
+      <word_default>Sharpness</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Saturation_map_0</word_key>
+      <word_default>Normal</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Saturation_map_1</word_key>
+      <word_default>Low saturation</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Saturation_map_2</word_key>
+      <word_default>High saturation</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Contrast_map_2</word_key>
+      <word_default>Hard</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Saturation</word_key>
+      <word_default>Saturation</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Contrast_map_0</word_key>
+      <word_default>Normal</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Contrast_map_1</word_key>
+      <word_default>Soft</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.Contrast</word_key>
+      <word_default>Contrast</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.GainControl_map_4</word_key>
+      <word_default>High gain down</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.GainControl_map_3</word_key>
+      <word_default>Low gain down</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.GainControl_map_2</word_key>
+      <word_default>High gain up</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.GainControl_map_1</word_key>
+      <word_default>Low gain up</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.GainControl_map_0</word_key>
+      <word_default>None</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.GainControl</word_key>
+      <word_default>Gain Control</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SceneCaptureType_map_2</word_key>
+      <word_default>Portrait</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.FileSource</word_key>
+      <word_default/>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SceneType</word_key>
+      <word_default/>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SceneCaptureType</word_key>
+      <word_default>Scene Capture Type</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SceneCaptureType_map_3</word_key>
+      <word_default>Night scene</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.SceneCaptureType_map_1</word_key>
+      <word_default>Landscape</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.FlashPixVersion_map_0100</word_key>
+      <word_default>Flashpix Format Version 1.0</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.FocalLength</word_key>
+      <word_default>Focal Length</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MakerNote</word_key>
+      <word_default/>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.FlashPixVersion</word_key>
+      <word_default>Flash Pix Version</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureBiasValue</word_key>
+      <word_default>Exposure Bias Value</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.MaxApertureValue</word_key>
+      <word_default>Max Aperture Value</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.CompressedBitsPerPixel</word_key>
+      <word_default>Compressed bits/pixel</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.DateTimeDigitized</word_key>
+      <word_default>Date Digitized</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ComponentsConfiguration</word_key>
+      <word_default/>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExifVersion</word_key>
+      <word_default>Exif Version</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.DateTimeOriginal</word_key>
+      <word_default>Date Taken</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.ExposureTime</word_key>
+      <word_default>Exposure Time</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>EXIF.FNumber</word_key>
+      <word_default>F Number</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.YCbCrPositioning</word_key>
+      <word_default>Thumbnail YCbCr Positioning</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.YCbCrPositioning_map_1</word_key>
+      <word_default>centered</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.YCbCrPositioning_map_2</word_key>
+      <word_default>co-sited</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.JPEGInterchangeFormatLength</word_key>
+      <word_default>Thumbnail JPEG Interchange Format Length</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.JPEGInterchangeFormat</word_key>
+      <word_default>Thumbnail JPEG Interchange Format</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.ResolutionUnit</word_key>
+      <word_default>Thumbnail Resolution Unit</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Orientation_map_8</word_key>
+      <word_default>The 0th row is the visual left-hand side of the image, and the 0th column is the visual bottom</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Orientation_map_7</word_key>
+      <word_default>The 0th row is the visual right-hand side of the image, and the 0th column is the visual bottom</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Orientation_map_6</word_key>
+      <word_default>The 0th row is the visual right-hand side of the image, and the 0th column is the visual top</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Orientation_map_5</word_key>
+      <word_default>The 0th row is the visual left-hand side of the image, and the 0th column is the visual top</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.YCbCrPositioning</word_key>
+      <word_default>YCbCr Positioning</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Model</word_key>
+      <word_default>Thumbnail Camera Model</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.XResolution</word_key>
+      <word_default>Thumbnail X-Resolution</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.YResolution</word_key>
+      <word_default>Thumbnail Y-Resolution</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.DateTime</word_key>
+      <word_default>Thumbnail Date Taken</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Compression</word_key>
+      <word_default>Thumbnail Compression</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Compression_map_1</word_key>
+      <word_default>uncompressed</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Compression_map_6</word_key>
+      <word_default>JPEG Compression</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Orientation</word_key>
+      <word_default>Thumbnail Orientation</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Orientation_map_1</word_key>
+      <word_default>The 0th row is at the visual top of the image, and the 0th column is the visual left-hand side</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Orientation_map_2</word_key>
+      <word_default>The 0th row is at the visual top of the image, and the 0th column is the visual right-hand side</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Orientation_map_3</word_key>
+      <word_default>The 0th row is at the visual bottom of the image, and the 0th column is the visual right-hand side</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Orientation_map_4</word_key>
+      <word_default>The 0th row is at the visual bottom of the image, and the 0th column is the visual left-hand side</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Exif_IFD_Pointer</word_key>
+      <word_default/>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.YCbCrPositioning_map_2</word_key>
+      <word_default>co-sited</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Orientation_map_8</word_key>
+      <word_default>The 0th row is the visual left-hand side of the image, and the 0th column is the visual bottom</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Orientation_map_6</word_key>
+      <word_default>The 0th row is the visual right-hand side of the image, and the 0th column is the visual top</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Orientation_map_7</word_key>
+      <word_default>The 0th row is the visual right-hand side of the image, and the 0th column is the visual bottom</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>THUMBNAIL.Make</word_key>
+      <word_default>Thumbnail Camera Make</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.YCbCrPositioning_map_1</word_key>
+      <word_default>centered</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.ResolutionUnit</word_key>
+      <word_default>Resolution Unit</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Software</word_key>
+      <word_default>Software</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Orientation_map_5</word_key>
+      <word_default>The 0th row is the visual left-hand side of the image, and the 0th column is the visual top</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Orientation_map_4</word_key>
+      <word_default>The 0th row is at the visual bottom of the image, and the 0th column is the visual left-hand side</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Orientation_map_2</word_key>
+      <word_default>The 0th row is at the visual top of the image, and the 0th column is the visual right-hand side</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Orientation_map_3</word_key>
+      <word_default>The 0th row is at the visual bottom of the image, and the 0th column is the visual right-hand side</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Orientation_map_1</word_key>
+      <word_default>The 0th row is at the visual top of the image, and the 0th column is the visual left-hand side</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Orientation</word_key>
+      <word_default>Orientation</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.DateTime</word_key>
+      <word_default>Date Taken</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.YResolution</word_key>
+      <word_default>Y-Resolution</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.XResolution</word_key>
+      <word_default>X-Resolution</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Copyright</word_key>
+      <word_default>Copyright</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Artist</word_key>
+      <word_default>Artist</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Model</word_key>
+      <word_default>Camera Model</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.Make</word_key>
+      <word_default>Camera Make</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.Thumbnail.FileType</word_key>
+      <word_default>Thumbnail File Type</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IFD0.ImageDescription</word_key>
+      <word_default>Image Description</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.UserComment</word_key>
+      <word_default/>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.ByteOrderMotorola_map_0</word_key>
+      <word_default>FALSE</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.ByteOrderMotorola_map_1</word_key>
+      <word_default>TRUE</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.ByteOrderMotorola</word_key>
+      <word_default>Byte Order Motorola</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.IsColor_map_1</word_key>
+      <word_default>TRUE</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.IsColor_map_0</word_key>
+      <word_default>FALSE</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.IsColor</word_key>
+      <word_default>Color</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.Width</word_key>
+      <word_default>Image Width</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.Height</word_key>
+      <word_default>Image Height</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.Thumbnail.MimeType</word_key>
+      <word_default>Thumbnail Mime Type</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.ApertureFNumber</word_key>
+      <word_default>Aperture F-Number</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>COMPUTED.html</word_key>
+      <word_default>HTML Sizes</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>FILE.FileType</word_key>
+      <word_default>File Type</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>FILE.FileSize</word_key>
+      <word_default>Original File Size</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>FILE.FileDateTime</word_key>
+      <word_default>Unix Timestamp</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>FILE.SectionsFound</word_key>
+      <word_default>Sections Found</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>FILE.MimeType</word_key>
+      <word_default>Mime Type</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>FILE.FileName</word_key>
+      <word_default>File Name</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2122</word_key>
+      <word_default>IPTC.CaptionWriter</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2118</word_key>
+      <word_default>IPTC.Contact</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2116</word_key>
+      <word_default>IPTC.CopyrightNotice</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2115</word_key>
+      <word_default>IPTC.Source</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2105</word_key>
+      <word_default>IPTC.Headline</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2103</word_key>
+      <word_default>IPTC.OTR</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2101</word_key>
+      <word_default>IPTC.Country</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2095</word_key>
+      <word_default>IPTC.State</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2090</word_key>
+      <word_default>IPTC.City</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2085</word_key>
+      <word_default>IPTC.By-LineTitle</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2080</word_key>
+      <word_default>IPTC.By-line</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2025</word_key>
+      <word_default>IPTC.Keywords</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2060</word_key>
+      <word_default>IPTC.TimeCreated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2055</word_key>
+      <word_default>IPTC.DateCreated</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2040</word_key>
+      <word_default>IPTC.ActionAdvised</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2020</word_key>
+      <word_default>IPTC.SupplementalCategories</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2015</word_key>
+      <word_default>IPTC.Category</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2110</word_key>
+      <word_default>IPTC.Credit</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2120</word_key>
+      <word_default>IPTC.Caption</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>IPTC2003</word_key>
+      <word_default>IPTC.ObjectTypeReference</word_default>
+    </lang>
+    <lang>
+      <word_app>gallery</word_app>
+      <word_pack>public_meta</word_pack>
+      <word_key>check_key</word_key>
+      <word_default>This is just a false key to ensure file is loaded</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

@@ -1,0 +1,27 @@
+<?php
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* SETTINGS START */
+
+$videoPluginType = '3';
+$maxP = '10';
+$quality = '90';
+$vidWidth = '220';
+$vidHeight = '165';
+$accountURL = '';
+$accountSharedSecret = '';
+$lccsUsername = '';
+$lccsPassword = '';
+$connectUrl = '';
+$camWidth = '640';
+$camHeight = '480';
+$fps = '30';
+$soundQuality = '7';
+
+
+/* SETTINGS END */
+
+$accountURL = str_replace('https://','http://',$accountURL);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

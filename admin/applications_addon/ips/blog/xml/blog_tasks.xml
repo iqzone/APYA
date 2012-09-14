@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <group>
+    <row>
+      <task_id>80</task_id>
+      <task_title>Send IP.Blog pings</task_title>
+      <task_file>blogpings.php</task_file>
+      <task_next_run>1332781224</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>3</task_hour>
+      <task_minute>20</task_minute>
+      <task_cronkey>fdb9075e778505b60306e3a20ac79cde</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Sends out stored trackbacks</task_description>
+      <task_enabled>0</task_enabled>
+      <task_key>blogpings</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>blog</task_application>
+    </row>
+    <row>
+      <task_id>81</task_id>
+      <task_title>Publish Future Entries</task_title>
+      <task_file>blog_entries.php</task_file>
+      <task_next_run>1333395420</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>-1</task_hour>
+      <task_minute>30</task_minute>
+      <task_cronkey>d4cc4ce352b809f11f33f8a4a1234525</task_cronkey>
+      <task_log>0</task_log>
+      <task_description>Checks for any draft entries with a future publish date</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>blog_entries</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>blog</task_application>
+    </row>
+    <row>
+      <task_id>96</task_id>
+      <task_title>Recache members blogs</task_title>
+      <task_file>blog_recache.php</task_file>
+      <task_next_run>1332864180</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>-1</task_hour>
+      <task_minute>5</task_minute>
+      <task_cronkey>5d8fa3e87432c0b3f8b54fe388c674ef</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Processes the blogs_recache entries for the members table. Please do not enable or edit this task as it is dynamically setup</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>blog_recache</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>blog</task_application>
+    </row>
+    <row>
+      <task_id>82</task_id>
+      <task_title>RSS Import Task</task_title>
+      <task_file>blog_rssimport.php</task_file>
+      <task_next_run>1333382520</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>-1</task_hour>
+      <task_minute>3</task_minute>
+      <task_cronkey>7514443425aa207a5edb3dabf41ac716</task_cronkey>
+      <task_log>0</task_log>
+      <task_description>Processes the RSS imports. Please do not enable or edit this task</task_description>
+      <task_enabled>0</task_enabled>
+      <task_key>blog_rssimport</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>blog</task_application>
+    </row>
+    <row>
+      <task_id>83</task_id>
+      <task_title>RSS Import Switch</task_title>
+      <task_file>blog_rssimport_switch.php</task_file>
+      <task_next_run>1333391640</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>3</task_hour>
+      <task_minute>-1</task_minute>
+      <task_cronkey>0551a9d9189f49bed61985dc75b1f38c</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Turns on RSS imports to be processed</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>blog_rssimport_switch</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>blog</task_application>
+    </row>
+    <row>
+      <task_id>84</task_id>
+      <task_title>Update blog views</task_title>
+      <task_file>updateblogviews.php</task_file>
+      <task_next_run>1333396200</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>1</task_hour>
+      <task_minute>-1</task_minute>
+      <task_cronkey>62a8b826ac815c8f322207f99f5bc84c</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Updates blog view counts when they are set to update hourly</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>updateblogviews</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>blog</task_application>
+    </row>
+  </group>
+</export>

@@ -1,0 +1,33 @@
+#progress_bar {  
+    width:102px;  
+    height:7px;  
+    border:1px solid #ccc;  
+    padding:0;  
+    margin:0;  
+    position:relative;  
+    background-image:url("progress_bar.gif");  
+    background-repeat:repeat-x;  
+} 
+ 
+#progress_bar div {  
+    background-color:#fff;  
+}
+
+
+#progresswrapper
+{
+	height: 40px;
+	padding: 20px;
+	position:relative;
+	margin-left: 175px;
+}
+
+#progressmsg
+{
+	font-size: 0.8em;
+	margin-top: 15px;
+	margin-left:-175px;
+	text-align: center;
+	color: #555555;
+	clear:both;
+}

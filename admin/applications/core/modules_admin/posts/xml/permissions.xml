@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Manage Badwords</grouptitle>
+		<grouplang>core_badwords</grouplang>
+		<items>
+			<item>
+				<key>badword_manage</key>
+				<string>Can manage badwords?</string>
+			</item>
+			<item>
+				<key>badword_delete</key>
+				<string>Can delete badwords?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Emoticons</grouptitle>
+		<grouplang>core_emoticons</grouplang>
+		<items>
+			<item>
+				<key>emoticons_manage</key>
+				<string>Can access emoticon manager?</string>
+			</item>
+			<item>
+				<key>emoticons_edit</key>
+				<string>Can edit emoticons?</string>
+			</item>
+			<item>
+				<key>emoticons_add</key>
+				<string>Can add new emoticons?</string>
+			</item>
+			<item>
+				<key>emoticons_delete</key>
+				<string>Can remove emoticons?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>BBCode</grouptitle>
+		<grouplang>core_bbcode</grouplang>
+		<items>
+			<item>
+				<key>bbcode_manage</key>
+				<string>Can manage bbcode?</string>
+			</item>
+			<item>
+				<key>bbcode_delete</key>
+				<string>Can delete bbcode?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Manage Media</grouptitle>
+		<grouplang>core_media</grouplang>
+		<items>
+			<item>
+				<key>media_manage</key>
+				<string>Can manage media bbcode supported sites?</string>
+			</item>
+			<item>
+				<key>media_delete</key>
+				<string>Can remove supported media bbcode sites?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

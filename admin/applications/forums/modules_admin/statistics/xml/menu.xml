@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Registration Stats</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Registration Stats</subitemtitle>
+					<subitemlang>stats_reg</subitemlang>
+					<subsection>stats</subsection>
+					<subitemurl>do=reg</subitemurl>
+					<subitemrolekey>stats_registration</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>New Topic Stats</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>New Topic Stats</subitemtitle>
+					<subitemlang>stats_topics</subitemlang>
+					<subsection>stats</subsection>
+					<subitemurl>do=topic</subitemurl>
+					<subitemrolekey>stats_topics</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Post Stats</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Post Stats</subitemtitle>
+					<subitemlang>stats_posts</subitemlang>
+					<subsection>stats</subsection>
+					<subitemurl>do=post</subitemurl>
+					<subitemrolekey>stats_posts</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Personal Message</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Personal Message</subitemtitle>
+					<subitemlang>stats_pms</subitemlang>
+					<subsection>stats</subsection>
+					<subitemurl>do=msg</subitemurl>
+					<subitemrolekey>stats_msg</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Topic Views</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Topic Views</subitemtitle>
+					<subitemlang>stats_tviews</subitemlang>
+					<subsection>stats</subsection>
+					<subitemurl>do=views</subitemurl>
+					<subitemrolekey>stats_views</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Spam Service</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Spam Service</subitemtitle>
+					<subitemlang>stats_spam</subitemlang>
+					<subsection>stats</subsection>
+					<subitemurl>do=spam</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

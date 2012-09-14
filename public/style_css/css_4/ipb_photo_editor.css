@@ -1,0 +1,9 @@
+#ips_photoWrap{width:700px;border:1px
+solid #D5DDE5;margin:0px
+auto;padding:6px}#ips_sidePanel{float:left;width:200px}#ips_cropperStart,#ips_cropperControls{text-align:right;width:200px;margin-top:8px}#ips_currentPhoto{text-align:center}#ips_currentPhoto
+img{border:1px
+solid #D5DDE5;background:white;max-width:200px;height:auto}#gravatar,#upload_photo{width:150px}#ips_photoOptions{margin-left:210px}li.ips_option{border:1px
+solid #D5DDE5;min-height:120px;margin-bottom:5px}.ips_photoPreview{width:100px;height:100px;display:block;overflow:hidden;margin:6px;float:left;border:1px
+solid #D5DDE5}.ips_photoPreview
+label{text-align:center;background:white}.ips_photoPreview label
+img{max-width:120px;max-height:120px}.ips_photoControls{padding-top:10px;margin-left:120px}.ips_photoOptionText{margin-left:18px;line-height:130%;padding-bottom:3px}.imgCrop_wrap{display:inline-block}

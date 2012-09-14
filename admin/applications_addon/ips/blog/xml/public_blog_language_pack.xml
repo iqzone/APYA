@@ -1,0 +1,4467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>topic_blog_entries</word_key>
+      <word_default>Recent blog entries on this topic</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>last_entry_on</word_key>
+      <word_default>Last Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_notify_new_entry_title</word_key>
+      <word_default>New entry on blog: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_settings</word_key>
+      <word_default>Edit Blog Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_add</word_key>
+      <word_default>Add</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_category</word_key>
+      <word_default>Category</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_tweet</word_key>
+      <word_default>Tweet</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_latest_comments</word_key>
+      <word_default>Latest comments on your blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_comments_on</word_key>
+      <word_default>Latest Comments In %s</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>remove</word_key>
+      <word_default>remove</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_billy_noblogs</word_key>
+      <word_default>This user does not have a blog.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_manage_comments</word_key>
+      <word_default>Manage Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_blog</word_key>
+      <word_default>Follow this blog?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>editor_add</word_key>
+      <word_default>Add</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_blog</word_key>
+      <word_default>Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>slideshow</word_key>
+      <word_default>Slideshow</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_in</word_key>
+      <word_default>in</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_entry</word_key>
+      <word_default>Blog Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_notify_new_entry</word_key>
+      <word_default><![CDATA[<#NAME#>,
+
+<#AUTHOR#> has just posted a new blog entry on <#BLOG#>: <#TITLE#>.
+
+You can see the new entry here:
+<#URL#>
+]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_manage</word_key>
+      <word_default>Manage Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>del_no_action</word_key>
+      <word_default>No action has been taken</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>comment_deleted</word_key>
+      <word_default>Successfully deleted the comment.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>draft</word_key>
+      <word_default>Draft</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_title</word_key>
+      <word_default>Entry Title</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_deleted</word_key>
+      <word_default>Successfully deleted the entry.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>add_entry</word_key>
+      <word_default>Add Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>show_draft</word_key>
+      <word_default>Show draft entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>num_drafts</word_key>
+      <word_default>Number of draft entries: </word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_syndicate</word_key>
+      <word_default>Syndicate my Blog (RSS)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>hide_draft</word_key>
+      <word_default>Hide draft entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_archive</word_key>
+      <word_default>Archive</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_cat_none</word_key>
+      <word_default><![CDATA[&lt;none&gt;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>not_your_blog_fool</word_key>
+      <word_default><![CDATA[That's not your blog]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_settings</word_key>
+      <word_default>Entry Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_tags</word_key>
+      <word_default>Entry Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_submit_comment</word_key>
+      <word_default>Post New Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_blog_choose</word_key>
+      <word_default>Post In Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>comment_edited</word_key>
+      <word_default>The comment has been successfully edited.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_submit_new</word_key>
+      <word_default>Post New Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_submit_editcomment</word_key>
+      <word_default>Submit Changes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_top_txt_reply</word_key>
+      <word_default>Post a reply in Blog entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_top_txt_editcomment</word_key>
+      <word_default>Edit comment of entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_edited</word_key>
+      <word_default>The Blog entry has been successfully edited.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_submit_edit</word_key>
+      <word_default>Submit Changes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_no_blog</word_key>
+      <word_default>No blog?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_top_txt_edit</word_key>
+      <word_default>Edit entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_top_txt_new</word_key>
+      <word_default>Post a new entry in</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_editcblock</word_key>
+      <word_default>Edit Custom Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>published</word_key>
+      <word_default>Published</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_editcomment</word_key>
+      <word_default>Edit comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblock</word_key>
+      <word_default>Add Custom Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_comment</word_key>
+      <word_default>Add comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_monthrow</word_key>
+      <word_default>Entries in</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_no_newer</word_key>
+      <word_default>There is no newer entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_post</word_key>
+      <word_default>Add entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_editentry</word_key>
+      <word_default>Edit entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>send_trackback_close</word_key>
+      <word_default>Close Window</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_start_blog</word_key>
+      <word_default>Click and start your own blog right now!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>send_trackback_url</word_key>
+      <word_default>Trackback URL</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sent_trackbacks</word_key>
+      <word_default>The following Trackback pings have been sent for this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ucp_editing_category</word_key>
+      <word_default>Editing Category</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bt_source</word_key>
+      <word_default>Source:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>send_trackback_succes</word_key>
+      <word_default>Successfully sent the trackback ping</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>send_trackback_for</word_key>
+      <word_default>Send trackback ping for entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>send_trackback_desc</word_key>
+      <word_default>Put the TrackBack URL of the Blog entry you want to ping below:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>send_trackback_title</word_key>
+      <word_default>Send Trackback ping</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_on</word_key>
+      <word_default>Tracked on</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_modoptions</word_key>
+      <word_default>Entry options</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_from</word_key>
+      <word_default>from</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_url_prompt</word_key>
+      <word_default>The Trackback URL for this entry is</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>show_trackback_url</word_key>
+      <word_default>Show the Trackback URL for this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_trackback_forentry</word_key>
+      <word_default>Trackbacks for this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_trackback_url</word_key>
+      <word_default>Trackback URL</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_no_trackbacks</word_key>
+      <word_default>There are no Trackbacks for this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_comments</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_trackbacks</word_key>
+      <word_default>Trackbacks: </word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_comments</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>show_external</word_key>
+      <word_default>External linked Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>show_local</word_key>
+      <word_default>Local Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>show_all</word_key>
+      <word_default>All Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ascending_order</word_key>
+      <word_default>A-Z</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>descending_order</word_key>
+      <word_default>Z-A</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sort_by_numentries</word_key>
+      <word_default>Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sort_by_numcomments</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sort_by_numviews</word_key>
+      <word_default>Views</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bstat_total_comments</word_key>
+      <word_default>Total Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sort_by_lastentry</word_key>
+      <word_default>Last Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sort_by_blogname</word_key>
+      <word_default>Blog Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sort_by_name</word_key>
+      <word_default>Owner</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view</word_key>
+      <word_default>View</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>s_name</word_key>
+      <word_default>Member name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_mmod_applied</word_key>
+      <word_default>Successfully applied Blog multi-moderation</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_mmod_noids</word_key>
+      <word_default>No Blogs selected for multi-moderation</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_disable</word_key>
+      <word_default>Disable blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_enable</word_key>
+      <word_default>Enable blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_pin</word_key>
+      <word_default>Pin blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_unpin</word_key>
+      <word_default>Unpin blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_go</word_key>
+      <word_default>With selected</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bloglist_start_pinned</word_key>
+      <word_default>Important Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_num_views</word_key>
+      <word_default>views</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_num_comments</word_key>
+      <word_default>comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bloglist_name</word_key>
+      <word_default>Blog name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_last_comment</word_key>
+      <word_default>Last comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_last_entry</word_key>
+      <word_default>Last entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_num_entries</word_key>
+      <word_default>entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bloglist_member</word_key>
+      <word_default>Member</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_enter_search</word_key>
+      <word_default>Enter words to search entries...</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_list</word_key>
+      <word_default>Community Blog List</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_locked</word_key>
+      <word_default>LOCKED</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_edited</word_key>
+      <word_default>Successfully edited Custom Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblock_show</word_key>
+      <word_default>Show Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblock_editsubmit</word_key>
+      <word_default>Submit Custom Content Block Changes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblock_options</word_key>
+      <word_default>Block Options</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblock_name</word_key>
+      <word_default>Block Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblock_order</word_key>
+      <word_default>Display Order</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>succes_del_cblock</word_key>
+      <word_default>Successfully deleted Custom Content Block.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblocks_list</word_key>
+      <word_default>Current Content Blocks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblock_dosettings</word_key>
+      <word_default>Update Content Block Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cusblocks_add</word_key>
+      <word_default>Add content block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_sure_delcblock</word_key>
+      <word_default>Are you sure you want to delete this Custom Content Block?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>preview_block</word_key>
+      <word_default>Preview Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblock_submit</word_key>
+      <word_default>Add Custom Content Block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblocks_def</word_key>
+      <word_default>Installed Content Blocks currently not used.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblocks_add</word_key>
+      <word_default>Add a custom content block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>context_search_blog</word_key>
+      <word_default>This blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>succes_stored_settings</word_key>
+      <word_default>Successfully updated your Blog settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_errors_found</word_key>
+      <word_default>Errors found!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_external_settings</word_key>
+      <word_default>Your external Blog settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblocks_header</word_key>
+      <word_default>Content Blocks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblocks_desc</word_key>
+      <word_default>This section will allow you to add custom content blocks. Custom content blocks are boxes on your Blog screen which can contain anything you would like to add to the page.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_external_url</word_key>
+      <word_default><![CDATA[URL to your Blog's page]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_exturl_entered</word_key>
+      <word_default>You must enter an external url for this type</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>norss</word_key>
+      <word_default><![CDATA[The community administrator has disabled RSS feeds.<br />This setting will have no effect.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>noguestcomment</word_key>
+      <word_default><![CDATA[The community administrator has disabled Guest commenting.<br />This setting will have no effect.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>noguestview</word_key>
+      <word_default><![CDATA[The community administrator has disabled Guest viewing.<br />This setting will have no effect.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_commentsperpage</word_key>
+      <word_default>Number of Comments per page</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_entriesperpage</word_key>
+      <word_default>Number of Entries per page</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cblock_position</word_key>
+      <word_default>Position</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>delete_blog_move</word_key>
+      <word_default>Move entries to</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_viewperdate</word_key>
+      <word_default>List per date</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>xmlrpc_disabled</word_key>
+      <word_default>XML-RPC is not enabled.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_viewlist</word_key>
+      <word_default>List</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_blocksleft</word_key>
+      <word_default>Left</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_blocksright</word_key>
+      <word_default>Right</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_allowguestcomments</word_key>
+      <word_default>Allow guests to post comments in your Blog?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_allowguest</word_key>
+      <word_default>Allow guests to view your Blog?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_private</word_key>
+      <word_default><![CDATA[<b>Private Blog?</b><br />If enabled only you can view it.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_view_settings</word_key>
+      <word_default>Customize the look of your Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_allowrss_desc</word_key>
+      <word_default>This will enable the RSS feed link on your Blog.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_allowrss</word_key>
+      <word_default>Allow others to syndicate your Blog?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_local_settings</word_key>
+      <word_default>Your local Blog settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_name</word_key>
+      <word_default>Blog name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_store_to_activate</word_key>
+      <word_default>Your Blog has been activated, but not yet enabled. The Blog will be enabled once you store these settings.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_external</word_key>
+      <word_default>Link to external Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_local</word_key>
+      <word_default>Local Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_type</word_key>
+      <word_default>Blog type</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_desc</word_key>
+      <word_default>Blog description</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_is_not_enabled</word_key>
+      <word_default>You have not activated your blog yet.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_disabled</word_key>
+      <word_default>The community administrator has disabled this Blog.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_name_entered</word_key>
+      <word_default>You must enter the name of your Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_not_enabled</word_key>
+      <word_default>This blog is not enabled.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>succes_activate_blog</word_key>
+      <word_default>Your blog has been successfully activated.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>activate_blog</word_key>
+      <word_default>Activate Your Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_main_header</word_key>
+      <word_default>Your Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_title</word_key>
+      <word_default>Community Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_blog_create_permission</word_key>
+      <word_default>The community administrator has not authorised you to create Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_blog_mod_permission</word_key>
+      <word_default>You are not authorised to use this feature</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_blogview_permission</word_key>
+      <word_default>You have no permission to view the Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>eoptions_show</word_key>
+      <word_default>Show Always</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_no_permission</word_key>
+      <word_default>You are not authorised to view this page</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>eoptions_hide</word_key>
+      <word_default>Hide Automatically</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sort_by_lastcomment</word_key>
+      <word_default>Last Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>list_goto_entry</word_key>
+      <word_default>Go to entry:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_defaultstatus</word_key>
+      <word_default>Default status of new entries?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>allowtrackback_desc</word_key>
+      <word_default>If enabled others can trackback ping your Blog entries.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_allowtrackback</word_key>
+      <word_default>Allow Blog entry Trackbacks?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>notrackback</word_key>
+      <word_default>The community administrator has disabled Trackbacks. This setting will have no effect.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bloglist_end_favourites</word_key>
+      <word_default>Favorite Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>addfavblog</word_key>
+      <word_default>Add Blog to favorites</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>showblog_rsstitle</word_key>
+      <word_default><![CDATA[<#blogname#> RSS feed]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bloglist_rsstitle</word_key>
+      <word_default><![CDATA[<#boardname#> Blogs RSS feed]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>delfavblog</word_key>
+      <word_default>Remove Blog from favorites</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>comment_approved</word_key>
+      <word_default>Comment successfully approved</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_markread</word_key>
+      <word_default>Mark Blog as read</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>and_all_entries</word_key>
+      <word_default>and all entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>approvemode_all</word_key>
+      <word_default>Moderate All Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_sharing</word_key>
+      <word_default>Blog Sharing</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>advanced_settings</word_key>
+      <word_default>Advanced Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>approvemode_none</word_key>
+      <word_default>Auto-Approve All Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>approvemode_guests</word_key>
+      <word_default>Moderate Guest Comments Only</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_approvemode</word_key>
+      <word_default>Approve comments posted on your blog?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>limitentrysize_error</word_key>
+      <word_default>The entry limit size must be 0 or greater then 100</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_show_privateentry</word_key>
+      <word_default>Click here to show the entry details</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_private_entry</word_key>
+      <word_default>The Blog owner has chosen this to be a private Blog and the entries are hidden by default.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_skin_default</word_key>
+      <word_default>Forums chosen skin</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackcomments_desc</word_key>
+      <word_default>If enabled you will receive an e-mail when a new comment is posted on your Blog.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>report_message</word_key>
+      <word_default>Enter your report</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>launch_color_picker</word_key>
+      <word_default>Launch Color Picker</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>report_entry</word_key>
+      <word_default>Report this entry to a moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>report_topic</word_key>
+      <word_default>Entry Title</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_choose_skin</word_key>
+      <word_default>Lock to following skin</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>comment_on</word_key>
+      <word_default>on</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_albums</word_key>
+      <word_default>Entry Album</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_no_albums_yet</word_key>
+      <word_default>No albums available</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>report_title</word_key>
+      <word_default>Report this comment to a moderator</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_must_agree</word_key>
+      <word_default>You must agree to the Terms of Use to be able to create a Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ucp_create_blog</word_key>
+      <word_default>Create a Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_terms_titles</word_key>
+      <word_default><![CDATA[Terms &amp; Rules]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_create_finish</word_key>
+      <word_default>Finish</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_terms_agree</word_key>
+      <word_default>I have read, understood and agree to these terms of the Blog usage</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_create_previous</word_key>
+      <word_default><![CDATA[&lt; Previous]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_terms</word_key>
+      <word_default><![CDATA[<b>Blog Terms &amp; Rules</b><br /><br />Please take a moment to review these rules detailed below. If you agree with them and wish to proceed with the Blog creation, simply click the &quot;Next&quot; button below. To cancel this creation, simply hit the &quot;back&quot; button on your browser.<br /><br />You agree, through your use of this service, that you will not use this Blog system to post any material which is knowingly false and/or defamatory, inaccurate, abusive, vulgar, hateful, harassing, obscene, profane, sexually oriented, threatening, invasive of a person's privacy, or otherwise violative of any law.<br /><br />We have the ability to remove objectionable messages and we will make every effort to do so, within a reasonable time frame, if we determine that removal is necessary.<br /><br />You agree not to post any copyrighted material unless the copyright is owned by you.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>permalink</word_key>
+      <word_default>Permalink</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>permalink_title</word_key>
+      <word_default>Show the permalink to this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_create_next</word_key>
+      <word_default><![CDATA[Continue &rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>top10_viewed</word_key>
+      <word_default>Top 10 Viewed Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>permalink_prompt</word_key>
+      <word_default>Entry Permalink</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>top10_rated</word_key>
+      <word_default>Top 10 Rated Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>top10_commented</word_key>
+      <word_default>Top 10 Commented Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>top10_bloggers</word_key>
+      <word_default>Top 10 Bloggers</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>po_options</word_key>
+      <word_default>Post Options</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sort_by_rating</word_key>
+      <word_default>Rating</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>rate_out_of</word_key>
+      <word_default>out of 5</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>rate_votes</word_key>
+      <word_default>votes:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_allready_rated</word_key>
+      <word_default>You have already rated this Blog!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>comment_queued</word_key>
+      <word_default>Your comment will not show up until the Blog owner has approved it</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_add_album</word_key>
+      <word_default>Create New Gallery Album</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>attached_file</word_key>
+      <word_default>Attached File</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>pic_attach</word_key>
+      <word_default>Attached Image</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>attach_dl</word_key>
+      <word_default>Download attachment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>attach_size</word_key>
+      <word_default>Size:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>attach_ahits</word_key>
+      <word_default>Downloads:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>attach_thumbs</word_key>
+      <word_default>Attached thumbnail(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>attach_normal</word_key>
+      <word_default>Attached File(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>attach_hits</word_key>
+      <word_default>Number of downloads</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>attach_images</word_key>
+      <word_default>Attached image(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>end_track_blog</word_key>
+      <word_default>Stop Tracking this Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>track_this_blog</word_key>
+      <word_default>Track this Blog (Receive email notification of new entries)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogucp_stoptrack</word_key>
+      <word_default>Stop Tracking Selected Items</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogucp_tracker_header</word_key>
+      <word_default>Blogs you are tracking</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bt_subject</word_key>
+      <word_default>Blog Tracker New Entry Notification</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cat_friends</word_key>
+      <word_default>Friends Only (Only my friends can view)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_poll_manage_link</word_key>
+      <word_default>Manage Entry Poll</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>disable_comments_desc</word_key>
+      <word_default>When set, nobody will be able to place comments in your Blog.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_active_users</word_key>
+      <word_default>%s user(s) are online (in the past %s minutes)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_active_users</word_key>
+      <word_default>%s user(s) viewing</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_disable_comments</word_key>
+      <word_default>Disable comments?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogucp_tracker_norows</word_key>
+      <word_default>You are not tracking any Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cat__privateclub</word_key>
+      <word_default>Private Club</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sharedmedia_elu</word_key>
+      <word_default>Last Update</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cat_private</word_key>
+      <word_default>Private (Only I can view)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cat_privateclub</word_key>
+      <word_default>Private Club (Only the people I choose can view)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cat_public</word_key>
+      <word_default>Public (Everyone can view)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogset_editors</word_key>
+      <word_default>Editors</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogset_privateclub</word_key>
+      <word_default>Private Club</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>too_many_buddies</word_key>
+      <word_default>Too many members in your Private Club. You can add a maximum of #maxnum# members in your Private Club</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>too_many_editors</word_key>
+      <word_default>Too many members in your editors list. You can add a maximum of #maxnum# members as your Blog editors</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ucp_editors_desc</word_key>
+      <word_default>Assign editors who can post, delete and edit entries.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cat__private</word_key>
+      <word_default>Private</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogname_noend_s</word_key>
+      <word_default><![CDATA[&#039;s Blog]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ucp_privateclub_desc</word_key>
+      <word_default>Assign club members who can see your Blog if it is private.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_approved</word_key>
+      <word_default>Trackback successfully approved</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>rss_not_allowed</word_key>
+      <word_default>This RSS feed has been disallowed</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>rss_not_available</word_key>
+      <word_default>This RSS feed is not available</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_approve</word_key>
+      <word_default>Approve</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>spam_wrongkey_akismet</word_key>
+      <word_default>The Akismet API key entered into the ACP is not valid</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>spam_reported</word_key>
+      <word_default>Missed spam reported to Akismet</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ham_reported</word_key>
+      <word_default>Ham (false-positive) reported to Akismet</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>submit_spam</word_key>
+      <word_default>Submit Spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>submit_spam_over</word_key>
+      <word_default>Notify Akismet that this was not identified as spam but is</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>spam_no_akismet</word_key>
+      <word_default>You do not have an Akismet API key entered into the ACP to use</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>spam_no_cid</word_key>
+      <word_default>No comment or trackback id was provided to submit</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>leave_comment</word_key>
+      <word_default>Leave A Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>spam_no_tb</word_key>
+      <word_default>Could not find the trackback you wish to submit as spam/ham</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>submit_ham_over</word_key>
+      <word_default>Notify Akismet that this was identified as spam but is really valid</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>submit_ham</word_key>
+      <word_default>Submit Ham</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_spam_detected</word_key>
+      <word_default>Your comment or trackback was identified as spam and has not been accepted</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bpost_draft</word_key>
+      <word_default>Save Draft</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_view</word_key>
+      <word_default>View Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_edit</word_key>
+      <word_default>Edit Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>com_report</word_key>
+      <word_default>Report</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_delete</word_key>
+      <word_default>Delete Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>com_edit</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>com_reply</word_key>
+      <word_default>Reply</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>com_delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>com_multiquote</word_key>
+      <word_default>Multi-Quote</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>com_approve</word_key>
+      <word_default>Approve</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>send_trackback</word_key>
+      <word_default>Send Trackback</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>lock_entry</word_key>
+      <word_default>Lock Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>unlock_entry</word_key>
+      <word_default>Unlock Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>publish_entry</word_key>
+      <word_default>Publish Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>make_draft</word_key>
+      <word_default>Make This Entry A Draft</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>feature_confirm_do</word_key>
+      <word_default>Are you sure you wish to make this the featured entry?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>feature_confirm_undo</word_key>
+      <word_default>Are you sure you wish to remove this as the featured entry?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>posted_by</word_key>
+      <word_default>Posted by</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>visits</word_key>
+      <word_default>Visits</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_comments</word_key>
+      <word_default>There are no comments on this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>this_is_an_external_blog</word_key>
+      <word_default><![CDATA[is hosted externally, so visiting it will take you away from this site. Click your browser's back button to return here when you're done!]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>has</word_key>
+      <word_default>has</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>has_had</word_key>
+      <word_default>has had</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>thanks_feature</word_key>
+      <word_default>The featured entry status has been toggled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>other_blogs</word_key>
+      <word_default>Our Other Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>feature_undo</word_key>
+      <word_default>Stop Featuring</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>by_small</word_key>
+      <word_default>by</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_latest_visitors</word_key>
+      <word_default>Latest Visitors</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>featured_entry_title</word_key>
+      <word_default>Featured Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>visitor_how_many</word_key>
+      <word_default>Number of latest visitors to show</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>feature_do</word_key>
+      <word_default>Feature Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>visitor_save</word_key>
+      <word_default>Save</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_google_shared_items</word_key>
+      <word_default>Google Shared Items</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_my_friends</word_key>
+      <word_default><![CDATA[My Friends' Blogs]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_theme_reset</word_key>
+      <word_default>If you continue, any customized theme CSS will be lost. Please backup any custom theme CSS before continuing!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_xmltheme_save</word_key>
+      <word_default>Your custom theme has been saved! An administrator will need to approve it before it is applied to your blog.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_entries_to_show</word_key>
+      <word_default><![CDATA[hasn't made any entries yet!]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_xmltheme_none</word_key>
+      <word_default>You do not have permission to edit the theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>headers_menu</word_key>
+      <word_default>Change Header</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>themes_menu</word_key>
+      <word_default>Change Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_rss_feedburner_help</word_key>
+      <word_default>You can override the standard RSS link on your blog with FeedBurner by specifying your FeedBurner ID here.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_offline</word_key>
+      <word_default><![CDATA[[Blogs Offline] ]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_title_too_long</word_key>
+      <word_default>The title of the entry is too long</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_entry_date</word_key>
+      <word_default>Entry Date</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_rss_feedburner</word_key>
+      <word_default>Feedburner</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>twitter</word_key>
+      <word_default>Twitter</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>twitter_settings</word_key>
+      <word_default>Twitter Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_view_rss_settings</word_key>
+      <word_default>RSS Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>twitter_friends2</word_key>
+      <word_default>Show only my updates</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>mybloglog_settings</word_key>
+      <word_default>MyBlogLog Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>mybloglog</word_key>
+      <word_default>MyBlogLog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>black</word_key>
+      <word_default>Black</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>grey</word_key>
+      <word_default>Grey</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blue</word_key>
+      <word_default>Blue</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ccolor</word_key>
+      <word_default>Color</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>red</word_key>
+      <word_default>Red</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>twitter_friends1</word_key>
+      <word_default>Show friends updates</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bgcolor</word_key>
+      <word_default>BG Color</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>lastfm_username</word_key>
+      <word_default>Username</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>account_settings_c</word_key>
+      <word_default>Account Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>lastfm_display</word_key>
+      <word_default>Display Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>save_settings_c</word_key>
+      <word_default>Save</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>digg_username</word_key>
+      <word_default>Username</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_google</word_key>
+      <word_default>Google Shared Items</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>google_id</word_key>
+      <word_default>ID</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_google_config</word_key>
+      <word_default>Shared Items Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>badge_x_drafts</word_key>
+      <word_default>%s draft(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_digg</word_key>
+      <word_default>Digg</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_blogs_found</word_key>
+      <word_default><![CDATA[We don't have any blogs you can view right now]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_digg_config</word_key>
+      <word_default>Digg Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>badge_x_drafts_tooltip_s</word_key>
+      <word_default>This blog contains %s draft entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>m_blog_tracker</word_key>
+      <word_default>Blog Tracker</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_date_future</word_key>
+      <word_default>You cannot set a publish date in the future</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>m_blog_create</word_key>
+      <word_default>Create a Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_follow_blog</word_key>
+      <word_default>follow this blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>m_blog_entry_tracker</word_key>
+      <word_default>Blog Entry Tracker</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_blogpings1</word_key>
+      <word_default>%s Blog update pings send; %s failed</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_updateblogviews</word_key>
+      <word_default>Blog views counter updated</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_ping_error2</word_key>
+      <word_default>ERROR: Invalid response received</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_ping_error3</word_key>
+      <word_default>ERROR: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_ping_error1</word_key>
+      <word_default>ERROR: Unknown service</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_blogpings</word_key>
+      <word_default>Blog update ping failed: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modlog_del_cb</word_key>
+      <word_default><![CDATA[Blog(%s) '%s': Deleted Custom Content Block (%s)]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modlog_app_tb</word_key>
+      <word_default><![CDATA[Blog(%s) '%s': Approved Entry trackback (%s) of entry %s]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modlog_del_tb</word_key>
+      <word_default><![CDATA[Blog(%s) '%s': Deleted Entry trackback (%s) of entry %s]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modlog_app_comment</word_key>
+      <word_default><![CDATA[Blog(%s) '%s': Approved Blog comment (%s) of member %s]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modlog_delete</word_key>
+      <word_default><![CDATA[Blog(%s) '%s': Deleted Blog entry '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modlog_locked</word_key>
+      <word_default><![CDATA[Blog(%s) '%s': Locked entry '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modlog_unlocked</word_key>
+      <word_default><![CDATA[Blog(%s) '%s': Unlocked entry '%s']]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>akismet_trackback_notspam</word_key>
+      <word_default>Trackback identified as spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>akismet_trackback_spam</word_key>
+      <word_default>Trackback NOT identified as spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>akismet_comment_notspam</word_key>
+      <word_default>Comment NOT identified as spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>akismet_comment_spam</word_key>
+      <word_default>Comment identified as spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>akismet_error</word_key>
+      <word_default>Akismet API returned an error</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_error3</word_key>
+      <word_default>Error: Failed to connect to %s</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_error4</word_key>
+      <word_default>Error: Invalid trackback url provided</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_error6</word_key>
+      <word_default>Error: Invalid trackback response received</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_error5</word_key>
+      <word_default>Error: No response received</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_post</word_key>
+      <word_default>You must enter a post</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_entry_title</word_key>
+      <word_default>You must enter an entry title longer than 2 characters</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>poll_you_created</word_key>
+      <word_default>You created this poll</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_error1</word_key>
+      <word_default>You must fill in a Trackback URL</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_error2</word_key>
+      <word_default>This Trackback URL has already been successfully pinged</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_no_visitors</word_key>
+      <word_default>There are no visitors to display yet</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_reply_polls</word_key>
+      <word_default>You cannot vote in this poll</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>poll_you_voted</word_key>
+      <word_default>You have already voted in this poll</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>posting_off</word_key>
+      <word_default>Your posting permissions have been removed</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_rate_entry</word_key>
+      <word_default>Rate Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>poll_none_found</word_key>
+      <word_default>We could not find that poll</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>poll_no_guests</word_key>
+      <word_default>Guests cannot vote</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>public_poll</word_key>
+      <word_default><![CDATA[This is a public poll. Other members <strong>will</strong> be able to see which options you chose]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>networking_submit</word_key>
+      <word_default>Submit to</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>who_voted_for</word_key>
+      <word_default>Who voted for:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_all_entry_in_tag</word_key>
+      <word_default><![CDATA[View all entries with a '%s' tag]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>votes</word_key>
+      <word_default>votes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_vote</word_key>
+      <word_default>You did not choose a poll choice to vote against. Please go back and ensure you click on one of the radio buttons next to the choice you wish to vote for</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>your_blogs_entries</word_key>
+      <word_default>Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>your_blogs_views</word_key>
+      <word_default>Views</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>comment_post_submit</word_key>
+      <word_default>Post</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_imported_from_rss</word_key>
+      <word_default>Entry imported from a RSS feed</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>your_blogs_comments</word_key>
+      <word_default>Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>stats_th</word_key>
+      <word_default>Stats</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>check_all_checkbox</word_key>
+      <word_default>Check all</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>track_blog_posted</word_key>
+      <word_default>Posted</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_view_permissions</word_key>
+      <word_default>Blog View Permissions</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_comments_alt</word_key>
+      <word_default>View comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>your_current_blogs</word_key>
+      <word_default>Your Current Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bp_html_off</word_key>
+      <word_default>HTML Off</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bp_html1</word_key>
+      <word_default>HTML On - Raw Linebreak Mode</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>use_full_editor</word_key>
+      <word_default>Use Full Editor</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>vote_legend</word_key>
+      <word_default>Vote</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>leave_a_comment</word_key>
+      <word_default>Leave A Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>percentage_of_votes</word_key>
+      <word_default>Percentage of vote:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_votes_link</word_key>
+      <word_default>View</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>error_lastentry_preview</word_key>
+      <word_default>There was a problem fetching this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>votes_cast_suffix</word_key>
+      <word_default>member(s) have cast votes</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>poll_prefix</word_key>
+      <word_default>Poll:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modcp_tab_draftentries</word_key>
+      <word_default>Draft Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_draft_entries</word_key>
+      <word_default>There are no blog entries in draft status</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_entry_alt</word_key>
+      <word_default>View entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_content_h3</word_key>
+      <word_default>Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>html_posting</word_key>
+      <word_default>HTML Posting</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_poll_h3</word_key>
+      <word_default>Entry Poll</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_info_h3</word_key>
+      <word_default>Entry Information</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>post_options_h3</word_key>
+      <word_default>Options</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>post_comment_h3</word_key>
+      <word_default>Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>results_per_page</word_key>
+      <word_default>results per page</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>by_sort</word_key>
+      <word_default>Sort By</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>with</word_key>
+      <word_default>with</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>total_entries</word_key>
+      <word_default>Total Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>newest_blog</word_key>
+      <word_default>Newest Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>by_author</word_key>
+      <word_default>By</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>total_blogs</word_key>
+      <word_default>Total Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>total_comments</word_key>
+      <word_default>Total Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>comm_blog_stats</word_key>
+      <word_default>Community Blog Statistics</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>format_list</word_key>
+      <word_default>List</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>format_table</word_key>
+      <word_default>Table</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_featured_entry</word_key>
+      <word_default>View featured blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>last_update_on</word_key>
+      <word_default>Last activity</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>posted_on</word_key>
+      <word_default>Posted on</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>last_entry</word_key>
+      <word_default>Last entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>comments_fn</word_key>
+      <word_default>comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>theme_saved_msg</word_key>
+      <word_default>Your theme has been saved, however, an administrator will need to approve it before it is applied to your blog.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>custom_css</word_key>
+      <word_default>Custom CSS</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>user_photo</word_key>
+      <word_default>User Photo</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entries_fn</word_key>
+      <word_default>entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_blog</word_key>
+      <word_default>View blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>save_css</word_key>
+      <word_default>Save Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>preview_css</word_key>
+      <word_default>Preview Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>create_custom_theme</word_key>
+      <word_default>Create custom theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>reset_theme</word_key>
+      <word_default>Reset Theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>custom_theme_create</word_key>
+      <word_default>Create a custom theme</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>header_alt</word_key>
+      <word_default>Header</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>reset_header_default</word_key>
+      <word_default>Reset my header to default</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>change_header_alt</word_key>
+      <word_default>Change header</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>click_cheader</word_key>
+      <word_default>Click the header you want to use</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>select_header</word_key>
+      <word_default>Select new header</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>add_a_cblock</word_key>
+      <word_default>Add a custom block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>remove_cblock</word_key>
+      <word_default>Remove block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_mini_calendar</word_key>
+      <word_default>Mini Calendar</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modcp_tab_blogcomments</word_key>
+      <word_default>Blog Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>in_blog_entry</word_key>
+      <word_default>in blog entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>you_voted</word_key>
+      <word_default>You voted</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>block_delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cp_no_perms</word_key>
+      <word_default>You do not have permission for this action.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>block_edit</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_homepage</word_key>
+      <word_default>Blog homepage</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_entries_yet</word_key>
+      <word_default>has no entries yet</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_short_image</word_key>
+      <word_default>Image reduced in size</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>macro__unread</word_key>
+      <word_default>Unread Topic</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>macro__read</word_key>
+      <word_default>Read Topic</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>on</word_key>
+      <word_default>on</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_queued_comments</word_key>
+      <word_default>%s unapproved comment(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ping_pingomatic</word_key>
+      <word_default>Ping-O-Matic</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_xmlrpc_nopass</word_key>
+      <word_default>You must set a XML-RPC password</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_xmlrpc_nomatch</word_key>
+      <word_default>The entered passwords do not match</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_xmlrpc_user</word_key>
+      <word_default>Username:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_xmlrpc_explain</word_key>
+      <word_default>You can use third party tools to post new entries to your Blog using the XML-RPC interface. The interface supports the Metaweblog API. Use the following URL and username to connect to the API:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_xmlrpc_pass1</word_key>
+      <word_default>XML-RPC Interface password</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_xmlrpc_pass2</word_key>
+      <word_default>Retype Interface password</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ping_technorati</word_key>
+      <word_default>Technorati</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_enablexmlrpc</word_key>
+      <word_default>Enable the XML-RPC interface</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogping</word_key>
+      <word_default>Ping blog tracking services?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ping_blogs</word_key>
+      <word_default>Blo.gs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ping_weblogs</word_key>
+      <word_default>Weblogs.com</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogping_desc</word_key>
+      <word_default>Check the boxes below to ping (inform) the selected blog tracking services when a new entry is made.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_approvetrackbacks</word_key>
+      <word_default>Approve trackbacks?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogset_tbpings</word_key>
+      <word_default>Interfaces</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_approvetrackbacks_desc</word_key>
+      <word_default>When set, trackbacks need to be approved to show up.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogxmlrpc_desc_2</word_key>
+      <word_default><![CDATA[The XML-RPC interface allows you to post blog entries using external blogging tools. The Blogger and Metaweblog API's are supported. The url to the interface is:]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogset_trackbacks</word_key>
+      <word_default>Trackbacks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_themes</word_key>
+      <word_default>There are no themes to choose from.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>tb_error_sess</word_key>
+      <word_default>Please remove the s=%s from the trackback url</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogxmlrpc_desc</word_key>
+      <word_default>XML-RPC interface</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_more_blogs_for_you</word_key>
+      <word_default>You are not allowed to create any more blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>block_config</word_key>
+      <word_default>Configure block</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>tb_error_spam</word_key>
+      <word_default>This trackback was identified as spam</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_members_caches_none</word_key>
+      <word_default>No more members blogs caches to update, task disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>tb_error_dup</word_key>
+      <word_default>This trackback already exists</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>tb_error_nourl</word_key>
+      <word_default>No URL provided</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>tb_error_disabled</word_key>
+      <word_default>Blog owner has disabled trackbacks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>tb_error_send</word_key>
+      <word_default>No permission to send trackback ping</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_categories</word_key>
+      <word_default>Entry Categories</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_save_entry_as</word_key>
+      <word_default>Entry Type</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_def_uncategorized</word_key>
+      <word_default>Uncategorized</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>form_add_cat</word_key>
+      <word_default>Add New Category</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_tags</word_key>
+      <word_default>Tags:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_delete</word_key>
+      <word_default>Delete Blog...</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_create_one</word_key>
+      <word_default>Start A New Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bt_must_have_blog</word_key>
+      <word_default><![CDATA[You need to have at least a blog before being able to use the 'Blog This' function, create a blog and try again]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ucp_options</word_key>
+      <word_default>Options</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_view</word_key>
+      <word_default>View Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_postnew</word_key>
+      <word_default>Post New Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_comments</word_key>
+      <word_default>Latest Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_entries</word_key>
+      <word_default>Manage Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_categories</word_key>
+      <word_default>Manage Categories</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_settings</word_key>
+      <word_default>Manage Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_recentcomments</word_key>
+      <word_default>Recent Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bmod_unapprove</word_key>
+      <word_default>Unapprove</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ucp_goblog</word_key>
+      <word_default>View blog: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bmod_delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bmod_approve</word_key>
+      <word_default>Approve</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>m_blog_ucp_mcomments</word_key>
+      <word_default>Manage Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>m_blog_ucp_mentries</word_key>
+      <word_default>Manage Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ucp_cats_edit</word_key>
+      <word_default>Edit This Category</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ucp_cats_note</word_key>
+      <word_default>Note: Deleting a category will not delete its entries. Entries that were only assigned to the category will be set to Uncategorized</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ucp_cats_manage</word_key>
+      <word_default>Manage Categories</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bcup_someone_elses_blog</word_key>
+      <word_default><![CDATA[%s's Blog]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucp_cat_add_but</word_key>
+      <word_default>Add Category</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bcup_my_blog</word_key>
+      <word_default>My Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucp_btype_private</word_key>
+      <word_default>Private Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucp_blog_owner</word_key>
+      <word_default>Owner:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_ucp_cats_entries</word_key>
+      <word_default>entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucp_btype_privateclub</word_key>
+      <word_default>Private Club Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucp_btype_friends</word_key>
+      <word_default>Friends Only Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucp_btype_public</word_key>
+      <word_default>Public Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bpost_blog_editor</word_key>
+      <word_default>Blog Editor</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucp_no_comments</word_key>
+      <word_default>There are no comments to display</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucp_btype_external</word_key>
+      <word_default>External Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_leave_comment</word_key>
+      <word_default>Leave Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bpost_blog_group</word_key>
+      <word_default>Group Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>no_entry_matches</word_key>
+      <word_default>There are no entries to display</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>leave_a_reply</word_key>
+      <word_default>Leave a Reply</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_is_featured</word_key>
+      <word_default>Featured</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_is_a_draft</word_key>
+      <word_default>Draft</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>read_more_go_on</word_key>
+      <word_default>Read Full Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bg_comment</word_key>
+      <word_default>comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bpost_addtoblog</word_key>
+      <word_default>Add To Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_hp_viewhome</word_key>
+      <word_default>Dashboard</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_post_bt</word_key>
+      <word_default><![CDATA[Please remember that this blog entry is <strong><em>public</em></strong> and any content you quote or use from the Blog This feature may not be suitable for public viewing]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_post_bt_title</word_key>
+      <word_default>Blog This Reminder</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_button_start</word_key>
+      <word_default>Create New Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_goto_view</word_key>
+      <word_default>View</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>com_report_entry</word_key>
+      <word_default>Report Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>err_reg_code</word_key>
+      <word_default>The security code you supplied did not match the one displayed, a new code has been generated, please try again</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entryrate_now</word_key>
+      <word_default>Rate Entry:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_goto_faves</word_key>
+      <word_default>View Favorite Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_rate_agg</word_key>
+      <word_default>Blog rating based on entry rate average</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entryhas_votes</word_key>
+      <word_default>This entry:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bentry_unbanish</word_key>
+      <word_default>Unbanish Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bentry_unbanish_redirect</word_key>
+      <word_default>The banish entry status has been toggled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_list_all</word_key>
+      <word_default>Blogs List</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_banish</word_key>
+      <word_default>Remove entry from the dashboard</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_show</word_key>
+      <word_default>Show</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>brss_NO_ITEMS</word_key>
+      <word_default>RSS feed did not contain any items</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_sort_on</word_key>
+      <word_default>Sort On</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_redirect_hits</word_key>
+      <word_default>redirect hits</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_per_page</word_key>
+      <word_default>Per Page</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>brss_NO_CHANNELS</word_key>
+      <word_default>RSS feed did not contain any channels</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>brss_RSS_CLASS_ERROR</word_key>
+      <word_default>RSS feed error:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>rss_stopped</word_key>
+      <word_default>RSS Import Canceled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>brss_HTTP_STATUS_CODE</word_key>
+      <word_default>Could not load the RSS feed</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_import_title</word_key>
+      <word_default>RSS Imports</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_desc</word_key>
+      <word_default>This is only required if you have a feed behind HTTP_AUTH. Leave blank if in doubt</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rssform_cancel</word_key>
+      <word_default>Stop Importing Now</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_auth_u</word_key>
+      <word_default>HTTP_AUTH Username</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_import_urldesc</word_key>
+      <word_default>This is a full URL that starts with http://</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rssform</word_key>
+      <word_default>Manage RSS Import</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_auth_p</word_key>
+      <word_default>HTTP_AUTH Password</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_auth_t</word_key>
+      <word_default>Authentication</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_import_url</word_key>
+      <word_default>RSS Feed URL</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_stats</word_key>
+      <word_default>%s items have been imported from this feed. Last update run: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_global_disabled_title</word_key>
+      <word_default>Blog Disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_import_t_desc</word_key>
+      <word_default>You can add an RSS feed that will be imported. Each feed article will be added as an entry to this blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_error_no_rss_url</word_key>
+      <word_default>You must enter a valid RSS URL</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_cats</word_key>
+      <word_default>Select categories to apply to all imported items</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_tags_desc</word_key>
+      <word_default>Enter tags to apply to all imported items, separate many with a comma.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_rss_tags</word_key>
+      <word_default>Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_ct_last_comment</word_key>
+      <word_default>Last Activity</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bview_featured</word_key>
+      <word_default>Featured</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_global_disabled_desc</word_key>
+      <word_default><![CDATA[This blog is currently disabled. <a href='%s'>Click here to re-enable it.</a>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bucpo_ct_blog_title</word_key>
+      <word_default>Entry Name</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogucp_entrytracker_header</word_key>
+      <word_default>Blog entries you are tracking</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bpost_publish</word_key>
+      <word_default>Publish</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bview_options</word_key>
+      <word_default>Options</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bview_blog</word_key>
+      <word_default>Blog:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_keep_dash_page</word_key>
+      <word_default><![CDATA[Keep <em>Dasboard</em> as start page]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_blogs</word_key>
+      <word_default>Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bstat_latest_blogger</word_key>
+      <word_default>Latest Blogger</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_opt_commas</word_key>
+      <word_default>(Optional; separate tags with commas)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_keep_list_page</word_key>
+      <word_default><![CDATA[Keep <em>All Blogs</em> as start page]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_no_older</word_key>
+      <word_default>There is no older entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bstat_latest_blog</word_key>
+      <word_default>Latest Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_cats_all</word_key>
+      <word_default>All tags</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bstat_</word_key>
+      <word_default/>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blist_recent_entries</word_key>
+      <word_default>Recent Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ucp_cannot_edit_category</word_key>
+      <word_default>Sorry, this category cannot be edited</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bstat_total_entries</word_key>
+      <word_default>Total Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bstat_total_blogs</word_key>
+      <word_default>Total Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ucp_save_category_edit</word_key>
+      <word_default>Save</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>context_search_blog_comments</word_key>
+      <word_default>Entry Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>ucp_cat_go</word_key>
+      <word_default>Go</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bt_from</word_key>
+      <word_default>From:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>portal_blog_entries</word_key>
+      <word_default>Blog Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_viewmode</word_key>
+      <word_default>View mode of Your Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>post_too_long</word_key>
+      <word_default>The post you entered is too long.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>notify__new_entry</word_key>
+      <word_default>Notify me of new entries on blogs I follow</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackbacks_disabled</word_key>
+      <word_default>Trackbacks are disabled.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>in</word_key>
+      <word_default>in</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>delete_blog_confirm</word_key>
+      <word_default>Confirm Deletion</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>pingservices_disabled</word_key>
+      <word_default>Ping services are not available.</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>delete_blog_confirm_2</word_key>
+      <word_default>Yes, please delete this blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_viewpermonth</word_key>
+      <word_default>List per month</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_trackcomments</word_key>
+      <word_default>New comment notification?</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_blogrssimport_switch</word_key>
+      <word_default>Re-enabled the task to import RSS feeds as blog entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bpost_timeopt</word_key>
+      <word_default>Publish Immediately (Change)</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_is_future_date</word_key>
+      <word_default>Future Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>spam_no_comment</word_key>
+      <word_default>Could not find the comment you wish to submit as spam/ham</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_blogrssimport_disable</word_key>
+      <word_default>No RSS feeds to import, task disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blogname_end_s</word_key>
+      <word_default><![CDATA[&#039; Blog]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_blogrssimport</word_key>
+      <word_default>Imported %s RSS feeds as blog entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_blogentries</word_key>
+      <word_default>Published %s blog entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sharedmedia_blogprefix</word_key>
+      <word_default>Blog:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>sharedmedia_blog</word_key>
+      <word_default>Blog Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>trackback_deleted</word_key>
+      <word_default>Trackback successfully deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>notify__short__new_entry</word_key>
+      <word_default>Entries on a blog I follow</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_sharedimg</word_key>
+      <word_default>Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_ucfirst_unfollow_blog</word_key>
+      <word_default>Unfollow this blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_totalcount_follow_blog</word_key>
+      <word_default>%s member(s) follow this blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_totalcount_follow_entry</word_key>
+      <word_default>%s member(s) follow this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_unfollow_blog</word_key>
+      <word_default>unfollow this blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>rss_error_message</word_key>
+      <word_default>RSS error</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_ucfirst_follow_blog</word_key>
+      <word_default>Follow this blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_unfollow_entry</word_key>
+      <word_default>unfollow this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_ucfirst_unfollow_entry</word_key>
+      <word_default>Unfollow this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_follow_entry</word_key>
+      <word_default>follow this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>m_blog_cblocks</word_key>
+      <word_default>Content Blocks Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>like_ucfirst_follow_entry</word_key>
+      <word_default>Follow this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>modlog_del_comment</word_key>
+      <word_default><![CDATA[Blog(%s) '%s': Deleted Blog comment (%s) of member %s]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>badge_x_drafts_tooltip_p</word_key>
+      <word_default>This blog contains %s draft entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>comment_singular_lower</word_key>
+      <word_default>comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_num_views_prefix</word_key>
+      <word_default>blog views</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_lastentry_preview</word_key>
+      <word_default>Preview the last entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>friends_no_blogs</word_key>
+      <word_default><![CDATA[Your friends don't have a blog yet]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>preview_goto_entry</word_key>
+      <word_default>Go to this entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_disabled_prefix</word_key>
+      <word_default>DISABLED</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_newest_comment</word_key>
+      <word_default>View newest comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_basic_settings</word_key>
+      <word_default>Basic Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>pinned_no_entries</word_key>
+      <word_default>No entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>your_blogs_postnew</word_key>
+      <word_default>Post new entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>profile_noblogentries</word_key>
+      <word_default>No blog entries found</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_all_entry_in_cat</word_key>
+      <word_default><![CDATA[View all entries in '%s' category]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>locked_topic</word_key>
+      <word_default>Sorry, this entry has been locked</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_active_users</word_key>
+      <word_default>Active Users</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>custom_filter</word_key>
+      <word_default>Custom</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>_blog_settings</word_key>
+      <word_default>Blog Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_voters</word_key>
+      <word_default>View Voters</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>featured_entries</word_key>
+      <word_default>Featured Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_my_search</word_key>
+      <word_default>Search My Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_my_tags</word_key>
+      <word_default>Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_my_categories</word_key>
+      <word_default>Categories</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_random_album_image</word_key>
+      <word_default>Random Album Image</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_my_picture</word_key>
+      <word_default>My Picture</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_albums</word_key>
+      <word_default>My Gallery Albums</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_last_comments</word_key>
+      <word_default>Recent Comments</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>add_cblocks</word_key>
+      <word_default>Add Blocks</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>cblock_get_last_entries</word_key>
+      <word_default>Recent Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_image</word_key>
+      <word_default>Entry Image</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>entry_image_change</word_key>
+      <word_default>Change</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_xmlrpc_url</word_key>
+      <word_default>URL:</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>top_js_1star</word_key>
+      <word_default>Rate entry 1 star</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>top_js_5star</word_key>
+      <word_default>Rate entry 5 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>top_js_3star</word_key>
+      <word_default>Rate entry 3 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>top_js_4star</word_key>
+      <word_default>Rate entry 4 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>view_comment</word_key>
+      <word_default>View comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>top_js_2star</word_key>
+      <word_default>Rate entry 2 stars</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>task_members_caches_x</word_key>
+      <word_default>Updated %s members blogs caches</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_error_deletecbox</word_key>
+      <word_default>If you want to delete this blog, you must check the box</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>blog_categories</word_key>
+      <word_default>Categories</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_blog</word_pack>
+      <word_key>bp_html2</word_key>
+      <word_default>HTML On - Auto Linebreak Mode</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_emails</word_pack>
+      <word_key>send_entry_text</word_key>
+      <word_default><![CDATA[I thought you might be interested in reading this Blog page: <#THE LINK#>
+
+From,
+
+<#USER NAME#>
+]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_emails</word_pack>
+      <word_key>footer</word_key>
+      <word_default><![CDATA[
+Regards,
+
+The <#BOARD_NAME#> team.
+<#BOARD_ADDRESS#>
+ ]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_emails</word_pack>
+      <word_key>subject__subs_new_entry</word_key>
+      <word_default>Blog Tracker New Entry Notification</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_emails</word_pack>
+      <word_key>subs_new_entry</word_key>
+      <word_default><![CDATA[<#NAME#>,
+
+<#POSTER#> has just posted a new entry entitled "<#ENTRY_NAME#>" in blog "<#BLOG_NAME#>".
+
+----------------------------------------------------------------------
+<#ENTRY#>
+----------------------------------------------------------------------
+
+The entry can be found here:
+<#BOARD_ADDRESS#>?app=blog&module=display&section=blog&blogid=<#BLOG_ID#>&showentry=<#ENTRY_ID#>
+
+Unsubscribing:
+--------------
+
+You can unsubscribe at any time by logging into your control panel and clicking on the "Blog Tracker" link in the "Blog" tab.
+]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_emails</word_pack>
+      <word_key>new_comment_on_entry</word_key>
+      <word_default><![CDATA[Hello!
+
+This email has been sent from: <#BOARD_NAME#>.
+
+A new comment has been made on <#BLOG_NAME#>.
+
+----------------------------------
+Entry: <#ENTRY_NAME#>
+Author: <#POSTER#>
+Comment:
+<#COMMENT#>
+----------------------------------
+
+The comment can be found here:
+<#URL#>
+]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_emails</word_pack>
+      <word_key>subject__new_comment_on_entry</word_key>
+      <word_default>New Comment on</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_emails</word_pack>
+      <word_key>header</word_key>
+      <word_default/>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_emails</word_pack>
+      <word_key>noblog_youcan_postto</word_key>
+      <word_default><![CDATA[You don't have any blogs that can be posted into. Please create one and try again]]></word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>blog_loc_blog</word_key>
+      <word_default>Viewing Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>blog_loc_entry</word_key>
+      <word_default>Viewing Blog Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>blog_loc_post</word_key>
+      <word_default>Posting an entry or comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>blog_loc_show</word_key>
+      <word_default>Viewing Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>blog_loc_list</word_key>
+      <word_default>Viewing Blogs</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>blog_loc_ucp</word_key>
+      <word_default>Using Control Panel</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_location</word_pack>
+      <word_key>blog_loc_attach</word_key>
+      <word_default>Viewing Blog Attachment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_error_5</word_key>
+      <word_default>This method is not supported!</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_notitle</word_key>
+      <word_default>No entry title specified</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_title_toolong</word_key>
+      <word_default>Entry title too long</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_toolong</word_key>
+      <word_default>Post too long</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_emptypost</word_key>
+      <word_default>Empty post</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_noxmlrpc</word_key>
+      <word_default>The interface is not enabled</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_nopost</word_key>
+      <word_default>No blog post permissions</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_board_offline</word_key>
+      <word_default>The community is offline</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_suspended</word_key>
+      <word_default>The user is (temporarely) suspended</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_banned_msg</word_key>
+      <word_default>You are banned</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_inv_pass</word_key>
+      <word_default>Invalid password</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_noblog</word_key>
+      <word_default>No Blog found for this user</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_unknown_user</word_key>
+      <word_default>Unknown user</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_error_4</word_key>
+      <word_default>Entry with id (%s) not found</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_error_3</word_key>
+      <word_default>Unknown Blog ID</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_deleted_log</word_key>
+      <word_default>Deleted Blog entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_error_2</word_key>
+      <word_default>Entry with id (%s) not found</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_error_1</word_key>
+      <word_default>No permission to delete an entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>blogger_blog_prefix</word_key>
+      <word_default>Blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>search_posted_in</word_key>
+      <word_default>Posted in</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>search_posted_by</word_key>
+      <word_default>by</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>search_posted_on</word_key>
+      <word_default>on</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>last_entry_in</word_key>
+      <word_default>in</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>latest_entries_title</word_key>
+      <word_default>Latest Blog Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>visit_blog</word_key>
+      <word_default>Visit this blog</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>noblogentries</word_key>
+      <word_default>No blog entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>readentry</word_key>
+      <word_default>Read entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>comment</word_key>
+      <word_default>Comment</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>posted_by</word_key>
+      <word_default>Posted by</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>followed_type__entries</word_key>
+      <word_default>Entries</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>entry</word_key>
+      <word_default>Entry</word_default>
+    </lang>
+    <lang>
+      <word_app>blog</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>followed_type__blog</word_key>
+      <word_default>Blog</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

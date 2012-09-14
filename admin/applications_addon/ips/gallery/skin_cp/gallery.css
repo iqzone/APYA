@@ -1,0 +1,319 @@
+
+.header {
+	background: #d6e4f1;
+	color: #246594;
+	text-shadow: 1px 1px 0 #d4e1ef;
+	padding: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/**
+ * Styles needed for album selector box taken from ips_styles.css
+ */
+
+.ipsUserPhoto {
+	padding: 1px;
+	border: 1px solid #d5d5d5;
+	background: #fff;
+	-webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+}
+
+.popupInner h3 {
+	background: #2c5687;
+	color: #fff;
+	border-width: 1px 1px 0 1px;
+	border-style: solid;
+	border-color: #316897;
+	padding: 8px 10px 9px;
+	font-size: 16px;
+	font-weight: 300;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0px 1px 0 #528cbc;
+	box-shadow: inset 0px 1px 0 #528cbc;
+	-moz-box-shadow: inset 0px 1px 0 #528cbc;
+}
+
+.ipsBox, .ipsPad { padding: 9px; }
+
+ipsBox { background: #ebf0f3; }
+
+.ipsBox_container {
+		background: #fff;
+		border: 1px solid #dbe4ef;
+	}
+
+.ipsPad_half { padding: 4px !important; }
+.ipsPad_left { padding-left: 9px; }
+.ipsPad_top { padding-top: 9px; }
+.ipsPad_top_slimmer { padding-top: 7px; }
+.ipsPad_top_half { padding-top: 4px; }
+.ipsPad_top_bottom { padding-top: 9px; padding-bottom: 9px; }
+.ipsPad_top_bottom_half { padding-top: 4px; padding-bottom: 4px; }
+
+.ipsForm_center { text-align: center; }
+
+.ipsButton_secondary {
+	height: 22px;
+	line-height: 22px;
+	font-size: 12px;
+	padding: 0 10px;
+	background: #f6f6f6;
+	background: -moz-linear-gradient(top, #f6f6f6 0%, #e5e5e5 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#e5e5e5)); /* webkit */
+	border: 1px solid #dbdbdb;
+	-moz-box-shadow: 0px 1px 0px rgba(255,255,255,1) inset, 0px 1px 0px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,1) inset, 0px 1px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 1px 0px rgba(255,255,255,1) inset, 0px 1px 0px rgba(0,0,0,0.3);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #616161;
+	display: inline-block;
+	white-space: nowrap;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+}
+	.ipsButton_secondary a { color: #616161; }
+	.ipsButton_secondary:hover {
+		color: #4c4c4c;
+		border-color: #9a9a9a;
+	}
+
+
+/************************************************************************/
+/* TYPOGRAPHY */
+
+.ipsType_pagetitle, .ipsType_subtitle {
+	font: 300 26px/1.3 Helvetica, Arial, sans-serif;
+	color: #323232;
+}
+.ipsType_subtitle { font-size: 18px; }
+.ipsType_sectiontitle { 
+	font-size: 16px;
+	font-weight: normal;
+	color: #595959;
+	padding: 5px 0;
+	border-bottom: 1px solid #ececec;
+}
+
+.ipsType_pagedesc {
+	color: #7f7f7f;
+	line-height: 1.5;
+}
+
+.ipsType_pagedesc a { text-decoration: underline; }
+
+.ipsType_textblock { line-height: 1.5; color: #282828; }
+
+.ipsType_small { font-size: 12px; }
+.ipsType_smaller, .ipsType_smaller a { font-size: 11px !important; }
+
+.ipsReset { margin: 0px !important; padding: 0px !important; }
+
+.
+.desc, .desc.blend_links a, p.posted_info {
+	font-size: 12px;
+	color: #777777;
+}
+.desc.lighter, .desc.lighter.blend_links a {
+	color: #a4a4a4;
+}	
+/* Album selection */
+.albumSelected {
+	font-weight: bold;
+	padding: 4px 10px;
+	border: 1px solid #d5d5d5;
+	background: #fff;
+	-webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+	display: inline-block;
+	border-radius: 3px;
+	margin: 0 3px;
+}
+
+
+/************************************************************************/
+/* TABLE STYLES */
+
+table.ipb_table {
+	width: 100%;
+	line-height: 1.3;
+	border-collapse: collapse;
+}
+	
+	/**
+	 *  @key			ipb_table
+	 *  @group			tables
+	 *  @colorize		base
+	 *	@title			Tabular Data Rows
+	 *  @description	Used where there is tabular data
+	 *	@default		border
+	 */
+	table.ipb_table td {
+		padding: 10px;
+		border-bottom: 1px solid #f3f3f3;
+	}
+		
+		table.ipb_table tr.unread h4 { font-weight: bold; }
+		table.ipb_table tr.highlighted td { border-bottom: 0; }
+	
+	table.ipb_table th {
+		font-size: 11px;
+		font-weight: bold;
+		padding: 8px 6px;
+	}
+	
+.last_post { margin-left: 45px; }
+
+table.ipb_table h4,
+table.ipb_table .topic_title {
+	font-size: 14px;
+	display: inline-block;
+}
+
+
+
+/************************************************************************/
+/* LAYOUT SYSTEM */
+
+.ipsLayout.ipsLayout_withleft { padding-left: 210px; }
+	.ipsBox.ipsLayout.ipsLayout_withleft { padding-left: 220px; }
+.ipsLayout.ipsLayout_withright { padding-right: 210px; clear: left; }
+	.ipsBox.ipsLayout.ipsLayout_withright { padding-right: 220px; }
+	
+/* Panes */
+.ipsLayout_content, .ipsLayout .ipsLayout_left, .ipsLayout_right { position: relative; }
+.ipsLayout_content { width: 100%; float: left; }
+.ipsLayout .ipsLayout_left { width: 200px; margin-left: -210px; float: left; }
+.ipsLayout .ipsLayout_right { width: 200px; margin-right: -210px; float: right; }
+
+/* Wider sidebars */
+.ipsLayout_largeleft.ipsLayout_withleft { padding-left: 280px; }
+	.ipsBox.ipsLayout_largeleft.ipsLayout_withleft { padding-left: 290px; }
+.ipsLayout_largeleft.ipsLayout .ipsLayout_left { width: 270px; margin-left: -280px; }
+.ipsLayout_largeright.ipsLayout_withright { padding-right: 280px; }
+	.ipsBox.ipsLayout_largeright.ipsLayout_withright { padding-right: 290px; }
+.ipsLayout_largeright.ipsLayout .ipsLayout_right { width: 270px; margin-right: -280px; }
+
+/* Narrow sidebars */
+.ipsLayout_smallleft.ipsLayout_withleft { padding-left: 150px; }
+	.ipsBox.ipsLayout_smallleft.ipsLayout_withleft { padding-left: 160px; }
+.ipsLayout_smallleft.ipsLayout .ipsLayout_left { width: 140px; margin-left: -150px; }
+.ipsLayout_smallright.ipsLayout_withright { padding-right: 150px; }
+	.ipsBox.ipsLayout_smallright.ipsLayout_withright { padding-right: 160px; }
+.ipsLayout_smallright.ipsLayout .ipsLayout_right { width: 140px; margin-right: -150px; }
+
+/* Tiny sidebar */
+.ipsLayout_tinyleft.ipsLayout_withleft { padding-left: 50px; }
+	.ipsBox.ipsLayout_tinyleft.ipsLayout_withleft { padding-left: 60px; }
+.ipsLayout_tinyleft.ipsLayout .ipsLayout_left { width: 40px; margin-left: -40px; }
+.ipsLayout_tinyright.ipsLayout_withright { padding-right: 50px; }
+	.ipsBox.ipsLayout_tinyright.ipsLayout_withright { padding-right: 60px; }
+.ipsLayout_tinyright.ipsLayout .ipsLayout_right { width: 40px; margin-right: -40px; }
+
+/* Big sidebar */
+.ipsLayout_bigleft.ipsLayout_withleft { padding-left: 330px; }
+	.ipsBox.ipsLayout_bigleft.ipsLayout_withleft { padding-left: 340px; }
+.ipsLayout_bigleft.ipsLayout .ipsLayout_left { width: 320px; margin-left: -330px; }
+.ipsLayout_bigright.ipsLayout_withright { padding-right: 330px; }
+	.ipsBox.ipsLayout_bigright.ipsLayout_withright { padding-right: 340px; }
+.ipsLayout_bigright.ipsLayout .ipsLayout_right { width: 320px; margin-right: -330px; }
+
+/* Even Wider sidebars */
+.ipsLayout_hugeleft.ipsLayout_withleft { padding-left: 380px; }
+	.ipsBox.ipsLayout_hugeleft.ipsLayout_withleft { padding-left: 390px; }
+.ipsLayout_hugeleft.ipsLayout .ipsLayout_left { width: 370px; margin-left: -380px; }
+.ipsLayout_hugeright.ipsLayout_withright { padding-right: 380px; }
+	.ipsBox.ipsLayout_hugeright.ipsLayout_withright { padding-right: 390px; }
+.ipsLayout_hugeright.ipsLayout .ipsLayout_right { width: 370px; margin-right: -380px; }
+
+	
+/************************************************************************/
+/* VERTICAL TABS (profile etc.) */
+
+.ipsVerticalTabbed { }
+
+	.ipsVerticalTabbed_content {
+		min-height: 400px;
+	}
+	
+	.ipsVerticalTabbed_tabs > ul {
+		width: 149px !important;
+		margin-top: 10px;
+		border-top: 1px solid #DBE4EF;
+		border-left: 1px solid #DBE4EF;
+	}
+		
+		.ipsVerticalTabbed_minitabs.ipsVerticalTabbed_tabs > ul { width: 40px !important; }
+		
+		/**
+		 *	@key			ipsVerticalTabbed_tabs_li
+		 *  @group			other
+		 *  @colorize		base
+		 *	@title			Vertical Tab
+		 *  @description	Used on profile page and other UserCP when veritcal tabs are needed
+		 *	@default		background,color,border
+		 */
+		.ipsVerticalTabbed_tabs li {
+			background: #f6f8fb;
+			color: #808080;
+			border-bottom: 1px solid #DBE4EF;
+			font-size: 13px;
+		}
+		
+			/**
+			 *	@key			ipsVerticalTabbed_tabs_li_a
+			 *  @group			other
+			 *  @colorize		base
+			 *	@title			Vertical Tab Link
+			 *  @description	Link on a vertical tab
+			 *	@default		color
+			 */
+			.ipsVerticalTabbed_tabs li a {
+				display: block;
+				padding: 10px 8px;
+				outline: 0;
+				color: #8d8d8d;
+				-webkit-transition: background-color 0.1s ease-in-out;
+				-moz-transition: background-color 0.3s ease-in-out;
+			}
+			
+				/**
+				 *	@key			ipsVerticalTabbed_tabs_li_a_hover
+				 *  @group			other
+				 *  @colorize		base
+				 *	@title			Vertical Tab Link Hover
+				 *  @description	Hover over a vertical tab
+				 *	@default		background,color
+				 */
+				.ipsVerticalTabbed_tabs li a:hover {
+					background: #eaeff5;
+					color: #808080;
+				}
+			
+				/**
+				 *	@key			ipsVerticalTabbed_tabs_li_active
+				 *  @group			other
+				 *  @colorize		base
+				 *	@title			Vertical Tab Active
+				 *  @description	An active tab
+				 *	@default		background,color,border
+				 */
+				.ipsVerticalTabbed_tabs li.active a {
+					width: 135px;
+					position: relative;
+					z-index: 8000;
+					border-right: 1px solid #fff;
+					background: #fff;
+					color: #353535;
+					font-weight: bold;
+				}
+				
+					.ipsVerticalTabbed_minitabs.ipsVerticalTabbed_tabs li.active a {
+						width: 24px;
+					}
+

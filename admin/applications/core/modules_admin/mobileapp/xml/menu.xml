@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Mobile App</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Mobile App</subitemtitle>
+					<subitemlang>skins_manage_app_images</subitemlang>
+					<subsection>images</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey>app_images</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

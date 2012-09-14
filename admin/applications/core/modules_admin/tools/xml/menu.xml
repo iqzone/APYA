@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Performance Mode</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Performance Mode</subitemtitle>
+					<subitemlang>performance</subitemlang>
+					<subsection>performance</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>performance_toggle</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>License Key</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>License Key</subitemtitle>
+					<subitemlang>licensekey</subitemlang>
+					<subsection>licensekey</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>licensekey_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>User Agent Management</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>User Agent Management</subitemtitle>
+					<subitemlang>uagents</subitemlang>
+					<subsection>uagents</subsection>
+					<subitemurl>do=list</subitemurl>
+					<subitemrolekey>uagents</subitemrolekey>
+					<subisredirect>0</subisredirect>
+					<subitemkeywords>spiders</subitemkeywords>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Recount &amp; Rebuild</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Recount &amp; Rebuild</subitemtitle>
+					<subitemlang>recount_rebuild</subitemlang>
+					<subsection>rebuild</subsection>
+					<subitemurl>do=rebuild_overview</subitemurl>
+					<subitemrolekey>rebuild_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Clean Up Tools</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Clean Up Tools</subitemtitle>
+					<subitemlang>cleanup_tools</subitemlang>
+					<subsection>rebuild</subsection>
+					<subitemurl>do=tools</subitemurl>
+					<subitemrolekey>cleanup_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Manage Help Files</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Manage Help Files</subitemtitle>
+					<subitemlang>manage_help</subitemlang>
+					<subsection>help</subsection>
+					<subitemurl>do=help_overview</subitemurl>
+					<subitemrolekey>helpfiles_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Cache Management</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Cache Management</subitemtitle>
+					<subitemlang>caches</subitemlang>
+					<subsection>cache</subsection>
+					<subitemurl>do=cache_overview</subitemurl>
+					<subitemrolekey>cache_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Question &amp; Answer Challenge</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Question &amp; Answer Challenge</subitemtitle>
+					<subitemlang>qanda</subitemlang>
+					<subsection>qanda</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>qanda_view</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>			
+		<item>
+			<title>API Users</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>API Users</subitemtitle>
+					<subitemlang>api_users</subitemlang>
+					<subsection>api</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>api_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Log In Management</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Log In Management</subitemtitle>
+					<subitemlang>login_modules</subitemlang>
+					<subsection>login</subsection>
+					<subitemurl>do=login_overview</subitemurl>
+					<subitemrolekey>login_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Share Links</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Share Links</subitemtitle>
+					<subitemlang>sharelinks</subitemlang>
+					<subsection>sharelinks</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>sharelinks_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Incoming Email Rules</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Incoming Email Rules</subitemtitle>
+					<subitemlang>incoming_emails</subitemlang>
+					<subsection>incomingEmails</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>incomingemail_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+			<condition><![CDATA[
+					$systemvars = ipsRegistry::cache()->getCache('systemvars');
+					return $systemvars['incomingEmails'];
+				]]></condition>
+		</item>
+	</tabitems>
+</menu>

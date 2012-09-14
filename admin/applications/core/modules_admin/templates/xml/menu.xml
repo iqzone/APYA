@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Manage Skin Sets &amp; Templates</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Manage Skin Sets &amp; Templates</subitemtitle>
+					<subitemlang>skins_manage</subitemlang>
+					<subsection>skinsets</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey>settemplates_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Template Tools</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Template Tools</subitemtitle>
+					<subitemlang>skins_tools</subitemlang>
+					<subsection>tools</subsection>
+					<subitemurl>do=splash</subitemurl>
+					<subitemrolekey>template_tools</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Template Merge Center</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Template Merge Center</subitemtitle>
+					<subitemlang>skins_merge</subitemlang>
+					<subsection>skindiff</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey>skindiff_reports</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Search and Replace</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Search and Replace</subitemtitle>
+					<subitemlang>skins_sar</subitemlang>
+					<subsection>searchandreplace</subsection>
+					<subitemurl>do=showform</subitemurl>
+					<subitemrolekey>templates_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Easy Logo Changer</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Easy Logo Changer</subitemtitle>
+					<subitemlang>skins_logo</subitemlang>
+					<subsection>easylogo</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>easy_logo</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Import / Export</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Import / Export</subitemtitle>
+					<subitemlang>skins_ie</subitemlang>
+					<subsection>importexport</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey>settemplates_export</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Externally Edit Templates &amp; CSS</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Externally Edit Templates &amp; CSS</subitemtitle>
+					<subitemlang>skins_external</subitemlang>
+					<subsection>external</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey>settemplates_external</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

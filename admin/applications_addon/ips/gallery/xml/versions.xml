@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<versions>
+	<version>
+		<human>1.2.X</human>
+		<long>10002</long>
+	</version>
+	<version>
+		<human>1.3.0 PF1</human>
+		<long>10003</long>
+	</version>
+	<version>
+		<human>1.3.0 PF2</human>
+		<long>10004</long>
+	</version>
+	<version>
+		<human>1.3.0 PF3</human>
+		<long>10005</long>
+	</version>
+	<version>
+		<human>1.3.0 PF4</human>
+		<long>10006</long>
+	</version>
+	<version>
+		<human>1.3.0</human>
+		<long>10007</long>
+	</version>
+	<version>
+		<human>1.3.1</human>
+		<long>10008</long>
+	</version>
+	<version>
+		<human>2.0.0 Beta 4</human>
+		<long>20001</long>
+	</version>
+	<version>
+		<human>2.0.0 Beta 5</human>
+		<long>20002</long>
+	</version>
+	<version>
+		<human>2.0.0 RC 1</human>
+		<long>20003</long>
+	</version>
+	<version>
+		<human>2.0.0 RC 2</human>
+		<long>20004</long>
+	</version>
+	<version>
+		<human>2.0.0 RC 3</human>
+		<long>20005</long>
+	</version>
+	<version>
+		<human>2.0.0 FINAL</human>
+		<long>20006</long>
+	</version>
+	<version>
+		<human>2.0.1</human>
+		<long>20007</long>
+	</version>
+	<version>
+		<human>2.0.2</human>
+		<long>20008</long>
+	</version>
+	<version>
+		<human>2.0.3</human>
+		<long>20009</long>
+	</version>
+	<version>
+		<human>2.0.4</human>
+		<long>20010</long>
+	</version>
+	<version>
+		<human>2.0.5</human>
+		<long>20011</long>
+	</version>
+	<version>
+		<human>2.0.6</human>
+		<long>20012</long>
+	</version>
+	<version>
+		<human>2.0.7</human>
+		<long>20013</long>
+	</version>
+	<version>
+		<human>2.1.0 RC1</human>
+		<long>21002</long>
+	</version>
+	<version>
+		<human>2.1.0 RC2</human>
+		<long>21003</long>
+	</version>
+	<version>
+		<human>2.1.0 RC3</human>
+		<long>21004</long>
+	</version>
+	<version>
+		<human>2.1.0</human>
+		<long>21005</long>
+	</version>
+	<version>
+		<human>2.1.1</human>
+		<long>21006</long>
+	</version>
+	<version>
+		<human>2.1.2</human>
+		<long>21007</long>
+	</version>
+	<version>
+		<human>2.2.0 Beta 1</human>
+		<long>22000</long>
+	</version>
+	<version>
+		<human>2.2.0 Beta 2</human>
+		<long>22001</long>
+	</version>
+	<version>
+		<human>2.2.0 Beta 3</human>
+		<long>22002</long>
+	</version>
+	<version>
+		<human>2.2.0 RC 1</human>
+		<long>22003</long>
+	</version>
+	<version>
+		<human>2.2.0 RC 2</human>
+		<long>22004</long>
+	</version>
+	<version>
+		<human>2.2.0 RC 3</human>
+		<long>22005</long>
+	</version>
+	<version>
+		<human>2.2.0 RC 4</human>
+		<long>22006</long>
+	</version>
+	<version>
+		<human>2.2.0</human>
+		<long>22007</long>
+	</version>
+	<version>
+		<human>2.2.1</human>
+		<long>22008</long>
+	</version>
+	<version>
+		<human>2.2.2</human>
+		<long>22009</long>
+	</version>
+	<version>
+		<human>2.2.3</human>
+		<long>22010</long>
+	</version>
+	<version>
+		<human>2.2.4</human>
+		<long>22011</long>
+	</version>
+	<version>
+		<human>3.0.0 Beta 1</human>
+		<long>30000</long>
+	</version>
+	<version>
+		<human>3.0.0 Beta 2</human>
+		<long>30001</long>
+	</version>
+	<version>
+		<human>3.0.0 Beta 3</human>
+		<long>30002</long>
+	</version>
+	<version>
+		<human>3.0.0 RC 1</human>
+		<long>30003</long>
+	</version>
+	<version>
+		<human>3.0.0 RC 2</human>
+		<long>30004</long>
+	</version>
+	<version>
+		<human>3.0.0</human>
+		<long>30005</long>
+	</version>
+	<version>
+		<human>3.0.1</human>
+		<long>30006</long>
+	</version>
+	<version>
+		<human>3.0.2</human>
+		<long>30007</long>
+	</version>
+	<version>
+		<human>3.0.3</human>
+		<long>30008</long>
+	</version>
+	<version>
+		<human>3.0.4</human>
+		<long>30009</long>
+	</version>
+	<version>
+		<human>3.1.0 Beta 1</human>
+		<long>31000</long>
+	</version>
+	<version>
+		<human>3.1.0 RC 1</human>
+		<long>31001</long>
+	</version>
+	<version>
+		<human>3.1.0 RC 2</human>
+		<long>31002</long>
+	</version>
+	<version>
+		<human>3.1.0</human>
+		<long>31003</long>
+	</version>
+	<version>
+		<human>3.2.0 Beta 1</human>
+		<long>32000</long>
+	</version>
+	<version>
+		<human>3.2.0 Beta 2</human>
+		<long>32001</long>
+	</version>
+	<version>
+		<human>3.2.0 Beta 3</human>
+		<long>32002</long>
+	</version>
+	<version>
+		<human>3.2.0</human>
+		<long>32003</long>
+	</version>
+	<version>
+		<human>3.2.1</human>
+		<long>32004</long>
+	</version>
+	<version>
+		<human>3.2.2</human>
+		<long>32005</long>
+	</version>
+	<version>
+		<human>4.0.0 Beta 1</human>
+		<long>40000</long>
+	</version>
+		<version>
+		<human>4.0.0 Beta 2</human>
+		<long>40001</long>
+	</version>
+	<version>
+		<human>4.0.0 Beta 3</human>
+		<long>40002</long>
+	</version>
+	<version>
+		<human>4.0.0 Beta 4</human>
+		<long>40003</long>
+	</version>
+	<version>
+		<human>4.0.0 Beta 5</human>
+		<long>40004</long>
+	</version>
+	<version>
+		<human>4.0.0 Beta 6</human>
+		<long>40005</long>
+	</version>
+	<version>
+		<human>4.0.0</human>
+		<long>40006</long>
+	</version>
+	<version>
+		<human>4.0.1</human>
+		<long>40007</long>
+	</version>
+	<version>
+		<human>4.0.2</human>
+		<long>40008</long>
+	</version>
+	<version>
+		<human>4.0.3</human>
+		<long>40009</long>
+	</version>
+	<version>
+		<human>4.0.4</human>
+		<long>40010</long>
+	</version>
+	<version>
+		<human>4.1.0 Beta 1</human>
+		<long>41000</long>
+	</version>
+	<version>
+		<human>4.1.0 Beta 2</human>
+		<long>41001</long>
+	</version>
+	<version>
+		<human>4.1.0</human>
+		<long>41002</long>
+	</version>
+	<version>
+		<human>4.1.1</human>
+		<long>41003</long>
+	</version>
+	<version>
+		<human>4.2.0 RC 1</human>
+		<long>42000</long>
+	</version>
+	<version>
+		<human>4.2.0</human>
+		<long>42001</long>
+	</version>
+	<version>
+		<human>4.2.1</human>
+		<long>42002</long>
+	</version>
+</versions>

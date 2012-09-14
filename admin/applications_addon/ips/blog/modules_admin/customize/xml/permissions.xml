@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Blog Theme Management</grouptitle>
+		<grouplang>blogs_themes</grouplang>
+		<items>
+			<item>
+				<key>blog_theme_manage</key>
+				<string>Can add/edit themes?</string>
+			</item>
+			<item>
+				<key>blog_theme_delete</key>
+				<string>Can delete themes?</string>
+			</item>
+			<item>
+				<key>blog_theme_approve</key>
+				<string>Can approve custom themes?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

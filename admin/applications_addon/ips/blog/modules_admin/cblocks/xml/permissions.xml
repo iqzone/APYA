@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Blog Content Block Management</grouptitle>
+		<grouplang>blogs_cblocks</grouplang>
+		<items>
+			<item>
+				<key>blogs_cmanage</key>
+				<string>Can add/edit content blocks?</string>
+			</item>
+			<item>
+				<key>blogs_cdelete</key>
+				<string>Can delete content blocks?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

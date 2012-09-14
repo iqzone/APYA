@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Reasons</grouptitle>
+		<grouplang>warn_reasons</grouplang>
+		<items>
+			<item>
+				<key>reasons_view</key>
+				<string>Can view warning reasons?</string>
+			</item>
+			<item>
+				<key>reasons_edit</key>
+				<string>Can edit warning reasons?</string>
+			</item>
+			<item>
+				<key>reasons_add</key>
+				<string>Can add new warning reasons?</string>
+			</item>
+			<item>
+				<key>reasons_delete</key>
+				<string>Can delete warning reasons?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Actions</grouptitle>
+		<grouplang>warn_actions</grouplang>
+		<items>
+			<item>
+				<key>actions_view</key>
+				<string>Can view warning actions?</string>
+			</item>
+			<item>
+				<key>actions_edit</key>
+				<string>Can edit warning actions?</string>
+			</item>
+			<item>
+				<key>actions_add</key>
+				<string>Can add new warning actions?</string>
+			</item>
+			<item>
+				<key>actions_delete</key>
+				<string>Can delete warning actions?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

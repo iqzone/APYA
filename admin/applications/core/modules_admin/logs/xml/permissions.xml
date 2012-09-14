@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Admin Logs</grouptitle>
+		<grouplang>core_adminlogs</grouplang>
+		<items>
+			<item>
+				<key>adminlogs_view</key>
+				<string>Can view admin logs?</string>
+			</item>
+			<item>
+				<key>adminlogs_delete</key>
+				<string>Can delete admin logs?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Moderator Logs</grouptitle>
+		<grouplang>core_modlogs</grouplang>
+		<items>
+			<item>
+				<key>modlogs_view</key>
+				<string>Can view moderator logs?</string>
+			</item>
+			<item>
+				<key>modlogs_delete</key>
+				<string>Can delete moderator logs?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Email Error Logs</grouptitle>
+		<grouplang>core_eelogs</grouplang>
+		<items>
+			<item>
+				<key>emailerrorlogs_view</key>
+				<string>Can view email error logs?</string>
+			</item>
+			<item>
+				<key>emailerrorlogs_delete</key>
+				<string>Can delete email error logs?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Spider Logs</grouptitle>
+		<grouplang>core_spiderlogs</grouplang>
+		<items>
+			<item>
+				<key>spiderlogs_view</key>
+				<string>Can view spider logs?</string>
+			</item>
+			<item>
+				<key>spiderlogs_delete</key>
+				<string>Can delete spider logs?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Warn Logs</grouptitle>
+		<grouplang>core_warnlogs</grouplang>
+		<items>
+			<item>
+				<key>warnlogs_view</key>
+				<string>Can view warn logs?</string>
+			</item>
+			<item>
+				<key>warnlogs_delete</key>
+				<string>Can delete warn logs?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Error Logs</grouptitle>
+		<grouplang>core_errorlogs</grouplang>
+		<items>
+			<item>
+				<key>errorlogs_view</key>
+				<string>Can view error logs?</string>
+			</item>
+			<item>
+				<key>errorlogs_delete</key>
+				<string>Can delete error logs?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>SQL Error Logs</grouptitle>
+		<grouplang>core_selogs</grouplang>
+		<items>
+			<item>
+				<key>sqlerrorlogs_view</key>
+				<string>Can view SQL error logs?</string>
+			</item>
+			<item>
+				<key>sqlerrorlogs_delete</key>
+				<string>Can delete SQL error logs?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

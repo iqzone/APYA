@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<css>
+  <cssfile>
+    <css_set_id>0</css_set_id>
+    <css_updated>1333723554</css_updated>
+    <css_group>ipblog</css_group>
+    <css_content/>
+    <css_position>1</css_position>
+    <css_app>blog</css_app>
+    <css_app_hide>1</css_app_hide>
+    <css_attributes><![CDATA[title="Main" media="screen,print"]]></css_attributes>
+    <css_removed>0</css_removed>
+    <css_modules/>
+    <css_master_key>xmlskin</css_master_key>
+  </cssfile>
+  <cssfile>
+    <css_set_id>0</css_set_id>
+    <css_updated>1333723554</css_updated>
+    <css_group>ipblog.print</css_group>
+    <css_content/>
+    <css_position>2</css_position>
+    <css_app>blog</css_app>
+    <css_app_hide>1</css_app_hide>
+    <css_attributes><![CDATA[title="Print" media="print"]]></css_attributes>
+    <css_removed>0</css_removed>
+    <css_modules/>
+    <css_master_key>xmlskin</css_master_key>
+  </cssfile>
+</css>

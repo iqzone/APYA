@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>Blog: Blog This Display</hook_name>
+      <hook_desc>Shows who has blogged a topic underneath the topic</hook_desc>
+      <hook_author>Invision Power Services, Inc.</hook_author>
+      <hook_email>support@invisionpower.com</hook_email>
+      <hook_website>http://www.invisionpower.com</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:3:{s:21:"required_applications";a:1:{s:4:"blog";a:3:{s:8:"app_name";s:4:"Blog";s:11:"min_version";i:25003;s:11:"max_version";i:0;}}s:20:"hook_php_version_min";s:0:"";s:20:"hook_php_version_max";s:0:"";}]]></hook_requirements>
+      <hook_version_human>2.5.2</hook_version_human>
+      <hook_version_long>25005</hook_version_long>
+      <hook_extra_data/>
+      <hook_key>blog_blogthis</hook_key>
+      <hook_global_caches/>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>blogsBlogThisShow.php</hook_file_real>
+      <hook_type>templateHooks</hook_type>
+      <hook_classname>blogsBlogThisShow</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:10:"skin_topic";s:12:"skinFunction";s:17:"topicViewTemplate";s:4:"type";s:2:"if";s:2:"id";s:16:"topicActiveUsers";s:8:"position";s:11:"pre.startif";}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+/**
+ * @file		blogsBlogThisShow.php 	Show a list of related 'Blog this' entries for the topic replies
+ *~TERABYTE_DOC_READY~
+ * $Copyright: (c) 2001 - 2011 Invision Power Services, Inc.$
+ * $License: http://www.invisionpower.com/company/standards.php#license$
+ * $Author: ips_terabyte $
+ * @since		17 May 2011
+ * $LastChangedDate: 2011-05-18 04:49:10 -0400 (Wed, 18 May 2011) $
+ * @version		v2.5.2
+ * $Revision: 8812 $
+ */
+
+/**
+ * @class		blogsBlogThisShow
+ * @brief		Show a list of related 'Blog this' entries for the topic replies
+ */
+class blogsBlogThisShow
+{
+	/**
+	 * Registry Object Shortcuts
+	 *
+	 * @var		$registry
+	 */
+	public $registry;
+	
+	/**
+	 * Constructor
+	 *
+	 * @return	@e void
+	 */
+	public function __construct()
+	{
+		$this->registry = ipsRegistry::instance();
+	}
+	
+	public function getOutput()
+	{
+		/* Init vars */
+		$output = '';
+		
+		if ( IPSLib::appIsInstalled('blog') )
+		{
+			/* Require our gateway */
+			$classToLoad = IPSLib::loadLibrary( IPSLib::getAppDir('blog') . '/sources/classes/hooks/gateway.php', 'blog_hookGateway', 'blog' );
+			$hookGateway = new $classToLoad( $this->registry );
+			
+			$output = $hookGateway->showBloggedThis();
+		}
+		
+		return $output;
+	}	
+}]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings/>
+  <hookextras_language/>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates/>
+  <hookextras_css/>
+  <hookextras_replacements/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

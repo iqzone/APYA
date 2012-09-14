@@ -1,0 +1,50 @@
+/*<IPS_IMPORT_BLOCK>
+DO NOT REMOVE OR ALTER THIS PLEASE. IT IS REMOVED AUTOMATICALLY BY THE IMPORT ROUTINE.
+<css_position>0</css_position>
+<css_app>core</css_app>
+<css_modules>help</css_modules>
+<css_app_hide>0</css_app_hide>
+<css_attributes>title="Main" media="screen,print"</css_attributes>
+</IPS_IMPORT_BLOCK>*/
+/************************************************************************/
+/* IP.Board 3 CSS - By Rikki Tissier - (c)2008 Invision Power Services 	*/
+/************************************************************************/
+/* ipb_help.css													*/
+/************************************************************************/
+/*
+	[ color ]
+	[ font ]
+	[ borders ]
+	[ padding ]
+	[ margin ]
+	[ sizing ]
+	[ other ]
+*/
+
+/************************************************************************/
+/*  HELP & PORTAL STYLES */
+	
+#help_topics { border: 1px solid #c9c9c9; }
+
+#help_topics li {
+	background-image: url(http://layout.iq-zone.com/public/style_images/master/help.png);
+	background-repeat: no-repeat;
+	background-position: 9px 12px;
+	padding: 10px 32px;
+	margin-bottom: 2px;
+}
+
+	#help_topics li h3 { padding: 2px 0 0 0; }
+
+.help_doc {	border: 1px solid #c9c9c9; }
+	#help_topics .help_doc ul,
+	#help_topics .help_doc ol {
+		padding: 8px 0;
+	}
+
+	#help_topics .help_doc li {
+		background: none;
+		padding: 2px;
+	}
+	.help_doc .input_submit { background: #dfdfdf; border: 0 !important; color: #000;	font-weight: bold; font-size: inherit; padding: 1px 4px; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+		.help_doc .input_submit:hover { color: #000 }

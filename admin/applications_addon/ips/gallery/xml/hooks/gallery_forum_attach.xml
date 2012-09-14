@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>Gallery: Show albums in board index</hook_name>
+      <hook_desc>Shows albums on the board index under forums</hook_desc>
+      <hook_author>Invision Power Services, Inc</hook_author>
+      <hook_email/>
+      <hook_website/>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:4:{s:20:"hook_ipb_version_min";i:0;s:20:"hook_ipb_version_max";i:0;s:20:"hook_php_version_min";s:0:"";s:20:"hook_php_version_max";s:0:"";}]]></hook_requirements>
+      <hook_version_human>1.0.0</hook_version_human>
+      <hook_version_long>10000</hook_version_long>
+      <hook_extra_data/>
+      <hook_key>gallery_attach_forums</hook_key>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>gallery_attach_forums.php</hook_file_real>
+      <hook_type>templateHooks</hook_type>
+      <hook_classname>gallery_attach_forums</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_boards";s:12:"skinFunction";s:18:"boardIndexTemplate";s:4:"type";s:7:"foreach";s:2:"id";s:6:"forums";s:8:"position";s:10:"inner.post";}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+
+class gallery_attach_forums
+{
+	/**
+	 * Registry Object
+	 *
+	 * @access	protected
+	 * @var		object
+	 */
+	protected $registry;
+	
+	
+	public function __construct()
+	{
+		/* Make registry objects */
+		$this->registry	= ipsRegistry::instance();
+	}
+	
+	public function getOutput() { }
+	/**
+	 * Replace output
+	 *
+	 * @access	public
+	 * @param	string		Output
+	 * @param	string		Hook key
+	 */
+	public function replaceOutput( $output, $key )
+	{
+		$cache = $this->registry->cache()->getCache('gallery_fattach');
+		
+		if ( ! count( $cache ) )
+		{
+			return $output;
+		}
+		
+		/* Gallery Object */
+		$classToLoad = IPSLib::loadLibrary( IPS_ROOT_PATH . '/applications_addon/ips/gallery/sources/classes/gallery.php', 'ipsGallery' );
+		$this->registry->setClass( 'gallery', new $classToLoad( $this->registry ) );
+		
+		/* Load the language File */
+		$this->registry->class_localization->loadLanguageFile( array( 'public_gallery', 'public_gallery_four' ), 'gallery' );
+			
+		if( is_array($this->registry->output->getTemplate('boards')->functionData['boardIndexTemplate'][0]['cat_data']) AND count($this->registry->output->getTemplate('boards')->functionData['boardIndexTemplate'][0]['cat_data']) )
+		{
+			$tag	= '<!--hook.' . $key . '-->';
+			$last	= 0;
+		
+			foreach( $this->registry->output->getTemplate('boards')->functionData['boardIndexTemplate'][0]['cat_data'] as $cid => $cdata )
+			{
+				foreach( $cdata['forum_data'] as $id => $data )
+				{
+					$pos	= strpos( $output, $tag, $last );
+					
+					if ( $pos )
+					{
+						$string = '';
+						
+						if ( isset( $cache[ $id ] ) )
+						{
+							foreach( $cache[ $id ] as $album_id )
+							{
+								$album   = $this->registry->gallery->helper('albums')->fetchAlbumsById( $album_id );
+								
+								if ( $album['album_id'] && $this->registry->gallery->helper('albums')->isViewable( $album ) )
+								{
+									$string	.= $this->registry->output->getTemplate('gallery_albums')->boardIndexEntry( $album );
+								}
+							}
+							
+							$output	= substr_replace( $output, $string . $tag, $pos, strlen( $tag ) ); 
+						}
+						
+						$last	= $pos + strlen( $tag . $string );
+					}
+				}
+			}
+		}
+		
+		return $output;
+	}
+}]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings/>
+  <hookextras_language/>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates/>
+  <hookextras_css/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

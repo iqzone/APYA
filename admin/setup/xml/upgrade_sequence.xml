@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<installdata>
+	<action>
+		<file>index</file>
+		<menu>Log In</menu>
+		<position>0</position>
+	</action>
+	<action>
+		<file>overview</file>
+		<menu>Overview</menu>
+		<position>2</position>
+	</action>
+	<action>
+		<file>apps</file>
+		<menu>Applications</menu>
+		<position>3</position>
+	</action>
+	<action>
+		<file>license</file>
+		<menu>License Key</menu>
+		<position>4</position>
+	</action>
+	<action>
+		<file>upgrade</file>
+		<menu>Upgrade</menu>
+		<position>5</position>
+	</action>
+	<action>
+		<file>done</file>
+		<menu>Finished</menu>
+		<position>6</position>
+	</action>
+</installdata>

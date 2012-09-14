@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Album Manager</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Album Manager</subitemtitle>
+					<subitemlang>album_manager</subitemlang>
+					<subsection>manage</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Add New Global Album</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Add New Global Album</subitemtitle>
+					<subitemlang>add_global</subitemlang>
+					<subsection>manage</subsection>
+					<subitemurl>do=add&amp;albumType=global</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Add New Member Album</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Add New Member Album</subitemtitle>
+					<subitemlang>add_member</subitemlang>
+					<subsection>manage</subsection>
+					<subitemurl>do=add&amp;albumType=member</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

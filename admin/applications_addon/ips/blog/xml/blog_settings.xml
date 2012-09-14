@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settingexport>
+  <settinggroup>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_title_title>IP.Blog Settings</conf_title_title>
+      <conf_title_desc>Configuration options for the blog system</conf_title_desc>
+      <conf_title_tab>IPS Apps</conf_title_tab>
+      <conf_title_app>blog</conf_title_app>
+      <conf_title_noshow>0</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>Blog online</conf_title>
+      <conf_description>Set IP.Blog online?</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_online</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group>Blog Online/Offline</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Offline text</conf_title>
+      <conf_description>Text to show when blog is offline</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>editor</conf_type>
+      <conf_key>blog_offline_text</conf_key>
+      <conf_default>Our blog system will be back online shortly!</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>2</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Groups who can view offline</conf_title>
+      <conf_description>Select which groups can view blog when offline</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>multi</conf_type>
+      <conf_key>blog_offline_view</conf_key>
+      <conf_default>4</conf_default>
+      <conf_extra>#show_groups#</conf_extra>
+      <conf_evalphp><![CDATA[if ( $save == 1)
+{
+	if ( is_array($_POST['blog_offline_view']) )
+	{
+		$_POST['blog_offline_view'] = implode(",",$_POST['blog_offline_view']);
+	}
+	else
+	{
+		$_POST['blog_offline_view'] = "";
+	}
+	
+	$key = 'blog_offline_view';
+}
+if ( $show == 1 )
+{
+    $key='blog_offline_view[]';
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>3</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Show full articles on blog list pages</conf_title>
+      <conf_description>Whether or not to show full articles on an individual blog listing page.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_list_full</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>4</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>blog,list,full,article,content</conf_keywords>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>User selectable entries per page dropdown contents</conf_title>
+      <conf_description>Separate with a comma.&#13;
+Example: 5,15,20,25,30</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_entriesperpage_list</conf_key>
+      <conf_default>5,10,15,20</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>5</conf_position>
+      <conf_start_group>Blog View Settings</conf_start_group>
+      <conf_add_cache>0</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Default entries per page</conf_title>
+      <conf_description>Number of entries per page per default</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_entries_perpage</conf_key>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>6</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>User selectable comments per page dropdown contents</conf_title>
+      <conf_description/>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_commentsperpage_list</conf_key>
+      <conf_default>5,10,15,20,25,30</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>7</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>0</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Default comments per page</conf_title>
+      <conf_description>Number of comments to show per page per default.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_comments_perpage</conf_key>
+      <conf_default>20</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>8</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow user to change numbers per page</conf_title>
+      <conf_description>Allow the blog owner to change the number of entries/comments per page view.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allowperpage</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>9</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Album images per row</conf_title>
+      <conf_description>This determines the number of gallery album images to show per row in an entry.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_album_imgs_per_row</conf_key>
+      <conf_default>5</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>10</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Image limit of album entries</conf_title>
+      <conf_description>This is the maximum number of images displayed in a gallery album entry.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_albumentry_limit</conf_key>
+      <conf_default>20</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>11</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow members to use themes</conf_title>
+      <conf_description>Allows members to select a theme from the admin-defined list of themes</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_themes</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>14</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow members to create themes</conf_title>
+      <conf_description>Allow members to create their own themes?  All created themes will require approval from the Customization section before they can be used</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_themes_custom</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>15</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Skins available for blogs</conf_title>
+      <conf_description>The blog owner can choose one of these skin sets for his blog view.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>multi</conf_type>
+      <conf_key>blog_skin_list</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra>#show_skins#</conf_extra>
+      <conf_evalphp><![CDATA[if ( $save == 1)
+{
+	if ( is_array($_POST['blog_skin_list']) )
+	{
+		$_POST['blog_skin_list'] = implode(",",$_POST['blog_skin_list']);
+	}
+	else
+	{
+		$_POST['blog_skin_list'] = "";
+	}
+
+	$key = 'blog_skin_list';
+}
+if ( $show == 1 )
+{
+$key = 'blog_skin_list[]';
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>17</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow content blocks editing</conf_title>
+      <conf_description>Allow the user to change the content block settings</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_cblockchange</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>18</conf_position>
+      <conf_start_group>Content Block Settings</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow custom content blocks</conf_title>
+      <conf_description>Allow the user to create custom content blocks?</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_cblocks</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>19</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Cache content blocks</conf_title>
+      <conf_description>Cache the content blocks where possible?</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_cblock_cache</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>20</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Show active users</conf_title>
+      <conf_description>This will show the users active in the blogs on the blog list page.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_showactive</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>21</conf_position>
+      <conf_start_group>Blog feature settings</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Immediately update the blog view counter</conf_title>
+      <conf_description><![CDATA[If set to 'Yes', this will immediately update the blog view counter. To save resources set this to 'No'.]]></conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_update_views_immediately</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>22</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow RSS imports</conf_title>
+      <conf_description>If enabled, members can import RSS data as entries for their blogs</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_rssimport</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>23</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow RSS feeds</conf_title>
+      <conf_description>Allow RSS feeds on the blogs?</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_rss</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>24</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Override permissions for RSS feeds</conf_title>
+      <conf_description>Allow RSS feeds even if guests are not allowed to view the blogs?</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_rssguests</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>25</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow blog pings</conf_title>
+      <conf_description>Allow blogs to ping online blog tracker services when new entries are made?</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_pingblogs</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>26</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow trackbacks</conf_title>
+      <conf_description>Allow trackbacks on the blog entries?</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_trackback</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>27</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Allow &#39;Blog This&#39;]]></conf_title>
+      <conf_description><![CDATA[If 'yes', then a Blog This button will be added to the topic view allowing a user to blog about a topic.]]></conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_bthis</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>28</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow trackback pings</conf_title>
+      <conf_description>Allow members to send trackback pings?</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_trackbackping</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>29</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Enable trackback spam prevention</conf_title>
+      <conf_description>When this setting is enabled trackbacks from detected bots are blocked.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_prevent_tbspam</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>30</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Akismet spam protection</conf_title>
+      <conf_description><![CDATA[If you wish to use Akismet to prevent comment and trackback spam, enter your <a href='http://akismet.com/personal/' target='_blank'>Akismet key</a>]]></conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_akismet_key</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>31</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Action to take for flagged spam</conf_title>
+      <conf_description>If Akismet flags a comment or trackback as spam, what do you want to do with it?</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>blog_akismet_action</conf_key>
+      <conf_default>queue</conf_default>
+      <conf_extra>delete=Delete/ignore submission&#13;
+allow=Allow submission&#13;
+queue=Queue submission for approval</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>32</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of items in RSS feed</conf_title>
+      <conf_description>Number of blog entries to syndicate</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_rss_count</conf_key>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>33</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow XML-RPC interface</conf_title>
+      <conf_description>This will allow members to use third party tools to post blog entries via the XML-RPC interface.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_xmlrpc</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>34</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Enable blog ratings</conf_title>
+      <conf_description>When enabled users will be able to rate the blogs.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_enable_rating</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>35</conf_position>
+      <conf_start_group>Blog Rating Settings</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Rating threshold</conf_title>
+      <conf_description>Only when more then this number of votes have been done on a blog the rating will show up.&#13;
+Set it to 0 for no threshold.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_rating_treshhold</conf_key>
+      <conf_default>5</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>36</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow multiple votes</conf_title>
+      <conf_description>Allow users to change their vote multiple times.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>blog_allow_multirate</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>37</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum number of members in a private club</conf_title>
+      <conf_description/>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_privclub_max</conf_key>
+      <conf_default>20</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>38</conf_position>
+      <conf_start_group>Blog Editors/Private Club Restrictions</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum number of editors per blog</conf_title>
+      <conf_description/>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_editors_max</conf_key>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>39</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Default entry status</conf_title>
+      <conf_description>This sets the default entry status for new entries. A member can overwrite this setting in his blog settings.</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>blog_entry_defaultstatus</conf_key>
+      <conf_default>draft</conf_default>
+      <conf_extra>published=Published&#13;
+draft=Draft</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>40</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Max length of entry titles</conf_title>
+      <conf_description>In bytes</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_max_entrytitle</conf_key>
+      <conf_default>255</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>41</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Max size of entries</conf_title>
+      <conf_description><![CDATA[in kilobytes [kb]]]></conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_max_entry_length</conf_key>
+      <conf_default>100</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>42</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Max size of comments</conf_title>
+      <conf_description><![CDATA[in kilobytes [kb]]]></conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_max_comment_length</conf_key>
+      <conf_default>100</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>43</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Max size of custom content blocks</conf_title>
+      <conf_description><![CDATA[in kilobytes [kb]]]></conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_max_cblock_length</conf_key>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>44</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Blog upload URL</conf_title>
+      <conf_description><![CDATA[The URL to your blog "uploads" folder.
+<!--SUGGEST-->]]></conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_upload_url</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp><![CDATA[if( $show == 1 )
+{
+	$this_host   = getenv( 'SERVER_NAME' );
+	$this_port   = getenv( 'SERVER_PORT' );
+	$this_script = getenv( 'SCRIPT_NAME' );
+	$this_script = str_replace( "&#092;&#092;&#092;&#092;", "/", $this_script );
+
+	if( $this_host AND $this_script )
+	{
+		$this_script = str_replace( '/'.CP_DIRECTORY.'/index.php', '/uploads', $this_script );
+
+		if( $this_port == 80 )
+		{
+			$_url	= "http://" . $this_host . $this_script;
+		}
+		else if( $this_port == 443 )
+		{
+			$_url	= "https://" . $this_host . $this_script;
+		}
+		else
+		{
+			$_url	= "http://" . $this_host . ":" . $this_port . $this_script;
+		}
+		
+		$r['conf_description'] = str_replace( "<!--SUGGEST-->", "<br />IP.Board has detected your uploads url as: <strong>". $_url . '</strong>', $r['conf_description'] );
+	}
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>45</conf_position>
+      <conf_start_group>Attachment Settings</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Upload directory</conf_title>
+      <conf_description><![CDATA[This is directory is used to store the Blog attachments
+<!--SUGGEST-->]]></conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_upload_dir</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp><![CDATA[if( $show == 1 )
+{
+	$this_script = str_replace( '&#092;&#092;&#092;&#092;', '/', getenv( 'SCRIPT_FILENAME' ) );
+ 	
+	if( $this_script )
+	{
+		$this_script = str_replace( '/'.CP_DIRECTORY.'/index.php', '/uploads', $this_script );
+ 		$r['conf_description'] = str_replace( "<!--SUGGEST-->", "<br />IPB has detected your uploads path as:<br />".$this_script, $r['conf_description'] );
+	}
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>46</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Thumbnail width</conf_title>
+      <conf_description>Maximum thumbnail width (in pixels)</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_thumb_width</conf_key>
+      <conf_default>100</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>47</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Thumbnail height</conf_title>
+      <conf_description>Maximum thumbnail height (in pixels)</conf_description>
+      <conf_group>83</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>blog_thumb_height</conf_key>
+      <conf_default>100</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>48</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>blog</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+  </settinggroup>
+</settingexport>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<replacements>
+  <replacement>
+    <replacement_key>add_folder</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/folder_add.png' alt='{lang:add_folder}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>add_friend</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/user_add.png' alt='{lang:add_friend}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>add_poll_choice</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/add.png' alt='+' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>add_poll_question</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/add.png' alt='+' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>blog_banish</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/blog/layout_delete.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>blog_blog</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/blog/blog.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>blog_category</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/folder.png' alt='-' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>blog_comments</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/blog/comments.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>blog_comments_new</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/blog/comments_new.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>blog_link</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/book_open.png' alt='{lang:view_blog}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>blog_locked</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/blog/lock.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>blog_rss_import</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/blog/rss-import.png' alt='' title='{lang:entry_imported_from_rss}' data-tooltip='{lang:entry_imported_from_rss}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>close_poll_form</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/accept.png' alt='x' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>display_name</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/display_name.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>dropdown</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/dropdown.png' alt='+' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>edit_folder</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/folder_edit.png' alt='{lang:edit_folders}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>find_topics_link</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/page_topic_magnify.png' alt='{lang:find_topics}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>folder_delete</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/delete.png' alt='{lang:delete_folder_title}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>folder_drafts</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/folder.png' alt='{lang:macro__folder}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>folder_empty</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/bin.png' alt='{lang:empty_folder_title}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>folder_finished</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/folder.png' alt='{lang:macro__folder}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>folder_generic</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/folder.png' alt='{lang:macro__folder}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>folder_myconvo</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/email_go.png' alt='{lang:macro__myconvo}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>folder_new</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/folder_page.png' alt='{lang:macro__new}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_cat_read</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_icon_read.png' alt='{lang:macro__readcat}' title='{lang:macro__readcat}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_cat_unread</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_icon.png' alt='{lang:macro__unreadcat}' title='{lang:macro__markread}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_nav_sep</replacement_key>
+    <replacement_content>{lang:_rarr}</replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_newpost</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/new_post.png' alt='' title='{lang:first_unread_post}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_pass_read</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_icon_read.png' alt='{lang:macro__readpw}' title='{lang:macro__readpw}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_pass_unread</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_icon.png' alt='{lang:macro__unreadpw}' title='{lang:macro__markread}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_read</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_icon_read.png' alt='{lang:macro__readf}' title='{lang:macro__readf}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_redirect</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_redirect.png' alt='{lang:macro__redirect}' title='{lang:macro__redirect}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>f_unread</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/f_icon.png' alt='{lang:macro__unreadf}' title='{lang:macro__markread}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>galery_album_edit</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/folder_edit.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>gallery_album_delete</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/delete.png' alt='-' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>gallery_image</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/gallery/image_add.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>gallery_link</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/picture.png' alt='{lang:view_gallery}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>gallery_slideshow</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/gallery/pictures.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>generic_cog</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/cog.png' alt='+' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>lim_facebook</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/loginmethods/facebook.png' alt='{lang:lim_facebook}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>lim_twitter</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/loginmethods/twitter.png' alt='{lang:lim_twitter}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>lim_windows</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/loginmethods/windows.png' alt='{lang:lim_windows}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>live_large</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/live.gif' alt='{lang:macro__liveicon}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>live_small</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/live.gif' alt='{lang:macro__liveicon}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>lock_icon</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/lock.png' alt='{lang:pm_locked}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>logo_img</replacement_key>
+    <replacement_content>{style_image_url}/logo.png</replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>mini_rate_off</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/bullet_star_off.png' alt='-' class='mini_rate' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>mini_rate_on</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/bullet_star.png' alt='*' class='mini_rate' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>pip_pip</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/bullet_black.png' alt='{lang:macro__pip}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>popular_post</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/star_big.png' alt='*' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>post_attach_link</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/attachicon.gif'	alt='{lang:macro__attachment}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>rate_off</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/star_off.png' alt='-' class='rate_img' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>rate_on</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/star.png' alt='*' class='rate_img' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>remove_friend</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/user_delete.png' alt='{lang:remove_friend}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>remove_poll_choice</replacement_key>
+    <replacement_content><![CDATA[<span class='cancel' title='{lang:remove_choice}'>&times;</span>]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>remove_poll_question</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/cross.png' alt='-' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>report_green_alert</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/reports/post_alert_3.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>report_red_alert</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/reports/post_alert_1.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>rep_down</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/rep_down.png' alt='-' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>rep_up</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/rep_up.png' alt='+' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>send_msg</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/email_open.png' alt='{lang:pm_this_member}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>signin_icon</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/key.png' alt='{lang:macro__signin}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>snapback</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/snapback.png' alt='{lang:macro__view_post}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>sort_down</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/bullet_arrow_down.png' alt='V' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>sort_up</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/bullet_arrow_up.png' alt='^' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>spammer_off</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/spammer_off.png' alt='{lang:spm_off}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>spammer_on</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/spammer_on.png' alt='{lang:spm_on}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>topic_popup</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/topicpreview.png' alt='' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_announcement</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_announcement.png' alt='{lang:announce_row}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_closed</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_locked.png' alt='{lang:pm_locked}' /><br />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_moved</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_moved.png' alt='{lang:pm_moved}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_read_dot</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_read_dot.png' alt='{lang:you_posted_here}' title='{lang:you_posted_here}' /><br />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_unread</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_unread.png' alt='{lang:pm_open_new}' /><br />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>t_unread_dot</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/t_unread_dot.png' alt='{lang:you_posted_here}' /><br />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+  <replacement>
+    <replacement_key>your_vote</replacement_key>
+    <replacement_content><![CDATA[<img src='{style_image_url}/bullet_star_rated.png' alt='{lang:macro__voted}' />]]></replacement_content>
+    <replacement_set_id>0</replacement_set_id>
+    <replacement_master_key>root</replacement_master_key>
+  </replacement>
+</replacements>

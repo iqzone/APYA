@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mediatagexport>
+  <mediataggroup>
+    <mediatag>
+      <mediatag_name>YouTube</mediatag_name>
+      <mediatag_match><![CDATA[http://(www.)?youtube.com/watch\?(\S+?)?v=([\d\w-_]+?)(&\S+?)?]]></mediatag_match>
+      <mediatag_replace><![CDATA[<object width="640" height="390"><param name="movie" value="http://youtube.com/v/$3?version=3"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://youtube.com/v/$3?version=3" type="application/x-shockwave-flash" width="640" height="390" wmode="transparent" allowscriptaccess="always" allowfullscreen="true"></embed></object>]]></mediatag_replace>
+    </mediatag>
+    <mediatag>
+      <mediatag_name>Google Video</mediatag_name>
+      <mediatag_match>http://video.google.com/videoplay?docid={1}</mediatag_match>
+      <mediatag_replace><![CDATA[<embed style="width:400px; height:326px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=$1&hl=en" flashvars=""> </embed>]]></mediatag_replace>
+    </mediatag>
+    <mediatag>
+      <mediatag_name>MySpace Video</mediatag_name>
+      <mediatag_match>http://www.myspace.com/video/{1}/(\d+)$</mediatag_match>
+      <mediatag_replace><![CDATA[<object width="425px" height="360px" >
+<param name="allowScriptAccess" value="always"/>
+<param name="allowFullScreen" value="true"/>
+<param name="wmode" value="transparent"/>
+<param name="movie" value="http://mediaservices.myspace.com/services/media/embed.aspx/m=$2,t=1,mt=video"/>
+<embed src="http://mediaservices.myspace.com/services/media/embed.aspx/m=$2,t=1,mt=video" width="425" height="360" allowFullScreen="true" type="application/x-shockwave-flash" wmode="transparent" allowScriptAccess="always"></embed>
+</object>]]></mediatag_replace>
+    </mediatag>
+    <mediatag>
+      <mediatag_name>GameTrailers</mediatag_name>
+      <mediatag_match>http://www.gametrailers.com/{1}/{2}/{3}</mediatag_match>
+      <mediatag_replace><![CDATA[<embed src="http://media.mtvnservices.com/mgid:moses:$1:gametrailers.com:$3" width="512" height="288" type="application/x-shockwave-flash" allowFullScreen="true" allowScriptAccess="always" base="." flashVars=""></embed>]]></mediatag_replace>
+    </mediatag>
+    <mediatag>
+      <mediatag_name>YouTu.be</mediatag_name>
+      <mediatag_match><![CDATA[http://(www.)?youtu.be/([\d\w-_]+?)$]]></mediatag_match>
+      <mediatag_replace><![CDATA[<object width="560" height="349"><param name="movie" value="http://youtube.com/v/$2"></param><param name="wmode" value="transparent"></param><param name="flashvars" value="fs=1&autoplay=0&playerMode=embedded"></param><embed src="http://youtube.com/v/$2" type="application/x-shockwave-flash" wmode="transparent" width="560" height="349"></embed></object>]]></mediatag_replace>
+    </mediatag>
+    <mediatag>
+      <mediatag_name>Flickr Image Set</mediatag_name>
+      <mediatag_match>http://www.flickr.com/photos/{1}/sets/{2}/</mediatag_match>
+      <mediatag_replace><![CDATA[<iframe align="center" src="http://www.flickr.com/slideShow/index.gne?user_id=$1&set_id=$2" frameBorder="0" width="500" height="500"></iframe>]]></mediatag_replace>
+    </mediatag>
+    <mediatag>
+      <mediatag_name>MP3</mediatag_name>
+      <mediatag_match>{1}.mp3</mediatag_match>
+      <mediatag_replace><![CDATA[<object type="application/x-shockwave-flash" data="{board_url}/public/mp3player.swf" width="300" height="40">
+     <param name="movie" value="{board_url}/public/mp3player.swf" />
+     <param name="FlashVars" value="mp3=$1.mp3&autoplay=0&loop=0&volume=100&showstop=1&showinfo=0" />
+</object>]]></mediatag_replace>
+    </mediatag>
+    <mediatag>
+      <mediatag_name>Flash Movie/Game</mediatag_name>
+      <mediatag_match>{1}.swf</mediatag_match>
+      <mediatag_replace><![CDATA[<embed src="$1.swf" {width} {height} play="true" loop="true" quality="best" type="application/x-shockwave-flash" wmode="transparent" pluginspace="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" />]]></mediatag_replace>
+    </mediatag>
+    <mediatag>
+      <mediatag_name>Vimeo</mediatag_name>
+      <mediatag_match>http://vimeo.com/{1}</mediatag_match>
+      <mediatag_replace><![CDATA[<iframe src="http://player.vimeo.com/video/$1" width="400" height="250" frameborder="0"></iframe>]]></mediatag_replace>
+    </mediatag>
+  </mediataggroup>
+</mediatagexport>

@@ -1,0 +1,45 @@
+/*<IPS_IMPORT_BLOCK>
+DO NOT REMOVE OR ALTER THIS PLEASE. IT IS REMOVED AUTOMATICALLY BY THE IMPORT ROUTINE.
+<css_position>1</css_position>
+<css_app>portal</css_app>
+<css_modules>portal</css_modules>
+<css_app_hide>0</css_app_hide>
+<css_attributes>title="Main" media="screen,print"</css_attributes>
+</IPS_IMPORT_BLOCK>*/
+/************************************************************************/
+/* IP.Board 3 CSS - By Julio Barreraa - (c)2010 Codebit.org     	*/
+/************************************************************************/
+/* timeline.css - Timeline styles					*/
+/************************************************************************/
+
+#pages {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.stream-item, .unfocusable-stream-item {
+    background: none repeat scroll 0 0 padding-box #FFFFFF;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.new-tweets-bar {
+    background-color: #F5F5F5;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05) inset;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 10px 1px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    top: -1px;
+    z-index: 2;
+}
+
+.stream-item {
+    display: none;
+}

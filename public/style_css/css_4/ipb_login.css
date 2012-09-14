@@ -1,0 +1,11 @@
+body{background:url(http://www.alvarezpuga.net/public/style_images/network/bghome.jpg) center top;background-attachment:fixed}body,html{height:100%;width:100%}#branding{background-image:url(http://www.alvarezpuga.net/public/style_images/network/greybar.jpg);background-position:center bottom;box-shadow:0 2px 2px -2px #000;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:12px;font-weight:300;height:93px;left:0;position:fixed;top:0;width:100%}#logo{padding-top:15px}#logo
+a{height:93px;display:block;width:317px}#branding .main_width #login-box{height:93px;position:absolute;right: -31px;top:0}#branding .main_width #login-box
+table{margin-top:14px}#branding .main_width #login-box table
+td{padding-bottom:10px}#branding .main_width #login-box table .input_text, #content table
+.input_text{float:left;height:22px;margin-right:10px;padding:4px;width:208px;border:1px
+solid #858585;color:#666;display:block;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:13px;font-weight:300}#branding .main_width #login-box table
+.checkbox{float:left;margin-top:3px}#content{padding-top:113px;background:transparent;font-size:13px;font-weight:300;position:relative}#content table tr
+td{padding-bottom:16px}h1,h2,h3,h4,h5,h6{color:#333;font-weight:300;margin:0;padding:0;position:relative;font-size:20px}#content table
+.input_text{width:302px}#content table
+select{border:1px
+solid #858585;color:#666;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:13px;font-weight:300;height:30px;padding:5px}

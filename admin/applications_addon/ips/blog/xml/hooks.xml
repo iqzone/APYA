@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hooks>
+	<hook>
+		<file>blog_featured_entry.xml</file>
+		<enabled>0</enabled>
+	</hook>
+	<hook>
+		<file>recent_blog_entries.xml</file>
+		<enabled>0</enabled>
+	</hook>
+	<hook>
+		<file>blog_this.xml</file>
+		<enabled>1</enabled>
+	</hook>
+</hooks>

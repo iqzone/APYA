@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settingexport>
+  <settinggroup>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_title_title>Topics, Posts and Polls</conf_title_title>
+      <conf_title_desc>These options control various elements when posting, reading topics and reading polls.</conf_title_desc>
+      <conf_title_tab>Forums</conf_title_tab>
+      <conf_title_app>forums</conf_title_app>
+      <conf_title_noshow>0</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>Number of topics per forum page</conf_title>
+      <conf_description/>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>display_max_topics</conf_key>
+      <conf_default>30</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group>Showing Topics</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of rating votes required to show</conf_title>
+      <conf_description><![CDATA[The number of actual rating votes needed before the topic's rating value is displayed.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>topic_rating_needed</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>2</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Auto remove redirect links (days)</conf_title>
+      <conf_description>If you would like the redirect links created when a topic is moved to be automatically removed after a certain number of days, enter the no. days. Enter 0 to not remove them automatically.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>topic_redirect_prune</conf_key>
+      <conf_default>30</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>3</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Number of posts needed to make a &#39;hot topic&#39;]]></conf_title>
+      <conf_description/>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>hot_topic</conf_key>
+      <conf_default>15</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>3</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Days to retain deleted topics and posts</conf_title>
+      <conf_description>Topics and posts that are deleted are retained in the database, allowing you to restore them from the moderator control panel. After how many days would you like these topics and posts removed from the database permanently?</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>days_to_keep_deletions</conf_key>
+      <conf_default>5</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>5</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>delete, deletions, deleted, deletion, marked</conf_keywords>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Topic title max length</conf_title>
+      <conf_description>Maximum topic title length allowed. Maximum topic title length allowed. Minimum is two regardless of input here.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>topic_title_max_len</conf_key>
+      <conf_default>150</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>7</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Enabled &#39;Also tagged with&#39;]]></conf_title>
+      <conf_description>If enabled and the topic has tags, other topics with the same tag(s) will be displayed underneath the fast reply box.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>forums_enabled_also_tagged</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>8</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Remove excess exclamation/question marks in topic titles</conf_title>
+      <conf_description>Will turn: This!!!!! into This!</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>etfilter_punct</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>8</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Stop shouting in topic titles</conf_title>
+      <conf_description>Will turn: CLICK HERE into Click Here</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>etfilter_shout</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>9</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of posts per topic page</conf_title>
+      <conf_description/>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>display_max_posts</conf_key>
+      <conf_default>20</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>10</conf_position>
+      <conf_start_group>Showing Posts</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Open posted links in a new window</conf_title>
+      <conf_description>Forces links to open in a new window, if javascript is available.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>links_external</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp><![CDATA[if ( $save && ( ! isset($_POST[ $key ]) || $_POST[ $key ] != ipsRegistry::$settings[ $key ] ) )
+{
+	ipsRegistry::DB()->delete('content_cache_posts');
+	ipsRegistry::DB()->delete('content_cache_sigs');
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>11</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Automatic resize image force size</conf_title>
+      <conf_description><![CDATA[By default, when automatic linked image resizing is on, it is resized to fit the width of the screen. If you'd like to enforce a PX width/height, enter it here. If you enter 600, then an image larger in width or height is scaled down.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>resize_img_force</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>12</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Ignore users: protected groups</conf_title>
+      <conf_description>Members of the groups selected will not be able to be ignored.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>multi</conf_type>
+      <conf_key>cannot_ignore_groups</conf_key>
+      <conf_default>,4,</conf_default>
+      <conf_extra>#show_groups#</conf_extra>
+      <conf_evalphp><![CDATA[if ( $save == 1)
+{
+	if ( is_array($_POST['cannot_ignore_groups']) )
+	{
+		$_POST['cannot_ignore_groups'] = ','.implode(",",$_POST['cannot_ignore_groups']).',';
+	}
+	else
+	{
+		$_POST['cannot_ignore_groups'] = "";
+	}
+	
+	$key = 'cannot_ignore_groups';
+}
+if ( $show == 1 )
+{
+$key = 'cannot_ignore_groups[]';
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>16</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Order posts within a topic by</conf_title>
+      <conf_description/>
+      <conf_group>28</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>post_order_sort</conf_key>
+      <conf_default>asc</conf_default>
+      <conf_extra>asc=Ascending (0-9)
+desc=Descending (9-0)</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>18</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum number of emoticons per post</conf_title>
+      <conf_description/>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_emos</conf_key>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>19</conf_position>
+      <conf_start_group>Making a Post</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum number of images per post</conf_title>
+      <conf_description/>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_images</conf_key>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>20</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Valid postable image extensions</conf_title>
+      <conf_description><![CDATA[Defines which images are allowed in [img][/img] tags.
+<br />Seperate with comma (gif,jpeg,jpg)]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>img_ext</conf_key>
+      <conf_default>gif,jpeg,jpg,png</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>21</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Maximum size of post (in kilobytes [kb])]]></conf_title>
+      <conf_description/>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_post_length</conf_key>
+      <conf_default>100</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>22</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Automatically parse media URLs</conf_title>
+      <conf_description>If enabled, and a link is submitted without bbcode tags that matches your configured media tag URLs, the link will be treated as media instead of a regular hyperlink.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>bbcode_automatic_media</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>23</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum height of posted media (in pixels)</conf_title>
+      <conf_description><![CDATA[When using the [media] tags where allowed.<br />
+Only applies when posting direct URLs to swf files - YouTube videos, etc. will always be shown at the same size.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_h_flash</conf_key>
+      <conf_default>199</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>24</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum width of posted media (in pixels)</conf_title>
+      <conf_description><![CDATA[When using the [media] tags where allowed.<br />
+Only applies when posting direct URLs to swf files - YouTube videos, etc. will always be shown at the same size.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_w_flash</conf_key>
+      <conf_default>199</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>25</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Stop quote embedding</conf_title>
+      <conf_description><![CDATA[This will remove any quoted text when quoting a post that contains quotes<br><a href='#' title='and if that made any sense, then you are far cleverer than I.'>..</a>]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>strip_quotes</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>26</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum number of quotes per post</conf_title>
+      <conf_description>Use this to stop multiple quote embedding which can cause some browsers to hang or crash.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_quotes_per_post</conf_key>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>27</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Merge member&#39;s concurrent posts]]></conf_title>
+      <conf_description><![CDATA[When a member posts twice within <em>n</em> minutes, once after the other in a topic they will be merged into one post.
+Enter the number of minutes to capture concurrent posts.
+Enter 0 to not use.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>post_merge_conc</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>28</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Use URL filtering</conf_title>
+      <conf_description>If you would like to filter urls based on your blacklist or whitelist settings, enable this.  URL filtering allows you to explicitely allow (whitelist) or deny (blacklist) links in topic posts (images and urls).</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>ipb_use_url_filter</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>29</conf_position>
+      <conf_start_group>URL Filtering Options</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Which filter do you wish to use</conf_title>
+      <conf_description>If you have enabled the url filtering, do you wish to use your blacklist or whitelist?  You may only use one or the other.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>ipb_url_filter_option</conf_key>
+      <conf_default>black</conf_default>
+      <conf_extra>white=Whitelist&#13;
+black=Blacklist</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>30</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Whitelist options</conf_title>
+      <conf_description><![CDATA[You can specify here links that you explicitly want to allow.  You may use * as a wildcard.  One per line.<br /><br />
+i.e.: http://www.yourdomain.com*<br />
+http://*google.com*]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>textarea</conf_type>
+      <conf_key>ipb_url_whitelist</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>31</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Blacklist options</conf_title>
+      <conf_description><![CDATA[You can specify here links that you explicitely want to disallow.  You may use * as a wildcard.  One per line.<br /><br />
+i.e.: http://*somedomain.com*<br />
+http://competitor_domain.com*]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>textarea</conf_type>
+      <conf_key>ipb_url_blacklist</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>32</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Add rel=&quot;nofollow&quot; to posted links]]></conf_title>
+      <conf_description><![CDATA[Do you wish to add rel="nofollow" to user-contributed links?]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>posts_add_nofollow</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>33</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Show uploaded images in post as images</conf_title>
+      <conf_description><![CDATA[If set to "yes", any image attachments in a post will be shown as the image and not as a downloadable link. Set this to yes to allow members to position their image attachments in the post using the [attachmentid] tag.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>show_img_upload</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>34</conf_position>
+      <conf_start_group>Attached Image Options</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Show thumbnail of attached image</conf_title>
+      <conf_description><![CDATA[If the above option is set to "yes" to allow image attachments to show as the image select this option to show the attached image as a thumbnail which takes up less space and can be quicker to load.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>siu_thumb</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra>siu_thumb</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>36</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Attachment image thumbnail size [width]]]></conf_title>
+      <conf_description><![CDATA[If both options above are set to "yes", you can define the maximum width of the thumbnail. If attached images are smaller than the dimensions set here, they will not be shown as a thumbnail.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>siu_width</conf_key>
+      <conf_default>100</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>37</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Attachment image thumbnail size [height]]]></conf_title>
+      <conf_description><![CDATA[If both options above are set to "yes", you can define the maximum width of the thumbnail. If attached images are smaller than the dimensions set here, they will not be shown as a thumbnail.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>siu_height</conf_key>
+      <conf_default>100</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>38</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Attachment image maximum size [width]]]></conf_title>
+      <conf_description>If the image is larger than the dimensions supplied, it will be resized accordingly before being saved.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>attach_img_max_w</conf_key>
+      <conf_default>1200</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>39</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Attachment image maximum size [height]]]></conf_title>
+      <conf_description>If the image is larger than the dimensions supplied, it will be resized accordingly before being saved.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>attach_img_max_h</conf_key>
+      <conf_default>1600</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>40</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Disable lightbox</conf_title>
+      <conf_description>This setting disables the fancier image viewing routine used for attached images in the forums.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>disable_lightbox</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>40</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Guest names [prefix]]]></conf_title>
+      <conf_description>This is for when a guest posts with a members name, it allows for a visual difference to prevent confusion</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>guest_name_pre</conf_key>
+      <conf_default>Guest_</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>40</conf_position>
+      <conf_start_group>Guest Username</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Guest names [suffix]]]></conf_title>
+      <conf_description>This is for when a guest posts with a members name, it allows for a visual difference to prevent confusion</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>guest_name_suf</conf_key>
+      <conf_default>_*</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>41</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum poll questions per poll</conf_title>
+      <conf_description>Enter the maximum number of questions you wish to allow your members to create in a single poll.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_poll_questions</conf_key>
+      <conf_default>3</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>43</conf_position>
+      <conf_start_group>Polls</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum number of poll choices allowed</conf_title>
+      <conf_description/>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_poll_choices</conf_key>
+      <conf_default>20</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>44</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow members to view the results of a poll without losing their vote</conf_title>
+      <conf_description/>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>allow_result_view</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>45</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow poll creator to vote in own poll</conf_title>
+      <conf_description><![CDATA[If set to "yes", the poll creator will have the option of voting in their own poll.]]></conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>allow_creator_vote</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>46</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Allow poll creator to make &quot;poll only&quot;]]></conf_title>
+      <conf_description>Do you wish to allow posters who create polls to be able to disallow replies to the poll?</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>ipb_poll_only</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>47</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow public polls</conf_title>
+      <conf_description>Public polls show who voted for which option and can be enabled when creating a poll if allowed.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>poll_allow_public</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>48</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow vote deletion</conf_title>
+      <conf_description>If enabled, members can delete their vote so they can re-vote. Admins and super moderators always have this ability.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>poll_allow_vdelete</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>49</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of hours to keep open the ability for topic starters to attach a poll to their topic</conf_title>
+      <conf_description>Does not affect administrators or super moderators</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>startpoll_cutoff</conf_key>
+      <conf_default>24</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>50</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Allow members to use flash uploader</conf_title>
+      <conf_description>Do you wish to allow members the option to use the flash multi-file uploader?</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>uploadFormType</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>52</conf_position>
+      <conf_start_group>Other</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Maximum number of media files per post</conf_title>
+      <conf_description>Too many media files embedded on one page can potentially crash the browser.</conf_description>
+      <conf_group>28</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>max_media_files</conf_key>
+      <conf_default>2</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>53</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>media, bbcode</conf_keywords>
+      <conf_title_keyword>topicspostsandpolls</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+  </settinggroup>
+</settingexport>

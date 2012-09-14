@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Manage Custom Themes</title>
+			<subitems>		
+				<subitem>
+					<subitemtitle>Manage Custom Themes</subitemtitle>
+					<subitemlang>blog_themes</subitemlang>
+					<subsection>custom</subsection>
+					<subitemurl>do=themes</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Manage Member Themes</title>
+			<subitems>		
+				<subitem>
+					<subitemtitle>Manage Member Themes</subitemtitle>
+					<subitemlang>blog_mem_themes</subitemlang>
+					<subsection>custom</subsection>
+					<subitemurl>do=custom</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

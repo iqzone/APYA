@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>My Control Panel</grouptitle>
+		<grouplang>core_mycp</grouplang>
+		<items>
+			<item>
+				<key>dashboard</key>
+				<string>Can access the dashboard?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

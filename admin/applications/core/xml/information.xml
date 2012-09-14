@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<information>
+  <data>
+    <name>System</name>
+    <public_name>Help Files</public_name>
+    <hide_tab>0</hide_tab>
+    <author>Invision Power Services, Inc.</author>
+    <description>Manage global tools and settings</description>
+    <disabledatinstall>0</disabledatinstall>
+    <global_caches/>
+    <website/>
+    <update_check/>
+    <templategroups>
+        <template match="exact">skin_editors</template>
+        <template match="exact">skin_emails</template>
+        <template match="exact">skin_global</template>
+        <template match="exact">skin_global_other</template>
+        <template match="exact">skin_global_comments</template>
+        <template match="exact">skin_help</template>
+        <template match="exact">skin_login</template>
+        <template match="exact">skin_register</template>
+        <template match="exact">skin_reports</template>
+        <template match="exact">skin_search</template>
+        <template match="exact">skin_stats</template>
+        <template match="exact">skin_modcp</template>
+    </templategroups>
+  </data>
+</information>

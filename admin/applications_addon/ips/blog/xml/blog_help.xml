@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <help>
+    <row>
+      <title>Blogs</title>
+      <text><![CDATA[The blog section of the community can be used to read other members&#39; blogs, and to create a blog yourself. To access it, click the &quot;Blogs&quot; tab at the top of any page.<br />
+<br />
+&lt;strong&gt;Blog Home Page&lt;/strong&gt;<br />
+When you first go into the blogs, you will see a list of blogs.  Important blogs and your favorite blogs will be shown at the top, followed by all other blogs. You may also see a featured blog entry above the list.<br />
+<br />
+Blogs may be local blogs, meaning that they are stored within the community, or they may be external blogs, which are links to blogs not stored within the community.<br />
+<br />
+&lt;em&gt; Blog List&lt;/em&gt;<br />
+For local blogs, you will see the title of the most recent entry along with a short excerpt from it, and details of the blog such as the title of the blog, to whom it belongs and the total number of comments, entries and views the blog has had. For external blogs, you will just see the title of the blog, to whom it belongs and the total number of views.  To view any blog, you can click on the title of the blog.  For hosted blogs,  you may also click on the title of the most recent entry.<br />
+<br />
+&lt;em&gt;Changing the View&lt;/em&gt;<br />
+There are two ways the blogs can be displayed.  You can change the display using the icons at the top of the blog list:<br />
+&lt;img src=&#39;{style_image_url}/blog/blog_view_entries_on.png&#39; style=&#39;background:grey&#39; /&gt; - The default layout, showing blogs in a list view.<br />
+&lt;img src=&#39;{style_image_url}/blog/blog_view_table_on.png&#39; style=&#39;background:grey&#39; /&gt; - A table view, which is similar to how topics are shown on the forums.<br />
+<br />
+<i>Following a blog</i><br />
+You are able to follow a blog and subscribe to be notified of updates to it by clicking on the follow blog button. <img src="http://content.community.invisionpower.com/global_remote_files/help_files/mJHZX2.png"/>
+<br />
+&lt;em&gt;Statistics&lt;/em&gt;<br />
+Below the blog list, you can see statistics of the blogs, such as who is currently reading the blogs, the total number of blogs, the newest blog, etc.<br />
+<br />
+There are also links to see the top 10 viewed blogs, top 10 commented blogs, and 10 blogs with the most entries.<br />
+<br />
+<br />
+&lt;strong&gt;Viewing Blogs&lt;/strong&gt;<br />
+This only applies to local blogs. For external blogs, you will be taken to the blog when clicking on the blog name.<br />
+<br />
+&lt;em&gt;Entry List&lt;/em&gt;<br />
+In the center of the blog page, you will see a list of recent entries. You will see the title of the entry, who posted it and when, the entry itself and how many comments and trackbacks it has had.<br />
+<br />
+You can click the entry title to see the full entry, along with trackbacks and comments, or press &quot;comments&quot; or &quot;trackbacks&quot; to be taken straight to those areas.<br />
+<br />
+<br />
+&lt;em&gt;Rating&lt;/em&gt;<br />
+You may be able to rate a blog by selecting one of the stars at the top of the blog. After rating, you may be able to change your rating by selecting a different star. In some cases, the stars may not be shown or you may not be able to click on them.<br />
+<br />
+&lt;em&gt;Content Blocks&lt;/em&gt;<br />
+In the left or right columns of the blog, you will see blocks containing various content. Which blocks are shown and their positions will vary based on the blog owner&#39;s configuration. The most common content blocks are:<br />
+&lt;ul&gt;&lt;li&gt;Mini Calendar - This will show a small calendar, highlighting days for which entries are available.&lt;/li&gt;&lt;li&gt;Last entries - This will show a list of the most recent entries to the blog. You can click on any entry title to be taken to it.&lt;/li&gt;&lt;li&gt;My Blog Links - This contains useful links, including:&lt;ul&gt;&lt;li&gt;Track this Blog - Clicking this link will add the blog to your tracked blogs which you can view and manage in your settings panel.&lt;/li&gt;&lt;li&gt;Add blog to favorites - Clicking this link will add the blog to your list of favorite blogs&lt;/li&gt;&lt;li&gt;Syndicate my Blog (RSS) - Clicking this link will take you to an RSS feed of the blog which you can subscribe to using an RSS program.&lt;/li&gt;&lt;li&gt;Archive - Clicking this link will take you to an archive of all entries to the blog.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Last Comments - This will show who most recently commented on the blog and which entry was commented on. You can click on the entry title to be taken to it.&lt;/li&gt;&lt;li&gt;My Picture - This will show the profile picture of the blog owner.&lt;/li&gt;&lt;li&gt;Active Users - This shows how many and which users are viewing the blog.&lt;/li&gt;&lt;li&gt;Categories - This shows the different blog entry categories. You can click on any category to see a list of entries in that category.&lt;/li&gt;&lt;li&gt;Search My Blog - You can use this to search all entries in the blog. Simply enter your keywords into the box and press &quot;Go&quot;.&lt;/li&gt;&lt;/ul&gt;<br />
+<br />
+&lt;em&gt;Sharing&lt;/em&gt;<br />
+You can share blog stories with sites such as Twitter or Facebook, or share them via Email, by using the "Share" buttons found below each entry.<br />
+<br />
+To email an entry to a friend, press the &lt;img src=&#39;{style_image_url}/blog/email.png&#39; /&gt; icon then follow the on-screen instructions.<br />
+<br />
+&lt;em&gt;Trackbacks&lt;/em&gt;<br />
+When viewing an entry you may see any trackbacks stored for the entry, if the blog has trackbacks enabled.  You can access the trackback URL by pressing the &quot;Trackback URL&quot; link.<br />
+<br />
+&lt;em&gt;Comments&lt;/em&gt;<br />
+At the bottom of an entry&#39;s page, you will see any existing comments on the entry.  Below the comments will be a textbox you can use to leave your own comment. 
+<br />
+<br />
+&lt;strong&gt;Creating and Managing Your Blog&lt;/strong&gt;<br />
+<br />
+&lt;em&gt;Creating a Blog&lt;/em&gt;<br />
+You may be able to create your own blog within the community. To do so, visit the &quot;Blogs&quot; tab in your settings panel.  Under &quot;Your Blog Settings&quot; you will see your current blog if you have one. If you can create a blog, you will also see a section titled &quot;Create a Blog&quot; - you must read and accept the terms by checking the box, and pressing &lt;span class=&#39;input_submit&#39;&gt;Next &amp;gt;&lt;/span&gt;.<br />
+<br />
+You can then give your blog a name and description and choose if it will be a local or external blog. When you are ready, press &lt;span class=&#39;input_submit&#39;&gt;Finish&lt;/span&gt;.<br />
+<br />
+You will now be taken back to the &quot;Your Blog Settings&quot;. Make sure if you are setting up an external blog that you now go into your blog settings and enter your blog URL.<br />
+<br />
+You may be able to create more than one blog, and you may not have all settings mentioned above available to you.<br />
+<br />
+&lt;em&gt;Your Blog Settings&lt;/em&gt;<br />
+From the &quot;Your Blog Settings&quot; area of your settings panel, you can click on your blog name to manage its settings, including:&lt;ul&gt;&lt;li&gt;Your Blog - This is general settings for your blog such as the name, description and whether it is local or external. You may also be able to change the view permissions. &quot;Public&quot; means all members that can see the blogs can see your blog, &quot;Private Club&quot; means that only members you allow can see your blog, and &quot;Private&quot; means only you can see your blog. Some of these options may not be available.&lt;/li&gt;&lt;li&gt;Your local blog settings - If you have a local blog, you can configure here various settings such as guest access, comments and trackbacks.&lt;/li&gt;&lt;li&gt;RSS Settings - You may be able to disable RSS, or enable an alternate RSS service here.&lt;/li&gt;&lt;li&gt;Customize the look of your Blog - You may be able to change the way your blog is displayed here such as the style it uses, and the number of entries shown per page.&lt;/li&gt;&lt;li&gt;Private Club - If your blog is in &quot;Private Club&quot; mode, you can enter who has access to your blog here.&lt;/li&gt;&lt;li&gt;Editors - You may be able to assign additional people permission to add entries to your blog. Enter the names of members who should have this permission here.&lt;/li&gt;&lt;li&gt;Your external blog settings - If you have an external blog, you can enter the URL to it here.&lt;/li&gt;&lt;/ul&gt;<br />
+<br />
+&lt;em&gt;Adding Entries&lt;/em&gt;<br />
+To add an entry, you can either click &quot;Post new entry&quot; beside your blog from &quot;Your Blog Settings&quot;, or press the &quot;&lt;img src=&#39;{style_image_url}/blog/book_add.png&#39; /&gt; Add Entry&quot; button from your blog.<br />
+<br />
+You will need to enter a title for your entry.  You can enter &quot;tags&quot; for your entry, which can be used to separate entries into categories if you frequently blog about multiple subjects.<br />
+<br />
+You may be able to choose the date that the entry is posted on, and if you have more than one blog, you can choose the blog it should be saved to.<br />
+<br />
+You may be able to add a poll to your entry just like you would on the forums.<br />
+<br />
+You should the type your entry like any message. You may be able to add attachments to your entry.<br />
+<br />
+At the very bottom of the page you can choose to submit your entry as a &quot;Draft&quot;, meaning it will not be published right away, or, as &quot;Published&quot;, which will mean it is immediately available for others to view.<br />
+<br />
+When you are ready, press &lt;span class=&#39;input_submit&#39;&gt;Post New Entry&lt;/span&gt;.<br />
+<br />
+&lt;em&gt;Changing Your Blog Theme&lt;/em&gt;<br />
+You may be able to change your blog&#39;s theme to a different style by pressing the &quot;&lt;img src=&#39;{style_image_url}/blog/palette.png&#39; /&gt; Change Theme&quot; button from your blog.  This will bring up a pop-up displaying the styles you can choose from. Click on a style to change your blog.<br />
+<br />
+You may be able to create your own theme by pressing the &quot;&lt;img src=&#39;{style_image_url}/add.png&#39; /&gt; Create a custom theme&quot; option. This will bring up a box that will allow you to change the theme of your blog by entering custom CSS code, or using the color picker. Once you have saved your theme, it may have to be approved by an administrator before it becomes active.<br />
+<br />
+&lt;em&gt;Content Blocks&lt;/em&gt;<br />
+You can add content blocks by pressing the &quot;&lt;img src=&#39;{style_image_url}/blog/layout_add.png&#39; /&gt; Add Blocks&quot; button from your blog.<br />
+<br />
+The functions of the default blocks are explained earlier in this help file, or you may be able to add your own blocks by pressing the &quot;&lt;img src=&#39;{style_image_url}/add.png&#39; /&gt; Add Custom Content Block&quot; option.  There may be additional content block options available.<br />
+<br />
+You can move your content blocks by clicking and holding on the title bar and then moving them to the new location, which can be in the left or right columns.<br />
+<br />
+To remove a content block, press the &lt;img src=&#39;{style_image_url}/close_popup.png&#39; /&gt; icon.]]></text>
+      <description>A guide to viewing the community blogs and creating your own blog.</description>
+      <position>14</position>
+      <app>blog</app>
+    </row>
+  </help>
+</export>

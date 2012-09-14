@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>Invitaciones</hook_name>
+      <hook_desc>Invitaciones para registrar a tus amigos.</hook_desc>
+      <hook_author>@codebit_org</hook_author>
+      <hook_email>juliobarreraa@gmail.com</hook_email>
+      <hook_website>http://www.codebit.org/</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:3:{s:21:"required_applications";a:0:{}s:20:"hook_php_version_min";s:0:"";s:20:"hook_php_version_max";s:0:"";}]]></hook_requirements>
+      <hook_version_human>1.0</hook_version_human>
+      <hook_version_long>1000</hook_version_long>
+      <hook_extra_data><![CDATA[a:6:{s:7:"display";a:5:{s:8:"settings";s:33:"Settings: Número de invitaciones";s:8:"language";s:38:"From portal_public_portal: invitations";s:7:"modules";s:39:"Modules: Members:: Ajax update (PUBLIC)";s:9:"templates";s:66:"From skin_portal: hookinvitefriend, pluginInvite, skeletonTemplate";s:6:"custom";s:30:"install_registerinvitation.php";}s:8:"settings";a:1:{s:0:"";s:24:"defaultnumberinvitations";}s:8:"language";a:1:{s:20:"portal_public_portal";a:1:{s:0:"";s:11:"invitations";}}s:7:"modules";a:1:{s:0:"";s:19:"public-members-ajax";}s:9:"templates";a:1:{s:11:"skin_portal";a:3:{i:0;s:16:"hookinvitefriend";i:1;s:12:"pluginInvite";i:2;s:16:"skeletonTemplate";}}s:6:"custom";s:22:"registerinvitation.php";}]]></hook_extra_data>
+      <hook_key>friendsinvite</hook_key>
+      <hook_global_caches/>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>friendsinvite.php</hook_file_real>
+      <hook_type>templateHooks</hook_type>
+      <hook_classname>friendsinvite</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_portal";s:12:"skinFunction";s:12:"pluginInvite";s:4:"type";s:2:"if";s:2:"id";s:12:"pluginInvite";s:8:"position";s:12:"post.startif";}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+
+/**
+ * <pre>
+ * Codebit.org
+ * IP.Board v3.3.0
+ * @description
+ * Last Updated: $Date: 09-may-2012 -006  $
+ * </pre>
+ * @filename            friendsinvite.php
+ * @author 		$Author: juliobarreraa@gmail.com $
+ * @package		PRI
+ * @subpackage	        
+ * @link		http://www.codebit.org
+ * @since		09-may-2012
+ * @timestamp           19:06:06
+ * @version		$Rev:  $
+ *
+ */
+
+/**
+ * Description of friendsinvite
+ *
+ * @author juliobarreraa@gmail.com
+ */
+class friendsinvite {
+    
+    //Public
+    public $lang;
+    
+    public function __construct() {
+        $this->registry = ipsRegistry::instance();
+    }
+    
+    public function getOutput(){
+        $this->lang = $this->registry->getClass('class_localization'); //Load language
+        return $this->registry->output->getTemplate('portal')->hookinvitefriend();
+    }
+}
+
+?>
+]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_custom>
+    <file>
+      <filename>registerinvitation.php</filename>
+      <source><![CDATA[<?php
+
+/**
+ * <pre>
+ * Codebit.org
+ * IP.Board v3.3.0
+ * @description
+ * Last Updated: $Date: 11-abr-2012 -006  $
+ * </pre>
+ * @filename            install_registerinvitation.php
+ * @author 		$Author: juliobarreraa@gmail.com $
+ * @package		PRI
+ * @subpackage	        
+ * @link		http://www.codebit.org
+ * @since		11-abr-2012
+ * @timestamp           18:16:30
+ * @version		$Rev:  $
+ *
+ */
+
+/**
+ * Description of install_registerinvitation
+ *
+ * @author juliobarreraa@gmail.com
+ */
+class registerinvitation {
+
+    const TBL_FIELDS = 'field_';
+
+    public $registry;
+    public $DB;
+
+    public function __construct() {
+        $this->registry = ipsRegistry::instance();
+        $this->DB = $this->registry->DB();
+    }
+
+    public function install() {
+        $row = $this->DB->buildAndFetch(array(
+            'select' => 'pf_group_id',
+            'from' => 'pfields_groups',
+            'where' => "pf_group_key = 'register_invitation_unique'",
+                ));
+
+        //No existe el campo, vamos a crearlo.
+        $pf_group_id = 0;
+        if (!$row) {
+            $pf_group_id = $this->insertGroupKey();
+        } else {
+            $pf_group_id = (int) $row['id'];
+        }
+
+        unset($row); //bye :)
+        if ($pf_group_id) {
+            $field_name = self::TBL_FIELDS . $pf_group_id;
+
+            //Insertamos la configuración del campo personalizado, si es que el campo no existe
+            $fieldNumberName = self::TBL_FIELDS . $this->insertData($pf_group_id);
+            if (!$this->checkField($fieldNumberName)) //Se crea o no se crea la modificaciÃ³n a la tabla
+                $this->alterTable($fieldNumberName);
+        }
+    }
+
+    private function checkField($field) {
+        //Si existe el campo $field de $pf_group_id entonces se devuelve true en otro caso false,
+        $this->DB->query("SHOW COLUMNS FROM {$this->registry->dbFunctions()->getPrefix()}pfields_content WHERE Field = '$field'");
+        $this->DB->execute();
+        return ($this->DB->getTotalRows() ? true : false);
+    }
+
+    private function alterTable($field) {
+        $this->DB->query("ALTER TABLE {$this->registry->dbFunctions()->getPrefix()}pfields_content ADD $field TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL");
+        $this->DB->execute();
+    }
+
+    private function insertGroupKey() {
+        $this->DB->insert('pfields_groups', array('pf_group_name' => 'Register', 'pf_group_key' => 'register_invitation_unique'));
+        return $this->DB->getInsertId();
+    }
+
+    private function insertData($pf_group_id) {
+        $row = $this->DB->buildAndFetch(array(
+            'select' => 'pf_id',
+            'from' => 'pfields_data',
+            'where' => "pf_key = 'number_invitations'",
+                ));
+        if (!$row) {
+            $this->DB->insert('pfields_data', array(
+                'pf_title' => 'Invitaciones disponibles',
+                'pf_desc' => 'Invitaciones disponibles para un usuario.',
+                'pf_content' => '',
+                'pf_type' => 'input',
+                'pf_not_null' => 0,
+                'pf_member_hide' => 1,
+                'pf_max_input' => 4,
+                'pf_member_edit' => 0,
+                'pf_position' => 0,
+                'pf_show_on_reg' => 0,
+                'pf_input_format' => 'n',
+                'pf_admin_only' => 1,
+                'pf_topic_format' => '',
+                'pf_group_id' => $pf_group_id,
+                'pf_icon' => '',
+                'pf_key' => 'number_invitations',
+                'pf_search_type' => 'exact',
+                'pf_filtering' => 0));
+             return $this->DB->getInsertId();
+        }
+    }
+
+    //Sistema de desinstalación, una vez borrado el hook no sucede nada
+    public function uninstall() {
+        
+    }
+
+}
+
+?>]]></source>
+    </file>
+  </hookextras_custom>
+  <hookextras_settings>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_title>Invitaciones</conf_title_title>
+      <conf_title_desc>Número de invitaciones que se dan por defecto</conf_title_desc>
+      <conf_title_noshow>0</conf_title_noshow>
+      <conf_title_keyword>registerinvite</conf_title_keyword>
+      <conf_title_app>members</conf_title_app>
+      <conf_title_tab>Members</conf_title_tab>
+    </setting>
+    <setting>
+      <conf_id>317</conf_id>
+      <conf_title>Número de invitaciones</conf_title>
+      <conf_description>Invitaciones por defecto</conf_description>
+      <conf_group>36</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>defaultnumberinvitations</conf_key>
+      <conf_value/>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>registerinvite</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+  </hookextras_settings>
+  <hookextras_language>
+    <language>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>invitations</word_key>
+      <word_default>You have %s invitation(s)</word_default>
+    </language>
+  </hookextras_language>
+  <hookextras_modules>
+    <module>
+      <sys_module_title>Ajax update</sys_module_title>
+      <sys_module_application>members</sys_module_application>
+      <sys_module_key>ajax</sys_module_key>
+      <sys_module_description>Ajax Update</sys_module_description>
+      <sys_module_version>1.0</sys_module_version>
+      <sys_module_protected>0</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>24</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+  </hookextras_modules>
+  <hookextras_help/>
+  <hookextras_templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="(int)$this->memberData['member_id'] && $invitations > 0">
+    <div class='ipsSideBlock clearfix'>
+        <h3><span>{parse expression="sprintf($this->lang->words['invitations'], $invitations)"}</span></h3>
+        <div class='_sbcollapsable'>
+            <form action="{parse url="app=core&amp;module=ajax&amp;section=ajaxmember&md5check={$this->member->form_hash}&do=process_form&login=" base="public"}" method="post" name="REG" id='send_invite'>
+                <fieldset>
+                    <ul class='ipsForm ipsForm_horizontal'>
+                        <li class='ipsField'>
+                            <label for='EmailAddress' class='ipsField_title' style="width: auto;">Correo <span class='ipsForm_required'>*</span></label>
+                            <p class=''>
+                                <input type='text' placeholder="correo@dominio.com" class='input_text' id='email' size='30' value='{$this->request['EmailAddress']}' name='EmailAddress' /><br />
+                                <span class='desc primary lighter'>
+                                    <div id="showErrors"><span class='error'></span></div>
+                                </span>
+                            </p>
+                            <br />
+                            <p>
+                                <input type="submit" value="Enviar" class="ipsButton" style="float:right;" />
+                            </p>
+                        </li>
+                    </ul>
+                </fieldset>
+        </form>
+        </div>
+    </div>
+</if>]]></template_content>
+      <template_name>hookinvitefriend</template_name>
+      <template_data>$invitations = 10</template_data>
+      <template_updated>1336758948</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="pluginInvite:|:$active">
+</if>]]></template_content>
+      <template_name>pluginInvite</template_name>
+      <template_data>$active = false</template_data>
+      <template_updated>1336758948</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[{parse addtohead="{$this->settings['css_base_url']}style_css/{$this->registry->output->skin['_csscacheid']}/timeline.css" type="importcss"}
+{parse addtohead="{$this->settings['css_base_url']}style_css/{$this->registry->output->skin['_csscacheid']}/podio.style.css" type="importcss"}
+{parse addtohead="https://fonts.googleapis.com/css?family=PT+Sans&subset=latin" type="importcss"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/jquery.js" type="javascript"}
+{parse addtohead="http://documentcloud.github.com/underscore/underscore-min.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/waypoints.min.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.events.input.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.mentionsInput.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/mentions/jquery.elastic.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/timeline.js" type="javascript"}
+{parse addtohead="{$this->settings['js_base_url']}js/3rd_party/ips.portal.js" type="javascript"}
+<if test="disablelightbox:|:!$this->settings['disable_lightbox']">
+{parse template="include_lightbox" group="global" params=""}
+</if>
+
+<div class='ipsLayout <if test="setupLeftBlockSide:|:is_array( $leftBlocks ) AND count( $leftBlocks )">ipsLayout_withleft ipsLayout_largeleft</if> <if test="setupRightBlockSide:|:is_array( $rightBlocks ) AND count( $rightBlocks )">ipsLayout_withright ipsLayout_largeright</if> clearfix'>
+      <div class='ipsLayout_left'>
+           {parse template="showBlocks" group="portal" params="$leftBlocks"}
+      </div>
+      <div class='ipsLayout_content clearfix'>
+           {parse template="showBlocks" group="portal" params="$mainBlocks"}
+      </div>
+      <div class='ipsLayout_right'>
+           {parse template="showBlocks" group="portal" params="$rightBlocks"} 
+      </div>
+</div>
+
+{parse template="include_highlighter" group="global" params="1"}]]></template_content>
+      <template_name>skeletonTemplate</template_name>
+      <template_data>$leftBlocks, $mainBlocks, $rightBlocks</template_data>
+      <template_updated>1336758948</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="disablelightbox:|:!$this->settings['disable_lightbox']">
+{parse template="include_lightbox" group="global" params=""}
+</if>
+<div class='ipsLayout <if test="setupLeftBlockSide:|:is_array( $leftBlocks ) AND count( $leftBlocks )">ipsLayout_withleft ipsLayout_largeleft</if> <if test="setupRightBlockSide:|:is_array( $rightBlocks ) AND count( $rightBlocks )">ipsLayout_withright ipsLayout_largeright</if> clearfix'>
+      <div class='ipsLayout_left'>
+           {parse template="showBlocks" group="portal" params="$leftBlocks"}
+      </div>
+      <div class='ipsLayout_content clearfix'>
+           {parse template="showBlocks" group="portal" params="$mainBlocks"}
+      </div>
+      <div class='ipsLayout_right'>
+           {parse template="showBlocks" group="portal" params="$rightBlocks"} 
+      </div>
+</div>
+{parse template="include_highlighter" group="global" params="1"}]]></template_content>
+      <template_name>skeletonTemplate</template_name>
+      <template_data>$leftBlocks, $mainBlocks, $rightBlocks</template_data>
+      <template_updated>1336758949</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>xmlskin</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="disablelightbox:|:!$this->settings['disable_lightbox']">
+{parse template="include_lightbox" group="global" params=""}
+</if>
+<div class='ipsLayout <if test="setupLeftBlockSide:|:is_array( $leftBlocks ) AND count( $leftBlocks )">ipsLayout_withleft ipsLayout_largeleft</if> <if test="setupRightBlockSide:|:is_array( $rightBlocks ) AND count( $rightBlocks )">ipsLayout_withright ipsLayout_largeright</if> clearfix'>
+      <div class='ipsLayout_left'>
+           {parse template="showBlocks" group="portal" params="$leftBlocks"}
+      </div>
+      <div class='ipsLayout_content clearfix'>
+           {parse template="showBlocks" group="portal" params="$mainBlocks"}
+      </div>
+      <div class='ipsLayout_right'>
+           {parse template="showBlocks" group="portal" params="$rightBlocks"} 
+      </div>
+</div>
+{parse template="include_highlighter" group="global" params="1"}]]></template_content>
+      <template_name>skeletonTemplate</template_name>
+      <template_data>$leftBlocks, $mainBlocks, $rightBlocks</template_data>
+      <template_updated>1336758949</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </templates>
+  </hookextras_templates>
+  <hookextras_css/>
+  <hookextras_replacements/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

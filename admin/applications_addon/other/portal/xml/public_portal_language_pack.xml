@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>invitations</word_key>
+      <word_default>You have %s invitation(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>use_mentions</word_key>
+      <word_default>Use @ to mention your friend, write something here</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>twitter</word_key>
+      <word_default>Twitter</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>news_pub</word_key>
+      <word_default> new updates</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>mightknow</word_key>
+      <word_default>People you maybe know</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>views</word_key>
+      <word_default>Views</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>replies</word_key>
+      <word_default>Replies</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>posted_by</word_key>
+      <word_default>Posted by</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>portal_title</word_key>
+      <word_default>Portal</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>poll_title</word_key>
+      <word_default>Website Poll</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>photo</word_key>
+      <word_default>Photo</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>online_split</word_key>
+      <word_default>%s members, %s visitors and %s anonymous users</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>online_title</word_key>
+      <word_default>Online Users</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>online_breakdown</word_key>
+      <word_default><![CDATA[There are <strong>%s</strong> online users browsing:]]></word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>links_title</word_key>
+      <word_default>Site Navigation</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>last_reply_by</word_key>
+      <word_default>Last reply by</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>in</word_key>
+      <word_default>in</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>discuss_title</word_key>
+      <word_default>Latest Discussions</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>noupdates</word_key>
+      <word_default>No updates</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>aff_title</word_key>
+      <word_default>Recommended Sites</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>facebook</word_key>
+      <word_default>Facebook</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hooks>
+	<hook>
+		<file>gallery_images_board_index.xml</file>
+		<enabled>0</enabled>
+	</hook>
+	<hook>
+		<file>gallery_profile_photo_album.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>gallery_forum_attach.xml</file>
+		<enabled>1</enabled>
+	</hook>
+</hooks>

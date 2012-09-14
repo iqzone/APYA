@@ -1,0 +1,79 @@
+/* Reset */
+.ccsBase * { margin: 0; padding: 0; }
+.ccsBase ol, .ccsBase ul { list-style:none; }
+.ccsBase h1,.ccsBase h2,.ccsBase h3,.ccsBase h4,.ccsBase h5,.ccsBase h6 { font-size:100%;font-weight:normal; }
+
+/* Base styles */
+.ccsBase {
+	font: normal 13px helvetica, arial, sans-serif;
+	background: #fff;
+}
+
+.ccsBase .ccsBlockTitle {
+	background: #262626;
+	font-size: 16px;
+	color: #fff;
+	padding: 10px 8px;
+}
+
+/* Backgrounds */
+.ccsRow_1 { background: #fbfbfb; }
+.ccsRow_2 { background: #f5f5f5; }
+.ccsRow_3 { background: #e6e6e6; }
+.ccsRow_4 { }
+
+/* Text */
+.ccsText_light { color: #b5b5b5; }
+
+.ccsText_small { font-size: 12px; }
+
+.ccsText_block { line-height: 1.6; margin-top: 5px; }
+
+/* Padding */
+.ccsPad_medium { padding: 15px; }
+.ccsPad_small { padding: 10px; }
+.ccsPad_smaller { padding: 5px; }
+
+/* Images */
+.ccsImage_thumbnail {
+	background: #fff;
+	border: 1px solid #d2d2d2;
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* User photos */
+.ccsUserPhoto { 
+	border: 1px solid #d2d2d2;
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.2); 
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+.ccsUserPhoto_small { width: 30px; height: 30px; }
+.ccsUserPhoto_medium { width: 50px; height: 50px; }
+.ccsUserPhoto_large { width: 75px; height: 75px; }
+
+/* Titles */
+.ccsBase h2 { font-size: 15px; }
+.ccsBase h2.ccsHeadline { font-size: 20px; }
+
+/* Badges */
+.ccsBadge {
+	background: #e6e6e6;
+	padding: 4px 8px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	color: #6c6c6c;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* Misc */
+.ccsClearfix:after { content: ".";display: block;height: 0;clear: both;visibility: hidden; }
+.ccsPos_left { float: left; }
+.ccsPos_right { float: right; }
+.ccsClickable { cursor: pointer; }

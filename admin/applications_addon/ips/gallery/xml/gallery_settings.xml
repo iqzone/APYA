@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settingexport>
+  <settinggroup>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>galleryinvisible</conf_title_keyword>
+      <conf_title_title>IP.Gallery Advanced</conf_title_title>
+      <conf_title_desc>Invisible settings for the Gallery</conf_title_desc>
+      <conf_title_tab>IPS Apps</conf_title_tab>
+      <conf_title_app>gallery</conf_title_app>
+      <conf_title_noshow>1</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Gallery Member&#39;s Album]]></conf_title>
+      <conf_description><![CDATA[ID for the member's designed album]]></conf_description>
+      <conf_group>80</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_members_album</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>galleryinvisible</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_title_title>IP.Gallery Settings</conf_title_title>
+      <conf_title_desc>Configuration options for your IP.Gallery.</conf_title_desc>
+      <conf_title_tab>IPS Apps</conf_title_tab>
+      <conf_title_app>gallery</conf_title_app>
+      <conf_title_noshow>0</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>General: Images Per Page</conf_title>
+      <conf_description>Number of images to be displayed per page for albums, favorite images, user info page, profile, and stats.</conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_images_per_page</conf_key>
+      <conf_default>25</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Default View</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>gallery_default_view</conf_key>
+      <conf_default>home</conf_default>
+      <conf_extra>home=Portal&#13;
+browse=Browse</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>2</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Enable Both Views</conf_title>
+      <conf_description>If disabled, users will only be able to access the default view.</conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>gallery_enable_both_views</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>3</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Directory to store images?</conf_title>
+      <conf_description><![CDATA[<!--SUGGEST-->]]></conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_images_path</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp><![CDATA[if( $show == 1 )
+{
+	$this_script = str_replace( '\\\\', '/', getenv( 'SCRIPT_FILENAME' ) );
+	
+	if( $this_script )
+	{
+		$this_script = str_replace( '/'.CP_DIRECTORY.'/index.php', '/uploads', $this_script );
+		$r['conf_description'] = str_replace( "<!--SUGGEST-->", "IPB has detected your uploads path as:<br />".$this_script, $r['conf_description'] );
+	}
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>4</conf_position>
+      <conf_start_group>Image Options</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>URL to store images?</conf_title>
+      <conf_description><![CDATA[<!--SUGGEST-->]]></conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_images_url</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp><![CDATA[if( $show == 1 )
+{
+	$this_host   = getenv( 'SERVER_NAME' );
+	$this_port   = getenv( 'SERVER_PORT' );
+	$this_script = getenv( 'SCRIPT_NAME' );
+	$this_script = str_replace( "&#092;&#092;&#092;&#092;", "/", $this_script );
+	
+	if( $this_host AND $this_script )
+	{
+		$this_script = str_replace( '/'.CP_DIRECTORY.'/index.php', '/uploads', $this_script );
+		
+		if( $this_port == 80 )
+		{
+			$_url = "http://" . $this_host . $this_script;
+		}
+		else if( $this_port == 443 )
+		{
+			$_url = "https://" . $this_host . $this_script;
+		}
+		else
+		{
+			$_url = "http://" . $this_host . ":" . $this_port . $this_script;
+		}
+		
+		$r['conf_description'] = str_replace( "<!--SUGGEST-->", "IP.Board has detected your uploads url as: <strong>". $_url . '</strong>', $r['conf_description'] );
+	}
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>5</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Images Location</conf_title>
+      <conf_description>This setting is used to determine if images are stored in a web accessible location.  In most cases this will be yes</conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>gallery_web_accessible</conf_key>
+      <conf_default>yes</conf_default>
+      <conf_extra>yes=In a web accessible area
+no=Not in a web accessible area</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>6</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Use Square Thumbnails</conf_title>
+      <conf_description>Square thumbnails make the Gallery look tidier, however will cause rectangular images to be cropped.</conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>gallery_use_square_thumbnails</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>7</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Select an image suite to use</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>gallery_img_suite</conf_key>
+      <conf_default>gd</conf_default>
+      <conf_extra>gd=GD 2.0&#13;
+im=Image Magick</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>8</conf_position>
+      <conf_start_group>Image settings: Image Suite</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Full path to Image Magick</conf_title>
+      <conf_description>If using Image Magick, fill this in and include a trailing slash on this path.</conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_im_path</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>9</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Width</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_max_img_width</conf_key>
+      <conf_default>1600</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>10</conf_position>
+      <conf_start_group>Image Settings: Full Size Image Dimensions</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Height</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_max_img_height</conf_key>
+      <conf_default>1200</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>11</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Width</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_medium_width</conf_key>
+      <conf_default>640</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>12</conf_position>
+      <conf_start_group>Image Settings: Medium Size Image Dimensions</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Height</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_medium_height</conf_key>
+      <conf_default>480</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>13</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Full path to watermark image</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_watermark_path</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>14</conf_position>
+      <conf_start_group>Image Settings: Watermarking</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Watermark Opacity</conf_title>
+      <conf_description>(1-100) or blank for no opacity setting.
+( Currently this setting only applies to GD )</conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_watermark_opacity</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>15</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>JPG Image Quality</conf_title>
+      <conf_description>JPG image quality.  Valid values are 0 (worst quality, best compression) through 100 (best quality, least compression)</conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_image_quality_jpg</conf_key>
+      <conf_default>80</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>16</conf_position>
+      <conf_start_group>Image Settings: Compression</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>PNG Image Quality</conf_title>
+      <conf_description>PNG image quality.  Valid values are 0 (worst quality, best compression) through 9 (best quality, least compression) for GD, or 100 for ImageMagick.</conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_image_quality_png</conf_key>
+      <conf_default>7</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>17</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Turn offline</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>gallery_offline</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>18</conf_position>
+      <conf_start_group>Misc: Gallery Offline/Online</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Enter message to display</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>textarea</conf_type>
+      <conf_key>gallery_offline_text</conf_key>
+      <conf_default>The gallery is currently offline.</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>19</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Bandwidth Logging</conf_title>
+      <conf_description>This setting will keep detailed records of bandwidth usage during the supplied timeframe.  If you have a very active forum, then you may want to disable this for performance reasons</conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>gallery_detailed_bandwidth</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>20</conf_position>
+      <conf_start_group>Misc: Bandwidth Logging</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of hours to keep logs</conf_title>
+      <conf_description/>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>gallery_bandwidth_period</conf_key>
+      <conf_default>48</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>21</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Bing API Key</conf_title>
+      <conf_description><![CDATA[To use the mapping functionality, you will need a Bing API key. You can sign up for one here: <a href='https://www.bingmapsportal.com/' target='_blank'>Bing Maps Portal</a>]]></conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>map_bing_api_key</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>22</conf_position>
+      <conf_start_group>Misc: Mapping</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Feature Image</conf_title>
+      <conf_description><![CDATA[The feature image is the large photo on the home page and on a global album's page.]]></conf_description>
+      <conf_group>50</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>gallery_feature_image</conf_key>
+      <conf_default>auto</conf_default>
+      <conf_extra>auto=Random from all suitable&#13;
+covers=Random from all suitable cover images&#13;
+none=None: Disable feature image</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>23</conf_position>
+      <conf_start_group>Display Settings</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>invisiongallerysettings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+  </settinggroup>
+</settingexport>

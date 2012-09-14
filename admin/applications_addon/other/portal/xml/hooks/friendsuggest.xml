@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>Sugerencia de amigos</hook_name>
+      <hook_desc>Sugerir amigos</hook_desc>
+      <hook_author>@codebit_org</hook_author>
+      <hook_email>juliobarreraa@gmail.com</hook_email>
+      <hook_website>http://www.codebit.org/</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:3:{s:21:"required_applications";a:0:{}s:20:"hook_php_version_min";s:0:"";s:20:"hook_php_version_max";s:0:"";}]]></hook_requirements>
+      <hook_version_human>1.0</hook_version_human>
+      <hook_version_long>1000</hook_version_long>
+      <hook_extra_data><![CDATA[a:4:{s:7:"display";a:3:{s:8:"settings";s:32:"Settings: Número de sugerencias";s:8:"language";s:36:"From portal_public_portal: mightknow";s:9:"templates";s:44:"From skin_portal: hookSuggest, pluginSuggest";}s:8:"settings";a:1:{s:0:"";s:19:"suggest_max_friends";}s:8:"language";a:1:{s:20:"portal_public_portal";a:1:{s:0:"";s:9:"mightknow";}}s:9:"templates";a:1:{s:11:"skin_portal";a:2:{i:0;s:11:"hookSuggest";i:1;s:13:"pluginSuggest";}}}]]></hook_extra_data>
+      <hook_key>friendsuggest</hook_key>
+      <hook_global_caches/>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>friendSuggest.php</hook_file_real>
+      <hook_type>templateHooks</hook_type>
+      <hook_classname>friendSuggest</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_portal";s:12:"skinFunction";s:13:"pluginSuggest";s:4:"type";s:2:"if";s:2:"id";s:13:"pluginSuggest";s:8:"position";s:12:"post.startif";}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+
+/**
+ * <pre>
+ * Codebit.org
+ * IP.Board v3.3.0
+ * @description
+ * Last Updated: $Date: 09-may-2012 -006  $
+ * </pre>
+ * @filename            friendSuggest.php
+ * @author 		$Author: juliobarreraa@gmail.com $
+ * @package		PRI
+ * @subpackage	        
+ * @link		http://www.codebit.org
+ * @since		09-may-2012
+ * @timestamp           13:58:52
+ * @version		$Rev:  $
+ *
+ */
+
+/**
+ * Description of friendSuggest
+ *
+ * @author juliobarreraa@gmail.com
+ */
+class friendSuggest {
+
+    //Private
+    private $recommend; //Instance of class suggest
+    //Protected
+    protected $registry;
+    protected $memberData;
+    //Public
+    public $lang;
+
+    public function __construct() {
+        $this->registry = ipsRegistry::instance();
+        $this->recommend = new suggest($this->registry);
+        $this->registry->class_localization->loadLanguageFile(array('public_portal'), 'portal'); //Load language
+        $this->memberData = & $this->registry->member()->fetchMemberData(); //Get member info
+    }
+
+    public function getOutput() {
+        $members = array();
+        $member_id = (int) $this->memberData['member_id'];
+        if ($member_id) {
+            $members = $this->recommend->getSuggest($member_id);
+        }
+        return $this->registry->output->getTemplate('portal')->hookSuggest($members);
+    }
+
+}
+
+class suggest {
+
+    //Private
+    private $DB;
+    //Protected
+    protected $registry;
+    protected $settings;
+
+    public function __construct(ipsRegistry $ipsRegistry) {
+        $this->DB = $ipsRegistry->DB();
+        $this->registry = $ipsRegistry;
+        $this->settings = & $this->registry->fetchSettings(); //Get settings default $this->settings['suggest_max_friends']
+    }
+
+    public function getSuggest($member_id) {
+        $row = $this->DB->buildAndFetch(array(
+            'select' => 'pf.friends_friend_id',
+            'from' => array('profile_friends' => 'pf'),
+            'where' => 'pf.friends_member_id = ' . $member_id . ' AND pf.friends_approved = 1',
+            'order' => 'rand()',
+            'limit' => '1',
+        ));
+        //you have friends with friends?
+        if ($row) {
+            ipsRegistry::DB()->allow_sub_select = 1;
+            //Get friends for $member_id
+            $this->DB->build(array(
+                'select' => 'pf.friends_id',
+                'from' => array('profile_friends' => 'pf'),
+                'where' => 'pf.friends_friend_id NOT IN (SELECT friends_friend_id FROM ' . $this->DB->obj['sql_tbl_prefix'] . 'profile_friends WHERE friends_member_id=' . $member_id . ') AND (pf.friends_member_id = ' . $row['friends_friend_id'] . ') AND pf.friends_approved = 1',
+                'limit' => array(0, (int) $this->settings['suggest_max_friends']),
+                'order' => 'rand()',
+                'add_join' => array(array(
+                        'select' => 'm.members_display_name, m.member_id, m.members_seo_name',
+                        'from' => array('members' => 'm'),
+                        'where' => 'pf.friends_friend_id = m.member_id AND pf.friends_friend_id <> ' . $member_id,
+                        'type' => 'inner'
+                    ),
+                    array(
+                        'select' => 'pp.pp_thumb_photo, pp.pp_main_photo, pp.pp_photo_type',
+                        'from' => array('profile_portal' => 'pp'),
+                        'where' => "m.member_id = pp.pp_member_id",
+                    ),
+                ),
+            ));
+
+            $this->DB->execute();
+            
+            $rows = array();
+            while ($member = $this->DB->fetch()) {
+                $row = IPSMember::buildProfilePhoto($member);
+                $rows[] = $row; //Build row within $member
+                unset($row);
+            }
+            return $rows;
+        }
+        return array();
+    }
+
+}
+
+?>
+]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_title>Número de sugerencias</conf_title_title>
+      <conf_title_desc>Máximo número de amigos a sugerir</conf_title_desc>
+      <conf_title_noshow>0</conf_title_noshow>
+      <conf_title_keyword>suggest_friends</conf_title_keyword>
+      <conf_title_app>portal</conf_title_app>
+      <conf_title_tab>Portal</conf_title_tab>
+    </setting>
+    <setting>
+      <conf_id>314</conf_id>
+      <conf_title>Número de sugerencias</conf_title>
+      <conf_description>Máximo número de usuarios amigos a sugerir</conf_description>
+      <conf_group>34</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>suggest_max_friends</conf_key>
+      <conf_value/>
+      <conf_default>5</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>suggest_friends</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+  </hookextras_settings>
+  <hookextras_language>
+    <language>
+      <word_app>portal</word_app>
+      <word_pack>public_portal</word_pack>
+      <word_key>mightknow</word_key>
+      <word_default>People you maybe know</word_default>
+    </language>
+  </hookextras_language>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="isArraySuggest:|:is_array($members) && count($members) > 0">
+    <div class="ipsSideBlock clearfix">
+        <h3>
+            <a href="#" class="ipsSidebar_trigger ipsType_smaller right desc mod_links">x</a>
+            {$this->lang->words['mightknow']}
+        </h3>
+        <foreach loop="suggestMember:$members as $member">
+            <div class="_sbcollapsable" style="overflow: visible;">
+                <ul class="ipsList_withminiphoto">
+                    <li class="clearfix">
+                        <a href='{parse url="showuser={$member['member_id']}" template="showuser" seotitle="{$member['members_seo_name']}" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink'>
+                           <img src='{$member['pp_thumb_photo']}' alt='{$this->lang->words['photo']}' class='ipsUserPhoto ipsUserPhoto_mini' />
+                        </a>
+                        <div class="list_content" style="margin-left: 4px !important; display:inline-block;">
+                            {parse template="userHoverCard" group="global" params="$member"}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </foreach>
+    </div>
+</if>]]></template_content>
+      <template_name>hookSuggest</template_name>
+      <template_data>$members</template_data>
+      <template_updated>1336758948</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+    <templates>
+      <template_group>skin_portal</template_group>
+      <template_content><![CDATA[<if test="pluginSuggest:|:$active">
+</if>]]></template_content>
+      <template_name>pluginSuggest</template_name>
+      <template_data>$active = false</template_data>
+      <template_updated>1336758948</template_updated>
+      <template_removable>0</template_removable>
+      <template_added_to>0</template_added_to>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </templates>
+  </hookextras_templates>
+  <hookextras_css/>
+  <hookextras_replacements/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

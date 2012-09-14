@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moduleexport>
+  <modulegroup>
+    <module>
+      <sys_module_title>Display</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>display</sys_module_key>
+      <sys_module_description>Display methods for blog</sys_module_description>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>0</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>1</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Quick actions</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>actions</sys_module_key>
+      <sys_module_description>Quick redirect methods for IP.Blog</sys_module_description>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>0</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>2</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>External methods</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>external</sys_module_key>
+      <sys_module_description>Trackbacks and RSD requests</sys_module_description>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>0</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>3</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Posting</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>post</sys_module_key>
+      <sys_module_description>Entry and comment posting</sys_module_description>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>0</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>4</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Manage Blogs</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>manage</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>6</sys_module_position>
+      <sys_module_admin>0</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Overview</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>overview</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>1</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Blogs</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>blogs</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>2</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Content Blocks</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>cblocks</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>3</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Customize</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>customize</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>5</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+    <module>
+      <sys_module_title>Tools</sys_module_title>
+      <sys_module_application>blog</sys_module_application>
+      <sys_module_key>tools</sys_module_key>
+      <sys_module_description/>
+      <sys_module_version>2.5.2</sys_module_version>
+      <sys_module_protected>1</sys_module_protected>
+      <sys_module_visible>1</sys_module_visible>
+      <sys_module_position>6</sys_module_position>
+      <sys_module_admin>1</sys_module_admin>
+    </module>
+  </modulegroup>
+</moduleexport>

@@ -1,0 +1,54 @@
+/*<IPS_IMPORT_BLOCK>
+DO NOT REMOVE OR ALTER THIS PLEASE. IT IS REMOVED AUTOMATICALLY BY THE IMPORT ROUTINE.
+<css_position>2</css_position>
+<css_app>blog</css_app>
+<css_modules></css_modules>
+<css_app_hide>1</css_app_hide>
+<css_attributes>title="Print" media="print"</css_attributes>
+</IPS_IMPORT_BLOCK>*/
+.topic_controls,
+.cblock,
+.photowrap,
+.photo,
+.entry_options,
+.rep_bar,
+.entry_footer,
+.ips_like,
+.facebook-like,
+.commentUser,
+.commentReply,
+.filter_bar,
+#fast_reply,
+.comment_options li a,
+.comment_options li input,
+.baby_go_back
+{
+	display: none !important;
+}
+
+#main_blog_wrapper
+{
+	padding: 0 !important;
+}
+
+.header_wrap
+{
+	margin-left: 0 !important;
+	margin-bottom: 50px !important;
+}
+
+#main_blog_wrapper #main_column
+{
+	border: 0;
+}
+
+a
+{
+	color: #000 !important;
+	text-decoration: none !important;
+}
+
+.entry_header
+{
+	background: none !important;
+}

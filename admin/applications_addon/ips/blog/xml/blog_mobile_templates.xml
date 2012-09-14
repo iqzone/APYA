@@ -1,0 +1,2699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates application="blog" templategroups="a:1:{s:10:&quot;skin_blog_&quot;;s:8:&quot;contains&quot;;}">
+  <templategroup group="skin_blog_cblocks">
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<a href="{parse url="app=gallery&amp;album={$album['album_id']}" base="public" template="viewalbum" seotitle="{$album['album_name_seo']}"}">{$album['album_name']}</a><br />]]></template_content>
+      <template_name>album_row</template_name>
+      <template_data><![CDATA[$album=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<strong>{$active['GUESTS']}</strong> {$this->lang->words['guests']}<br />
+	<strong>{$active['MEMBERS']}</strong> {$this->lang->words['public_members']}<br />
+	<strong>{$active['ANON']}</strong> {$this->lang->words['anon_members']}<br /><br />
+	{$active['NAMES']}]]></template_content>
+      <template_name>block_activeusers</template_name>
+      <template_data><![CDATA[$active=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<div id='cblock_{$position}' class='cblock'>
+	{$content}
+</div>]]></template_content>
+      <template_name>blog_cblocks</template_name>
+      <template_data>$content, $position, $hidden</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<if test="count( $categories ) > 7">
+<ul class='largeblock_rows categories'>
+<else />
+<ul class='block_rows categories'>
+</if>
+	<if test="is_array( $categories ) AND count( $categories )">
+		<foreach loop="$categories as $cid => $cdata">
+			<li>{parse replacement="blog_category"} &nbsp; <a href='{parse url="app=blog&amp;blogid={$blogid}&amp;cat={$cid}" base="public" template="blogcatview" seotitle="{$cdata['category_title_seo']}"}'>{$cdata['category_title']} ({parse expression="intval($cdata['count'])"})</a></li>
+		</foreach>
+	</if>
+</ul>]]></template_content>
+      <template_name>categories</template_name>
+      <template_data>$blogid, $categories=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[</div>
+	<if test="isCustomBlock:|:$cblock['cblock_type']=='custom'">
+		<if test="inlineeditcustomcblock:|:$this->settings['blog_inline_edit']">
+			<br />
+			<ul class='right'>
+				<li class='ipsButton_secondary'>
+					<a href="{parse url="app=blog&amp;module=post&amp;section=post&amp;do=editcblock&amp;blogid={$cblock['blog_id']}&amp;cbid={$cblock['cbcus_id']}&amp;inline=1" base="public"}">{$this->lang->words['block_edit']}</a>
+				</li>
+				<li class='ipsButton_secondary important'>
+					<a href="{parse url="app=blog&module=post&section=mod&do=delcblock&blogid={$cblock['blog_id']}&cbid={$cblock['cblock_id']}&auth_key={$auth_key}" base="public"}" class='delete_block'>{$this->lang->words['block_delete']}</a>
+				</li>
+			</ul>
+			<br class='clear' />
+		</if>
+		<if test="exteditcustomcblock:|:$cblock['allow_edit'] && !$this->settings['blog_inline_edit']">
+			<br />
+			<ul class='right'>
+				<li class='ipsButton_secondary'>
+					<a href="{parse url="app=blog&amp;module=post&amp;section=post&amp;do=editcblock&amp;blogid={$cblock['blog_id']}&amp;cbid={$cblock['cbcus_id']}&amp;inline=1" base="public"}">{$this->lang->words['block_edit']}</a>
+				</li>
+				<li class='ipsButton_secondary important'>
+					<a href="{parse url="app=blog&module=post&section=mod&do=delcblock&blogid={$cblock['blog_id']}&cbid={$cblock['cblock_id']}&auth_key={$auth_key}" base="public"}" class='delete_block'>{$this->lang->words['block_delete']}</a>
+				</li>
+			</ul>
+			<br class='clear' />
+		</if>
+	</if>
+</div>]]></template_content>
+      <template_name>cblock_footer</template_name>
+      <template_data><![CDATA[$cblock="",$auth_key=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<if test="anyfriends:|:is_array( $friends ) && count( $friends )">
+	<ul class='ipsList_withminiphoto'>
+		{parse striping="friendBlogs" classes="row1,row2"}
+		<foreach loop="recentLoop:$friends as $fid => $friend">
+			<li class='{parse striping="friendBlogs"} ipsPad_half clearfix'>
+				<a href='{parse url="showuser={$friend['member_id']}" template="showuser" seotitle="{$friend['members_seo_name']}" base="public"}' class='ipsUserPhotoLink left ipsPad_half'>
+					<img src='{$friend['pp_small_photo']}' alt='{$this->lang->words['photo']}' class='ipsUserPhoto ipsUserPhoto_mini' />
+				</a>
+				<div class='list_content'>
+					<a href='{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$friend['blog_id']}" template="showblog" seotitle="{$friend['blog_seo_name']}" base="public"}' title='{$friend['blog_name']}'><strong>{$friend['blog_name']}</strong></a>
+					<div class='desc'>
+						{$this->lang->words['by_ucfirst']} {parse template="userHoverCard" group="global" params="$friend"}
+					</div>
+				</div>
+			</li>
+		</foreach>
+	</ul>
+<else />
+	<div class='no_messages'>{$this->lang->words['friends_no_blogs']}</div>
+</if>]]></template_content>
+      <template_name>cblock_friends</template_name>
+      <template_data>$friends=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<div id='cblock_{$cblock['cblock_id']}' class='general_box cblock_drag alt'>
+<if test="thisismyblog:|:$this->registry->blogFunctions->blog['member_id'] == $this->memberData['member_id']">
+	<h3 class='draggable'><span class='cblock_title'>{$title}</span></h3>
+	<if test="$this->settings['blog_inline_edit'] && $cblock['cblock_id'] > 0">
+		<if test="$configable">
+			<a href='#' class='configure_link'>{$this->lang->words['block_config']}</a>
+		</if>
+		<if test="$this->settings['blog_allow_cblockchange']">
+			<a href='#' class='close_link'><img src='{$this->settings['img_url']}/close_popup.png' alt='x' /></a>
+		</if>
+	</if>
+<else />
+	<h3><span class='cblock_title'>{$title}</span></h3>
+</if>
+<div class='cblock_inner<if test="$nopad"> nopad</if> row1'>]]></template_content>
+      <template_name>cblock_header</template_name>
+      <template_data><![CDATA[$cblock,$title="", $configable=0, $nopad=false]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[{parse striping="comments" classes="row1,row2"}
+<ul class='block_rows'>
+	{$html}
+</ul>]]></template_content>
+      <template_name>comments</template_name>
+      <template_data>$html</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<div class='short'>
+	<label for='digg_user'>{$this->lang->words['digg_username']}: <input type="text" id="digg_user" name="digg_user" value="{$config['digg_user']}" class='input_text' /></label><br /><br />
+	<input class="input_submit" id='digg_config' type="button" value="{$this->lang->words['save_settings_c']}" />
+	<script type='text/javascript'>
+		$('digg_config').observe('click', ipb.blog.saveCblock.bindAsEventListener( this, {$cblock['cblock_id']}, ["digg_user"] ) );
+	</script>
+</div>]]></template_content>
+      <template_name>config_digg</template_name>
+      <template_data>$config, $cblock</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<div class='short'>
+	
+	<label for='shareditems_id'>{$this->lang->words['google_id']}: <input type="text" id="shareditems_id" name="shareditems_id" value="{$config['shareditems_id']}" /></label><br /><br />
+	<input class="input_submit" id='google_config' type="button" value="{$this->lang->words['save_settings_c']}" />
+	
+	<script type='text/javascript'>
+		$('google_config').observe('click', ipb.blog.saveCblock.bindAsEventListener( this, {$cblock['cblock_id']}, ["shareditems_id"] ) );
+	</script>
+		
+		
+</div>]]></template_content>
+      <template_name>config_google</template_name>
+      <template_data>$config, $cblock</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<div class='short'>
+	<label for='mybloglog_id'>{$this->lang->words['google_id']}: <input type='text' id='mybloglog_id' name='mybloglog_id' value='{$config['mybloglog_id']}' /></label><br /><br />
+	<input class='input_submit' id='mybloglog_config' type='button' value='{$this->lang->words['save_settings_c']}' />
+	<script type='text/javascript'>
+		$('mybloglog_config').observe('click', ipb.blog.saveCblock.bindAsEventListener( this, {$cblock['cblock_id']}, ["mybloglog_id"] ) );
+	</script>		
+</div>]]></template_content>
+      <template_name>config_mybloglog</template_name>
+      <template_data>$config, $cblock</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<div class='short'>
+	<strong>{$this->lang->words['account_settings_c']}</strong><br /><br />
+		<label for='twitter_username'>{$this->lang->words['lastfm_username']}: <input type="text" id="twitter_username" name="twitter_username" value="{$config['twitter_username']}" class='input_text' /></label><br />
+		<label for='twitter_id'>{$this->lang->words['google_id']}: <input type="text" id="twitter_id" name="twitter_id" value="{$config['twitter_id']}" class='input_text' /></label><br /><br />
+		
+	<strong>{$this->lang->words['lastfm_display']}</strong><br /><br />
+		<select name='twitter_friends' id='twitter_friends'>
+			<option value='1'{$friend_sel[0]}>{$this->lang->words['twitter_friends1']}</option>
+			<option value='0'{$friend_sel[1]}>{$this->lang->words['twitter_friends2']}</option>
+		</select>
+		<br /><br />
+		
+	<input class="input_submit" id='twitter_config' type="button" value="{$this->lang->words['save_settings_c']}" />
+		
+	<script type='text/javascript'>
+		$('twitter_config').observe('click', ipb.blog.saveCblock.bindAsEventListener( this, {$cblock['cblock_id']}, ["twitter_username", "twitter_id", "twitter_friends"] ) );
+	</script>
+		
+		
+</div>]]></template_content>
+      <template_name>config_twitter</template_name>
+      <template_data>$config, $cblock, $friend_sel</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<div class='short'>
+	<label for='num_latest_visitors'>{$this->lang->words['visitor_how_many']}: <input type="text" id="num_latest_visitors" name="num_latest_visitors" value="{$config['num_latest_visitors']}" /></label><br /><br />
+	<input class="input_submit" id='visitors_config' type="button" value="{$this->lang->words['save_settings_c']}" />
+	
+	<script type='text/javascript'>
+		$('visitors_config').observe('click', ipb.blog.saveCblock.bindAsEventListener( this, {$cblock['cblock_id']}, ["num_latest_visitors"] ) );
+	</script>		
+</div>]]></template_content>
+      <template_name>config_visitors</template_name>
+      <template_data>$config, $cblock</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<form method='post' action='{$this->settings['base_url']}app=core&amp;module=search&amp;do=quick_search&amp;search_filter_app[blog]=1' id='context_search'>
+	<input type='hidden' name='type' value='blog' />
+	<input type='hidden' name='type_id' value='{$blogid}' />
+	<div class='short'>
+		<input type="text" style="width:90%;" name="search_term"  onfocus="this.value=''" value="{$this->lang->words['blog_enter_search']}" /><br />
+		<input type="submit" class='input_submit' value="{$this->lang->words['jmp_go']}" />
+	</div>
+</form>]]></template_content>
+      <template_name>get_my_search</template_name>
+      <template_data><![CDATA[$blogid=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[{parse striping="recentcomments" classes="row1,row2"}
+<li class='{parse striping="recentcomments"}' style='clear:both'>
+	<img src='{$comment['pp_mini_photo']}' width='{$comment['pp_mini_width']}' height='{$comment['pp_mini_height']}' alt='' class='photo' />
+	<div class='nexttophoto'>{$comment['memberlink']}
+	 <span class='desc'>{$this->lang->words['comment_on']} {$comment['_comment_date']}</span>
+	 <br />
+	 <if test="newcomment:|:$comment['newpost']">
+		 <a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$this->registry->blogFunctions->blog['blog_id']}&amp;showentry={$comment['entry_id']}&amp;cid={$comment['comment_id']}&amp;show=comment" template="showentry" seotitle="{$comment['entry_name_seo']}" base="public"}" title="{$this->lang->words['view_comment']}">{parse replacement="f_newpost"}</a>
+	</if><a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$this->registry->blogFunctions->blog['blog_id']}&amp;showentry={$comment['entry_id']}&amp;cid={$comment['comment_id']}&amp;show=comment" template="showentry" seotitle="{$comment['entry_name_seo']}" base="public"}"><strong>{$comment['entry_name']}</strong></a>
+	</div>
+</li>]]></template_content>
+      <template_name>last_comment_row</template_name>
+      <template_data><![CDATA[$comment=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<if test="anyvisitors:|:is_array( $visitors ) && count( $visitors )">
+	<ul class='ipsList_withminiphoto'>
+		{parse striping="visitorRow" classes="row1,row2"}
+		<foreach loop="recentLoop:$visitors as $vid => $visitor">
+			<li class='{parse striping="visitorRow"} ipsPad_half clearfix'>
+				<a href='{parse url="showuser={$visitor['member_id']}" template="showuser" seotitle="{$visitor['members_seo_name']}" base="public"}' class='ipsUserPhotoLink left ipsPad_half'>
+					<img src='{$visitor['pp_small_photo']}' alt='{$this->lang->words['photo']}' class='ipsUserPhoto ipsUserPhoto_mini' />
+				</a>
+				<div class='list_content ipsPad_half'>
+					{parse template="userHoverCard" group="global" params="$visitor"}
+					<div class='desc'>
+						{parse date="$visitor['visited_date']" format="TINY"}
+					</div>
+				</div>
+			</li>
+		</foreach>
+	</ul>
+<else />
+	<div class='no_messages'>{$this->lang->words['blog_no_visitors']}</div>
+</if>]]></template_content>
+      <template_name>latest_visitors</template_name>
+      <template_data>$visitors=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<td class="row1 altrow">&nbsp;<!-- no content --></td>]]></template_content>
+      <template_name>mini_cal_blank_cell</template_name>
+      <template_data/>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<td<if test="strstr($month_day, '<a href')"> class='cellHasEntry'</if>>$month_day</td>]]></template_content>
+      <template_name>mini_cal_date_cell</template_name>
+      <template_data><![CDATA[$month_day=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<td class="today">
+	<strong>$month_day</strong>
+</td>]]></template_content>
+      <template_name>mini_cal_date_cell_today</template_name>
+      <template_data><![CDATA[$month_day=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<td width="14%" class="subtitle">$day</td>]]></template_content>
+      <template_name>mini_cal_day_bit</template_name>
+      <template_data><![CDATA[$day=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<table class='mini_cal row1'>
+	<tr class='header'>
+		<foreach loop="minicalday:$days as $day">
+			<th class='row1 altrow cwd'>$day</th>
+		</foreach>
+	</tr>
+	<tr>
+			{$content}
+	</tr>
+</table>]]></template_content>
+      <template_name>mini_cal_mini_wrap</template_name>
+      <template_data><![CDATA[$content="", $days]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[</tr>
+	<!-- NEW ROW-->
+<tr>]]></template_content>
+      <template_name>mini_cal_new_row</template_name>
+      <template_data><![CDATA[$week=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[{parse striping="recententries" classes="row1,row2"}
+<ul class='block_rows'>
+	<if test="is_array( $entries )">
+		<foreach loop="$entries as $eid => $entry">
+			<li class='{parse striping="recententries"}' style='clear:both'>
+				<img src='{$entry['pp_mini_photo']}' width='{$entry['pp_mini_width']}' height='{$entry['pp_mini_height']}' alt='' class='photo' />
+				<div class='nexttophoto'>
+					<if test="newcomment:|:$entry['newpost']">
+					 <a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}">{parse replacement="f_newpost"}</a>&nbsp;
+					</if>
+					<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$this->registry->blogFunctions->blog['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}"><strong>{$entry['entry_name']}</strong></a>
+					<p class='desc'>{$this->lang->words['comment_on']} {$entry['_entry_date']}</p>
+				</div>
+			</li>
+		</foreach>
+	</if>
+</ul>]]></template_content>
+      <template_name>recentEntries</template_name>
+      <template_data><![CDATA[$entries=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[{$cblock['cbcus']} <if test="$cblock['cbcus_has_attach']"><!--IBF.ATTACHMENT_{$cblock['cbcus_id']}--></if>]]></template_content>
+      <template_name>show_cblock</template_name>
+      <template_data><![CDATA[$cblock=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<center>
+	<a href='{parse url="showuser={$member['member_id']}" template="showuser" seotitle="{$member['members_seo_name']}" base="public"}' class='ipsUserPhotoLink ipsPad_half'>
+		<img src='{$member['pp_small_photo']}' alt='{$this->lang->words['photo']}' class='ipsUserPhoto ipsUserPhoto_medium' />
+	</a>
+</center>]]></template_content>
+      <template_name>show_mypicture</template_name>
+      <template_data>$member=array(),$blog=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_cblocks</template_group>
+      <template_content><![CDATA[<center>{$image_link}</center>]]></template_content>
+      <template_name>show_random_album_image</template_name>
+      <template_data><![CDATA[$image_link=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_blog_global">
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<div class='master_list'>
+	<h2>{$blog['blog_name']}</h2>
+	<if test="blogowner:|:is_array($this->memberData['has_blog']) AND count($this->memberData['has_blog'])">
+		<div class='controls'>
+			{$this->settings['_mobile_blog_pages']}
+			<div class='buttons'>
+				<a href='{parse url="app=blog&amp;module=post&amp;section=post&amp;do=showform" base="public"}' class='button'>{$this->lang->words['add_entry']}</a>
+			</div>
+		</div>
+	</if>
+	<if test="showDisabledBox:|:$blog['blog_disabled'] AND $this->memberData['g_is_supmod']">
+		<div class='message error'>
+			<h4>{$this->lang->words['blog_global_disabled_title']}</h4>
+			{parse expression="sprintf( $this->lang->words['blog_global_disabled_desc'], $this->settings['base_url'] . 'app=blog&amp;module=post&amp;section=mod&amp;do=toggledisable&amp;disable=0&amp;blog_id=' . $blog['blog_id'] . '&amp;auth_key='.$this->member->form_hash )"}
+		</div>
+		<br />
+	</if>]]></template_content>
+      <template_name>blog_header</template_name>
+      <template_data><![CDATA[$blog="", $cblock_control="", $theme_js='', $header_js='']]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<php>
+	$categories = $this->registry->blogFunctions->formatCategoriesUrl( $blogId, $categories );
+</php>
+<if test="is_array( $categories ) AND count( $categories )">
+	<em>{$this->lang->words['blog_categories']}</em>
+	<foreach loop="$categories as $id => $data">
+		<a href='{$data['_url']}'>{$data['category_title']}</a><if test="! $data['_last']">, </if>
+	</foreach>
+</if>]]></template_content>
+      <template_name>catsAsList</template_name>
+      <template_data>$blogId, $categories</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>cblock_menu</template_name>
+      <template_data>$cblocks</template_data>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>contextSearch</template_name>
+      <template_data/>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>hookTagCloud</template_name>
+      <template_data>$tags</template_data>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[{parse template="defaultHeader" group="global" params=""}]]></template_content>
+      <template_name>overwriteHeader</template_name>
+      <template_data/>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<div>
+<a href='{$this->settings['base_url']}app=core&amp;module=attach&amp;section=attach&amp;attach_rel_module=post&amp;attach_id={$matches[1]}' target='_blank'><img src="{$this->settings['img_url']}/blog/image.png" alt="" /></a>
+<br />
+{parse replacement="post_attach_link"} <a href='{$this->settings['base_url']}app=core&amp;module=attach&amp;section=attach&amp;attach_rel_module=post&amp;attach_id={$matches[1]}' target='_blank'>{$matches[2]}</a>
+</div>]]></template_content>
+      <template_name>short_attach_tag</template_name>
+      <template_data>$matches</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<if test="strpos( $matches[1], $this->settings['emoticons_url'] ) === false">
+<img src='{$matches[1]}' style='max-width:300px;height:auto' alt='{$this->lang->words['blog_short_image']}' title='{$this->lang->words['blog_short_image']}' />
+<else />
+{$matches[0]}
+</if>]]></template_content>
+      <template_name>short_img_tag</template_name>
+      <template_data>$matches</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<img src='{$this->settings['img_url']}/blog/<if test="isyoutube:|:strstr( $url, 'youtube.' )">youtube.png<else />media.png</if>'> <a href='$url'>{$type}</a>]]></template_content>
+      <template_name>short_media_tag</template_name>
+      <template_data>$url, $type</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<php>
+	$tags = $this->registry->blogFunctions->formatTagsUrl( $blogId, $tags );
+</php>
+<if test="is_array( $tags ) AND count( $tags )">
+	<br />
+	<span class='desc'><strong>{$this->lang->words['blog_tags']}</strong>
+		<foreach loop="$tags as $id => $data">
+			<a href='{$data['_url']}'>{$data['_tag']}</a><if test="! $data['_last']">, </if>
+		</foreach>
+	</span>
+</if>]]></template_content>
+      <template_name>tagsAsList</template_name>
+      <template_data>$blogId, $tags</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_global</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>theme_menu</template_name>
+      <template_data><![CDATA[$themes, $blog, $_customTheme='']]></template_data>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_blog_hooks">
+    <template>
+      <template_group>skin_blog_hooks</template_group>
+      <template_content><![CDATA[<br />
+{parse striping="blog_row" classes="row2,row1"}
+<h2 class='maintitle'>
+	Recent blog entries on this topic
+</h2>
+<table class='ipb_table blog_list'>
+<foreach loop="blogloop:$entries as $eid => $blog">
+	<tr>
+		<td class="post_body {parse striping="blog_row"}">
+			<div class='left'><img src='{$blog['pp_thumb_photo']}' width='{$blog['pp_thumb_width']}' height='{$blog['pp_thumb_height']}' class='photo' /></div>
+			<div style='margin-left:50px'>
+				<h3 style='padding-top:0px;padding-left:10px'><a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$blog['blog_id']}&amp;showentry={$blog['blog_last_entry']}" template="showentry" seotitle="{$blog['entry_name_seo']}" base="public"}" title='{$this->lang->words['entry_view']}'>{$blog['blog_last_entryname']}</a></h3>
+				<div class='desc' style='padding-left:10px'>
+					{$this->lang->words['by_author']} {parse template="userHoverCard" group="global" params="$blog"}
+					{$this->lang->words['in']} <a href='{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$blog['blog_id']}" template="showblog" seotitle="{$blog['blog_seo_name']}" base="public"}'>{$blog['blog_name']}</a>, {$this->lang->words['on']} {parse date="$blog['_entry_date']" format="long"}
+				</div>
+				<div class='post entry-content' style='padding-top:0px; margin-top:0px'>
+					{$blog['blog_last_entry_excerpt']} <if test="$blog['blog_last_entry']"><div class='right' style='padding-top:10px;padding-bottom:10px'><a href='{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$blog['blog_id']}&amp;showentry={$blog['blog_last_entry']}" template="showentry" seotitle="{$blog['_seo_blog_last_entryname']}" base="public"}' title="{$this->lang->words['morelink']}">{$this->lang->words['morelink']} {$this->lang->words['_rarr']}</a></div></if>
+				</div>
+			</div>
+		</td>
+	</tr>
+</foreach>
+</table>]]></template_content>
+      <template_name>topics_blogThis</template_name>
+      <template_data>$entries</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_blog_list">
+    <template>
+      <template_group>skin_blog_list</template_group>
+      <template_content><![CDATA[<foreach loop="ratingimages:array(1,2,3,4,5) as $int">
+	<if test="ratingishigher:|:$number >= $int">
+		{parse replacement="mini_rate_on"}
+	<else />
+		{parse replacement="mini_rate_off"}
+	</if>
+</foreach>]]></template_content>
+      <template_name>blog_rating</template_name>
+      <template_data>$number</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_list</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>blogAjaxSidebar</template_name>
+      <template_data>$blogs</template_data>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_list</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>blogAjaxSidebarREntries</template_name>
+      <template_data>$entries</template_data>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_list</template_group>
+      <template_content><![CDATA[<if test="featured:|:is_array($featured) AND count($featured)">
+	<link rel="stylesheet" type="text/css" title='Main' media='screen' href='{$this->settings['public_dir']}style_css/{$this->registry->output->skin['_csscacheid']}/ipblog.css' />
+	<div class='ipsBox'>
+		<div class='ipsBox_container' id='entry_data'>
+			{parse template="blogListRow" group="blog_list" params="$featured, TRUE"}
+		</div>
+	</div>
+	<br class='clear' />
+</if>]]></template_content>
+      <template_name>blogFeaturedEntry</template_name>
+      <template_data>$featured=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_list</template_group>
+      <template_content><![CDATA[<div class='master_list'>
+	<h2>{$this->lang->words['blist_blogs']}</h2>
+	
+	<if test="noblogs:|:!count($blogs) && !count($featured)">
+		<div class='row no_messages'>{$this->lang->words['no_blogs_found']}</div>
+	<else />
+		<if test="featured:|:is_array($featured) AND count($featured)">
+			<h3>{$this->lang->words['featured_entries']}</h3>
+			<foreach loop="featuredloop:$featured as $fid => $entry">
+				{parse template="blogTableRow" group="blog_list" params="$entry"}
+			</foreach>
+		</if>
+		<if test="tablepinnedblogs:|:is_array( $blogs['pinned'] ) && count( $blogs['pinned'] )">
+			<h3>{$this->lang->words['bloglist_start_pinned']}</h3>
+			<foreach loop="tablepinnedblogloop:$blogs['pinned'] as $pinned">
+				{parse template="blogTableRow" group="blog_list" params="$pinned"}
+			</foreach>
+		</if>
+		<if test="tablenormalblogs:|:is_array( $blogs['normal'] ) && count( $blogs['normal'] )">
+			<h3>{$this->lang->words['other_blogs']}</h3>
+			<foreach loop="tablenormalblogloop:$blogs['normal'] as $normal">
+				{parse template="blogTableRow" group="blog_list" params="$normal"}
+			</foreach>
+		</if>
+	</if>
+	
+	<div class='controls'>
+		{$pages}
+		<div class='buttons'>
+			<if test="blogowner:|:is_array($this->memberData['has_blog']) AND count($this->memberData['has_blog'])">
+				<a href='{parse url="app=blog&amp;module=post&amp;section=post&amp;do=showform" base="public"}' class='button'>{$this->lang->words['add_entry']}</a>
+			</if>
+		</div>
+	</div>
+</div>]]></template_content>
+      <template_name>blogIndexPage</template_name>
+      <template_data><![CDATA[$pages, $featured=array(), $blogs=array(), $extra='', $type='dash', $sorting='']]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_list</template_group>
+      <template_content><![CDATA[<div class='entry<if test="$entry['entry_featured']"> featured</if><if test="viewdraftcss:|:$entry['entry_status'] != 'published'"> moderated</if><if test="$entry['hide_private']"> private</if>' id='entry_{$entry['entry_id']}'>
+	<div class='entry_header'>
+		<if test="isdraft:|:$entry['entry_status'] != 'published'"><span class='ipsBadge ipsBadge_red'>{$this->lang->words['entry_is_a_draft']}</span></if>
+		<if test="isfeatured:|:$entry['blog_pinned'] || $entry['entry_featured']"><span class='ipsBadge ipsBadge_green'>{$this->lang->words['entry_is_featured']}</span></if>
+		
+		<a href='{parse url="showuser={$entry['member_id']}" template="showuser" seotitle="{$entry['members_seo_name']}" base="public"}' class='ipsUserPhotoLink left ipsPad_half'>
+			<img src='{$entry['pp_small_photo']}' alt='{$this->lang->words['photo']}' class='ipsUserPhoto ipsUserPhoto_medium' />
+		</a>
+		
+		<h2 class='ipsType_pagetitle'><a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}" title='{$this->lang->words['view_entry_alt']}'>{$entry['entry_name']}</a></h2>
+		<div class='entry_date desc'>{parse date="$entry['_entry_date']" format="short2" relative="false"}</div>
+		<br class='clear' />
+	</div>
+	<div class='entry_author desc ipsPad_half'>
+		<if test="isrssimport:|:$entry['entry_rss_import']">{parse replacement="blog_rss_import"}&nbsp;</if>
+		{$this->lang->words['posted_by']} <strong>{parse template="userHoverCard" group="skin_global" params="$entry"}</strong>
+		{$this->lang->words['in']} <a href='{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}" template="showblog" seotitle="{$entry['blog_seo_name']}" base="public"}'>{$entry['blog_name']}</a>
+	</div>
+	<div class='entry_content ipsType_textblock ipsPad'>
+		<if test="viewprivate:|:$entry['hide_private']">
+			{$this->lang->words['blog_private_entry']}
+			<div class='desc right'><a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}&amp;showprivate=1" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}">{$this->lang->words['blog_show_privateentry']} {$this->lang->words['_rarr']}</a></div>
+		<else />
+			{$entry['entry_short']}
+		</if>
+		<br />
+	</div>
+	<div class='entry_footer general_box clear'>
+		<h3 class='ipsType_small'>
+			<if test="entryFooterMod:|:$this->memberData['member_id'] && !$outSideBlog">
+				<span class='right'>
+					<if test="canbanish:|:$this->memberData['g_is_supmod']">
+						<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}&amp;banish=1&amp;return=home" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}" title="{$this->lang->words['blist_banish']}">{parse replacement="blog_banish"}</a>
+					</if>
+					<if test="ismod:|:$this->_canModerateBlogs">
+						&nbsp;&nbsp;<input type='checkbox' name='bmod_{$entry['blog_id']}' value='1' class='input_check' <if test="selected:|:$entry['bidon']">selected='selected'</if> /> <label for='bmod_{$entry['blog_id']}' class='hide'>{$this->lang->words['select_for_mod']}</label>
+					</if>
+				</span>
+			</if>
+			<if test="hasQueuedComments:|:$entry['entry_queued_comments'] && $entry['_can_approve']"><span class='ipsBadge ipsBadge_orange' data-tooltip="{parse expression="sprintf( $this->lang->words['entry_queued_comments'], $entry['entry_queued_comments'] )"}">{$this->lang->words['f_queued_badge']}</span></if>
+			<if test="islocked:|:$entry['entry_locked']">{parse replacement="blog_locked"}<else /><if test="$entry['entry_num_comments'] AND $entry['entry_last_comment_date'] > $entry['_lastRead']">{parse replacement="blog_comments_new"}<else />{parse replacement="blog_comments"}</if></if>
+			<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}#commentsStart">{$entry['entry_num_comments']} {$this->lang->words['entry_comments']}</a>
+		</h3>
+	</div>
+</div>]]></template_content>
+      <template_name>blogListRow</template_name>
+      <template_data>$entry, $outSideBlog=false</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_list</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>blogPreview</template_name>
+      <template_data>$blog, $entry</template_data>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_list</template_group>
+      <template_content><![CDATA[<div class='row touch-row with_photo'>
+	<div class='icon'>
+		<if test="$blog['_lastAuthor']">
+			<img src='{$blog['_lastAuthor']['pp_mini_photo']}' width='{$blog['_lastAuthor']['pp_mini_width']}' height='{$blog['_lastAuthor']['pp_mini_height']}' class='photo' />
+		<else />
+			<img src='{$blog['pp_mini_photo']}' width='{$blog['pp_mini_width']}' height='{$blog['pp_mini_height']}' class='photo' />
+		</if>
+	</div>
+	
+	<div class='rowContent'>
+		
+		<if test="$blog['blog_type'] == 'local'">
+			<if test="$blog['entry_featured']">
+				<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$blog['blog_id']}&amp;showentry={$blog['entry_id']}" template="showentry" seotitle="{$blog['entry_name_seo']}" base="public"}" title='{$this->lang->words['entry_view']}' class='title'>{$blog['_entry_name_short']}</a>
+				<br />
+				<span class='desc'>{$blog['entry_date_short']} &middot; {parse format_number="$blog['entry_num_comments']"} {$this->lang->words['comments_fn']}</span>
+				<br />
+	
+				<div class='blog_excerpt'>
+					{parse expression="IPSText::truncate( $blog['entry_short'], 100 )"}
+				</div>
+				
+				<span class='desc'>
+					<strong>
+						{$this->lang->words['blog_in']} <a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$blog['blog_id']}" template="showblog" seotitle="{$blog['blog_seo_name']}" base="public"}" title='{$this->lang->words['view_blog']}'>{$blog['blog_name']}</a> {$this->lang->words['by_small']} 
+						<if test="isGroupBlog:|:$blog['blog_groupblog']">
+							{$blog['blog_groupblog_name']}
+						<else />
+							{parse template="userHoverCard" group="global" params="$blog"}
+						</if>
+					</strong>
+				</span>
+			<else />
+				<if test="isDisabledBadge:|:$blog['blog_disabled']">
+					<span class='ipsBadge ipsBadge_red'>{$this->lang->words['blog_disabled_prefix']}</span>
+				</if>
+				
+				<if test="blogIsPrivate:|:$blog['blog_private']">
+					<span class='ipsBadge ipsBadge_red'>{$this->lang->words['cat_private']}</span>
+				</if>
+				<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$blog['blog_id']}" template="showblog" seotitle="{$blog['blog_seo_name']}" base="public"}" title='{$this->lang->words['view_blog']}' class='title'>{$blog['blog_name']}</a>
+				<if test="isntGroupBlog:|:!$blog['blog_groupblog']">
+					<span class='desc'>{$this->lang->words['by_small']} {$blog['members_display_name']}</span>
+				</if>
+				<br />
+				
+				<div class='blog_excerpt'>
+					{parse format_number="$blog['blog_num_entries']"} {$this->lang->words['entries_fn']} &middot;
+					{parse format_number="$blog['blog_num_comments']"} {$this->lang->words['comments_fn']} &middot;
+					{parse format_number="$blog['blog_num_views']"} {$this->lang->words['blog_num_views']}
+				</div>
+				
+				<if test="$blog['blog_last_entry']">
+					<span class='desc'>
+			 			{$this->lang->words['last_entry_on']}: <a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$blog['blog_id']}&amp;showentry={$blog['blog_last_entry']}" template="showentry" seotitle="{$blog['entry_name_seo']}" base="public"}" title='{$this->lang->words['entry_view']}'>{$blog['_entry_name_short']}</a> {$this->lang->words['on']} {$blog['entry_date_short']}
+					</span>
+				</if>
+			</if>
+		<else />
+			<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$blog['blog_id']}" template="showblog" seotitle="{$blog['blog_seo_name']}" base="public"}" title='{$this->lang->words['view_blog']}' class='title'>{$blog['blog_name']}</a> {$this->lang->words['by_small']} 
+			<if test="isGroupBlog:|:$blog['blog_groupblog']">
+				<img src='{$this->settings['img_url']}/blog/blog_group_small.png' alt='' /> {$blog['blog_groupblog_name']}
+			<else />
+				{parse template="userHoverCard" group="global" params="$blog"}
+			</if>
+			<br />
+			<span class='desc'>{$this->lang->words['blist_redirect_hits']}: {parse format_number="$blog['blog_num_exthits']"}</span>
+		</if>
+	</div>
+</div>]]></template_content>
+      <template_name>blogTableRow</template_name>
+      <template_data>$blog</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_list</template_group>
+      <template_content><![CDATA[<php>
+	$isUnread = ($data['last_read'] < $data['blog_last_update']) ? true : false;
+</php>
+
+<if test="gotoNewCommentsStart:|:$isUnread">
+	<a href='{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$data['blog_id']}&amp;showentry={$data['blog_last_entry']}&amp;show=newcomment" template="showentry" seotitle="{$data['entry_name_seo']}" base="public"}' title='{$this->lang->words['view_newest_comment']}'>
+</if>
+<if test="isDisabled:|:$blog['blog_disabled']">
+	<span title="{$this->lang->words['blog_global_disabled_title']}">{parse replacement="t_closed"}</span>
+<else />
+	<if test="isBlogOwner:|:$this->registry->blogFunctions->ownsBlog( $data )">
+		<if test="isBlogOwnerUnread:|:$isUnread">
+			{parse replacement="t_unread_dot"}
+		<else />
+			{parse replacement="t_read_dot"}
+		</if>
+	<else />
+		<if test="isNotBlogOwnerUnread:|:$isUnread">
+			{parse replacement="t_unread"}
+		<else />
+			{parse replacement="t_read"}
+		</if>
+	</if>
+</if>
+<if test="gotoNewCommentsEnd:|:$isUnread">
+	</a>
+</if>]]></template_content>
+      <template_name>generateBlogIcon</template_name>
+      <template_data>$data</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_blog_manage">
+    <template>
+      <template_group>skin_blog_manage</template_group>
+      <template_content><![CDATA[{parse template="createSteps" group="blog_manage" params="1"}
+<br />
+<h1 class='ipsType_pagetitle'>{$this->lang->words['ucp_create_blog']}</h1>
+<br />
+<if test="$error">
+	<p class='message error'>{$error}</p>
+	<br />
+</if>
+<form action="{parse url="app=blog&amp;module=manage&amp;section=dashboard&amp;act=create&amp;stage=2" base="public" template="createblog" seotitle="false"}" method="post">
+	<input type='hidden' name='form_hash' value='{$this->member->form_hash}' />
+	<div class='ipsBox'>
+		<div class='ipsBox_container ipsPad'>
+			{$this->lang->words['blog_terms']}
+		</div>
+		<br />
+		<div class='ipsBox_container ipsPad'>
+			<input type='checkbox' id='agree_cbox' class='input_check' name='agree_to_terms' value='1' />
+			<label for='agree_cbox' class='clickable'>{$this->lang->words['blog_terms_agree']}</label>
+		</div>
+	</div>
+	<fieldset class='submit'>
+		<input type='submit' value='{$this->lang->words['blog_create_next']}' class='input_submit' />
+	</fieldset>
+</form>]]></template_content>
+      <template_name>create1</template_name>
+      <template_data>$error</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_manage</template_group>
+      <template_content><![CDATA[{parse template="createSteps" group="blog_manage" params="2"}
+<br />
+<h1 class='ipsType_pagetitle'>{$this->lang->words['ucp_create_blog']}</h1>
+<br />
+<if test="createerror:|:$errors">
+	<div class='message error'>
+		{$errors}
+	</div>
+	<br />
+</if>
+<form action="{parse url="app=blog&amp;module=manage&amp;section=dashboard&amp;act=create&amp;stage=3" base="public" template="createblog" seotitle="false"}" method="post">
+	<div class='ipsBox'>
+		<input type='hidden' name='agree_to_terms' value='1' />
+		<input type='hidden' name='form_hash' value='{$this->member->form_hash}' />
+		<div class='ipsBox_container ipsPad'>
+			<ul class='ipsForm ipsForm_vertical'>
+				<li class='ipsField {parse striping="createForm"}'>
+					<label class='ipsField_title'>{$this->lang->words['blog_name']} <span class='ipsForm_required'>*</span></label>
+					<p class='ipsField_content'><input type='text' size='32' maxlength='128' name='blog_name' id='blog_name' value='{$blog['blog_name']}' class='input_text' /></p>
+				</li>
+				<li class='ipsField {parse striping="createForm"}'>
+					<span class='ipsField_title'>{$this->lang->words['blog_desc']}</span>
+					<p class='ipsField_content'><input type='text' size='32' maxlength='250' name='blog_desc' id='blog_name' value='{$blog['blog_desc']}' class='input_text' /></p>
+				</li>
+				<li class='ipsField ipsField_select {parse striping="createForm"}'>
+					<label class='ipsField_title'>{$this->lang->words['blog_type']} <span class='ipsForm_required'>*</span></label>
+					<p class='ipsField_content'>
+						<select class='input_select' name='blog_type' id='blog_type'>
+							<if test="allowLinkedBlog:|:$this->memberData['g_blog_allowlocal']"><option value='local' {$blog['type_local']}>{$this->lang->words['blog_local']}</option></if>
+							<if test="allowHostedBlog:|:$this->memberData['g_blog_allowcreate']"><option value='external' {$blog['type_external']}>{$this->lang->words['blog_external']}</option></if>
+						</select>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<fieldset class='submit'>
+		<input type='submit' value="{$this->lang->words['blog_create_next']}" class='input_submit' />
+	</fieldset>
+</form>]]></template_content>
+      <template_name>create2</template_name>
+      <template_data><![CDATA[$blog=array(),$errors='']]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_manage</template_group>
+      <template_content><![CDATA[<div class='ipsSteps clearfix'>
+	<ul>
+		<li class='<if test="$active > 1">ipsSteps_done<else /><if test="$active == 1">ipsSteps_active</if></if>'>
+	       <strong class='ipsSteps_title'>{parse expression="sprintf( $this->lang->words['step'], 1 )"}</strong>
+	       <span class='ipsSteps_desc'>{$this->lang->words['blog_terms_titles']}</span>
+	       <span class='ipsSteps_arrow'>&nbsp;</span>
+		</li>
+		<li class='<if test="$active > 2">ipsSteps_done<else /><if test="$active == 2">ipsSteps_active</if></if>'>
+	       <strong class='ipsSteps_title'>{parse expression="sprintf( $this->lang->words['step'], 2 )"}</strong>
+	       <span class='ipsSteps_desc'>{$this->lang->words['blog_name']}</span>
+	       <span class='ipsSteps_arrow'>&nbsp;</span>
+		</li>
+		<li class='<if test="$active > 3">ipsSteps_done<else /><if test="$active == 3">ipsSteps_active</if></if>'>
+	       <strong class='ipsSteps_title'>{parse expression="sprintf( $this->lang->words['step'], 3 )"}</strong>
+	       <span class='ipsSteps_desc'>{$this->lang->words['_blog_settings']}</span>
+	       <span class='ipsSteps_arrow'>&nbsp;</span>
+		</li>
+	</ul>
+</div>]]></template_content>
+      <template_name>createSteps</template_name>
+      <template_data>$active=1</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_manage</template_group>
+      <template_content><![CDATA[<h1 class='ipsType_pagetitle left'>{$this->lang->words['blog_ucp_cats_manage']}</h1>
+<ul class='topic_buttons right'>
+	<li><a href='#' id='addCategory'>{$this->lang->words['form_add_cat']}</a></li>
+</ul>
+<br class='clear' />
+<br />
+<form action="{parse url="app=blog&amp;module=manage&amp;section=categories&amp;act=manage&amp;blogid={$blog['blog_id']}" base="public" template="manageblog" seotitle="false"}" method="post">
+	<input type="hidden" name="form_hash" value="{$this->member->form_hash}" />
+	<h3 class='maintitle'>{$this->lang->words['blog_categories']}</h3>
+	<table class="ipb_table">
+		<tr class="header">
+			<th>{$this->lang->words['blog_category']}</th>
+			<th class='col_f_starter short'>{$this->lang->words['entries_fn']}</th>
+			<th class='col_mod'></th>
+		</tr>
+		{parse striping="categories" classes="row2,row1"}
+		<foreach loop="managecategories:$blog['_categories'] as $id => $category">
+			<tr class="{parse striping="categories"}">
+				<td><a href="{parse url="app=blog&blogid={$blog['blog_id']}&cat={$id}" base="public" seotitle="{$category['category_title_seo']}" template="blogcatview"}">{$category['category_title']}</a></td>
+				<td class='short'>{$category['count']}</td>
+				<td><if test="isCategorized:|:!empty($id)"><input type="checkbox" name="categories[{$id}]" /><else /><input type='checkbox' disabled='disabled' /></if></td>
+			</tr>
+		</foreach>
+	</table>
+	<div class='bar altbar moderation_bar with_action'>
+		<input type='submit' value='{$this->lang->words['com_delete']}' class="input_submit" />
+	</div>
+</form>
+<div id='addCategory_popup' style='display:none'>
+	<form action="{parse url="app=blog&module=manage&section=categories&act=add&blogid={$blog['blog_id']}" base="public" template="manageblog" seotitle="false"}" method="post">
+		<h3>{$this->lang->words['form_add_cat']}</h3>
+		<div class="ipsBox ipsPad" style='text-align:center'>
+			<input class='input_text' type="text" name="title" size="35" maxlength="32" />
+		</div>
+		<fieldset class='submit'>
+			<input type='submit' value='{$this->lang->words['blog_add']}' class='input_submit' />
+		</fieldset>
+	</form>
+</div>
+<script type='text/javascript'>
+	$('addCategory').on('click', function(e){
+		Event.stop(e);
+		new ipb.Popup( 'see_all', {
+						type: 'pane',
+						initial: $('addCategory_popup').show(),
+						hideAtStart: false,
+						stem: false,
+						hideClose: false,
+						w: '350px',
+						h: 300
+					} );
+	});
+</script>]]></template_content>
+      <template_name>listCategories</template_name>
+      <template_data>$blog=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_manage</template_group>
+      <template_content><![CDATA[<h1 class='ipsType_pagetitle'>{parse expression="sprintf($this->lang->words['blog_comments_on'], $blog['blog_name'])"}</h1>
+<br />
+<if test="hasPaginationTop:|:$pagination">
+	<div class='clearfix'>{$pagination}</div>
+	<br />
+</if>
+<if test="canModerateBlogStart:|:$this->memberData['g_blog_allowownmod']">
+	<form action="{parse url="app=blog&amp;module=manage&amp;section=comments&amp;act=moderate" base="public" template="manageblog" seotitle="false"}" id="checkBoxForm" method="post"> 
+		<input type="hidden" name="form_hash" value="{$this->member->form_hash}" />
+		<input type='hidden' name='returnTo' value='app=blog&module=manage&section=comments&blogid={$blog['blog_id']}' />
+</if>
+<if test="hasComments:|:is_array( $comments ) && count( $comments )">
+	<div class='ipsBox'>
+		<foreach loop="recentLoop:$comments as $cid => $comment">
+			<div class='ipsBox_container ipsPad <if test="!$comment['comment_approved']"> moderated' style='background-color: #f8f1f3</if>'>
+				<if test="canModerateBlogCheck:|:$this->memberData['g_blog_allowownmod']">
+					<span class='ipsPad_half right'><input type='checkbox' name='modIds[{$comment['comment_id']}]' value='1' /></span>
+				</if>
+				<div class='ipsComment_author'>
+					<a class='ipsUserPhotoLink' href='{parse url="showuser={$comment['member_id']}" template="showuser" seotitle="{$comment['members_seo_name']}" base="public"}'>
+						<img src='{$comment['pp_small_photo']}' alt='{$this->lang->words['photo']}' class='ipsUserPhoto ipsUserPhoto_mini' />
+					</a>
+					<br />
+					{parse template="userHoverCard" group="global" params="$comment"}
+					<br />
+					<span class='desc'>
+						{$comment['comment_date']}<br />
+						{$this->lang->words['in']} <a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$comment['blog_id']}&amp;showentry={$comment['entry_id']}" template="showentry" seotitle="{$comment['entry_name_seo']}" base="public"}#commentsStart"><strong>{$comment['entry_name']}</strong></a>
+					</span>
+				</div>
+				<div id='comment_7' class='ipsComment_comment'>
+					{$comment['comment_text']}
+				</div>
+				<br class='clear' />
+			</div>
+			<br />
+		</foreach>
+	</div>
+	<if test="canModerateBlogEnd:|:$this->memberData['g_blog_allowownmod']">
+			<div class='bar altbar moderation_bar with_action'>
+				<select name='modOption' class='input_select'>
+					<option value='delete'>{$this->lang->words['bmod_delete']}</option>
+					<option value='approve'>{$this->lang->words['bmod_approve']}</option>
+					<option value='unapprove'>{$this->lang->words['bmod_unapprove']}</option>
+				</select>
+				<input type='submit' value='{$this->lang->words['ucp_cat_go']}' class='input_submit' />
+			</div>
+		</form>		
+	</if>
+<else />
+	<div class='no_messages'>{$this->lang->words['bucp_no_comments']}</div>
+</if>
+<br />
+<if test="hasPaginationBottom:|:$pagination">
+	<div class='clearfix'>{$pagination}</div>
+</if>
+<br />]]></template_content>
+      <template_name>manageComments</template_name>
+      <template_data>$comments, $blog, $pagination</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_manage</template_group>
+      <template_content><![CDATA[<script type='text/javascript'>	
+ipb.blog.blogs = \$H({$dropdown});
+ipb.lang['blog_error_deletecbox'] = "{$this->lang->words['blog_error_deletecbox']}";
+ipb.templates['deleteDialogue'] = new Template("<h3 class='bar'>{$this->lang->words['bucpo_delete']}</h3><div class='ipsBox'><div class='message error'><strong>{$this->lang->words['delete_blog_confirm']}</strong><br /><if test="count($myBlogs) > 1"><input type='checkbox' id='delMove_#{id}' name='delMove' value='1' /> {$this->lang->words['delete_blog_move']} <select name='moveTo' id='delselect_#{id}'></select><br /></if><input type='checkbox' id='delConfirm_#{id}' value='1' /> {$this->lang->words['delete_blog_confirm_2']} <span id='delMore_#{id}'>{$this->lang->words['and_all_entries']}</span></div><div class='short ipsPad_half'><input type='button' class='input_submit' value='{$this->lang->words['delete']}' id='delButton_#{id}' /></div></div>");
+</script>
+<h1 class='ipsType_pagetitle left'>{$this->lang->words['blog_manage']}</h1>
+<if test="blogcancreate:|:($this->memberData['g_blog_allowcreate'] || $this->memberData['g_blog_allowlocal']) && $this->registry->getClass('blogFunctions')->checkMaxBlogs()">
+	<ul class='topic_buttons'>
+		<li><a href='{parse url="app=blog&amp;module=manage&amp;section=dashboard&amp;act=create&amp;form_hash={$this->member->form_hash}" base="public" template="createblog" seotitle="false"}'>{$this->lang->words['ucp_create_blog']}</a></li>
+	</ul>
+</if>
+<br class='clear' />
+<br />
+<if test="dasherror:|:$error">
+	<div class="message error">
+		{$error}
+	</div>
+	<br />
+</if>
+<div class='ipsLayout <if test="is_array( $latestComments ) && count( $latestComments )">ipsLayout_withright ipsLayout_bigright</if> clearfix'>
+	<div class='ipsLayout_content'>
+		<h3 class='maintitle'>{$this->lang->words['your_current_blogs']}</h3>
+		<table class='ipb_table' summary="{$this->lang->words['your_current_blogs']}">
+			<tr class='header'>
+				<th scope='col' width='1%'>&nbsp;</th>
+				<th scope='col' width='60%'>&nbsp;</th>
+				<th scope='col' width='5%'>&nbsp;</th>
+				<th scope='col' class='short' width="10%">{$this->lang->words['your_blogs_entries']}</th>
+				<th scope='col' class='short' width="10%">{$this->lang->words['your_blogs_views']}</th>
+				<th scope='col' class='short' width="10%">{$this->lang->words['your_blogs_comments']}</th>
+			</tr>
+			{parse striping="forums" classes="row1,row2"}
+			<foreach loop="blogs:$myBlogs as $bid => $r">
+				<tr class='{parse striping="forums"}'>
+					<if test="isExternal:|:$r['blog_type'] == 'external'">
+						<td class='altrow short'>
+							<img src="{$this->settings['img_url']}/blog/blog_external.png" alt='{$this->lang->words['bucp_btype_external']}' data-tooltip='{$this->lang->words['bucp_btype_external']}' />
+						</td>
+					<else />
+						<td class='altrow short'>
+							<img src="{$this->settings['img_url']}/blog/blog_{$r['blog_view_level']}.png" alt='{$this->lang->words['bucp_btype_'.$r['blog_view_level']]}' data-tooltip='{$this->lang->words['bucp_btype_'.$r['blog_view_level']]}' />
+						</td>
+					</if>
+					<td>
+						<a href='{parse url="app=blog&amp;blogid={$r['blog_id']}" base="public" seotitle="{$r['blog_seo_name']}" template="showblog"}' id='blogLink_{$r['blog_id']}'><strong>{$r['blog_name']}</strong></a>
+						<if test="$r['_type'] == 'privateclub' OR $r['_type'] == 'editor'">
+							<span class='desc'>
+								( {$this->lang->words['bucp_blog_owner']} {IPSMember::makeProfileLink( $r['members_display_name'], $r['blog_owner_id'], $r['members_seo_name'] )} )
+							</span>
+						</if>
+					</td>
+					<td>
+						<if test="( $r['_type'] != 'privateclub' AND $r['blog_type'] != 'external' ) or ( $r['_type'] != 'editor' AND $r['blog_type'] != 'external' AND $r['_type'] != 'privateclub' AND $r['blog_type'] != 'external' ) or ( $r['_type'] != 'editor' AND $r['_type'] != 'privateclub' )">
+							<a href='#' id='blog-{$r['blog_id']}__mod_options' class='ipsButton_secondary left ipbmenu clickable' />
+								{$this->lang->words['blog_ucp_options']}
+							</a>
+							<ul class='ipbmenu_content' id='blog-{$r['blog_id']}__mod_options_menucontent' style='display:none'>
+								<if test="blogNotEditor:|:$r['_type'] != 'privateclub' AND $r['blog_type'] != 'external'">
+									<li><a href='{parse url="app=blog&amp;module=post&amp;section=post&amp;do=showform&amp;blogid={$r['blog_id']}" base="public"}' title='{$this->lang->words['bucpo_postnew']}'><img src="{$this->settings['img_url']}/add.png" alt='' /> <strong>{$this->lang->words['bucpo_postnew']}</strong></a></li>
+								</if>
+								<if test="blogNotEditorRest:|:$r['_type'] != 'editor' AND $r['blog_type'] != 'external' AND $r['_type'] != 'privateclub' AND $r['blog_type'] != 'external'">
+									<li><a href='{parse url="app=blog&amp;module=manage&amp;section=settings&amp;blogid={$r['blog_id']}" base="public" template="manageblog" seotitle="false"}' title='{$this->lang->words['bucpo_settings']}'>{parse replacement="generic_cog"} {$this->lang->words['bucpo_settings']}</a></li>
+									<li><a href='{parse url="app=blog&amp;module=manage&amp;section=categories&amp;blogid={$r['blog_id']}" base="public" template="manageblog" seotitle="false"}' title='{$this->lang->words['bucpo_categories']}'><img src="{$this->settings['img_url']}/blog/categories.png" alt='' /> {$this->lang->words['bucpo_categories']}</a></li>
+									<li><a href='{parse url="app=blog&amp;module=manage&amp;section=comments&amp;blogid={$r['blog_id']}" base="public" template="manageblog" seotitle="false"}' title='{$this->lang->words['bucpo_comments']}'><img src="{$this->settings['img_url']}/blog/comments.png" alt='' /> {$this->lang->words['bucpo_comments']}</a></li>
+									<if test="$this->settings['blog_allow_rssimport'] AND $this->memberData['g_blog_rsspergo']">
+										<li><a href='{parse url="app=blog&amp;module=manage&amp;section=settings&act=rssimport&amp;blogid={$r['blog_id']}" base="public" template="manageblog" seotitle="false"}' title='{$this->lang->words['bucpo_rssform']}'><img src="{$this->settings['img_url']}/blog/rss.png" alt='' /> {$this->lang->words['bucpo_rssform']}</a></li>
+									</if>
+								<else />
+									<if test="blogNotEditorSettings:|:$r['_type'] != 'editor' AND $r['_type'] != 'privateclub'">
+										<li><a href='{parse url="app=blog&amp;module=manage&amp;section=settings&amp;blogid={$r['blog_id']}" base="public" template="manageblog" seotitle="false"}' title='{$this->lang->words['bucpo_settings']}'>{parse replacement="generic_cog"} {$this->lang->words['bucpo_settings']}</a></li>
+									</if>
+								</if>
+								<if test="$this->memberData['g_blog_allowdelete'] AND $r['_type'] != 'group' AND $r['_type'] != 'editor' AND $r['_type'] != 'privateclub'">
+									<li><a class='__delete' id='blogDelete_{$r['blog_id']}' href='{parse url="app=blog&amp;module=manage&amp;section=dashboard&act=delete&amp;blogid={$r['blog_id']}&amp;form_hash={$this->member->form_hash}" base="public" template="manageblog" seotitle="false"}' title='{$this->lang->words['bucpo_delete']}'>{parse replacement="folder_delete"} <strong>{$this->lang->words['bucpo_delete']}</strong></a></li>
+								</if>
+							</ul>
+						</if>
+					</td>
+					<td class="short altrow">{parse expression="intval($r['num_entries'])"}</td>
+					<td class="short">{parse expression="intval($r['blog_num_views'])"}</td>
+					<td class="short altrow">{parse expression="intval($r['blog_num_comments'])"}</td>
+				</tr>
+			</foreach>
+		</table>
+		<br />
+	</div>
+	<if test="hasComments:|:is_array( $latestComments ) && count( $latestComments )">
+		<div class='ipsLayout_right'>
+			<if test="canModerateBlogStart:|:$this->memberData['g_blog_allowownmod']">
+				<form action="{parse url="app=blog&amp;module=manage&amp;section=comments&amp;act=moderate" base="public" template="manageblog" seotitle="false"}" id="checkBoxForm" method="post"> 
+					<input type="hidden" name="form_hash" value="{$this->member->form_hash}" />
+					<input type='hidden' name='returnTo' value='app=blog&module=manage' />
+			</if>
+			
+			<h3 class="maintitle">{$this->lang->words['blog_latest_comments']}</h3>
+			<div class='ipsBox'>
+				<foreach loop="recentLoop:$latestComments as $cid => $comment">
+					<div class='ipsBox_container ipsPad <if test="!$comment['comment_approved']"> moderated' style='background-color: #f8f1f3</if>'>
+						<a href='{parse url="showuser={$comment['member_id']}" template="showuser" seotitle="{$comment['members_seo_name']}" base="public"}' class='ipsUserPhotoLink left ipsPad_half'>
+							<img src='{$comment['pp_small_photo']}' alt='{$this->lang->words['photo']}' class='ipsUserPhoto ipsUserPhoto_mini' />
+						</a>
+						<div class='list_content desc'>
+							<if test="canModerateBlogCheck:|:$this->memberData['g_blog_allowownmod']">
+								<span class='ipsPad_half right'><input type='checkbox' name='modIds[{$comment['comment_id']}]' value='1' /></span>
+							</if>
+							{$this->lang->words['by_ucfirst']} {parse template="userHoverCard" group="global" params="$comment"} {$this->lang->words['in']} <a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$comment['blog_id']}&amp;showentry={$comment['entry_id']}" template="showentry" seotitle="{$comment['entry_name_seo']}" base="public"}#commentsStart"><strong>{$comment['entry_name']}</strong></a>
+							<br />{parse date="$comment['comment_date']" format="short"}
+						</div>
+						<br />{$comment['comment_text']}
+					</div>
+					<br />
+				</foreach>
+			</div>
+			
+			<if test="canModerateBlogEnd:|:$this->memberData['g_blog_allowownmod']">
+					<div class='bar altbar moderation_bar with_action'>
+						<select name='modOption' class='input_select'>
+							<option value='delete'>{$this->lang->words['bmod_delete']}</option>
+							<option value='approve'>{$this->lang->words['bmod_approve']}</option>
+							<option value='unapprove'>{$this->lang->words['bmod_unapprove']}</option>
+						</select>
+						<input type='submit' value='{$this->lang->words['ucp_cat_go']}' class='input_submit' />
+					</div>
+				</form>
+			</if>
+		</div>
+	</if>
+</div>]]></template_content>
+      <template_name>manageDashboard</template_name>
+      <template_data><![CDATA[$myBlogs=array(), $latestComments=array(), $error='', $dropdown='']]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_manage</template_group>
+      <template_content><![CDATA[<h1 class='ipsType_pagetitle'>{$this->lang->words['bucpo_rssform']}</h1>
+<br />
+<if test="settingserror:|:$error">
+	<div class="message error">
+  		{$error}
+	</div>
+	<br />
+</if>
+<p class='message'>
+	{$this->lang->words['bucpo_rss_import_t_desc']}
+	<if test="$data['rss_count']">
+		<br />{parse expression="sprintf( $this->lang->words['bucpo_rss_stats'], intval( $data['rss_count'] ), $data['_rss_last_import'])"}
+	</if>
+</p>
+<br />
+<form action="{parse url="app=blog&amp;module=manage&amp;section=settings&amp;act=rssimport&amp;blogid={$blog['blog_id']}" base="public" template="manageblog" seotitle="false"}" method="post">
+	<input type="hidden" name="form_hash" value="{$this->member->form_hash}" />
+	<div class='ipsBox'>
+		<div class='ipsBox_container ipsPad'>
+			<ul class='ipsForm_horizontal ipsPad'>
+				<li class='ipsField'>
+					<label class='ipsField_title'>{$this->lang->words['bucpo_rss_import_url']} <span class='ipsForm_required'>*</span></label>
+					<p class='ipsField_content'>
+						<input type='text' size='50' maxlength='128' id='rss_url' name='rss_url' value='{$data['rss_url']}' class='input_text' />
+						<br /><span class='desc'>{$this->lang->words['bucpo_rss_import_urldesc']}
+					</p>
+				</li>
+				<li class='ipsField'>
+					<label class='ipsField_title'>{$this->lang->words['bucpo_rss_tags']}</label>
+					<p class='ipsField_content'>
+						{$tagBox}
+					</p>
+				</li>
+				<li class='ipsField ipsField_select'>
+					<label class='ipsField_title'>{$this->lang->words['blog_categories']} <span class='ipsForm_required'>*</span></label>
+					<p class='ipsField_content'>
+						<select name='rss_cats[]' id='rss_cats' multiple='true' size='5'>
+							<if test="is_array($data['_cats']) AND count($data['_cats'])">
+								<foreach loop="$data['_cats'] as $cid => $cdata">
+									<option value="$cid" <if test="$cdata['_selected']">selected="selected"</if>>{$cdata['category_title']}</option>
+								</foreach>
+							</if>
+						</select>
+						<br /><span class='desc'>{$this->lang->words['bucpo_rss_cats']}</span>
+					</p>
+				</li>
+				<li class='ipsField'>
+					<label class='ipsField_title'>{$this->lang->words['bucpo_rss_auth_u']}</label>
+					<p class='ipsField_content'>
+						<input type='text' size='32' maxlength='250' id='rss_auth_user' name='rss_auth_user' value='{$data['rss_auth_user']}' class='input_text' />
+						<br /><span class='desc'>{$this->lang->words['bucpo_rss_desc']}</span>
+					</p>
+				</li>
+				<li class='ipsField'>
+					<label class='ipsField_title'>{$this->lang->words['bucpo_rss_auth_p']}</label>
+					<p class='ipsField_content'>
+						<input type='password' size='32' maxlength='250' id='rss_auth_pass' name='rss_auth_pass' value='{$data['rss_auth_pass']}' class='input_text' />
+						<br /><span class='desc'>{$this->lang->words['bucpo_rss_desc']}</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<fieldset class='submit'>
+		<input type='submit' value='{$this->lang->words['save_settings_c']}' class='input_submit' />
+	</fieldset>
+</form>]]></template_content>
+      <template_name>rssImportForm</template_name>
+      <template_data>$blog, $data, $error, $tagBox</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_manage</template_group>
+      <template_content><![CDATA[<script type="text/javascript">
+	var manageMembersBox = {
+		names: { 'editor': [], 'private': [] },
+		create: function(textAreaId)
+		{
+			/* Hackish way to block IE7.. */
+			if ( Prototype.Browser.IE7 )
+			{
+				return;
+			}
+			
+			var managerId       = textAreaId + '_manager';
+			var textAreaElement = $(textAreaId);
+			var currentNames    = textAreaElement.getValue().replace('\r', '').split('\n');
+			
+			textAreaElement.up('tr').hide();
+			
+			/* Create input field */
+			var addNameBox = new Element('input', {type: 'text', style: 'width: 75%', 'class': 'input_text', id: managerId + '_add'});
+			var addNameBtn = new Element('input', {type: 'button', 'class': 'input_submit', value: '{$this->lang->words['editor_add']}', id: managerId + '_add_button'});
+			var addNameCol = new Element('td', {'colspan': 2});
+			var addNameRow = new Element('tr', {'class': 'row2 short'});
+			
+			Element.insert(managerId, addNameRow);
+			Element.insert(addNameRow, addNameCol);
+			Element.insert(addNameCol, addNameBox);
+			Element.insert(addNameCol, '&nbsp;');
+			Element.insert(addNameCol, addNameBtn);
+			
+			/* This MUST be run AFTER creating the input field */
+			for(var i = 0; i < currentNames.length; i++)
+			{
+				if(currentNames[i] != '')
+				{
+					manageMembersBox.addName(managerId, currentNames[i]);
+				}
+			}
+			
+			var url = ipb.vars['base_url'] + 'app=core&module=ajax&section=findnames&do=get-member-names&secure_key=' + ipb.vars['secure_hash'] + '&name=';
+			var autoComplete = new ipb.Autocomplete( $(managerId + '_add'), { multibox: false, url: url, templates: { wrap: ipb.templates['autocomplete_wrap'], item: ipb.templates['autocomplete_item'] } } );
+			
+			Event.observe(managerId + '_add_button', 'click', function(event)
+			{
+				var boxId = event.findElement().id.replace('_button', '');
+				var mgrId = boxId.replace('_add', '');
+				var textBox = $(boxId);
+				manageMembersBox.addName(mgrId, textBox.getValue());
+			});
+		},
+		
+		addName: function (managerId, name)
+		{
+			// No name?
+			if ( name == '' )
+			{
+				return;
+			}
+			
+			var rowId = managerId + '_row_' + name.replace(/ /g, '_');
+			var type  = managerId.indexOf('editor') == -1 ? 'private' : 'editor';
+			
+			// Same name?
+			if ( $(rowId) )
+			{
+				return;
+			}
+			
+			var managerEditorRow = new Element('tr', { 'id': rowId + '_remove', 'class': 'row1 editorRow' });
+			var removeBadge      = new Element('span', {id: rowId, 'class': 'ipsBadge ipsBadge_red clickable'}).update('{$this->lang->words['remove']}');
+			
+			manageMembersBox.names[ type ].push( name );
+			
+			Element.insert(managerEditorRow, new Element('td', {width: 1}).insert(removeBadge));
+			Element.insert(managerEditorRow, new Element('td', {'class': 'editorName'} ).update(name));
+			Element.insert($(managerId), managerEditorRow);
+			
+			Event.observe(rowId, 'click', manageMembersBox.removeName);
+			manageMembersBox.update(managerId);
+		},
+		
+		removeName: function(event)
+		{
+			var elem = Event.findElement(event);
+			var name = elem.id.replace( /blog_editor_list_manager_row_/, '' ).replace( /blog_private_list_manager_row_/, '' ); 
+			
+			var type = elem.id.indexOf('editor') == -1 ? 'private' : 'editor';
+			
+			$( elem.id + '_remove' ).remove();
+			
+			tmp = manageMembersBox.names[ type ];
+			manageMembersBox.names[ type ] = [];
+			
+			tmp.each( function(row){
+				var _check = row.replace(/ /g, '_');
+				
+				if ( _check != name )
+				{
+					manageMembersBox.names[ type ].push( row );
+				}
+			});
+			
+			var theId = event.findElement().id.substring(0, event.findElement().id.indexOf('_row'));
+			manageMembersBox.update(theId);
+		},
+		
+		update: function(managerId)
+		{
+			var managerElement = $(managerId);
+			var textBoxElement = $(managerId.replace('_manager', ''));
+			
+			var type = managerId.indexOf('editor') == -1 ? 'private' : 'editor';
+			
+			textBoxElement.update( manageMembersBox.names[ type ].join("\n") );
+			
+			Debug.write( manageMembersBox.names[ type ].join("\n") );
+		}
+	};
+	
+	var activeTab = 1;
+	var editorBoxCreated = false;
+	function switchTab( tab )
+	{
+		$( 'tab-' + activeTab ).removeClassName('active');
+		$( 'tab-' + tab ).addClassName('active');
+		
+		$( 'tab-content-' + activeTab ).hide();
+		$( 'tab-content-' + tab ).show();
+		
+		if( tab == 3 && !$('blog_editor_list_manager_add_button') )
+		{
+			manageMembersBox.create('blog_editor_list');
+		}
+		else if( tab == 4 && !$('blog_private_list_manager_add_button') )
+		{
+			manageMembersBox.create('blog_private_list');
+		}
+		
+		activeTab = tab;
+	}
+</script>
+<if test="isCreating:|:$this->request['create']">
+	{parse template="createSteps" group="blog_manage" params="3"}
+	<br />
+	<h1 class='ipsType_pagetitle'>{$this->lang->words['ucp_create_blog']}</h1>
+	<br />
+<else />
+	<h1 class='ipsType_pagetitle'>{$blog['blog_name']}</h1>
+	<br />
+</if>
+<if test="hasError:|:$error">
+	<p class='message error'>{$error}</p>
+	<br />
+</if>
+<form action="{parse url="app=blog&amp;module=manage&amp;section=settings&amp;blogid={$blog['blog_id']}" base="public" template="manageblog" seotitle="false"}" method="post" id='settingForm'>
+	<input type="hidden" name="form_hash" value="{$this->member->form_hash}" />
+	<input type="hidden" name="create" value="{$this->request['create']}" />
+	<div class='ipsBox'>
+		<div class='ipsLayout ipsLayout_withleft ipsLayout_smallleft ipsVerticalTabbed'>
+			<div class='ipsLayout_left ipsVerticalTabbed_tabs'>
+				<ul>
+	                    <li id='tab-1' onclick='switchTab(1)' class='active'><a href='javascript:void(0);'>{$this->lang->words['blog_main_header']}</a></li>
+	                    <if test="$blog['blog_type'] != 'external'">
+	                    	<li id='tab-2' onclick='switchTab(2)'><a href='javascript:void(0);'>{$this->lang->words['blog_sharing']}</a></li>
+	                    	<if test="alloweditors:|:$this->memberData['g_blog_alloweditors']"><li id='tab-3' onclick='switchTab(3)'><a href='javascript:void(0);'>{$this->lang->words['blogset_editors']}</a></li></if>									
+							<if test="allowprivateclub:|:$this->memberData['g_blog_allowprivclub'] && $blog['blog_view_level'] == 'privateclub'"><li id='tab-4' onclick='switchTab(4)'><a href='javascript:void(0);'>{$this->lang->words['blogset_privateclub']}</a></li></if>
+						</if>
+	                    <if test="$blog['blog_type'] != 'external'"><li id='tab-5' onclick='switchTab(5)'><a href='javascript:void(0);'>{$this->lang->words['advanced_settings']}</a></li></if>
+				</ul>
+			</div>
+			<div class='ipsLayout_content ipsVerticalTabbed_content ipsBox_container'>
+				<div class='ipsPad' id='tab-content-1'>
+					<table class="ipb_table">
+						<tr class="header">
+							<th width="50%">
+								{$this->lang->words['blog_basic_settings']}
+							</th>
+							<th>
+								<if test="$blog['blog_type'] == 'local'">
+								{$this->lang->words['blog_local_settings']}
+								<else />
+								{$this->lang->words['blog_external_settings']}
+								</if>
+							</th>
+						</tr>
+						<tr class="row1">
+							<td valign="top">
+								<fieldset>
+								<ul>
+									<li class='field'>
+										<label for='blog_name'>{$this->lang->words['blog_name']}</label> <input type='text' size='32' maxlength='128' id='blog_name' name='blog_name' value='{$blog['blog_name']}' class='input_text' />
+									</li>
+									<li class='field'>
+										<label for='blog_desc'>{$this->lang->words['blog_desc']}</label> <input type='text' size='32' maxlength='250' id='blog_desc' name='blog_desc' value='{$blog['blog_desc']}' class='input_text' />
+									</li>
+									<if test="allowcreate:|:$this->memberData['g_blog_allowcreate'] AND $this->memberData['g_blog_allowlocal']">
+										<li class='field' style='display:none'>
+											<label for='blog_type'>{$this->lang->words['blog_type']}</label>
+											<select class='input_select blogform' name='blog_type' id='blog_type'>
+												<option value='local' <if test="islocal:|:$blog['blog_type'] == 'local'">selected='selected'</if>>{$this->lang->words['blog_local']}</option>
+												<option value='external' <if test="isremote:|:$blog['blog_type'] == 'external'">selected='selected'</if>>{$this->lang->words['blog_external']}</option>
+										  	</select>			
+										</li>
+									<else />
+										<if test="localhiddensetting:|:$this->memberData['g_blog_allowlocal']">
+											<input type="hidden" name="blog_type" value="local" />
+										<else />
+											<input type="hidden" name="blog_type" value="external" />
+										</if>
+									</if>
+									<li class='field' id='list_blog_view_level'>
+										<label for='blog_view_level'>{$this->lang->words['blog_view_permissions']}</label> 
+										<select class='input_select blogform' name='blog_view_level' id='blog_view_level'>
+											<foreach loop="viewlevelloop:$blog['view_level'] as $r">
+												<option value='{$r[0]}'{$r[2]}>{$r['1']}</option>
+											</foreach>
+										</select>
+									</li>
+								</ul>
+								</fieldset>
+							</td>
+							<td valign="top">
+								<fieldset id='blog_external_settings' <if test="$blog['blog_type'] == 'local'">style='display: none'</if>>	
+									<ul>
+										<li class='field'>
+											<input type='text' class='input_text' size='32' maxlength='128' name='blog_exturl' value='{$blog['blog_exturl']}' />
+											<span class='desc'>{$this->lang->words['blog_external_url']}</span>
+										</li>
+									</ul>
+								</fieldset>
+								<if test="localblog:|:$this->memberData['g_blog_allowlocal']">
+									<fieldset id='blog_local_settings' <if test="$blog['blog_type'] == 'external'">style='display: none'</if>>	
+										<ul>
+											<li class='field checkbox' id='list_allowguest'>
+												<input type='checkbox' class='input_check blogform' name='blog_allowguests' id='blog_allowguests' value='1' <if test="allowguests:|:$blog['blog_allowguests']">checked='checked'</if> /> <label for='blog_allowguests' class='blogform'>{$this->lang->words['blog_allowguest']}</label><br />
+												<span class='desc'>{$blog['global_guestview']}</span>
+											</li>
+											<li class='field checkbox' id='list_allowguestcomments'>
+												<input type='checkbox' class='input_check' name='blog_allowguestcomments' id='blog_allowguestcomments' value='1' <if test="allowguestcomments:|:$blog['blog_settings']['allowguestcomments']">checked='checked'</if> /> <label for='blog_allowguestcomments'>{$this->lang->words['blog_allowguestcomments']}</label><br />
+												<span class='desc'>{$blog['global_guestcomment']}</span>
+											</li>
+											<li class='field checkbox'>
+												<input type='checkbox' class='input_check' name='blog_disable_comments' id='blog_disable_comments' value='1' <if test="disablecomments:|:$blog['blog_settings']['disable_comments']">checked='checked'</if> /> <label for='blog_disable_comments'>{$this->lang->words['blog_disable_comments']}</label><br />
+												<span class='desc'>{$this->lang->words['disable_comments_desc']}</span>
+											</li>
+					
+											<li class='field checkbox'>
+												<input type='checkbox' class='input_check' name='blog_trackcomments' id='blog_trackcomments' value='1' <if test="trackcomments:|:$blog['blog_settings']['trackcomments']">checked='checked'</if> /> <label for='blog_trackcomments'>{$this->lang->words['blog_trackcomments']}</label><br />
+												<span class='desc'>{$this->lang->words['trackcomments_desc']}</span>
+											</li>
+											<li class='field'>
+												<label for='blog_defaultstatus'>{$this->lang->words['blog_defaultstatus']}</label>
+												<select class='input_select' name='blog_defaultstatus' id='blog_defaultstatus'>{$blog['blog_defaultstatus']}</select>
+											</li>
+											<li class='field'>
+												<label for='blog_approvemode'>{$this->lang->words['blog_approvemode']}</label>
+												<select class='input_select' name='blog_approvemode' id='blog_approvemode'>{$blog['approvemode']}</select>
+											</li>
+										</ul>
+									</fieldset>
+								</if>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class='ipsPad' id='tab-content-2' style='display:none'>
+					<table class="ipb_table">
+					<if test="rssallowed:|:$this->settings['blog_allow_rss'] && $blog['blog_type'] != 'external'">
+						<tr class="header">
+							<th colspan="2">
+								{$this->lang->words['blog_view_rss_settings']}
+							</th>
+						</tr>
+						<tr class="row1">
+							<td colspan="2">
+								<fieldset id='blog_rss_settings'>	
+									<ul>
+										<li class='field checkbox'>
+											<input type='checkbox' class='input_check' name='blog_allowrss' id='blog_allowrss' value='1' <if test="allowrss:|:$blog['blog_settings']['allowrss']">checked='checked'</if> /> <label for='blog_allowrss'>{$this->lang->words['blog_allowrss']}</label><br />
+											<span class='desc'>{$this->lang->words['blog_allowrss_desc']}</span>
+										</li>
+										<li class='field'>
+											<label for='blog_rss_feedburner'>{$this->lang->words['blog_rss_feedburner']}</label><input type='text' size='32' maxlength='128' name='blog_rss_feedburner' id='blog_rss_feedburner' value='{$blog['blog_settings']['rssfeedburner']}' class='input_text' /> <br />
+											<span class='desc'>{$this->lang->words['blog_rss_feedburner_help']}</span>
+										</li>
+									</ul>
+								</fieldset>
+							</td>
+						</tr>
+					</if>
+					
+					<tr class="header">
+						<th width="50%">{$this->lang->words['blogping']}</th>
+						<th>{$this->lang->words['blogset_trackbacks']}</th>
+					</tr>
+					
+					<tr class="row1">
+						<td valign="top">
+							<if test="ping_services:|:is_array( $blog['ping_options'] ) && count( $blog['ping_options'] ) && $this->settings['blog_allow_pingblogs'] && $blog['blog_type'] != 'external'">
+							
+							<fieldset>
+								<span class='desc'>{$this->lang->words['blogping_desc']}</span>
+								<ul>
+								<foreach loop="$blog['ping_options'] as $service">
+									<li class='field checkbox'>
+										<input type='checkbox' class='input_check' name='blog_ping_{$service['blog_service_key']}' value='1' {$service['enabled']} /> &nbsp;
+										<label for='blog_ping_{$service['blog_service_key']}'>{$service['blog_service_name']}</label>
+									</li>
+								</foreach>
+								</ul>
+							</fieldset>
+							<else />
+								{$this->lang->words['pingservices_disabled']}
+							</if>
+						</td>
+						<td valign="top">
+							<if test="$this->settings['blog_allow_trackback'] && $blog['blog_type'] != 'external'">
+							<fieldset>
+								<ul>
+									<li class='field checkbox'>
+										<input type='checkbox' class='input_check' name='blog_allowtrackback' value='1' <if test="allowtrackbacks:|:$blog['blog_settings']['allowtrackback']">checked='checked'</if> /> <label for='blog_allowtrackback'>{$this->lang->words['blog_allowtrackback']}</label>
+										<span class='desc'>{$this->lang->words['allowtrackback_desc']}</span>
+									</li>
+									<li class='field checkbox'>
+										<input type='checkbox' class='input_check' name='blog_approvetrackbacks' value='1' <if test="approvetrackbacks:|:$blog['blog_settings']['approve_trackbacks']">checked='checked'</if> /> <label for='blog_approvetrackbacks'>{$this->lang->words['blog_approvetrackbacks']}</label>
+										<span class='desc'>{$this->lang->words['blog_approvetrackbacks_desc']}</span>
+									</li>
+								</ul>
+							</fieldset>
+							<else />
+								{$this->lang->words['trackbacks_disabled']}
+							</if>
+						</td>
+					</tr>
+				</table>
+				</div>
+				<div class='ipsPad' id='tab-content-3' style='display:none'>
+					<table class='ipb_table' id="blog_editor_list_manager">
+						<tbody>
+							<tr class="header">
+								<th colspan='2'>{$this->lang->words['ucp_editors_desc']}</th>
+							</tr>
+							<tr>
+								<td colspan='2' class='row1'>
+									<textarea id="blog_editor_list" cols="80" rows="7" name="blog_editors" class="input_text">{$blog['blog_editors']}</textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class='ipsPad' id='tab-content-4' style='display:none'>
+					<table class='ipb_table' id="blog_private_list_manager">
+						<tbody>
+							<tr class="header">
+								<th colspan='2'>{$this->lang->words['ucp_privateclub_desc']}</th>
+							</tr>
+							<tr>
+								<td colspan='2' class='row1'>
+									<textarea id="blog_private_list" cols="80" rows="7" name="private_buddies" class="input_text">{$blog['private_buddies']}</textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class='ipsPad' id='tab-content-5' style='display:none'>
+					<table class="ipb_table">
+						<tr class="header">
+							<th width="50%">{$this->lang->words['blog_view_settings']}</th>
+							<th width="50%">{$this->lang->words['blogset_tbpings']}</th>
+						</tr>
+						<tr class="row1">
+							<td valign="top">
+							<fieldset id='blog_customize_settings'>	
+								<ul>
+								<if test="selectskin:|:$this->memberData['g_blog_allowskinchoose']">
+									<li class='field'>
+										<label for='blog_skin_id'>{$this->lang->words['blog_choose_skin']}</label>
+										<select class='input_select' name='blog_skin_id' id='blog_skin_id'>{$blog['blog_skin_id']}</select>
+									</li>
+								</if>
+									<li class='field'>
+										<label for='blog_viewmode'>{$this->lang->words['blog_viewmode']}</label>
+										<select class='input_select' name='blog_viewmode' id='blog_viewmode'>
+											<option value='list' <if test="listview:|:$blog['blog_settings']['viewmode'] == 'list'">selected='selected'</if>>{$this->lang->words['blog_viewlist']}</option>
+											<option value='perdate' <if test="groupperdate:|:$blog['blog_settings']['viewmode'] == 'perdate'">selected='selected'</if>>{$this->lang->words['blog_viewperdate']}</option>
+											<option value='permonth' <if test="grouppermonth:|:$blog['blog_settings']['viewmode'] == 'permonth'">selected='selected'</if>>{$this->lang->words['blog_viewpermonth']}</option>
+										</select>
+									</li>
+									<li class='field'>
+										<label for='blog_entriesperpage'>{$this->lang->words['blog_entriesperpage']}</label>
+										<select class='input_select' name='blog_entriesperpage' id='blog_entriesperpage'>{$blog['entriesperpage']}</select>			
+									</li>
+									<li class='field'>
+										<label for='blog_commentsperpage'>{$this->lang->words['blog_commentsperpage']}</label>
+										<select class='input_select' name='blog_commentsperpage' id='blog_commentsperpage'>{$blog['commentsperpage']}</select>
+									</li>
+								</ul>
+							</fieldset>
+							</td>
+							<td valign="top">
+							<if test="$this->settings['blog_allow_xmlrpc']">
+							<fieldset>
+								<h3></h3>
+								<ul>
+									<li class='field checkbox'>
+										<input type='checkbox' class='input_check' name='blog_enable_xmlrpc' value='1' <if test="xmlrpcenabled:|:$blog['blog_settings']['enable_xmlrpc']">checked='checked'</if>> <label for='blog_enable_xmlrpc'>{$this->lang->words['blogxmlrpc_desc']}</label>
+										<span class='desc'>
+											{$this->lang->words['blogxmlrpc_desc_2']}<br />
+											{$this->settings['board_url']}/interface/blog/xmlrpc.php<br /><br />
+								  		 	&nbsp;{$this->lang->words['blog_enablexmlrpc']}
+										</span>
+									</li>
+									<li class='field'>
+										<label for='blog_xmlrpc_password'>{$this->lang->words['blog_xmlrpc_pass1']}</label>
+										<input type='password' class='input_text' size='25' name='blog_xmlrpc_password' value='Iamapassword' />
+									</li>
+									<li class='field'>
+										<label for='blog_xmlrpc_password'>{$this->lang->words['blog_xmlrpc_pass2']}</label>
+										<input type='password' class='input_text' size='25' name='blog_xmlrpc_password2' value='Iamapassword' />
+									</li>
+								</ul>
+							</fieldset>
+							<else />
+								{$this->lang->words['xmlrpc_disabled']}
+							</if>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<br class='clear' />
+	</div>
+	<fieldset class='submit'>
+		<input class="button input_submit" type="submit" value="{$this->lang->words['save_settings_c']}" />
+	</fieldset>
+</form>]]></template_content>
+      <template_name>settingsForm</template_name>
+      <template_data><![CDATA[$blog, $error='']]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_blog_portal">
+    <template>
+      <template_group>skin_blog_portal</template_group>
+      <template_content><![CDATA[<div class='_sharedMediaBbcode'>
+	<div class='bbcode_mediaWrap'>
+		<a href="{parse url="app=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}"><img src='{$this->settings['img_url']}/sharedmedia/entries.png' alt='{$this->lang->words['entry_sharedimg']}' class='sharedmedia_image' /></a>
+		<div class='details'>
+			<h5><a href="{parse url="app=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}">{IPSText::truncate( $entry['entry_name'], 60 )}</a></h5>
+			<div><a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}" template="showblog" seotitle="{$entry['blog_seo_name']}" base="public"}">{$this->lang->words['sharedmedia_blogprefix']} {$entry['blog_name']}</a></div>
+			<div>{$this->lang->words['sharedmedia_elu']} {parse date="$entry['entry_last_update']" format="short"}</div>
+		</div>
+	</div>
+</div>
+<br />]]></template_content>
+      <template_name>bbCodeEntry</template_name>
+      <template_data>$entry</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_portal</template_group>
+      <template_content><![CDATA[<if test="hasResults:|:is_array($rows) && count($rows)">
+	<table class='ipb_table topic_list' id='forum_table'>
+		<foreach loop="followedResults:$rows as $row">
+			{$row['html']}
+		</foreach>
+	</table>
+</if>]]></template_content>
+      <template_name>blogFollowedWrapper</template_name>
+      <template_data>$rows</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_portal</template_group>
+      <template_content><![CDATA[<span class='gutter rounded'><img src='{$this->settings['public_dir']}style_extra/app_icons/blog.png' alt='' /> {$this->lang->words['comment']}</span>
+<div>
+	<div class='date' style='float:right;'>
+		{$this->lang->words['posted_by']} <a href='{parse url="showuser={$r['member_id']}" base="public"}'>{$r['members_display_name']}</a> @ {parse date="$r['updated']" format="short"}
+	</div>
+</div>
+<h3><a href='{parse url="app=blog&amp;blogid={$r['type_id']}&amp;showentry={$r['type_id_2']}#comment{$r['misc']}" base="public"}'>{$r['content_title']}</a></h3>
+<if test="showcomment:|:!$resultAsTitle">
+<p>
+	{$r['content']}
+</p>
+</if>]]></template_content>
+      <template_name>commentSearchResult</template_name>
+      <template_data>$r, $indent, $resultAsTitle=false</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_portal</template_group>
+      <template_content><![CDATA[<div class='result_info'>
+	<h3><a href='{parse url="app=blog&amp;blogid={$r['blog_id']}&amp;showentry={$r['type_id_2']}" base="public"}'>{$r['content_title']}</a></h3>
+	<if test="showcontent:|:!$resultAsTitle">
+	<p>
+		{$r['content']}
+	</p>
+	</if>
+</div>
+<div class='result_details desc'>
+	<ul>
+		<li>{$this->lang->words['posted_by']} <a href='{parse url="showuser={$r['member_id']}" base="public"}'>{$r['members_display_name']}</a></li>
+		<li>{$this->lang->words['search_posted_on']} {parse date="$r['updated']" format="short"}</li>
+	</ul>
+</div>]]></template_content>
+      <template_name>entrySearchResult</template_name>
+      <template_data>$r, $resultAsTitle=false</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_portal</template_group>
+      <template_content><![CDATA[<table class='ipb_table topic_list' id='forum_table'>
+	<foreach loop="followedResults:$rows as $data">
+		<tr<if test="isUnread:|:$data['newpost']"> class='unread'</if>>
+			<td class='col_f_icon short altrow'>
+				<if test="newdata:|:$data['newpost']">
+					<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$data['blog_id']}" template="showblog" seotitle="{$data['blog_seo_name']}" base="public"}">
+						<if test="isEntryAuthor:|:$this->memberData['member_id'] && $this->memberData['member_id'] == $data['member_id']">
+							{parse replacement="t_unread_dot"}
+						<else />
+							{parse replacement="t_unread"}
+						</if>
+					</a>
+				</if>
+			</td>
+			<td valign='top'>
+				<if test="blogRatingEnabled:|:$this->settings['blog_enable_rating']">
+					<div class='right'>
+						<foreach loop="ratingLoop:array(1,2,3,4,5) as $_rating">
+							<if test="filerate:|:$data['blog_rating_total'] >= $_rating">{parse replacement="rate_on"}<else />{parse replacement="rate_off"}</if>
+						</foreach>
+					</div>
+				</if>
+				<if test="hasDrafts:|:$data['_hasDrafts']">
+					<span class='ipsBadge ipsBadge_red reset_cursor' data-tooltip="{parse expression="sprintf( ( $data['blog_num_drafts'] == 1 ? $this->lang->words['badge_x_drafts_tooltip_s'] : $this->lang->words['badge_x_drafts_tooltip_p']), $data['blog_num_drafts'] )"}">{parse expression="sprintf( $this->lang->words['badge_x_drafts'], $data['blog_num_drafts'] )"}</span>
+				</if>
+				<h4><a href='{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$data['blog_id']}" base="public" template="showblog" seotitle="{$data['blog_seo_name']}"}'>{$data['blog_name']}</a></h4>
+				<div class='desc lighter toggle_notify_off'>{$data['blog_desc']}</div>
+				<if test="isFollowedStuff:|:count($data['_followData'])">
+					{parse template="followData" group="search" params="$data['_followData']"}
+				</if>
+			</td>
+			<td class='col_f_views ipsType_small'>
+				<strong>{parse format_number="$data['blog_num_entries']"}</strong> {$this->lang->words['entries_fn']}<br />
+				<strong>{parse format_number="$data['blog_num_comments']"}</strong> {$this->lang->words['blog_num_comments']}<br />
+				<strong>{parse format_number="$data['blog_num_views']"}</strong> {$this->lang->words['blog_num_views_prefix']}
+			</td>
+			<td class='col_f_post'>
+				<if test="submitterIsMemberStart:|:$data['member']['member_id']"><a href='{parse url="showuser={$data['member']['member_id']}" seotitle="{$data['member']['members_seo_name']}" template="showuser" base="public"}' class='ipsUserPhotoLink'></if>
+					<img src='{$data['member']['pp_small_photo']}' class='ipsUserPhoto ipsUserPhoto_mini left' />
+				<if test="submitterIsMemberEnd:|:$data['member']['member_id']"></a></if>
+				<ul class='last_post ipsType_small'>
+					<if test="hasEntries:|:$data['blog_last_entry']">
+						<li>
+							<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$data['blog_id']}&amp;showentry={$data['blog_last_entry']}" template="showentry" seotitle="{$data['entry_name_seo']}" base="public"}" title='{$this->lang->words['entry_view']}'>
+								{parse expression="IPSText::truncate( $blog['blog_last_entryname'], 28 )"}
+							</a>
+						</li>
+						<li>{$this->lang->words['by_ucfirst']} {parse template="userHoverCard" group="global" params="$data['member']"}</li>
+						<li class='desc lighter'>{parse date="$data['blog_last_update']" format="DATE"}</li>
+					<else />
+						<li class='desc lighter'><em>{$this->lang->words['profile_noblogentries']}</em></li>
+					</if>
+				</ul>
+			</td>
+			<if test="isFollowedStuff:|:count($data['_followData'])">
+				<td class='col_f_mod'>
+					<input class='input_check checkall toggle_notify_on' type="checkbox" name="likes[]" value="{$data['_followData']['like_app']}-{$data['_followData']['like_area']}-{$data['_followData']['like_rel_id']}" />
+				</td>
+			</if>
+		</tr>
+	</foreach>
+</table>]]></template_content>
+      <template_name>followedContentBlogs</template_name>
+      <template_data>$rows</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_portal</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>moderatorPanel</template_name>
+      <template_data><![CDATA[$results, $pages='']]></template_data>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_portal</template_group>
+      <template_content><![CDATA[<h3 class='maintitle'>{$this->lang->words['portal_blog_entries']}</h3>
+<div class='ipsBox'>
+	<div class='ipsBox_container'>
+		<foreach loop="$entries as $entry">
+			<div class='post_block no_sidebar'>
+				<div class='post_wrap'>
+					<h3 class='row2'>
+						<a href="{parse url="app=blog&amp;blogid={$entry['blog_id']}" base="public" seotitle="{$entry['blog_seo_name']}" template="showblog"}">{$entry['blog_name']}</a> &gt;
+						<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" base="public" seotitle="{$entry['entry_name_seo']}" template="showentry"}">{IPSText::truncate( $entry['entry_name'], 90 )}</a>
+					</h3>
+					<div class='post_body'>
+						<p class='posted_info'>{$this->lang->words['posted']} {$entry['entry_date_short']}</p>
+						<div class='post'>
+							{$entry['entry_short']}
+							<if test="$entry['_hasMore']">
+								<br />
+								<div class='right'>
+									<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}">
+										<span class='ipsButton_secondary'>{$this->lang->words['read_more_go_on']} {$this->lang->words['_rarr']}</span>
+									</a>
+								</div>
+								<br class='clear' />
+							</if>
+						</div>
+					</div>
+				</div>
+				<br />
+			</div>
+		</foreach>
+	</div>
+</div>]]></template_content>
+      <template_name>profileBlock</template_name>
+      <template_data>$entries</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_portal</template_group>
+      <template_content><![CDATA[<div class='ipsSideBlock clearfix'>
+	{parse striping="recententries" classes="row1,row2"}
+	<h3><if test="isset($this->lang->words['recently_added_entries'])">{$this->lang->words['recently_added_entries']}<else />{$this->lang->words['latest_entries_title']}</if></h3>
+	<ul class='ipsList_withminiphoto hfeed'>
+		<if test="is_array( $entries )">
+			<foreach loop="$entries as $eid => $entry">
+				<li class='clearfix'>
+					<img src='{$entry['pp_thumb_photo']}' alt='' class='ipsUserPhoto ipsUserPhoto_mini left' />
+					<div class='list_content'>
+						<if test="newcomment:|:$entry['newpost']">
+						 <a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}&amp;show=newcomment" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}">{parse replacement="f_newpost"}</a>&nbsp;
+						</if>
+						<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}">{$entry['entry_name']}</a>
+						<p class='desc ipsType_smaller'>
+							<a href='{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}" template="showblog" seotitle="{$entry['blog_seo_name']}" base="public"}'>{$entry['blog_name']}</a> <span class='desc lighter ipsType_smaller'>{parse date="$entry['entry_date']" format="manual{%d %b}" relative="true"}</span>
+						</p>
+					</div>
+				</li>
+			</foreach>
+		</if>
+	</ul>
+</div>]]></template_content>
+      <template_name>recentEntries</template_name>
+      <template_data>$entries=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_portal</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>unapprovedComments</template_name>
+      <template_data><![CDATA[$comments, $pages='']]></template_data>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_blog_post">
+    <template>
+      <template_group>skin_blog_post</template_group>
+      <template_content><![CDATA[<form id='postingform' action='{$this->settings['base_url']}' method='post' name='postingform' enctype='multipart/form-data'>
+	<input type='hidden' name='s' value='{$this->member->session_id}' />
+	<input type='hidden' name='auth_key' value='{$this->member->form_hash}' />
+	<input type='hidden' name='removeattachid' value='0' />
+	<input type='hidden' name='app' value='blog' />
+	<input type='hidden' name='module' value='post' />
+	<input type='hidden' name='section' value='post' />
+	<if test="entryhiddens:|:is_array( $form_hiddens ) && count( $form_hiddens )">
+		<foreach loop="entryhiddensloop:$form_hiddens as $hidden">
+			<input type='hidden' name='{$hidden[0]}' value='{$hidden[1]}' />
+		</foreach>
+	</if>
+	
+<h2>{$form_title}</h2>
+<h3>{$this->lang->words['entry_info_h3']}</h3>
+<div class='row'>
+	<span class='field'>{$this->lang->words['entry_title']}</span><br />
+	<input id='entry_title' class='input_text' type="text" size="70" maxlength="150"  style='width:99%' name="EntryTitle" value="{$title['TITLE']}" tabindex="1" />
+	
+	<if test="needsdd:|:is_array( $blogsdd ) AND count( $blogsdd )">
+		<br /><br />
+		<span class='field'>{$this->lang->words['bpost_addtoblog']}</span><br />
+		<select name='blogid'>
+			<foreach loop="needsddloop:$blogsdd as $bid => $bdata">
+				<option value="{$bdata['blog_id']}" <if test="needsddselected:|:$bid == $this->request['blogid']">selected='selected'</if>>{$bdata['blog_name']}</option>
+			</foreach>
+		</select>
+	</if>
+</div>
+<h3>{$this->lang->words['entry_content_h3']}</h3>
+<div class='row'>
+	{$editor}
+	<br />
+	
+	<span class='field'>{$this->lang->words['blog_save_entry_as']}</span><br />
+	{$mod_options}
+	</select>
+</div>
+<div class='submit'>
+	<input type="submit" name="dosubmit" value="{$button}" tabindex="0" id='bfs_submit' class="input_submit" accesskey="s"  />&nbsp;
+	{$this->lang->words['or']} <a href='<if test="cancelToPost:|:!empty($_extraData['bt_topicData']) && !empty($this->request['id2'])">{parse url="showtopic={$_extraData['bt_topicData']['tid']}&amp;view=findpost&amp;p={$this->request['id2']}" template="showtopic" seotitle="{$_extraData['bt_topicData']['title_seo']}" base="public"}<else /><if test="cancelToEntry:|:$this->request['eid']">{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$this->request['blogid']}&amp;showentry={$this->request['eid']}" base="public"}<else />{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$this->request['blogid']}" base="public"}</if></if>' title='{$this->lang->words['cancel']}' class='cancel'>{$this->lang->words['cancel']}</a>
+</div>
+<!-- close master list -->
+</div>]]></template_content>
+      <template_name>blogPostForm</template_name>
+      <template_data><![CDATA[$form_hiddens=array(), $form_title="", $button="", $date=array(), $title=array(), $albums="", $mod_options="", $editor="", $captcha="", $poll_box="", $upload_field='', $html_status=array(), $canPublish=0, $blogsdd='', $_extraData=array()]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_post</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>cBlockForm</template_name>
+      <template_data><![CDATA[$form_hiddens=array(), $form_title='', $button='', $cbtitle='', $editor='', $html_status=array(), $upload_field='', $blogData=array()]]></template_data>
+      <template_updated>1333723547</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_post</template_group>
+      <template_content><![CDATA[<form id='postingform' action='{$this->settings['base_url']}' method='post' enctype='multipart/form-data'>
+	<input type='hidden' name='s' value='{$this->member->session_id}' />
+	<input type='hidden' name='auth_key' value='{$this->member->form_hash}' />
+	<input type='hidden' name='removeattachid' value='0' />
+	<input type='hidden' name='app' value='blog' />
+	<input type='hidden' name='module' value='post' />
+	<input type='hidden' name='section' value='post' />
+	<if test="hiddenform:|:is_array( $form_hiddens ) && count( $form_hiddens )">
+		<foreach loop="commenthiddens:$form_hiddens as $v">
+	<input type='hidden' name='{$v[0]}' value='{$v[1]}' />
+		</foreach>
+	</if>
+	
+	<h2 class='maintitle'>{$form_title}</h2>
+	
+	<if test="queuedtest:|:$queued != ''">
+		<div class='message unspecific'>
+			{$this->lang->words['comment_queued']}
+		</div>
+	</if>
+	
+	<div class='row'>
+		{$editor}
+	</div>
+	
+	<div class='submit'>
+		<input type="submit" name="dosubmit" value="{$button}" tabindex="0" class="input_submit" accesskey="s"  />&nbsp;
+ 		{$this->lang->words['or']} <a href='{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$this->request['blogid']}&amp;showentry={$this->request['eid']}" template="showentry" seotitle="{$seo_name}" base="public"}' title='{$this->lang->words['cancel']}' class='cancel'>{$this->lang->words['cancel']}</a>
+	</div>
+</form>]]></template_content>
+      <template_name>commentForm</template_name>
+      <template_data><![CDATA[$form_hiddens=array(), $form_title='', $button='', $editor='', $html_status=array(), $captcha='', $queued='', $seo_name='']]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_blog_show">
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<script type='text/javascript'>
+	ipb.blog.withBlocks = true;
+</script>
+<div id='main_blog_wrapper' class='clearfix <if test="hasleftbar:|:$cb_left_html"> with_left</if><if test="hasrightbar:|:$cb_right_html"> with_right</if>'>
+	<div id='main_column'>
+		<if test="$links">
+			<div class='topic_controls'>
+				{$links}
+			</div>
+		</if>
+		
+		<php>
+			// Set some variables
+			$prev_entrymonth	= "";
+		</php>
+		
+		<if test="entriesexist:|:is_array( $entries ) && count( $entries )">
+			<table class='ipb_table'>
+				{parse striping="archive" classes="row1,row2"}
+				<foreach loop="archivedentries:$entries as $entry">
+					<if test="entrymonths:|:$entry['entry_month'] != $prev_entrymonth">
+						<if test="$prev_entrymonth = $entry['entry_month']"></if>
+						<tr class='header'>
+							<th colspan='3' class='short'>{$this->lang->words['blog_monthrow']} {$prev_entrymonth}</th>
+						</tr>
+					</if>
+					<tr class='{parse striping="archive"}'>
+						<td class='altrow short blog_date' style='width: 10%'>{$entry['entry_monthday']}</td>
+						<td style='width: 60%'><a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}" title="{$this->lang->words['view_entry_alt']}"><strong>{$entry['entry_name']}</strong></a></td>
+						<td class='altrow' style='width: 30%'><a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}#comments" title="{$this->lang->words['view_comments_alt']}">{$this->lang->words['entry_comments']} {$entry['entry_num_comments']}</a></td>
+					</tr>
+				</foreach>
+			</table>
+		</if>
+		
+		<if test="$links">
+			<div class='topic_controls'>
+				{$links}
+			</div>
+		</if>
+	</div>
+		
+	<if test="leftsidebar:|:$cb_left_html">
+		{$cb_left_html}
+	</if>
+	
+	<!-- Left bar comes before this -->
+	<span id='sidebar_holder'></span>
+	<!-- Right bar comes after -->
+	
+	<if test="rightsidebar:|:$cb_right_html">
+		{$cb_right_html}
+	</if>
+</div>
+<br class='clear' />]]></template_content>
+      <template_name>blogArchive</template_name>
+      <template_data><![CDATA[$blog, $links, $entries=array(), $cb_left_html="", $cb_right_html=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<div class='master_list'>
+	<h2 class='secondary'><a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['_seo_entry_name']}" base="public"}" title='{$this->lang->words['view_entry_alt']}'>{$entry['entry_name']}</a> <span class='subtext'>{$entry['entry_date_short']}</span></h2>
+
+	<div class='row post line_spacing'>
+		{$poll_html}
+		<if test="privatenotification:|:$entry['hide_private']">
+			<em>{$this->lang->words['blog_private_entry']}<br /><br />
+			<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}&amp;showprivate=1" template="showentry" seotitle="{$entry['_seo_entry_name']}" base="public"}">{$this->lang->words['blog_show_privateentry']}</a></</em>
+		<else />
+			{$entry['entry']}
+		</if>
+		<if test="hasTags:|:!empty( $tags['formatted'] )">
+			<br /><br />
+			{$tags['formatted']['truncatedWithLinks']}
+		</if>
+	</div>
+	
+	<!-- Leave comment box -->
+	{$comments_html}
+</div>]]></template_content>
+      <template_name>blogEntryView</template_name>
+      <template_data>$blog, $comments_html, $header, $entry, $poll_html, $trackbacks_html, $links, $cblocks, $follow, $tags=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<if test="checkforentries:|:!count($entries)">
+	<div class='row no_messages'>
+		<if test="$this->request['cat'] OR $this->request['tag']">{$this->lang->words['no_entry_matches']}<else />{$blog['blog_name']} {$this->lang->words['no_entries_yet']}</if>
+	</div>
+<else />
+	<php>
+		// Set some variables
+		$prev_entrydate		= "";
+		$prev_entrymonth	= "";
+		$this->_totalEntries = count( $entries );
+	</php>
+	<foreach loop="viewentriesloop:$entries as $entry">
+		<div class='topic_reply'>
+			<h2 class='secondary'>
+				<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}" title='{$this->lang->words['view_entry_alt']}'>{$entry['entry_name']}</a>
+				
+				<span class='subtext'>{$entry['entry_date_short']}</span>
+			</h2>
+			
+			<div class='row post line_spacing' id='entry_{$entry['entry_id']}'>
+				<if test="viewprivate:|:$entry['hide_private']">
+					<strong>{$this->lang->words['blog_private_entry']}</strong>
+					<br /><br />
+					<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}&amp;showprivate=1" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}">{$this->lang->words['blog_show_privateentry']}</a>
+				<else />
+					{parse expression="IPSText::truncate( $entry['entry_short'], 200 )"}
+					<if test="hasTags:|:!empty( $entry['tags']['formatted'] )">
+						<br />
+						{$tags['formatted']['truncatedWithLinks']}
+					</if>>
+				</if>
+			</div>
+			
+			<div class='post_controls' id='entry_{$entry['entry_id']}-controls'>
+				<a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}#comments">{$entry['entry_num_comments']} {$this->lang->words['entry_comments']}</a> 
+				 <a href="{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}">{$this->lang->words['read_more_go_on']}</a>
+			</div>
+		</div>
+	</foreach>
+</if>
+
+<php>
+	$this->settings['_mobile_blog_pages'] = $links;
+</php>
+
+<if test="blogowner:|:is_array($this->memberData['has_blog']) AND count($this->memberData['has_blog'])">
+	<div class='controls'>
+		{$links}
+		<div class='buttons'>
+			<a href='{parse url="app=blog&amp;module=post&amp;section=post&amp;do=showform" base="public"}' class='button'>{$this->lang->words['add_entry']}</a>
+		</div>
+	</div>
+</if>
+
+<!-- close master list -->
+</div>]]></template_content>
+      <template_name>blogView</template_name>
+      <template_data>$blog, $links, $entries=array(), $dates=array(), $cblocks</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<if test="slideshow:|:$this->memberData['g_slideshows']">
+	<div class='topic_options'>
+		<li><a href="{parse url="app=gallery&amp;module=images&amp;section=slideshow&amp;show=first&amp;album={$album_id}&amp;duration=5&amp;closewindow=1&amp;hfoff=1" base="public"}">{parse replacement="gallery_slideshow"} {$this->lang->words['slideshow']}</a></li>
+	</div>
+</if>
+<div id='attach_wrap' class='rounded clearfix'>
+	<ul>
+		<foreach loop="albumsloop:$album as $img">
+			<li>{$img}</li> 
+		</foreach>
+	</ul>
+</div>]]></template_content>
+      <template_name>entryAlbum</template_name>
+      <template_data><![CDATA[$album="",$album_id]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<a id='trackbacks'></a>
+
+<h3>{$this->lang->words['entry_trackback_forentry']} <span class='trackback_url'>[ <a title="{$this->lang->words['show_trackback_url']}" href="#" onclick="link_to_trackbackurl(); return false;">{$this->lang->words['entry_trackback_url']}</a> ]</span></h3>
+
+<if test="trackbackrows:|:is_array( $rows ) && count( $rows )">
+	<div id='trackbacks'>
+		{parse striping="trackbacks" classes="row1,row2"}
+		<foreach loop="trackbackloop:$rows as $trackback">
+			<if test="trackbackqueued:|:$trackback['trackback_queued']">
+				<div class='trackback moderated'>
+			<else />
+				<div class='trackback {parse striping="trackbacks"}'>
+			</if>
+			
+				<h4>
+					<a href="{$trackback['trackback_url']}" title="{$trackback['trackback_excerpt']}" target="_blank">{$trackback['trackback_title']}</a> {$this->lang->words['trackback_from']} {$trackback['trackback_blog_name']}
+				</h4>
+			
+				<span class='posted_date desc'>
+					{$this->lang->words['trackback_on']} {$trackback['trackback_date']}
+				</span>
+			
+				<ul class='trackback_options'>
+					<if test="trackbackapprove:|:$trackback['trackback_queued']">
+						<li><a href="{$this->settings['blog_url']}module=post&amp;section=mod&amp;do=doapprovetb&amp;blogid={$trackback['blog_id']}&amp;eid={$trackback['entry_id']}&amp;tbid={$trackback['trackback_id']}&amp;st={$this->request['st']}&amp;auth_key={$trackback['key']}">{$this->lang->words['trackback_approve']}</a></li>
+					</if>
+					<if test="trackbackdelete:|:$trackback['allow_deltrackback']">
+						<li><a href="{$this->settings['blog_url']}module=post&amp;section=mod&amp;do=dodeltrackback&amp;blogid={$trackback['blog_id']}&amp;eid={$trackback['entry_id']}&amp;tbid={$trackback['trackback_id']}&amp;st={$this->request['st']}&amp;auth_key={$trackback['key']}">{$this->lang->words['trackback_delete']}</a></li>
+						<if test="trackbackakismet:|:$this->settings['blog_akismet_key']">
+							<if test="trackbackhamspam:|:$trackback['trackback_queued']">
+								<li><a href="{$this->settings['blog_url']}module=actions&amp;section=report&amp;do=submitham&amp;blogid={$trackback['blog_id']}&amp;cid={$trackback['trackback_id']}&amp;st={$this->request['st']}&amp;trackback=1" title='{$this->lang->words['submit_ham_over']}'>{$this->lang->words['submit_ham']}</a></li>
+							<else />
+								<li><a href="{$this->settings['blog_url']}module=actions&amp;section=report&amp;do=submitspam&amp;blogid={$trackback['blog_id']}&amp;cid={$trackback['trackback_id']}&amp;st={$this->request['st']}&amp;trackback=1" title='{$this->lang->words['submit_spam_over']}'>{$this->lang->words['submit_spam']}</a></li>
+							</if>
+						</if>
+					</if>
+				</ul>
+			</div>
+		</foreach>
+	</div>
+<else />
+	<p class='no_messages'>{$this->lang->words['entry_no_trackbacks']}</p>
+</if>
+			
+<script type="text/javascript">
+//<!#^#|CDATA|
+	function link_to_trackbackurl(){
+		temp = prompt( "{$this->lang->words['trackback_url_prompt']}", "{parse url="app=blog&module=external&section=trackback&eid={$entry_id}" base="public"}" );
+		return false;
+	}
+//|#^#]>
+</script>]]></template_content>
+      <template_name>entryTrackbacks</template_name>
+      <template_data><![CDATA[$entry_id="",$rows=array()]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<script type='text/javascript'>
+	ipb.templates['poll_voters'] = new Template("<h3 class='bar'>{$this->lang->words['who_voted_for']} #{title}</h3><div class='general_box'>#{content}</div>");
+</script>
+
+<div class='general_box alt poll' id='poll_{$poll['pid']}'>
+	<form action="{parse url="app=blog&amp;module=actions&amp;section=dovote&amp;eid={$entry['entry_id']}&amp;blogid={$this->request['blogid']}&amp;st={$this->request['st']}" base="public"}" method="post">
+		<h3>{$this->lang->words['poll_prefix']} {$poll['poll_question']}<if test="showresults:|:$showResults"> <span class='desc'>({$poll['_totalVotes']} {$this->lang->words['votes_cast_suffix']})</span></if></h3>
+		<if test="publicpoll:|:$this->settings['poll_allow_public'] AND $poll['poll_view_voters'] AND ! $showResults">
+			<div class='message unspecified'>{$this->lang->words['public_poll']}</div>
+		</if>
+		<foreach loop="pollquestion:$pollData as $questionID => $questionData">
+			<div class='poll_question<if test="votedcss:|:$showResults"> voted</if>'>
+				<h4>{$pollData[ $questionID ]['question']}</h4>
+				<if test="noguests:|:! $this->settings['allow_result_view'] AND ! $this->memberData['member_id']">
+					{$this->lang->words['poll_noview_guest']}
+				<else />
+					<ol>
+						<foreach loop="pollchoice:$pollData[ $questionID ]['choices'] as $choiceID => $choiceData">
+							<if test="resultsshown:|:$showResults">
+								<li>
+									<span class='answer'><if test="gotvoters:|:is_array( $choiceData['voters'] ) AND in_array( $this->memberData['member_id'], array_keys( $choiceData['voters'] ) )"> {parse replacement="your_vote"} </if>{$choiceData['choice']}</span>
+									<if test="viewvoters:|:$poll['poll_view_voters'] AND is_array( $choiceData['voters'] ) AND $this->settings['poll_allow_public'] AND $choiceData['votes']">
+										<a href='#' class='votes' id='l_voters_{$questionID}_{$choiceID}' title='{$this->lang->words['view_voters']}'>({$choiceData['votes']} {$this->lang->words['votes']} [{$choiceData['percent']}%] - <strong>{$this->lang->words['view_votes_link']}</strong>)</a>
+									<else />
+										<span class='votes'> ({$choiceData['votes']} {$this->lang->words['votes']} [{$choiceData['percent']}%])</span>
+									</if>
+									<if test="showvoters:|:$poll['poll_view_voters'] AND is_array( $choiceData['voters'] ) AND $this->settings['poll_allow_public'] AND $choiceData['votes']">
+										<script type='text/javascript'>
+											$('l_voters_{$questionID}_{$choiceID}').observe('click', ipb.topic.showVoters.bindAsEventListener( this, {$questionID}, {$choiceID} ) );
+											if( Object.isUndefined( ipb.topic.poll[ $questionID ] ) ){
+												ipb.topic.poll[ $questionID ] = [];
+											}
+											
+											var users = "";
+											
+											<foreach loop="pollvoters:$choiceData['voters'] as $id => $member">
+												users += "<a href='{parse url="showuser={$member['member_id']}" base="public" seotitle="{$member['members_seo_name']}" template="showuser"}'>{$member['members_colored_name']}</a><if test="lastmember:|:$member['_last'] == 0">, </if>";
+											</foreach>
+											ipb.topic.poll[ $questionID ][ $choiceID ] = { name: "{$choiceData['choice']}", users: users};
+										</script>
+									</if>
+									<p class='progress_bar topic_poll' title='Percentage of vote: {$choiceData['percent']}%'>
+										<span style='width: {$choiceData['percent']}%'><span>{$this->lang->words['percentage_of_votes']} {$choiceData['percent']}%</span></span>
+									</p>
+								</li>
+							<else />
+								<if test="multichoice:|:$choiceData['type'] == 'multi'">
+									<li><input type='checkbox' id='choice_{$questionID}_{$choiceID}' name='choice_{$questionID}_{$choiceID}' value='1' class='input_check' /> <label for='choice_{$questionID}_{$choiceID}'>{$choiceData['choice']}</label></li>
+								<else />
+									<li><input type='radio' name='choice[{$questionID}]' id='choice_{$questionID}_{$choiceID}' class='input_radio' value='{$choiceID}' /> <label for='choice_{$questionID}_{$choiceID}'>{$choiceData['choice']}</label></li>
+								</if>
+							</if>
+						</foreach>
+					</ol>
+				</if>
+			</div>
+		</foreach>
+		<fieldset class='submit'>
+			<legend>{$this->lang->words['vote_legend']}</legend>
+			
+			<if test="membervote:|:$this->memberData['member_id']">
+				<if test="havenotvoted:|:! $poll['_memberVoted']">
+					<if test="pollcreator:|:($poll['starter_id'] == $this->memberData['member_id']) and ($this->settings['allow_creator_vote'] != 1)">
+						{$this->lang->words['poll_you_created']}
+					<else />
+						<!-- VOTE Button -->
+						<if test="votelink:|:$this->request['mode'] != 'show'">
+							<input class='input_submit' type="submit" name="submit" value="{$this->lang->words['poll_add_vote']}" title="{$this->lang->words['tt_poll_vote']}" />
+						</if>
+						<!-- SHOW Button -->
+						<if test="viewresults:|:$this->settings['allow_result_view'] == 1">
+							<if test="showlink:|:$this->request['mode'] != 'show'">
+								<a href='{parse url="app=blog&amp;module=display&amp;section=blog&amp;blogid={$entry['blog_id']}&amp;showentry={$entry['entry_id']}&amp;mode=show&amp;st={$this->request['st']}" template="showentry" seotitle="{$entry['entry_name_seo']}" base="public"}' title='{$this->lang->words['tt_poll_show']}' id='poll_showresults' class='input_submit'>{$this->lang->words['pl_show_results']}</a>
+							</if>
+						<else />
+							<input class='input_submit' type="submit" name="nullvote" value="{$this->lang->words['poll_null_vote']}" title="{$this->lang->words['tt_poll_null']}" />
+						</if>
+					</if>
+				</if>
+			<else />
+				{$this->lang->words['poll_no_guests']}
+			</if>
+		</fieldset>
+	</form>
+</div>]]></template_content>
+      <template_name>pollDisplay</template_name>
+      <template_data>$poll, $entry, $pollData, $showResults</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<div id='attach_wrap' class='rounded clearfix'>
+	<h4>{$title}</h4>
+	<ul>
+		<foreach loop="attach:$data as $file">
+			<li class='<if test="attachType:|:$type == 'attach'">clear</if>'>
+				{$file}
+			</li>
+		</foreach>
+	</ul>
+</div>]]></template_content>
+      <template_name>show_attachment_title</template_name>
+      <template_data><![CDATA[$title="",$data="",$type=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<a href="{parse url="app=core&amp;module=attach&amp;section=attach&amp;attach_id={$data['attach_id']}" base="public"}" title="{$this->lang->words['attach_dl']}"><img src="{$this->settings['public_dir']}{$data['mime_image']}" alt="{$this->lang->words['attached_file']}" /></a>
+&nbsp;<a href="{parse url="app=core&amp;module=attach&amp;section=attach&amp;attach_id={$data['attach_id']}" base="public"}" title="{$this->lang->words['attach_dl']}">{$data['attach_file']}</a> <span class='desc'><strong>({$data['file_size']})</strong></span>
+<br /><span class="desc info">{$this->lang->words['attach_hits']}: {$data['attach_hits']}</span>]]></template_content>
+      <template_name>Show_attachments</template_name>
+      <template_data><![CDATA[$data=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<a class='resized_img' rel='lightbox[{$data['attach_rel_id']}]' id='ipb-attach-url-{$data['_attach_id']}' href="{parse url="app=core&amp;module=attach&amp;section=attach&amp;attach_rel_module={$data['type']}&amp;attach_id={$data['attach_id']}" base="public"}" title="{$data['location']} - {$this->lang->words['attach_size']} {$data['file_size']}, {$this->lang->words['attach_ahits']} {$data['attach_hits']}"><img src="{$this->settings['blog_upload_url']}/{$data['o_location']}" class='bbc_img linked-image' alt="{$this->lang->words['pic_attach']}: {$data['location']}" /></a>]]></template_content>
+      <template_name>Show_attachments_img</template_name>
+      <template_data>$data=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_show</template_group>
+      <template_content><![CDATA[<a class='resized_img' rel='lightbox[{$data['attach_rel_id']}]' id='ipb-attach-url-{$data['_attach_id']}' href="{parse url="app=core&amp;module=attach&amp;section=attach&amp;attach_rel_module={$data['type']}&amp;attach_id={$data['attach_id']}" base="public"}" title="{$data['location']} - {$this->lang->words['attach_size']} {$data['file_size']}, {$this->lang->words['attach_ahits']} {$data['attach_hits']}"><img src="{$this->settings['blog_upload_url']}/{$data['t_location']}" id='ipb-attach-img-{$data['_attach_id']}' style='width:{$data['t_width']};height:{$data['t_height']}' class='attach' width="{$data['t_width']}" height="{$data['t_height']}" alt="{$this->lang->words['pic_attach']}" /></a>
+<br />]]></template_content>
+      <template_name>Show_attachments_img_thumb</template_name>
+      <template_data>$data=array()</template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_blog_trackback">
+    <template>
+      <template_group>skin_blog_trackback</template_group>
+      <template_content><![CDATA[<h2>{$this->lang->words['send_trackback_for']} &quot;{$entry['entry_name']}&quot;</h2>
+	
+<if test="trackbackerror:|:$error">
+	<p class='message error'>
+		{$error}
+	</p>
+</if>
+<if test="trackbackssent:|:$entry['entry_sent_trackbacks']">
+	<p class='message'>
+		<strong>{$this->lang->words['sent_trackbacks']}</strong><br />
+		{$entry['entry_sent_trackbacks']}
+	</p>
+</if>
+<div class='general_box alt'>
+	<h3>{$this->lang->words['send_trackback_desc']}</h3>
+	<form action="{$this->settings['base_url']}" method="post">
+		<fieldset>
+			<input type="hidden" name="app" value="blog" />
+			<input type="hidden" name="module" value="external" />
+			<input type="hidden" name="section" value="trackback" />
+			<input type="hidden" name="do" value="dosendtrackback" />
+			<input type="hidden" name="eid" value="{$entry['entry_id']}" />
+		
+			<ul>
+				<li class='field'>
+					<label for='trackback_url'>{$this->lang->words['send_trackback_url']}</label>
+					<input type="text" size="35" name="trackback_url" id='trackback_url' value="" />
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset class='submit'>
+			<input type='submit' class='input_submit' value='Send Trackback' />
+		</fieldset>
+	</form>
+</div>]]></template_content>
+      <template_name>sendTrackbackForm</template_name>
+      <template_data><![CDATA[$entry="",$error=""]]></template_data>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_blog_trackback</template_group>
+      <template_content><![CDATA[<p class='message'>
+	{$this->lang->words['send_trackback_succes']}
+</p>]]></template_content>
+      <template_name>trackbackSuccess</template_name>
+      <template_data/>
+      <template_updated>1333723549</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+  </templategroup>
+</templates>

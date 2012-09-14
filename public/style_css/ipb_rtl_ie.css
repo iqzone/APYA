@@ -1,0 +1,35 @@
+/* IE7 specific RTL fixes */
+/* Utility styles */
+
+#search{ float:left; margin-left:23%; }
+#logo { float:right; }
+
+#notify_link, #inbox_link {
+	vertical-align: middle;
+	width: 18px;
+	left:45px;
+	bottom:0;
+	top:7px;
+	height: 15px;
+	padding: 11px 12px 5px 24px;
+	position: relative;
+	float:left;
+}
+
+#user_link:hover, #notify_link:hover, #inbox_link:hover { background-color: #323232; }
+#user_link.menu_active, #notify_link.menu_active, #inbox_link.menu_active { background-color: #fff; } 
+#user_link_menucontent > div { margin-right: 15px;width: 264px;padding:0px;text-align: right; }
+
+#main_search {
+	font-size: 12px;
+	border: 0;
+	padding: 0px;
+	float:right;
+	background: transparent;
+	width: 130px;
+	outline: 0;
+}
+
+.ipsHeaderMenu {
+	height: auto !important;
+}

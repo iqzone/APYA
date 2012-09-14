@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Managing Members</grouptitle>
+		<grouplang>members_members</grouplang>
+		<items>
+			<item>
+				<key>member_add</key>
+				<string>Can add members?</string>
+			</item>
+			<item>
+				<key>member_add_admin</key>
+				<string>Can add ADMINS?</string>
+			</item>
+			<item>
+				<key>member_edit</key>
+				<string>Can edit members?</string>
+			</item>
+			<item>
+				<key>member_edit_admin</key>
+				<string>Can edit ADMINS?</string>
+			</item>
+			<item>
+				<key>member_delete</key>
+				<string>Can delete members?</string>
+			</item>
+			<item>
+				<key>member_delete_admin</key>
+				<string>Can delete ADMINS?</string>
+			</item>
+			<item>
+				<key>member_login</key>
+				<string>Can log in as members?</string>
+			</item>
+			<item>
+				<key>members_merge</key>
+				<string>Can merge two user accounts?</string>
+			</item>
+			<item>
+				<key>member_suspend</key>
+				<string>Can suspend and unsuspend members?</string>
+			</item>
+			<item>
+				<key>member_suspend_admin</key>
+				<string>Can suspend and unsuspend ADMINS?</string>
+			</item>
+			<item>
+				<key>member_prune</key>
+				<string>Can prune members?</string>
+			</item>
+			<item>
+				<key>member_prune_admin</key>
+				<string>Can prune ADMINS?</string>
+			</item>
+			<item>
+				<key>member_move</key>
+				<string>Can bulk move members to other groups? (Does not apply to editing members where the group can still be changed)</string>
+			</item>
+			<item>
+				<key>member_move_admin1</key>
+				<string>Can move ADMINS to other groups?</string>
+			</item>
+			<item>
+				<key>member_move_admin2</key>
+				<string>Can promote members to ADMIN?</string>
+			</item>
+			<item>
+				<key>member_ban</key>
+				<string>Can ban members?</string>
+			</item>
+			<item>
+				<key>member_ban_admin</key>
+				<string>Can ban ADMINS?</string>
+			</item>
+			<item>
+				<key>member_photo</key>
+				<string>Can upload new member photos?</string>
+			</item>
+			<item>
+				<key>member_photo_admin</key>
+				<string>Can upload new photos for ADMINS?</string>
+			</item>
+			<item>
+				<key>membertools_validating</key>
+				<string>Can manage validating members?</string>
+			</item>
+			<item>
+				<key>membertools_locked</key>
+				<string>Can manage locked members?</string>
+			</item>
+			<item>
+				<key>membertools_banned</key>
+				<string>Can manage banned members?</string>
+			</item>
+			<item>
+				<key>membertools_spam</key>
+				<string>Can manage spam members?</string>
+			</item>
+			<item>
+				<key>membertools_incomplete</key>
+				<string>Can manage incomplete members?</string>
+			</item>
+			<item>
+				<key>membertools_delete_pms</key>
+				<string>Can delete private messages?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Member Tools</grouptitle>
+		<grouplang>members_tools</grouplang>
+		<items>
+			<item>
+				<key>membertools_ip</key>
+				<string>Can use the IP address tools?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Member Ranks</grouptitle>
+		<grouplang>members_ranks</grouplang>
+		<items>
+			<item>
+				<key>ranks_add</key>
+				<string>Can view and add new member ranks?</string>
+			</item>
+			<item>
+				<key>ranks_edit</key>
+				<string>Can edit member ranks?</string>
+			</item>
+			<item>
+				<key>ranks_delete</key>
+				<string>Can delete member ranks?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Managing Ban Filters</grouptitle>
+		<grouplang>members_banfilters</grouplang>
+		<items>
+			<item>
+				<key>ban_manage</key>
+				<string>Can manage ban filters?</string>
+			</item>
+			<item>
+				<key>ban_remove</key>
+				<string>Can remove ban filters?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Member Reputation</grouptitle>
+		<grouplang>members_reputation</grouplang>
+		<items>
+			<item>
+				<key>reps_manage</key>
+				<string>Can manage reputation levels?</string>
+			</item>
+			<item>
+				<key>reps_delete</key>
+				<string>Can delete reputation levels?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Notification Defaults</grouptitle>
+		<grouplang>members_notifications</grouplang>
+		<items>
+			<item>
+				<key>configure_notifications</key>
+				<string>Configure notification defaults?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

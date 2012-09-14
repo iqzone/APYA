@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Album Management</grouptitle>
+		<grouplang>album_managet</grouplang>
+		<items>
+			<item>
+				<key>album_add</key>
+				<string>Can add albums for members?</string>
+			</item>
+			<item>
+				<key>album_manage</key>
+				<string>Can edit and resynchronize album information for members?</string>
+			</item>
+			<item>
+				<key>album_delete</key>
+				<string>Can delete albums?</string>
+			</item>
+			<item>
+				<key>album_empty</key>
+				<string>Can empty albums?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

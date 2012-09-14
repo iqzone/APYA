@@ -1,0 +1,2109 @@
+/************************************************************************/
+/* IP.Board 3.2 alpha RTL CSS - By Ajouz 	last update 16-7-2011*/
+/************************************************************************/
+/* ipb_rtl.css														*/
+/************************************************************************/
+
+/* CORE ELEMENT STYLES */
+
+body {
+    direction: rtl;
+	text-align:right;
+}
+ #ipbwrapper {
+ direction:rtl ;
+ }
+
+	
+/************************************************************************/
+/* LISTS */
+
+	.ipsList_inline > li:first-child { margin-right: 0; margin-left: 3px; }
+	.ipsList_inline > li:last-child { margin-left: 0; margin-right: 3px; }
+.ipsList_withminiphoto > li .list_content { margin-right: 40px; margin-left:0px;}
+.ipsList_withtinyphoto > li .list_content { margin-right: 30px; margin-left:0px ;}
+
+.ipsList_data .row_title, .ipsList_data .ft {
+	float: right;
+	text-align: left;
+	padding-left: 10px;
+	padding-right:0px ;
+}
+
+/************************************************************************/
+/* TYPOGRAPHY */
+
+/************************************************************************/
+/* LAYOUT */
+
+/************************************************************************/
+
+/* HEADER */
+#header_bar {
+   -moz-box-shadow: 0 0;
+ 
+}
+
+#sign_in{ margin-left:10px; }
+
+#user_link {
+	margin-left: 15px;
+	margin-right:0px;
+}
+
+#user_link_menucontent {
+	left: 100px;
+	right:auto;
+}
+
+#user_link_menucontent #links li {
+	float: right;
+}
+	#user_link_menucontent > div {
+		margin-right: 15px;
+        margin-left:0px ;
+		text-align: right;
+	}
+
+#notify_link, #inbox_link {
+	padding: 13px 12px 9px 24px;
+}
+
+	
+	#primary_nav li { margin: 0px 0 0 3px; }
+
+	#primary_nav a {
+		padding: 6px 15px 8px;
+
+	}
+
+
+#more_apps_menucontent {
+	-moz-border-radius: 0 4px 4px 0;
+	-webkit-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+}
+	
+	
+
+	.breadcrumb li .nav_sep { margin: 0 0 0 5px; }
+	.breadcrumb li:first-child{ margin-right: 0 ; }
+
+
+/************************************************************************/
+/* SEARCH */
+/************************************************************************/
+
+#search_wrap {
+	padding: 0 4px 0 26px;
+	-moz-border-radius: 3px 3px 4px 4px;
+	-webkit-border-radius: 3px 3px 4px 4px;
+	border-radius: 3px 3px 4px 4px;
+}
+
+#adv_search {
+    background-position: left 50%;
+    font-size: 0;
+    margin: 4px 4px 4px 0;
+    text-indent: -3000em;
+	overflow: hidden;
+}
+
+#search .submit_input {
+	left: 0; 
+	right:auto ;
+	-moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+
+#search_options {
+	margin: 3px 0 3px 3px;
+	float: left;
+}
+
+
+	#search_options_menucontent input { margin-left: 10px; margin-right:0px ; }
+	div#search_results div.result_info {
+                float: right;
+                                           }
+                                           
+div#search_results .result_details {
+    border-left: 0 ;
+    border-right: 1px solid #B5C0CF;
+    float: left;
+    padding-right: 15px;
+    padding-left:0px;
+}
+	
+/************************************************************************/
+/* FOOTER */	
+
+#backtotop {
+	right: 50%;
+	left:auto;
+	margin-right: -20px;
+	margin-left:0px;
+}
+
+
+	
+	#copyright {
+		text-align: left;
+	}
+
+#ipsDebug_footer {
+	margin: 8px auto 0px auto;
+}
+	
+/************************************************************************/
+/* GENERAL CONTENT */
+
+
+
+
+	.ipsBox_withphoto { margin-right: 65px;margin-left:0px; }
+	.ipsBox_container .ipsBox_notice {	margin: -10px -10px 10px -10px;	}	
+.ipsPad_left { padding-right: 9px;padding-left:0px ; }
+
+
+.ipsModMenu {
+	margin-left: 5px;
+    margin-right:0px;
+}
+	
+#ajax_loading {
+	right: 46%;
+	left:auto;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+
+#ipboard_body.redirector {
+	margin: 150px auto 0 auto;
+}
+	
+
+	.progress_bar span {
+		background-position: right 50%;
+	}
+
+
+.antispam_img {
+	margin-right: 215px;
+	margin-left:0px ;
+}
+
+/************************************************************************/
+/* GENERIC REPEATED STYLES */
+/* Inline lists */
+
+/* Utility styles */
+.right { float: left; }
+.left { float: right; }
+
+
+
+/* Bullets */
+.bullets ul, .bullets ol,
+ul.bullets, ol.bullets {
+	margin-right: 30px;
+	margin-left:0px;
+
+}
+
+	
+/************************************************************************/
+/* COLUMN WIDTHS FOR TABLES */
+/* col_f = forums; col_c = categories; col_m = messenger; col_n = notifications */
+	
+.col_f_views, .col_m_replies {
+	text-align: left;
+}
+
+.col_f_mod, .col_m_mod, .col_n_mod { width: 40px; text-align: left; }
+.col_f_preview { 
+	text-align: left;
+}
+
+.col_c_icon { padding: 10px 5px 10px 5px !important;  }
+.col_m_mod { text-align: left; }
+.col_c_stats {  text-align: left; }
+
+
+/************************************************************************/
+/* TABLE STYLES */
+
+
+.last_post { margin-right: 45px;margin-left:0px; }
+
+.forum_data {
+	margin: 0px 8px 0 0;
+}
+
+
+table.ipb_table .subforums {
+	margin: 2px 5px 3px 0;
+	padding-right: 20px;
+	padding-left:0px;
+	background-position:  right 4px;
+}
+
+table.ipb_table .preview td {
+	padding: 20px 29px 20px 10px;
+}
+
+.preview_col {
+	margin-right: 80px;
+}
+
+table.ipb_table tr.header th {
+	text-align: right;
+}
+
+table.ipb_table tr.header th.short {
+	text-align: center;
+}
+
+/************************************************************************/
+/* LAYOUT SYSTEM */
+
+.ipsLayout.ipsLayout_withleft { padding-right: 210px; padding-left:0px; }
+.ipsLayout.ipsLayout_withright { padding-left: 210px; padding-right:0px; clear: right; }
+/* Panes */
+.ipsLayout_content {  float: right; }
+.ipsLayout .ipsLayout_left { margin-right: -210px;margin-left:0px; float: right; }
+.ipsLayout .ipsLayout_right { margin-left: -210px;margin-right:0px; float: left; }
+
+/* Wider sidebars */
+.ipsLayout_largeleft.ipsLayout_withleft { padding-right: 290px; }
+.ipsLayout_largeleft.ipsLayout .ipsLayout_left { margin-right: -290px; margin-left:0}
+.ipsLayout_largeright.ipsLayout_withright { padding-left: 290px; padding-right:0px;}
+.ipsLayout_largeright.ipsLayout .ipsLayout_right { margin-left: -290px; margin-right:0;}
+.ipsLayout_largeright.ipsLayout_withright.ipsLayout_withleft {padding-right:290px;} 
+.ipsLayout_largeleft.ipsLayout_withleft.ipsLayout_withright {padding-left:290px;} 
+/* Narrow sidebars */
+.ipsLayout_smallleft.ipsLayout_withleft { padding-right: 150px; padding-left:0px;}
+.ipsLayout_smallleft.ipsLayout .ipsLayout_left {  margin-right: -150px; margin-left:0px;}
+.ipsLayout_smallright.ipsLayout_withright { padding-left: 150px; padding-right:0px;}
+.ipsLayout_smallright.ipsLayout .ipsLayout_right {  margin-left: -150px; margin-right:0px;}
+
+/* Tiny sidebar */
+.ipsLayout_tinyleft.ipsLayout_withleft { padding-right: 50px; padding-left: 0; }
+.ipsLayout_tinyleft.ipsLayout .ipsLayout_left {margin-right: -40px; margin-left:0px;}
+.ipsLayout_tinyright.ipsLayout_withright { padding-left: 50px;padding-right:0px; }
+.ipsLayout_tinyright.ipsLayout .ipsLayout_right { margin-left: -40px;margin-right:0px; }
+
+/* Big and huge  */
+.ipsLayout_bigleft.ipsLayout_withleft{padding-left:0px ; padding-right:330px}
+.ipsLayout_bigleft.ipsLayout .ipsLayout_left{width:320px;margin-left: 0px ;margin-right:-330px}
+.ipsLayout_bigright.ipsLayout_withright{padding-right:0px ;padding-left:330px}
+.ipsLayout_bigright.ipsLayout .ipsLayout_right{width:320px;margin-right: 0px ;margin-left:-330px}
+.ipsLayout_hugeleft.ipsLayout_withleft{padding-left:380px ;padding-right:0px}
+.ipsLayout_hugeleft.ipsLayout .ipsLayout_left{width:370px;margin-left: 0px ;margin-right:-380px;}
+.ipsLayout_hugeright.ipsLayout_withright{padding-right:0px ; padding-left:380px}
+.ipsLayout_hugeright.ipsLayout .ipsLayout_right{width:370px;margin-right: 0px ;margin-left:-380px}
+
+/************************************************************************/
+/* NEW FORMS */
+
+.ipsForm_horizontal .ipsField_title {
+	float: right;
+	padding-left: 15px;
+	padding-right:0px;
+	text-align: left;
+}
+
+.ipsForm_horizontal .ipsField_content, .ipsForm_horizontal .ipsField_submit { margin-right: 200px; margin-left:0px;}
+.ipsForm_horizontal .ipsField_checkbox { margin: 0 200px 5px 0; }
+.ipsForm .ipsField_checkbox .ipsField_content { margin-right: 25px; }
+.ipsForm .ipsField_checkbox input { float: right; }
+
+
+.ipsForm_submit {
+	text-align: left;
+}
+
+.ipsForm_right { text-align: left; }
+.ipsForm_left { text-align: right; }
+
+	
+/************************************************************************/
+/* AlertFlag */
+
+.ipsHasNotifications {
+	right: 3px;
+	left:auto;
+}
+
+/************************************************************************/
+/* SIDEBAR STYLE */
+
+.ipsSideMenu { padding: 10px 0; }
+.ipsSideMenu h4 { 
+	margin: 0 25px 5px 10px;
+}
+
+.ipsSideMenu ul li a {
+	padding: 5px 25px 5px 10px;
+}
+
+	.ipsSideMenu ul li.active a
+	{
+		background-position: 160px 8px;
+	}
+
+
+/***************************************************************************/
+/* WIZARDS */
+
+	.ipsSteps ul li {
+		float: right;
+		padding: 11px 18px 11px 33px;
+		background-position: bottom left;
+	}
+	
+	.ipsSteps .ipsSteps_active {
+		background-position: top left;
+	}
+	
+	
+	.ipsSteps_active .ipsSteps_arrow {
+		right: -23px;
+		left:auto;
+
+	}
+	
+/************************************************************************/
+/* VERTICAL TABS (profile etc.) */
+
+	.ipsVerticalTabbed_tabs > ul {
+	    border-left:0px;
+		border-right: 1px solid #DBE4EF;
+	}
+		
+			
+	
+			
+				.ipsVerticalTabbed_tabs li.active a {
+	                border_right:0px;
+					border-left: 1px solid #fff;			
+				}
+				
+#user_utility_links {
+    text-align: left;
+}
+/************************************************************************/
+/* 'LIKE' FUNCTIONS */
+
+	
+/*.ipsLikeButton {
+	padding: 0 24px 0 6px;
+}
+
+	
+	.ipsLikeButton.ipsLikeButton_enabled {
+		background-position: top right;
+	}
+	
+	.ipsLikeButton.ipsLikeButton_disabled {
+		background-position: bottom right;
+	}*/
+
+/************************************************************************/
+/* TAG LIST */
+
+.ipsTag {
+
+	margin: 5px 0 0 5px;
+	border-radius: 0 0 3px 3px;
+    -moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+	.ipsTag span {
+		display: inline-block;
+	    -moz-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		-webkit-transform: rotate(-180deg) !important;
+		filter: fliph; /*IE*/	
+	}
+
+/************************************************************************/
+/* TAG EDITOR STYLES */
+
+	.ipsTagBox_tag {
+		padding: 2px 4px 2px 1px;
+		margin: 0 0 2px 3px;
+	}
+	
+		
+	.ipsTagBox_closetag {
+		margin-right: 2px;
+		margin-left:0px;
+
+	}
+		
+	.ipsTagBox_addlink {
+		margin-right: 3px;
+        margin-left:0px;
+	}
+	
+/************************************************************************/
+/* NEW FILTER BAR */
+
+.ipsFilterbar li {
+	margin: 0px 0 0px 15px;
+}
+	
+/************************************************************************/
+/* POSTING FORM STYLES */
+/* Additional form styles for posting forms */
+
+  .ipsLayout_smallleft.ipsPostForm.ipsLayout_withright {padding-right: 150px;}
+	
+	.ipsPostForm.ipsLayout_withright {
+		padding-left: 260px;
+		padding-right:inherit !important;
+	}
+	
+	.ipsPostForm .ipsLayout_right {
+		margin-left: -251px;
+		margin-right:0px ;
+		border-right: 0px none;
+		border-left: 1px solid #DBE4EF;
+	}
+	
+	.ipsPostForm .ipsLayout_content
+	{
+		box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+	}
+	
+	.ipsPostForm_sidebar .ipsPostForm_sidebar_block.closed h3 {
+		background-position: 10px 9px;
+		padding-right: 26px;
+		padding-left:0px;
+	}
+
+/************************************************************************/
+/* MEMBER LIST STYLES */
+.ipsMemberList li .reputation { margin: 5px 0 0 10px; }
+
+/*************************/
+/* Member List RTL by Ziv */
+/************************************************************************/
+ 
+ div#member_filters ul {
+  margin-bottom: 12px;
+  margin-top: 8px;
+  width: 49%;
+  float: right;
+ }
+ 
+ div#member_filters li {
+  border-bottom: 1px solid #d5dde5;
+  margin-left: 20px;
+  padding: 8px 0 8px 0;
+  clear: both;
+ }
+ 
+ div#member_filters label { 
+  text-align: right;
+  margin-left: 15px;
+  width: 150px;
+  display: block;
+  float: right;
+ }
+
+/************************************************************************/
+/* FORM STYLES */
+
+
+body#ipboard_body fieldset.submit .left-align {
+	text-align: right;
+}
+	
+li.field {
+	margin-right: 5px;
+	margin-left:0px;
+}
+
+li.field.checkbox, li.field.cbox {
+	margin-right: 0;
+}
+
+li.field.checkbox .input_check,
+li.field.checkbox .input_radio,
+li.field.cbox .input_check,
+li.field.cbox .input_radio {
+	margin-left: 10px;
+    margin-right:0px;
+}
+
+	
+	li.field.checkbox p,
+	li.field.cbox p {
+		right: 245px;
+        left:auto;
+	}
+
+	li.field.checkbox span.desc,
+	li.field.cbox span.desc {
+		padding-right: 27px;
+		padding-left:0px;
+		margin-right: auto;
+		display: block;
+	}
+	
+/************************************************************************/
+/* MESSAGE STYLES */
+	
+	.message.error.usercp {
+		float: left;
+	}
+	
+	.message.unspecific {
+		margin: 0 0 10px 0;
+	}
+	
+#folder_list .total {
+	right: auto;
+	left: 0;
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.edit_folders {
+ right: auto;
+ left: 0;
+ margin-right: 0;
+ margin-left: 10px;
+}
+
+/************************************************************************/
+/* UserCP */
+
+.ipsSettings_section h3.ipsSettings_sectiontitle {
+	float: right;
+	padding-right: 10px;
+	padding-left:0px;
+}
+
+.ipsSettings_section > div {
+	margin-left: 0;
+	margin-right: 175px;
+}
+
+.ipsSettings_fieldtitle {
+	margin-right: 0px;
+	margin-left: 10px;
+}
+
+	
+/************************************************************************/
+/* MENU & POPUP STYLES */
+
+	.ipbmenu_content a { 
+		text-align: right;
+	}
+
+
+.popupClose {
+	position: absolute;
+	left: 16px;
+    right:auto ;
+}
+
+.popupClose.light_close_button {
+	background-position:top right;
+    left:auto;
+	right: 16px;
+}
+
+.popup_footer {
+    right:auto;
+	left: 0px;
+}
+
+.userpopup h3, .userpopup .side + div { padding-right: 110px; padding-left:0px;}
+.userpopup .user_controls { text-align: right; }
+.info dt {
+	float: right;
+	clear: left;
+}
+
+.info dd {
+	margin-right: 35%;
+	margin-left:0px;
+}
+
+/************************************************************************/
+/* BUTTONS STYLES */
+
+.topic_buttons li {
+	float: left;
+	margin: -10px 10px 10px 0;
+}
+
+.topic_buttons li.important a, .topic_buttons li.important span, .ipsButton .important,
+.topic_buttons li a, .topic_buttons li span, .ipsButton {
+	border-width: 1px 1px 0 1px;
+}
+		
+	
+.ipsButton_extra {
+	margin-right: 5px;
+	margin-left:0px
+}
+
+
+ul.post_controls {
+	padding: 6px 6px 28px 0px;
+}
+
+		ul.post_controls li {
+			float: left;
+		}
+
+
+		ul.post_controls a {	
+			margin-right: 4px;
+            margin-left:0px;
+		}
+
+.hide_signature, .sigIconStay { float: left; }
+.post_block:hover .signature a.hide_signature, .sigIconStay {
+	background-position: top left;
+	left:0 ;
+	right:auto;
+}
+
+/************************************************************************/
+/* PAGINATION STYLES */
+.pagination .back { margin-left: 6px; }
+	.pagination .back li { margin: 0 0 0 2px; }
+.pagination .forward { margin-right: 6px; }
+	.pagination .forward li { margin: 0 2px 0 0; }
+
+ul.mini_pagination {
+    margin-left:0px;
+	margin-right: 7px;
+}
+
+
+/************************************************************************/
+/* MODERATION & FILTER STYLES */
+
+.moderation_bar {
+	text-align: left;
+}
+
+	.moderation_bar.with_action {
+		background-position: left center;
+		padding-left: 35px;
+		padding-right:0px;
+	}
+
+/************************************************************************/
+/* TAB BAR STYLES */
+
+.tab_bar {
+	-moz-border-radius: 6px 0 0 6px;
+	-webkit-border-radius: 6px 0 0 6px;
+	border-radius: 6px 0 0 6px;
+	padding: 7px 15px 25px 15px;
+}
+
+	.tab_bar.no_title {
+		padding: 7px 15px 56px 15px;
+	}
+		
+		.tab_bar.no_title.mini {
+			padding: 7px 15px 25px 15px;
+		}
+		
+	.tab_bar li {
+		float: right;
+	}
+		
+		.tab_bar li.active {
+			-moz-border-radius: 4px 0 0 4px;
+			-webkit-border-radius: 4px 0 0 4px;
+			border-radius: 4px 0 0 4px;
+			margin: -2px 10px 0 10px;
+		}
+		
+
+		
+/************************************************************************/
+/* AUTHOR INFO (& RELATED) STYLES */
+
+.author_info {
+	float: right;
+}
+	
+
+/************************************************************************/
+/* BOARD INDEX STYLES */
+
+
+.status_list .status_list { margin: 10px 50px 0 0; }
+
+/* board stats */
+
+	#board_stats li { margin-left: 20px; margin-right:0px;}
+	#board_stats .value {
+		margin-left: 3px;
+	}
+
+.statistics {
+	margin: 20px 0 0 0;
+}
+
+.friend_list ul li,
+#top_posters li {
+	float: right;
+}
+#board_index.no_sidebar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+	#board_index.force_sidebar { padding-left: 290px; padding-right: 0px; }
+
+#toggle_sidebar {
+    left: -5px;
+    right:auto;
+}
+/************************************************************************/
+/* FORUM VIEW (& RELATED) STYLES */
+
+
+	ul.topic_moderation li {
+		float: right;
+	}
+	
+	.topic_preview a,
+	ul.topic_moderation li a {
+		float: right;
+	}
+
+img.mini_rate {
+	margin-left: -5px;
+	margin-right:-5px;
+}
+
+/************************************************************************/
+/* TOPIC VIEW (& RELATED) STYLES */
+
+
+span.post_id { margin-right: 15px;margin-left:0px; }
+input.post_mod { margin:12px 10px 0px 5px; }
+
+.signature {
+	clear: left;
+}
+.hide_signature,.sigIconStay {
+
+ float:left;
+
+}
+
+.post_body {
+	margin: 0 185px 0 10px;
+}
+	
+	
+	.post_block.no_sidebar .post_body { margin-right: 10px; margin-left:0px;}
+	
+.posted_info {
+	padding: 0 0 10px 0;
+}
+
+
+		
+p.rep_highlight {
+	float: left;
+	margin: 5px 10px 10px 10px;
+}
+
+	
+
+.edit {
+	padding: 2px 24px 0 0;
+	background-position:  right 4px;
+	font-size: 12px;
+}
+
+
+.poll_question {
+	margin: 10px 20px 10px 10px;
+}
+
+	
+	.poll_question .votes {
+		margin-right: 5px;
+		margin-left:0px;
+	}
+	
+.snapback { 
+	margin-left: 5px;
+	margin-right;0px;
+	padding: 1px 1px 1px 0;
+}
+
+
+#rating_text { margin-right: 4px;margin-left:0px; }
+	
+/************************************************************************/
+/* POSTING FORM (& RELATED) STYLES */
+
+div.post_form label {
+	text-align: left;
+	padding-left: 15px;
+	padding-right:0px;
+	float: right;
+}
+
+	div.post_form .checkbox input.input_check,
+	#mod_form .checkbox input.input_check {
+		margin-right: 295px;
+		margin-left:0px;
+	}
+	
+	div.post_form .antispam_img {
+		margin-right: 290px;
+		margin-left:0px;
+	}
+	
+	div.post_form .captcha .input_text {
+		float: right;
+	}
+	
+
+	fieldset.with_subhead h4 {
+		text-align: left;	
+		float: right;
+	}
+
+	fieldset.with_subhead ul {
+		margin: 0 320px 6px 15px;
+	}
+
+	fieldset.with_subhead .checkbox input.input_check {
+		margin-right: 0px;
+	}
+
+#toggle_post_options {
+	padding: 2px 22px 2px 0;
+
+}
+
+
+		#poll_wrap .question .wrap ol {
+			margin-right: 25px; 
+		}
+		
+	
+.question_title { margin-right: 30px; margin-left: 0; }
+
+.poll_control { margin-right: 20px; margin-left: 0;}
+.post_form .tag_field ul { margin-right: 290px; margin-left: 0;}
+
+/************************************************************************/
+/* ATTACHMENT MANAGER (& RELATED) STYLES */
+
+
+	#attachments li {
+
+		padding: 6px 62px 6px 0px;
+	}
+	
+	#attachments li.complete {
+		background-position: 98%;
+	}
+			
+			#attachments li.complete .links {
+				margin-left: 15px;
+				margin-right:0px;
+				left: 0px;
+				right:auto;
+			}
+			
+		#attachments li .progress_bar {
+			margin-left: 15px;
+            margin-right:0px;
+			left: 0px;
+	        right:auto;
+		}
+	
+		
+		#attachments li .thumb_img {
+			right: 6px;
+	        left:auto;
+		}
+
+
+
+.attach_controls {
+	padding-right: 35px;
+	padding-left:0px;
+}
+
+	
+	
+	#attach_wrap li {
+		float: right;
+	}
+		
+		#attach_wrap .desc.info {
+			margin-right: 24px;
+			margin-left:0px;
+		}
+
+
+/************************************************************************/
+/* COMMENTS (& RELATED) STYLES */
+
+		.comment_wrap .rep_bar {
+
+			margin: -10px 0 -5px -5px;
+			
+		}
+	
+	
+	.comment_wrap .comment .photo {
+		float: right;
+		margin: 0 0 10px 10px;
+	}
+	
+	.comment_wrap .comment h4,
+	.comment_wrap .posted_date,
+	.comment_wrap .comment .comment_content {
+		margin-right: 65px;
+		margin-left:0px;
+	}
+
+.comment_options {
+	float: left;
+}
+
+	.comment_options li {
+		float: right;
+	}
+	
+	
+
+
+#commentUser {
+	padding-right: 10px;
+	padding-left:0px;
+	float: right;
+}
+
+#commentButtons {
+	margin: 0px 0px 10px 0px;
+	text-align: left;
+}
+	
+/* New comment styles */
+.comment .post_wrap .cleft {
+	float: right;
+	margin-right: 65px;
+	margin-left:0px;
+	padding-right: 5px;
+	padding-left:0px;
+
+}
+
+.comment_wrap .comment.gallery_row_off,
+.comment_wrap .comment.row1,
+.comment_wrap .comment.row2 {
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+
+.comment_content {
+	padding: 10px 0px 10px 0px;
+}
+
+
+.ipsComment_comment {
+    margin-right: 190px;
+    margin-left:0px;
+}
+/************************************************************************/
+/* REPUTATION STYLES */
+
+
+.status_main_content p {
+	padding: 6px 0px 6px 0px;
+}
+.status_mini_photo {
+	float: right;
+}
+
+	.status_feedback { margin: 10px -10px 0 0; }
+
+
+/* Favorites */
+
+.ips_like a.ftoggle {
+	float: left;
+}
+
+.ips_like a.ftoggle._newline,
+.ips_like a.ftoggle.on._newline {
+	margin-right: auto;
+	margin-left: 0;
+}
+
+
+/* New notification panel */
+#ipsGlobalNotification {
+	right: 50%;
+	left:auto;
+	margin-right: -250px;
+	margin-left:0px;
+}
+
+#ips_NotificationCloseButton {
+	background-position: top right;
+	right: 5px;
+	left:auto;
+
+}
+
+.status_list .mod_links {
+float:right;
+}
+/************************************************************************/
+/* SHARED MEDIA STYLES */
+
+#mymedia_inserted {
+    right: 50%;
+	left:auto;
+	margin-right: -200px;
+	margin-left:0px;
+	
+}
+
+#mymedia_toolbar { 
+	position: absolute;
+	bottom: 0; right: 0;	left: 0;
+}
+
+#mymedia_finish { position: absolute; left: 5px; right:auto; }
+
+.media_results li.result {
+	float: right;
+}
+
+	
+
+
+
+
+/* Multiquote insert button */
+#multiQuoteInsert {
+	left: 30px;
+    right:auto;
+}
+
+
+/*** user_navigation **/
+#user_navigation {
+float:left;
+}
+
+#user_link_menucontent #links li {
+    float: right;
+}
+
+
+/************************************************************************/
+/* ipb_common.css														*/
+/************************************************************************/
+
+	
+/************************************************************************/
+/* LIGHTBOX STYLES */
+
+#lightbox{	position: absolute;	right: 0;left:auto; }
+#loading{ position: absolute; right: 0%; left:auto; }
+#hoverNav{ position: absolute; right: 0;left:auto; }
+#imageContainer>#hoverNav{ right: 0;left:auto;}
+#prevLink { right: 0;left:auto; float: right;}
+#nextLink { left: 0;right:auto; float: left;}
+#imageData #imageDetails{ float: right; text-align: right; }			
+#imageData #bottomNavClose{ float: left;  }
+/************************************************************************/
+/*  BBCODE STYLES */
+/* 	NOTE: These selectors style bbcodes throughout IPB. It is recommended that you DO NOT change these 
+	styles if you are creating a skin since it may interfere with user expectation
+	of what certain BBCodes look like (quote boxes are an exception to this). */
+span.bbc_left, div.bbc_left		{	text-align: left; display: block; }
+span.bbc_right , div.bbc_right	{	text-align: right; display: block; }
+div.bbc_indent 			{	margin-right: 50px; margin-left:0px;}
+ul.bbc 					{	 margin: 12px 40px 12px 0; }
+ul.bbcol.decimal 				{ margin: 12px 40px 12px 0;  }
+	ul.bbcol.lower-alpha		{ margin-right: 40px; margin-left:0px; }
+	ul.bbcol.upper-alpha		{ margin-right: 40px; margin-left:0px; }
+	ul.bbcol.lower-roman		{ margin-right: 40px; margin-left:0px;}
+	ul.bbcol.upper-roman		{ margin-right: 40px; margin-left:0px; }
+
+pre.prettyprint 		{  text-align: left; direction: ltr; }
+/* Quote boxes */
+
+p.citation {
+    background-position: right center;
+    border-left: 1px solid #E2E2E2;
+    border-right: 3px solid #414141;
+    text-align: right;
+}
+
+div.blockquote {
+	border-right: 3px solid #414141;
+	border-left: 1px solid #e2e2e2;
+        text-align: right;
+}
+
+div.blockquote div.blockquote {
+	margin: 0 0 0 10px;
+}
+
+div.blockquote p.citation {
+	margin: 6px 0 0 10px;
+}
+
+._sharedMediaBbcode
+{
+	margin-left: 15px;
+	margin-right:15px ;
+
+}
+
+.bbcode_mediaWrap
+{
+
+	margin-left: 5px;
+}
+
+.bbcode_mediaWrap .details
+{
+	float: right;
+	margin-right: 80px;
+	margin-left:0px ;
+}
+
+
+
+
+.bbcode_mediaWrap img.sharedmedia_image
+{
+	float: right;
+	position: relative;
+	right: 40px;
+	left:auto;
+}
+
+.bbcode_mediaWrap img.sharedmedia_screenshot
+{
+	float: right;
+	position: relative;
+	right: 10px;
+	left:auto;
+
+}
+
+/************************************************************************/
+/** ipb common rtl css **/   
+/************************************************************************/
+.ipsComment_author, .ipsComment_reply_user {
+    float: right;
+	text-align: left;
+}
+
+#user_latest_status {
+    background-position: left 50% ;
+    /*padding-right: 11px;
+    padding-left:0px ;*/
+    -moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	filter: fliph; /*IE*/
+}
+
+	#user_latest_status > div {
+	    -moz-transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		filter: fliph; /*IE*/
+	}
+
+/************************************************************************/
+/* ipb_calendar.css - Calendar specific styles							*/
+/************************************************************************/
+
+.calendar_title { float: right; }
+
+/* Mini calendars */
+#mini_calendars.three_wide > div.left:first-child { margin-left: 2%; margin-right:0;}
+#mini_calendars.three_wide > div.right { margin-right: 2%; margin-left:0;}
+
+
+	.mini_cal_wrap h3 { margin: 10px 15px 0 0; }	
+	.post_wrap.vevent h3 .ipsUserPhoto { margin-left: 10px;margin-right:0px; }
+	
+/* RSVPing */
+
+.calendar_jump { 
+	margin: 6px 10px 0 0;
+}
+
+
+/* Week view */
+	
+	div#current_calendar ol#week_view li.day div {
+		padding: 4px 75px 4px 10px;
+	}
+	
+	div#current_calendar ol#week_view li.day .date {
+		right: 0px;
+		left:auto;
+	}
+	
+
+.cal_color {
+	margin-left: 8px;
+	margin-right:0px;
+
+}
+
+
+
+.input_check.event_options {
+	margin-right: 12px !important;
+	margin-left:auto;
+}
+/************************************************************************/
+/*** IP.content RTL   ***/
+/************************************************************************/
+
+.articles-layout {
+	width: 100%;
+}
+
+.articles {
+	float: right;
+}
+		
+
+
+.articles .type-1x2x2 .block-2,
+.articles .type-1x2x2 .block-3 {
+
+	float: right;
+}
+
+
+.articles .article_title {
+	clear: left;
+}
+
+.articles .type-1x1x1 .photo {
+	float: left;
+	margin-right: 15px;
+       margin-left:0px;
+}
+
+.articles .type-1x2x2 .photo {
+	margin-left: 15px;
+margin-right: 0px;
+	float: right;
+}
+
+
+.articles .type-1x2x2 .block-1 .overview {
+	float: right;
+}
+
+.articles .type-1x2x2 .block-2 .links,
+.articles .type-1x2x2 .block-3 .links {
+	margin-right: 0px;
+       margin-left:0px;
+}
+
+#previous_bar {
+	text-align: left;
+}
+	
+
+.articles .archives h3,
+.articles .categories h3 {
+	padding-right: 0px;
+}
+
+
+	
+	.articles .subcat h2 {
+		float: right;
+	}
+	
+	
+
+.articles .archives .photo,
+.articles .categories .photo {
+	float: left;
+	margin-right: 15px;
+        margin-left:0px;
+}
+
+.sort_bar {
+	text-align: left;
+}
+
+	
+	.sort_bar li {
+		margin: 0 10px 0 0;
+	}
+
+
+.articles .children {
+	float: right;
+	clear: right;
+	margin-right: 20px;
+        margin-left:0px;
+}
+
+
+	.articles .last_article {
+		margin-right: 200px;
+               margin-left:0px;
+	}
+	
+		.articles .last_article h3 {
+			padding-right: 0px;
+                   
+		}
+
+
+
+/**
+ * Article view
+ */
+
+	.articles .article_body .photo {
+		float: left;
+		margin: 0 15px 15px 0;
+	}
+
+
+.topic_share li {
+	float: right;
+	margin: 4px 0 0 8px !important;
+}
+
+.articles .view .rating {
+	float: left;
+}
+
+	.articles .view ul.shareButtons {
+		float: left;
+	}
+
+
+	/* Move comments down */
+	
+/** 
+ *	Sidebar styles
+ */
+
+#article_sidebar {
+	float: left;
+	margin-right: 5px;
+        margin-left:0px;
+}
+
+
+		#category_list h3 a {
+			float: left;
+		}
+
+	#category_list ul a {
+		border-left: 10px solid #1d3652;
+                border-right:0px;
+	}
+
+		#category_list ul a:hover {
+			border-left: 10px solid #1d3652;
+                        border-right:0px;
+		}
+
+
+
+			#category_list ul ul li a {
+				padding: 6px 25px 6px 12px;
+			}
+
+
+		#recent_articles .block_list li {
+			padding-left: 10px;
+                        paddin-right:0px;
+		}
+
+	#recent_comments .photo {
+		float: right;
+		margin-left: 8px;
+              margin-right:0px;
+	}
+
+
+/**
+ * Some misc/global styles
+ */
+ 
+
+/* Videos system */
+
+
+	#videos_latest h2, #videos_recent h2 {
+		text-align: right;
+	}
+
+
+
+	.video_thumb {
+		float: right;
+	}
+
+/*** print rtl ***/
+.article_body img.photo {
+float: right;
+}
+	
+/************************************************************************/
+/** ipb download rtl css **/   
+/************************************************************************/
+	
+#downloads #file_block {
+	float: right;
+	margin-right: 2%;
+        margin-left:0px;
+}
+
+
+	.file_options li {
+		float: left;
+		margin-right: 15px;
+                margin-left:0px;
+	}
+	
+
+/*****************************************************/
+/* IDM 2.3 */
+
+#panel_screenshots #ss_list li {
+	float: right;
+
+}
+	
+	
+	#panel_screenshots #ss_list .links {
+		text-align: left;
+	}
+	
+
+	
+	#ss_linked .links {
+		margin-right: 10px;
+                margin-left:0px;
+	}
+
+#iframeAttach_files, #iframeAttach_ss {
+	margin-right: 8px !important;
+        margin-left:0px;
+}
+
+
+/* view file */
+
+	
+	h1 .download_button {	
+		margin-right: 10px;
+                margin-left:0px;
+	}
+
+
+	.screenshot.primary {
+		margin-right: 10px;
+                margin-left:0px;
+		float: left;
+	}
+
+	
+	#file_screenshots .screenshot {
+		margin-left: 5px;
+                margin-right:0px;
+	}
+	
+	
+/* portal */
+
+#idm_categories a.cat_toggle {
+	right: 8px;
+	left:auto;
+}
+	
+		#idm_categories > li > a {
+			padding: 10px 25px 10px 10px;
+		}
+		
+	
+		
+	#idm_categories .file_count {
+		margin: 11px 0 0 8px;
+	}
+	
+	#idm_categories ul.subforums {
+		margin: 0px 35px 10px 0;
+	}
+
+
+/* - fin - */
+
+
+	.download_pane li {
+		padding-right: 1%;
+                padding-left:0;
+	}
+	
+		.download_pane li .ipsBadge {
+			position: absolute;
+			right: 0px;
+                        left:auto;
+		}
+		
+
+	.download_pane .mini.screenshot {
+		margin-left: 10px;
+                margin-right:0px;
+	}
+	
+	
+		
+	#featured_pane .screenshot {
+		margin-left: 10px;
+                margin-right:0px;
+	}
+	
+
+	#featured_pane .ipsBadge {
+		right: 0px;
+                left:auto;
+	}
+
+
+/* category view */
+.pagination {
+	padding-right: 0 !important;
+}
+
+#idm_category { }
+	
+	#idm_category.no_screenshots .ipsBadge {
+		margin-left: 10px;
+                margin-right:0px;
+	}
+	
+	#idm_category.with_screenshots .ipsBadge, #idm_category.with_screenshots .ipsBadge.ipsBadge_green {
+		right: 60px;
+		left:auto;
+	}
+	
+
+	#idm_category .screenshot {
+		float: right;
+		margin-left: 15px;
+                margin-right:0px;
+	}
+
+		
+		#idm_category .cat_name {
+			margin-right: 6px;
+                        margin-left:0px;
+		}
+		
+	
+	#idm_category .file_info {
+		padding-right: 10px;
+                padding-left:0px;
+		border-right: 1px solid #dfdfdf;
+                border_left:0px;
+	}
+
+		
+	#idm_category .topic_prefix {
+		float: left;
+		margin-left: 10px;
+                margin-right:0px;
+	}
+
+
+	
+	.filters li.dropdown a {
+		padding-left: 17px;
+                padding-right:0px;
+		background-position: left 10px;
+	}
+	
+
+
+/************************************************************************/
+/** ips nexus rtl css **/   
+/************************************************************************/
+
+
+#store_wrapper #main_column,
+#store_wrapper #sidebar_left,
+#store_wrapper #sidebar_right {
+	float: right;
+}
+
+#store_wrapper {
+	padding-left: 275px;
+	padding-right: 0;
+}
+
+#store_wrapper.with_left {
+	padding-right: 200px;
+	padding-left: 0;
+}
+
+
+#store_wrapper #sidebar_left {
+	left: 200px; /* Left width */
+        right:auto;
+	margin-right: -100%;
+        margin-left:0px;
+}
+
+#store_wrapper #sidebar_right {
+	margin-left: -275px; /* Right width */
+        margin-right:0px;
+}
+
+	
+	.block_inner span.pagination.no_pages {
+		padding-right: 0;
+	}
+
+
+
+.add_to_cart {
+	margin-right: 30px;
+        margin-left:0px;
+	float: left;
+}
+
+
+
+#store_wrapper .filter {
+	text-align: left;
+}
+
+
+#mini_cart .item_detail { 
+	float: right;
+}
+
+#mini_cart .item_price {
+	float: left;
+	text-align: left;
+}
+
+
+#store_wrapper .fields .field {
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+.required {
+	margin-right: 15px;
+        margin-left:0px;
+}
+
+#cart_totals td {
+	text-align: left;
+}
+	
+
+
+#confirm {
+	text-align: left;
+
+}
+
+
+.desctext {
+	margin-right: 195px;
+        margin-left:0px;
+
+}
+
+.input_checkbox {
+	margin-right: 225px;
+        margin-left:0px;
+}
+
+
+
+	.ship_select select {
+		float: left;
+	}
+	
+
+.payment_fields li {
+	margin-right: 0;
+        
+}
+
+
+	#wizard_progress li {
+		float: right;
+
+	}
+	
+
+/************************************************************************/
+/* Client area */
+/************************************************************************/
+
+.menu li a {
+
+	padding: 12px 15px 12px 10px;
+}
+	
+
+	
+	.menu li img {
+		margin-left: 10px;
+	}
+
+
+
+
+#package_change .toggle {
+	padding-right: 15px;
+        padding-left:0px;
+	float: right;
+}
+
+
+
+	
+	#support_ticket .author_info .photo {
+		margin-right: 15px;
+                margin-left:0px;
+	}
+	
+	
+	#support_ticket .post_body {
+		margin-right: 90px;
+                margin-left:0px;
+	}
+	
+	#support_ticket p.posted_info {
+		padding-right: 10px;
+                padding-left:0px;
+		margin-right: 0;
+	}
+	
+
+
+#purchase_downloads_menucontent {
+	float: left;
+}
+
+
+
+#purchase_downloads_menucontent a {
+
+	padding: 5px 15px 5px 5px;
+}
+
+
+
+
+/************************************************************************/
+/** ips blog rtl css **/   
+/************************************************************************/
+
+/* TRACKBACKS */
+#trackbacks {
+	margin-right: 15px;
+	margin-left: 10px;
+}
+
+
+.trackback_options {
+	float: left;
+}
+
+.trackback_options li {
+	float: right;
+}
+
+/* CUSTOMIZATION */
+	
+#theme_editor strong {
+	float: right;
+}
+
+	#theme_editor img.input_submit {
+		float: left;
+		margin-left: 3%;
+		margin-right:0px;
+	}
+
+/* Form */
+#blogEditor
+{
+	margin-left: 245px;
+	margin-right:0px;
+}
+
+#blogEditorExtra
+{
+	float: left;
+	margin-left: 6px;
+    margin-right:0px;
+}
+
+#no_bid_warn {
+	margin-left: 3px;
+	margin-right:0px;
+
+}
+
+/** Blog entry views **/
+
+
+	.teaser_left,
+	.teaser_right {
+		float: left;
+	}
+	
+	.teaser_left
+	{
+		float:right;
+	}
+	
+
+/* New CSS IP.Blog 2.4 CSS */
+
+.entry_header .ipsBadge {
+	float: left;
+}
+
+	.entry.featured .entry_header .ipsBadge,
+	.entry.moderated .entry_header .ipsBadge,
+	#entry_data .entry_header .ipsBadge {
+		margin-left: 10px;
+		margin-right:0px;
+	}
+
+/************************************************************************/
+/* IP.Chat CSS */
+/************************************************************************/
+
+.messages-list img.ipsUserPhoto{ float: right; }
+
+.messages-list label{ margin-left: 0px; margin-right: 40px; }
+	.messages-list label.fluid{ float: right; margin-right: 0px; margin-left: 4px; }
+
+.messages-list div{ margin-left: 0px; margin-right: 40px; }
+	.messages-list div.hider{ float: right; margin-left: 0px; margin-right: -4px; }
+
+#ipboard_body .ipb_palette input {
+	margin-left: 7px;
+	margin-right:0px ;
+}
+
+#ipboard_body .ipb_palette label {
+	text-align: right !important;
+}
+
+
+/************************************************************************/
+/*****ips gallery rtl ****/
+/************************************************************************/
+#ipg_category .galattach {
+  float: right;
+  margin-left: 15px;
+        margin-right:0px;
+}
+#ipg_category .cat_name {
+        margin-right: 6px;
+   margin-left: 0px;
+}
+/* Gallery view image */
+.image_info li { padding: 5px 2px 5px 0px; }
+.image_info li STRONG {
+  float: right;
+}
+/* Others... */
+em.inline-moderated {
+margin-right: 5px;
+margin-left: 0px;
+}
+/***********************************************/
+/* Image notes */
+.note_wrap.editable .handle {
+left: 0;
+        right:auto;
+}
+.note_text, .note_form {
+text-align: right;
+}
+/******************************************/
+.album.horizontal img { float: right; }
+.album.horizontal.showMore {
+text-align: left;
+margin-right: -5px;
+margin-left: 0px;
+}
+.album.horizontal .sub_album_children {
+padding-left:16px;
+}
+/*DD*/
+.album.horizontal .sub_album_children span.desc{
+float: right;
+}
+.album.horizontal.mini img {
+  margin-left: 3px;
+  margin-right:0px;
+}
+
+.gas_entry img
+{
+  float: right;
+}
+/* Photo strip */
+ul#strip li
+{
+float: right;
+margin: -2px 0px 0px 1px;
+}
+#photostrip {
+margin-right: 10px;
+margin-left: 0px;
+}
+.photoStipNav {
+right: 0px;
+left:auto;
+}
+.image_is_hidden_box
+{
+margin: 0px 3px 0px 0px !important;
+}
+input[type="checkbox"].albumModBox {
+margin: 90px 90px 0px 0px !important;
+}
+/* NEW IP.Gallery 4.1.0 CSS */
+/* HOME */
+/* ALBUMS + MISC */
+.imageDescription {
+right: 0;
+left:auto;
+}
+ul.wrap li .small
+{
+  margin-right:90px;
+  margin-left:0px;
+}
+/* Next/previous links in image view */
+#image_nav_links li {
+  padding: 0px 5px 0px 0px;
+}
+/************************************************************************/
+/********* slide show rtl *********/
+/************************************************************************/
+#image_info .info {
+  right: 0;
+  left:auto;
+}
+  #image_info .info .photo {
+   float: right;
+  }
+
+  #image_info .info .info_body {
+   margin-right: 65px;
+   margin-left:0px;
+  }
+#thumbnail_wrap {
+  right: 30px;
+  left:auto;
+}
+#thumbnail_bar #thumbnails #thumbnail_wrap > div {
+  float: right;
+}
+  #thumbnail_bar img {
+   right: -50%;
+   left:auto;
+  }
+
+#slideshow_controls {
+right: 1%;
+left:auto;
+}
+#slideshow_controls #controls {
+  right: 50%;
+  left:auto;
+  margin-right: -104px;
+  margin-left:0px;
+}
+#slideshow_controls .control {
+  float: right;
+}
+#loading {
+  left: 15px;
+        right:auto;
+}
+
+#close_slideshow {
+left: 15px;
+right:auto;
+}
+/*** editor related rtl ***/
+.cke_skin_ips .cke_editor {
+        width: auto;
+}
+
+
+/* Uploading */
+#iframeUploadForm {
+	text-align: right;
+}
+
+/* forum_marker / icons / forum unread/read icons */
+.touch-row-arrow {
+	float: left;
+}
+
+.row.unread .icon {
+	float: right;
+}
+  
+.master_list .row .icon {
+	float: right;
+	margin: 0 5px 0 -5px;
+	min-width: 18px;
+}

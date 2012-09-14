@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>success</word_key>
+      <word_default>Data were entered successfully on the database</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>error_save</word_key>
+      <word_default><![CDATA[The data can't save on the database, verify that the fields match with the of the table '<b>%s</b>']]></word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>acceptbutton</word_key>
+      <word_default>Accept</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>user</word_key>
+      <word_default>User:</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>text</word_key>
+      <word_default>Text:</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>tablename</word_key>
+      <word_default>Table Name:</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>date</word_key>
+      <word_default>Date:</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>newfields</word_key>
+      <word_default><![CDATA[Fields news&#63; (New):]]></word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>postform_badmd5</word_key>
+      <word_default>Key did not match </word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>right_blocks</word_key>
+      <word_default>Right Blocks</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>view_block</word_key>
+      <word_default>View Block</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>view_template_tag</word_key>
+      <word_default>View Template Tag</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>action_taken</word_key>
+      <word_default>Action taken:</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>portal_settings</word_key>
+      <word_default>Portal Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>portal_pop_tags</word_key>
+      <word_default>Exportable Tags:</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>portal_pop_name</word_key>
+      <word_default>Tag Name</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>portal_main_key</word_key>
+      <word_default>Plug-in Title</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>portal_main_title</word_key>
+      <word_default>Portal Plug-ins</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>portal_pop_desc</word_key>
+      <word_default>Tag Description</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>no_custom_blocks</word_key>
+      <word_default>There are currently no custom blocks to show.</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>plugin_settings</word_key>
+      <word_default>Plugin Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>more</word_key>
+      <word_default>More</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>no_blocks_match_id</word_key>
+      <word_default>No blocks match the id provided.</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>main_title</word_key>
+      <word_default>Manage Portal Plug-ins</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>left_blocks</word_key>
+      <word_default>Left Blocks</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>main_blocks</word_key>
+      <word_default>Main Blocks</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>block_updated</word_key>
+      <word_default>Thank you, block has been updated.</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>error_no_key</word_key>
+      <word_default>There is no matching plug-in for the key used to find it.</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>error_no_dir</word_key>
+      <word_default><![CDATA[The directory '{app_name}/extensions/portalPlugins' does not exist. Create it and try again.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>edit_block</word_key>
+      <word_default>Edit Block</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>delete_block</word_key>
+      <word_default>Delete Block</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>custom_blocks</word_key>
+      <word_default>Custom Blocks</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>block_title</word_key>
+      <word_default>Block Title</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>block_template_desc</word_key>
+      <word_default>Wrap block code with a sidebar block template?</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>overwrite</word_key>
+      <word_default><![CDATA[The data can't save on the database already exists an register identical or the table '<b>%s</b>' not exist, verify the values]]></word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>block_template</word_key>
+      <word_default>Block Template</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>block_position</word_key>
+      <word_default>Block Position</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>block_deleted</word_key>
+      <word_default>Thank you, block has been deleted.</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>block_code</word_key>
+      <word_default>Block Code</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>block_code_desc</word_key>
+      <word_default><![CDATA[Enter your full html or php block code. If using php, place your php within the <?php ?> tags.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>block_added</word_key>
+      <word_default>Thank you, block has been added.</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>add_block</word_key>
+      <word_default>Add Block</word_default>
+    </lang>
+    <lang>
+      <word_app>portal</word_app>
+      <word_pack>admin_portal</word_pack>
+      <word_key>all_fields_required</word_key>
+      <word_default>Please go back and complete all fields.</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

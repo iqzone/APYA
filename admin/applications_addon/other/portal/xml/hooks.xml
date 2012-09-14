@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hooks>
+	<hook>
+		<file>friendsinvite.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>friendsuggest.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>timeline.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>labelfriends.xml</file>
+		<enabled>1</enabled>
+	</hook>
+</hooks>

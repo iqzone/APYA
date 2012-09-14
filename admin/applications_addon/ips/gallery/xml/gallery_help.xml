@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <help>
+    <row>
+      <title>Gallery</title>
+      <text><![CDATA[The gallery can be used to upload images you wish to share with the community. To access it, click the "Gallery" tab at the top of any page.<br />
+<br />
+<strong>Gallery Home Page</strong><br />
+The gallery has two areas: Member albums and global albums. If you have permission to create albums, these will be member albums. The administrator can create global albums. You may be able to create an album inside a global album or upload directly into the global album. The homepage shows the global albums down the side, a random feature image and a list of recently updated member albums<br />
+<br />
+<br />
+<strong>Viewing Albums</strong><br />
+<br />
+<em>Image Listing</em><br />
+You will see a tiled layout of images that the album contains. You can click on any thumbnail to see the full-size image.<br />
+If the album has any sub-albums, you will see these listed down the side.<br />
+<br />
+<br />
+<em>Slide Shows</em><br />
+You may be able to see a slide show of all images in that category or album by pressing the slide show link when viewing an album.  Click on the Slidehow link to enter the slideshow mode.<br />
+<br />
+<br />
+<br />
+<strong>Viewing Images</strong><br />
+<br />
+<em>Information, ratings and options</em><br />
+To the side of the image, you will see more information about the image such as who uploaded it, when they uploaded it, how many views and comments the image has, and how big it is.<br />
+<br />
+You may see a number of stars which show the image's rating.  You may also be able to rate the image yourself by selecting one of the stars. If you are able to rate an image, the stars will change color as you move your pointer over them.<br />
+<br />
+<br />
+To the side of the image you will see a photostrip of other images in the category or album, which you can use to quickly jump to those images.  You can cycle through these images by clicking the < and > buttons to the left and right of the photostrip.<br />
+<br />
+<em>Sharing Images</em><br />
+<br />
+Below the image, you will have several options to share it with others, such as Facebook, Email, or Twitter.
+<br />
+
+<i>Embed Images</i><br />
+
+Each image has unique HTML and BBCode embed links for you to embed them on your website or within the forums. To display these, click on the "Options" drop down, and then click on "Share Links"
+<br />
+<em>Comments</em><br />
+At the bottom of the image's page, you will see any existing comments on the image.  You can add a comment by pressing the  "<img src='{style_image_url}/comment_add.png' /> Add Comment" button, and you can use the "Reply" and "Multiquote" links, and the Fast Reply box, just like in the forums.<br />
+<br />
+<br />
+<strong>Adding your Images</strong><br />
+<br />
+Clicking an upload link or button will take you to the media upload page. This is a two step process.
+<br />
+The first step is to select or create an album to upload the images into. Once the album has been set, you can upload images right away when the upload form reveals itself.
+<br />
+When you have uploaded the images you wish to add to the album, you click the 'Review & Publish' button which will allow you to rotate the image or edit the image's details.]]></text>
+      <description>A guide to viewing and adding images to the Gallery.</description>
+      <position>13</position>
+      <app>gallery</app>
+    </row>
+  </help>
+</export>

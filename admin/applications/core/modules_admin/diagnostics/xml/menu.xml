@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Overview</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Overview</subitemtitle>
+					<subitemlang>diag_overview</subitemlang>
+					<subsection>diagnostics</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Whitespace Checker</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Whitespace Checker</subitemtitle>
+					<subitemlang>whitespace_checker</subitemlang>
+					<subsection>diagnostics</subsection>
+					<subitemurl>do=whitespace</subitemurl>
+					<subitemrolekey>whitespace_checker</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Permissions Checker</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Permissions Checker</subitemtitle>
+					<subitemlang>permissions_checker</subitemlang>
+					<subsection>diagnostics</subsection>
+					<subitemurl>do=filepermissions</subitemurl>
+					<subitemrolekey>permission_checker</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Connection Checker</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Connection Checker</subitemtitle>
+					<subitemlang>connection_checker</subitemlang>
+					<subsection>diagnostics</subsection>
+					<subitemurl>do=connections</subitemurl>
+					<subitemrolekey>connection_checker</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Database Checker</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Database Checker</subitemtitle>
+					<subitemlang>db_checker</subitemlang>
+					<subsection>diagnostics</subsection>
+					<subitemurl>do=dbchecker</subitemurl>
+					<subitemrolekey>database_checker</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Database Index Checker</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Database Index Checker</subitemtitle>
+					<subitemlang>dbi_checker</subitemlang>
+					<subsection>diagnostics</subsection>
+					<subitemurl>do=dbindex</subitemurl>
+					<subitemrolekey>index_checker</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Email Tester</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Email Tester</subitemtitle>
+					<subitemlang>email_checker</subitemlang>
+					<subsection>diagnostics</subsection>
+					<subitemurl>do=email</subitemurl>
+					<subitemrolekey>email_checker</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

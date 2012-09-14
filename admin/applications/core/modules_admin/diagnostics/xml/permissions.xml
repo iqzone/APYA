@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Diagnostic Tools</grouptitle>
+		<grouplang>core_diag_tools</grouplang>
+		<items>
+			<item>
+				<key>index_checker</key>
+				<string>Can use the database index checker?  Warning: Allows ability to run database queries indirectly.</string>
+			</item>
+			<item>
+				<key>database_checker</key>
+				<string>Can use the database checker?  Warning: Allows ability to run database queries indirectly.</string>
+			</item>
+			<item>
+				<key>whitespace_checker</key>
+				<string>Can use the whitespace checker?</string>
+			</item>
+			<item>
+				<key>connection_checker</key>
+				<string>Can use the connection checker?</string>
+			</item>
+			<item>
+				<key>permission_checker</key>
+				<string>Can use the permissions checker?</string>
+			</item>
+			<item>
+				<key>email_checker</key>
+				<string>Can use the email tester?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

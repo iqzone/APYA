@@ -1,0 +1,93 @@
+/**
+* IPS Template Skin Diff Thingy
+* (c) Invision Power Services, Inc
+* @author Matt Mecham
+*/
+
+	
+/* Log Tray */
+#diffLowDrawInner
+{
+	margin-left: auto;
+	margin-right: auto;
+	background: rgb(241, 244, 247);
+	background-repeat: repeat-x;
+	border: 1px solid #5b5b5b;
+	width: 500px;
+}
+	#diffLowDrawInner table
+	{
+		height: 120px;
+		width: 100%;
+	}
+
+#diffDone
+{
+	margin:auto;
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+}
+
+#diffLogTitle
+{
+	width: 96%;
+	padding:6px;
+	font-size:22px;
+	margin:auto;
+	text-align:center;
+	font-weight:bold;
+	overflow: auto;
+}
+	
+#diffLogText
+{
+	width: 96%;
+	padding:6px;
+	font-size:14px;
+	margin:auto;
+	text-align:center;
+	font-weight:normal;
+	overflow: auto;
+}
+
+#diffLogMsg
+{
+	color: gray;
+	font-size:10px;
+	margin:auto;
+	text-align:center;
+}
+
+/* Progress Bar */
+#diffLogProgressBar
+{
+	border: 1px solid #5b5b5b;
+	background-color: #2B2B2B;
+	width: 200px;
+	height: 15px;
+	padding-top:0px;
+	padding-bottom:2px;
+	padding-right:5px;
+	padding-left:0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:10px;
+}
+
+#diffLogProgressBarInner
+{
+	padding:0px;
+	margin:0px;
+	height:14px;
+	width:68%;
+	background-image: url("images/icon_components/templates/diff/progressbar.gif");
+	background-repeat: repeat-x;
+}
+
+#diffStatusImage
+{
+	float:left;
+	margin-top: -4px;
+	margin-left: 115px;
+}

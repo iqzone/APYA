@@ -1,0 +1,19 @@
+#profile_photo{max-width:174px;max-height:174px}#profile_content_main{min-height:75px;line-height:1.3;margin-bottom:20px}#pane_info
+.ipsLayout_right{width:260px !important;margin-right: -290px}#friends_overview
+.ipsUserPhoto_link{margin:0
+2px 5px 2px;display:inline-block}#profile_panes_wrap
+.reputation{float:none;margin:0
+0 5px 0;padding:10px;text-align:center;font-weight:normal;display:block}#profile_panes_wrap .reputation
+.number{font-size:20px;font-weight:bold;display:block}#profile_panes_wrap .ipsList_data
+.row_data{display:block;margin-left:130px}.warn_panel{text-align:center;margin:8px
+0}.photo_holder{position:relative}#change_photo{position:absolute;top:0;left:0;background:rgba(0,0,0,0.2);color:#fff;opacity:0.3;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-transition:all 0.4s ease-in-out;-moz-transition:all 0.4s ease-in-out}.photo_holder:hover
+#change_photo{opacity:1;background:#000}#user_info_cell{display:table-cell;white-space:nowrap;padding-right:15px}#user_status_cell{display:table-cell;width:100%;vertical-align:top}#user_latest_status{background:url(http://www.alvarezpuga.net/public/style_images/network/stems/profile_status_stem.png) no-repeat 0px 50%;padding-left:11px}#user_latest_status>div{padding:10px
+15px;background-color:#ebece5;color:#343434;font-size:14px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;min-height:45px;word-wrap:break-word}#user_latest_status>div>span{display:block}#user_utility_links{margin-top:10px;text-align:right}.rating{margin-top:10px}#status_wrapper
+.ipsBox_container{margin-bottom:9px}.profile-info{display:block}.profile-info
+.inner{background-color:#E1E1E1;float:left;padding:10px
+0 10px 10px;width:244px}.profile-info
+.separate{margin-left:20px}.profile-info .inner h4
+span.count{background-image:url(http://www.alvarezpuga.net/public/style_images/network/sprites-buttons.png);background-position: -206px -109px;color:#FFF;display:block;float:right;font-size:13px;font-weight:bold;height:22px;line-height:22px;text-align:center;text-shadow:0 1px 1px #333;width:38px;right:10px;position:relative}.profile-picture{float:left;margin:3px
+7px 0 0;position:relative}.profile-picture
+img{height:74px;width:74px}.profile-info .inner .profile-picture
+.bright{background-image:url(http://www.alvarezpuga.net/public/style_images/network/bright.png);height:50%;position:absolute;top:0;left:0;width:100%;z-index:10}

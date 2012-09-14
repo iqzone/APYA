@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Manage Settings</grouptitle>
+		<grouplang>core_settings</grouplang>
+		<items>
+			<item>
+				<key>settings_manage</key>
+				<string>Can edit/add settings and setting groups?</string>
+			</item>
+			<item>
+				<key>settings_delete</key>
+				<string>Can delete settings and setting groups?</string>
+			</item>
+			<item>
+				<key>performance_toggle</key>
+				<string>Can toggle performance mode?</string>
+			</item>
+			<item>
+				<key>licensekey_manage</key>
+				<string>Can manage license key?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

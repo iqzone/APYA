@@ -1,0 +1,85 @@
+/**
+* Template Editing Stuffs
+* (c) Invision Power Services, Inc
+* @author Matt Mecham
+*/
+
+/* text area wrapper */
+.tmpl_pte
+{
+	clear: both;
+}
+
+/* Text area */
+.tmpl_te
+{
+	width: 99%;
+	height: 470px;
+	line-height: 150%;
+	font-family: "monaco", "courier new", monospace;
+	font-size: 11px;
+}
+
+/* Close tab */
+.tbe_tab_c
+{
+	cursor: pointer;
+	float: left;
+	width: 12px;
+	height: 12px;
+	background-image: url(images/icons/mclose.png);
+	background-position: 0px 4px;
+	background-repeat: no-repeat;
+}
+
+/* Go FS tab */
+.tbe_tab_f
+{
+	cursor: pointer;
+	float: left;
+	width: 12px;
+	height: 12px;
+	background-image: url(images/icons/mfullscreen.png);
+	background-position: 0px 4px;
+	background-repeat: no-repeat;
+}
+
+/* Tab text */
+.tbe_tab_t
+{
+	float: left;
+	margin-left: 1px;
+}
+
+#tbe_tabstrip
+{
+	margin-top: 2px;
+}
+
+#tbe_tabstrip li,
+#tbe_tabstrip li.tbe_item_lit
+{
+	cursor: pointer;
+	float: left;
+	background: #FFFFFF; /* old browsers */
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #F6F9FA 3%, #E4EEF3 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(3%,#F6F9FA), color-stop(100%,#E4EEF3)); /* webkit */
+	font-size: 12px;
+	border: 1px solid #afd4f1;
+	color: #0b5794;
+	text-shadow: 1px 1px 0 #f4f7fa;
+	padding: 4px 9px;
+	font-size: 0.9em;
+	margin: 0;
+	position: relative;
+}
+
+#tbe_tabstrip li.tbe_item_lit
+{
+	background: #CE3C92; /* old browsers */
+	background: -moz-linear-gradient(top, #CE3C92 0%, #AB156D 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#CE3C92), color-stop(100%,#AB156D)); /* webkit */
+	color: #fff;
+	text-shadow: -1px -1px 0 #97115f;
+	border-color: #9d1263;
+}

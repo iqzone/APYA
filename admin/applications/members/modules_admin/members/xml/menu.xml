@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Manage Members</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Manage Members</subitemtitle>
+					<subitemlang>manage_members</subitemlang>
+					<subsection>members</subsection>
+					<subitemurl>do=members_overview</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+
+		<item>
+			<title>Member Ranks</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Member Ranks</subitemtitle>
+					<subitemlang>mem_ranks</subitemlang>
+					<subsection>ranks</subsection>
+					<subitemurl>do=ranks_overview</subitemurl>
+					<subitemrolekey>ranks_add</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		
+		<item>
+			<title>Member Reputation</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Member Reputation</subitemtitle>
+					<subitemlang>mem_rep</subitemlang>
+					<subsection>reputation</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey>reps_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+
+		<item>
+			<title>Member Management Tools</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Member Management Tools</subitemtitle>
+					<subitemlang>mem_tools</subitemlang>
+					<subsection>tools</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>membertools_ip</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	
+		<item>
+			<title>Add New Member</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Add New Member</subitemtitle>
+					<subitemlang>mem_add</subitemlang>
+					<subsection>members</subsection>
+					<subitemurl>do=add</subitemurl>
+					<subitemrolekey>member_add</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		
+		<item>
+			<title>Ban Filters</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Ban Filters</subitemtitle>
+					<subitemlang>banfilters</subitemlang>
+					<subsection>banfilters</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>ban_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+
+		<item>
+			<title>Notification Defaults</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Notification Defaults</subitemtitle>
+					<subitemlang>notifications</subitemlang>
+					<subsection>notifications</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey>configure_notifications</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

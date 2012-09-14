@@ -1,0 +1,214 @@
+/*<IPS_IMPORT_BLOCK>
+DO NOT REMOVE OR ALTER THIS PLEASE. IT IS REMOVED AUTOMATICALLY BY THE IMPORT ROUTINE.
+<css_position>2</css_position>
+<css_app>core</css_app>
+<css_modules>search</css_modules>
+<css_app_hide>1</css_app_hide>
+<css_attributes>title="Main" media="screen,print"</css_attributes>
+</IPS_IMPORT_BLOCK>*/
+/************************************************************************/
+/* IP.Board 3 CSS - By Rikki Tissier - (c)2008 Invision Power Services	*/
+/************************************************************************/
+/* ipb_search.css - Search results styles								*/
+/************************************************************************/
+
+.ipsFilterbar #search_sort .submenu_indicator
+{
+	/* Prevent padding in sort buttons */
+}
+
+#main_search_form .ipsBox_container { margin-bottom: 10px; }
+#main_search_form .ipsField { margin-bottom: 20px; }
+
+.toggle_notify_on { display: none; }
+.show_notify .toggle_notify_on { display: block; }
+	.show_notify input.toggle_notify_on { display: inline; }
+.show_notify .toggle_notify_off { display: none; }	
+
+.notify_info span {
+	padding: 1px 8px;
+	background: #ededed;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 10px;
+	font-weight: bold;
+	display: inline-block;
+}
+	
+	.notify_info img { vertical-align: bottom; }
+
+#main_search_form .search_app {
+	font-size: 12px;
+	display: inline-block;
+	padding: 8px 10px 8px 0;
+	margin-right: 12px;
+	font-weight: bold;
+	border: 1px solid transparent;
+	cursor: pointer;
+}
+
+	#main_search_form .search_app.active {
+		background: #2b4f74;
+		border: 1px solid #1d3652;
+		padding-left: 10px;
+		color: #fff;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+	}
+
+#main_search_form .search_msg {
+	border-bottom: 1px solid #f0f0f0;
+	display: block;
+	font-size: 12px;
+	padding: 0 0 5px 200px;
+	margin-bottom: 15px;
+	color: #5c5c5c;
+}
+
+
+div#search_results {
+	border-bottom: 4px solid #d5dde5;
+}	
+	
+	div#search_results span.icon {
+		float: left;
+		margin-right: 15px;
+	}
+	
+	div#search_results div.result_info {
+		float: left;
+		width: 68%;
+	}
+	
+		div#search_results div.result_info span.desc.breadcrumb a {
+			color: #a9a9a9;
+		}
+	
+	div#search_results h3 {
+		background: none;
+		font-weight: normal;
+		font-size: 1.3em;
+		border: 0;
+		padding: 0;
+	}
+
+	div#search_results li {
+		padding: 10px 15px 15px 15px;
+		border-top: 1px solid #fff;
+	}
+
+	div#search_results p {
+		color: #606060;
+		margin: 4px 0 2px 0;
+	}
+	
+	/* Further details */
+	div#search_results .result_details {
+		width: 30%;
+		float: right;
+		border-left: 1px solid #B5C0CF;
+		padding-left: 15px;
+		line-height: 130%;
+		font-size: 11px;
+	}
+	
+		div#search_results .result_details li {
+			border: 0;
+			padding: 0;
+		}
+
+	div#search_results .gutter {
+		background-color: #528f6c;
+		color: #fff;
+		font-size: 9px;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 3px 8px 2px 8px;
+		margin-top: 0px;
+		margin-right: 15px;
+		display: none;
+		float: left;
+	}
+
+		div#search_results .gutter img {
+			padding-right: 4px;
+		}
+
+	div#search_results .sub div.result_info {
+		padding-left: 3%;/*padding-left: 45px;*/
+	}
+
+		div#search_results .sub .gutter {
+			background-color: #dedede;
+			color: #1d3652;
+			padding: 6px 8px 5px 8px;
+			margin-left: 45px;
+		}
+
+	div#search_results ol ol {
+		padding: 20px 0 0 15px;
+		margin: 0 0 -15px 20px;
+	}
+	
+	.tab_filters ul {
+		padding-top: 5px;
+	}
+	
+	.tab_filters ul.padded
+	{
+		padding-top: 10px;
+	}
+	
+/* as forum stuffs */
+.maintitle.links,
+.maintitle a {
+	text-decoration: none;
+	font-size: 12px;
+}
+.entry-content.search {}
+
+/* These styles are duplicated Rikki, putting a note as requested */
+
+.search_filter_container {
+	height: 440px;
+	max-height: 440px;
+}
+.search_filter_container ul.block_list {
+	height: 396px; overflow: auto;
+}
+.search_filter_container ul.block_list > li {
+	padding: 0px;
+}
+
+.search_filter_container ul.block_list > li span {
+	padding: 3px 10px 3px 25px;
+	display: block;
+}
+
+	.search_filter_container ul.block_list li span.heading {
+		font-weight: bold;
+	}
+
+.search_filter_container ul.block_list li.active span {
+	background: #af286d url(http://layout.iq-zone.com/public/style_images/master/icon_check_white.png ) no-repeat 6px 8px;
+	color: #fff;
+	font-weight: bold;
+}
+
+#vnc_filter_popup_close { 
+	text-align: center;
+	position: absolute;
+	bottom: 0; left: 0;	right: 0;
+	height: 42px;
+	line-height: 42px;
+	padding: 0 5px;
+	background: #DBE4EF;
+	background: -moz-linear-gradient(top, #DBE4EF 0%, #c7d4e4 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DBE4EF), color-stop(100%,#c7d4e4)); /* webkit */
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0px 1px 1px 0px rgba(255,255,255,0.5) inset;
+	box-shadow: 0px 1px 1px 0px rgba(255,255,255,0.5) inset;
+	border-top: 1px solid #DBE4EF;
+}

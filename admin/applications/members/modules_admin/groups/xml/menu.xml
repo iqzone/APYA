@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Manage Member Groups</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Manage Member Groups</subitemtitle>
+					<subitemlang>manage_groups</subitemlang>
+					<subsection>groups</subsection>
+					<subitemurl>do=groups_overview</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Manage User Permissions</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Manage User Permissions</subitemtitle>
+					<subitemlang>manage_perms</subitemlang>
+					<subsection>permissions</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey>perms_manage</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>		
+	</tabitems>
+</menu>

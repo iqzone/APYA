@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Archiving</grouptitle>
+		<grouplang>forums_archive</grouplang>
+		<items>
+			<item>
+				<key>archive_rules</key>
+				<string>Can manage archiving rules?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

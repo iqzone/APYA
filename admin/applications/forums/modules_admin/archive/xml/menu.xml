@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Archiving</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Archive Overview</subitemtitle>
+					<subitemlang>archive_overview</subitemlang>
+					<subsection>archive</subsection>
+					<subitemurl>do=forums_overview</subitemurl>
+					<subitemrolekey>archive_overview</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Archive Rules</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Archive Rules</subitemtitle>
+					<subitemlang>archive_rules</subitemlang>
+					<subsection>archive</subsection>
+					<subitemurl>do=rules</subitemurl>
+					<subitemrolekey>archive_rules</subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

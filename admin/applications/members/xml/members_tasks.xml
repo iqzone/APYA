@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <group>
+    <row>
+      <task_id>6</task_id>
+      <task_title>Send Bulk Mail</task_title>
+      <task_file>bulkmail.php</task_file>
+      <task_next_run>1339093811</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>-1</task_hour>
+      <task_minute>-1</task_minute>
+      <task_cronkey>a2fde6cf4785f4ae856d9e932d2c650a</task_cronkey>
+      <task_log>0</task_log>
+      <task_description>Dynamically assigned, no need to edit or change</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>bulkmail</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>members</task_application>
+    </row>
+    <row>
+      <task_id>51</task_id>
+      <task_title>Mobile Notifications</task_title>
+      <task_file>mobile_notifications.php</task_file>
+      <task_next_run>1339093811</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>-1</task_hour>
+      <task_minute>5</task_minute>
+      <task_cronkey>7e99bce5347147adb947cfa70bc26ea0</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Sends mobile notifications</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>mobile_notifications</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>1333389995</task_locked>
+      <task_application>members</task_application>
+    </row>
+    <row>
+      <task_id>93</task_id>
+      <task_title>Prune Notifications</task_title>
+      <task_file>prunenotifications.php</task_file>
+      <task_next_run>1339093811</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>6</task_hour>
+      <task_minute>-1</task_minute>
+      <task_cronkey>e12fafc294a458697d095e0b6cdeba23</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Removes older notifications</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>prunenotifications</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>members</task_application>
+    </row>
+    <row>
+      <task_id>16</task_id>
+      <task_title>Remove Locked Members</task_title>
+      <task_file>removelocked.php</task_file>
+      <task_next_run>1339093811</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>3</task_hour>
+      <task_minute>0</task_minute>
+      <task_cronkey>b8b9793ed18fea9c0639b111da887bd9</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Removes member accounts that are no longer locked</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>remove_locked</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>members</task_application>
+    </row>
+    <row>
+      <task_id>53</task_id>
+      <task_title>Twitter/Facebook Sync</task_title>
+      <task_file>twitfacesync.php</task_file>
+      <task_next_run>1339093811</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>1</task_hour>
+      <task_minute>-1</task_minute>
+      <task_cronkey>bacf57b98720cb455a2ef23f0d021a6c</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Resyncs Facebook/Twitter integration</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>twitfacesync</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>members</task_application>
+    </row>
+    <row>
+      <task_id>15</task_id>
+      <task_title>Update Profile Views</task_title>
+      <task_file>update_profile_views.php</task_file>
+      <task_next_run>1339093811</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>1</task_hour>
+      <task_minute>-1</task_minute>
+      <task_cronkey>bacf57b98720cb455a2ef23f0d021a6c</task_cronkey>
+      <task_log>0</task_log>
+      <task_description>Rebuilds the profile view counters</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>update_profile_views</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>members</task_application>
+    </row>
+    <row>
+      <task_id>13</task_id>
+      <task_title>Remove Old Validating Members</task_title>
+      <task_file>removevalidating.php</task_file>
+      <task_next_run>1339093811</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>2</task_hour>
+      <task_minute>0</task_minute>
+      <task_cronkey>2da3d5c435ca78d9e1ccd64375e64bda</task_cronkey>
+      <task_log>1</task_log>
+      <task_description><![CDATA[If you enable the &#39;Prune validating members after x days&#39; setting, this task will remove those members]]></task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>validating</task_key>
+      <task_safemode>1</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>members</task_application>
+    </row>
+    <row>
+      <task_id>79</task_id>
+      <task_title>Remove Warning Points</task_title>
+      <task_file>warnings.php</task_file>
+      <task_next_run>1339093811</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>0</task_hour>
+      <task_minute>0</task_minute>
+      <task_cronkey>31fe19793eb01315b19c1fb43b117638</task_cronkey>
+      <task_log>1</task_log>
+      <task_description/>
+      <task_enabled>1</task_enabled>
+      <task_key>warnings</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>members</task_application>
+    </row>
+  </group>
+</export>

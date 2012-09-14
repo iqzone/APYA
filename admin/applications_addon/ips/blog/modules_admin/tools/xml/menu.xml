@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>			
+			<title>Rebuild</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Rebuild</subitemtitle>
+					<subitemlang>blog_rebuild</subitemlang>
+					<subsection>rebuild</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>	
+		<item>
+			<title>Akismet Logs</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Akismet Logs</subitemtitle>
+					<subitemlang>blog_akismet</subitemlang>
+					<subsection>akismet</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Trackback &amp; Ping Services</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Trackback &amp; Ping Services</subitemtitle>
+					<subitemlang>blog_trackbacks</subitemlang>
+					<subsection>pings</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>	
+	</tabitems>
+</menu>

@@ -1,0 +1,62 @@
+/*<IPS_IMPORT_BLOCK>
+DO NOT REMOVE OR ALTER THIS PLEASE. IT IS REMOVED AUTOMATICALLY BY THE IMPORT ROUTINE.
+<css_position>1</css_position>
+<css_app>gallery</css_app>
+<css_modules>_manual_</css_modules>
+<css_app_hide>1</css_app_hide>
+<css_attributes>title="Main" media="screen"</css_attributes>
+</IPS_IMPORT_BLOCK>*/
+/************************************************************************/
+/* RESET (Thanks to YUI) */
+
+#ips_lightbox {
+	z-index:10000;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #2b2f34;
+	width: 100%;
+	height: 100%;
+	padding: 0 !important;
+	overflow: hidden;
+	font-family: 'Helvetica Neue', arial, verdana, tahoma, sans-serif;
+	text-align: center;
+	min-width: 950px;
+}
+
+#ips_lightbox .lightbox_image {
+        max-height: 75%;
+        max-width: 75%;
+	border: 2px solid #fff;
+	margin-top: 60px;
+	
+}
+
+#ips_lightbox .lightbox_caption {
+	
+	margin: 15px 0;
+	font-size:1.4em;
+	font-weight: bold;
+	color: #888;
+	
+}
+
+#ips_lightbox .lightbox_ps {
+	position: absolute;
+	left: 50%;
+}
+
+#close_lightbox {
+	display: block;
+	width: 38px;
+	height: 38px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: url(http://layout.iq-zone.com/public/style_images/master/gallery/slideshow/close.png ) no-repeat;
+	text-indent: -3000em;
+}
+
+	#close_lightbox:hover {
+		background: url(http://layout.iq-zone.com/public/style_images/master/gallery/slideshow/close_hover.png ) no-repeat;
+	}

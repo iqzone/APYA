@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<versions>
+    <version>
+		<human>1.1.8</human>
+		<long>10008</long>
+	</version>
+	<version>
+		<human>1.1.7</human>
+		<long>10007</long>
+	</version>
+	<version>
+		<human>1.1.6</human>
+		<long>10006</long>
+	</version>    
+	<version>
+		<human>1.1.5</human>
+		<long>10005</long>
+	</version>
+	<version>
+		<human>1.1.4</human>
+		<long>10004</long>
+	</version>
+	<version>
+		<human>1.1.0</human>
+		<long>10003</long>
+	</version>
+	<version>
+		<human>1.0.1</human>
+		<long>10002</long>
+	</version>
+	<version>
+		<human>1.0.0</human>
+		<long>10001</long>
+	</version>
+</versions>

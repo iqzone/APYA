@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Blog Management</grouptitle>
+		<grouplang>blogs_managet</grouplang>
+		<items>
+			<item>
+				<key>blogs_manage</key>
+				<string>Can edit blogs?</string>
+			</item>
+			<item>
+				<key>blogs_delete</key>
+				<string>Can delete blogs?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

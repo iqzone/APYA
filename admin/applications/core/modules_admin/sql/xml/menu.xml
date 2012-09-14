@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>SQL Toolbox</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>SQL Toolbox</subitemtitle>
+					<subitemlang>sql_toolbox</subitemlang>
+					<subsection>toolbox</subsection>
+					<subitemurl>do=overview</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>SQL Back Up</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>SQL Back Up</subitemtitle>
+					<subitemlang>sql_backup</subitemlang>
+					<subsection>toolbox</subsection>
+					<subitemurl>do=backup</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>SQL Runtime Info</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>SQL Runtime Info</subitemtitle>
+					<subitemlang>sql_ri</subitemlang>
+					<subsection>toolbox</subsection>
+					<subitemurl>do=runtime</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>SQL System Vars</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>SQL System Vars</subitemtitle>
+					<subitemlang>sql_vars</subitemlang>
+					<subsection>toolbox</subsection>
+					<subitemurl>do=system</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>SQL Processes</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>SQL Processes</subitemtitle>
+					<subitemlang>sql_processes</subitemlang>
+					<subsection>toolbox</subsection>
+					<subitemurl>do=processes</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	
+	</tabitems>
+</menu>
