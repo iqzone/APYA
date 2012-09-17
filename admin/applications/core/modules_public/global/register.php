@@ -985,7 +985,12 @@ class public_core_global_register extends ipsCommand
 		// Go to the board index
 		//-----------------------------------------
 		
-		$this->registry->output->redirectScreen( $this->lang->words['clogin_done'], $this->settings['base_url'] );
+                $this->html = $this->registry->output->getTemplate('global');
+                $output = $this->html->showLinks();
+                $this->registry->getClass('output')->setTitle( 'Casi estas listo' );
+                $this->registry->getClass('output')->addContent( $output );
+                $this->registry->getClass('output')->sendOutput();
+		//$this->registry->output->redirectScreen( $this->lang->words['clogin_done'], $this->settings['base_url'] );
 	}
  	
 	/**
