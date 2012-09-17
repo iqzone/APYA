@@ -90,11 +90,11 @@ class public_gallery_images_import extends ipsCommand
                                     {
                                         foreach($album as $a){
                                             $coverPhoto = $this->facebook->api(array(   'method'       => 'fql.query',
-                                                                                        'query'        => 'select src_big from photo where object_id="'.$a['cover_photo'].'"',
+                                                                                        'query'        => 'select src_big from photo where object_id="'.@$a['cover_photo'].'"',
                                                                                         'access_token' => $this->_userToken ) );
                                             
-                                            $a['coverPhotoStr'] = $coverPhoto[0]['src_big'];
-                                            $a[ 'aid' ] = $a[ 'id' ];
+                                            @$a['coverPhotoStr'] = $coverPhoto[0]['src_big'];
+                                            @$a[ 'aid' ] = @$a[ 'id' ];
                                             $albumInfo[] = $a;
                                         }
                                     }

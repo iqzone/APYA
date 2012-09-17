@@ -119,7 +119,6 @@ class public_gallery_images_viewphotos extends ipsCommand
 				}
 				catch( Exception $e )
 				{
-	                var_dump($e);
 				}
 				
 				if ( $_userData['id'] AND $_userData['id'] == $this->_userId )
