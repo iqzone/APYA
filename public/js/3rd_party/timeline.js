@@ -420,10 +420,10 @@ tl = (function (){
                                                                     {
                                                                             try {
                                                                                     $( 'statusReplyBlank-' + status_id ).show().innerHTML += t.responseJSON['html'];
-                                                                                    if($( '_statusReplyBlank' + status_id ))
-	                                                                                    $( '_statusReplyBlank' + status_id ).show().innerHTML += t.responseJSON['html'];
-                                                                                    jQuery('#statusText-' + status_id + ', _statusText-' + status_id ).val('');
-                                                                                    jQuery('#statusText-' + status_id+', #_statusText-' + status_id).parent().parent().find('div.mentions-input-box > div.mentions').html('');
+                                                                                    if($( '_statusReplyBlank-' + status_id ))
+	                                                                                    $( '_statusReplyBlank-' + status_id ).show().innerHTML += t.responseJSON['html'];
+                                                                                    jQuery('#statusText-' + status_id + ', #_statusText-' + status_id ).val('');
+                                                                                    jQuery('#statusText-' + status_id).parent().parent().find('div.mentions-input-box > div.mentions').html('');
                                                                                     tl.getInstance().like();
                                                                             }
                                                                             catch(err)
